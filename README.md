@@ -36,8 +36,54 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
    install-tiller.sh
    ```
 
+## Kafka cluster installation
+
+From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts](https://github.com/confluentinc/cp-helm-charts):
+
+```bash
+./install-confluent-kafka.sh
+```
+
+See the [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html) for more information.
+
+## Test the Kafka cluster
+
+Deploy a `kafka-client` pod:
+
+```bash
+kubectl create -f kafka-test-client-pod.yaml
+```
+
+Log into the `kafka-client` pod:
+
+```bash
+kubectl exec -it kafka-client -- /bin/bash
+```
+
+From the pod's shell,
+
+1. Create a topic:
+
    ```bash
-   ./k8s-cluster/create-cluster-admin.sh
+   kafka-topics --zookeeper confluent-kafka-cp-zookeeper-headless:2181 --topic confluent-kafka-topic --create --partitions 1 --replication-factor 1 --if-not-exists
+   ```
+
+2. Create a message:
+
+   ```bash
+   MESSAGE="`date -u`"
+   ```
+
+3. Produce a message to the topic:
+
+   ```bash
+   echo "$MESSAGE" | kafka-console-producer --broker-list confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic
+   ```
+
+4. Consume the message:
+
+   ```bash
+   kafka-console-consumer --bootstrap-server confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic --from-beginning --timeout-ms 2000 --max-messages 1 | grep "$MESSAGE"
    ```
 
 ### Related reading
