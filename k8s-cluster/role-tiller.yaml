@@ -1,0 +1,11 @@
+# From https://raw.githubusercontent.com/jonbcampos/kubernetes-series/master/helm/scripts/values/role-tiller.yaml
+
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: tiller-manager
+  namespace: tiller
+rules:
+- apiGroups: ["", "batch", "extensions", "apps"]
+  resources: ["*"]
+  verbs: ["*"]
