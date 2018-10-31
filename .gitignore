@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Certificates for Tiller
+k8s-cluster/*.pem
+k8s-cluster/*.srl

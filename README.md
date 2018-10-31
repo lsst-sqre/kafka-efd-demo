@@ -9,7 +9,9 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
 
 ## Kubernetes cluster set up
 
-1. The Kubernetes cluster is set up to these specs:
+1. `cd k8s-cluster`
+
+2. The Kubernetes cluster is set up to these specs:
 
    - `n1-standard-2` machine type provides 2 vCPUs and 7.5 GB of memory (sufficient for JVM).
    - 3 nodes as a minimum for both the Zookeeper and Kafka clusters.
@@ -22,7 +24,17 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
 
    **TODO:** script cluster creation.
 
-2. Set up the cluster-admin role:
+3. Set up the cluster-admin role:
+
+   ```bash
+   ./create-cluster-admin.sh
+   ```
+
+4. Install Tiller
+
+   ```bash
+   install-tiller.sh
+   ```
 
    ```bash
    ./k8s-cluster/create-cluster-admin.sh
