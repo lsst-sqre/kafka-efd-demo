@@ -22,10 +22,13 @@ install_requires = [
 ]
 
 tests_require = [
+    'pytest==3.9.3',
+    'pytest-flake8==1.0.2',
 ]
 
 setup_requires = [
-    'setuptools_scm'
+    'setuptools_scm',
+    'pytest-runner==4.2',
 ]
 
 entry_points = {}
