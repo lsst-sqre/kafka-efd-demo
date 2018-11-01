@@ -36,6 +36,45 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
    install-tiller.sh
    ```
 
+## Prometheus and Grafana installation
+
+Install Prometheus and Grafana with Helm:
+
+```bash
+./install-prometheus.sh
+```
+
+Then access the various dashboards by port forwarding into the cluster:
+
+- Connect to the Prometheus server:
+
+  ```bash
+  ./port-forward-prometheus.sh
+  ```
+
+  Open http://localhost:9090 in a browser.
+
+- Connect to the Prometheus alert manager:
+
+  ```bash
+  ./port-forward-alertmanager.sh
+  ```
+
+  Open http://localhost:9093 in a browser.
+
+- Connect to Grafana:
+
+  ```bash
+  ./port-forward-grafana.sh
+  ```
+
+  Open http://localhost:3000 in your browser.
+  The username is "admin" and the password is printed by the port forwarding script.
+
+  Use `echo http://$(kubectl get service --namespace default -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}").default.svc.cluster.local` to get the Prometheus server URL for the data source.
+
+  Import the [confluent-open-source-grafana-dashboard.json](https://github.com/confluentinc/cp-helm-charts/blob/700b4326352cf5220e66e6976064740b8c1976c7/grafana-dashboard/confluent-open-source-grafana-dashboard.json) dashboard into Grafana to monitor Kafka.
+
 ## Kafka cluster installation
 
 From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts](https://github.com/confluentinc/cp-helm-charts):
