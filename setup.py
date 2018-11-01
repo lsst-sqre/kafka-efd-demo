@@ -19,6 +19,7 @@ with README.open() as f:
     READMETXT = f.read()
 
 install_requires = [
+    'click>=7.0,<8.0',
 ]
 
 tests_require = [
@@ -31,7 +32,9 @@ setup_requires = [
     'pytest-runner==4.2',
 ]
 
-entry_points = {}
+entry_points = {
+    'console_scripts': ['kafkaefd = kafkaefd.bin.main:main']
+}
 
 setup(
     name=PACKAGENAME,
