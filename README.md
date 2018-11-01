@@ -71,8 +71,6 @@ Then access the various dashboards by port forwarding into the cluster:
   Open http://localhost:3000 in your browser.
   The username is "admin" and the password is printed by the port forwarding script.
 
-  Use `echo http://$(kubectl get service --namespace default -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}").default.svc.cluster.local` to get the Prometheus server URL for the data source.
-
   Import the [confluent-open-source-grafana-dashboard.json](https://github.com/confluentinc/cp-helm-charts/blob/700b4326352cf5220e66e6976064740b8c1976c7/grafana-dashboard/confluent-open-source-grafana-dashboard.json) dashboard into Grafana to monitor Kafka.
 
 ## Kafka cluster installation
