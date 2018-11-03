@@ -36,6 +36,14 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
    install-tiller.sh
    ```
 
+### Related reading
+
+- [jonbcampos/kubernetes-series](https://github.com/jonbcampos/kubernetes-series): scripts for creating a secure Helm/Tiller deployment. Goes with these Medium articles:
+
+  - [Kubernetes: Day One](https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29)
+  - [Installing Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e)
+  - [Install Secure Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/install-secure-helm-in-gke-254d520061f7)
+
 ## Prometheus and Grafana installation
 
 Install Prometheus and Grafana with Helm:
@@ -81,7 +89,10 @@ From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts]
 ./install-confluent-kafka.sh
 ```
 
-See the [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html) for more information.
+### Related reading
+
+- [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html)
+- [Confluent Platform Helm charts repository](https://github.com/confluentinc/cp-helm-charts)
 
 ## Test the Kafka cluster
 
@@ -123,10 +134,5 @@ From the pod's shell,
    kafka-console-consumer --bootstrap-server confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic --from-beginning --timeout-ms 2000 --max-messages 1 | grep "$MESSAGE"
    ```
 
-### Related reading
 
-- [jonbcampos/kubernetes-series](https://github.com/jonbcampos/kubernetes-series): scripts for creating a secure Helm/Tiller deployment. Goes with these Medium articles:
 
-  - [Kubernetes: Day One](https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29)
-  - [Installing Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e)
-  - [Install Secure Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/install-secure-helm-in-gke-254d520061f7)
