@@ -134,5 +134,20 @@ From the pod's shell,
    kafka-console-consumer --bootstrap-server confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic --from-beginning --timeout-ms 2000 --max-messages 1 | grep "$MESSAGE"
    ```
 
+## Connecting to Kafka via Telepresence
 
+[Telepresence](https://www.telepresence.io) is a tool that proxies the Kubernetes network onto your local development machine.
+For example, [Telepresennce](https://www.telepresence.io) lets a Kafka client, running locally, see and connect to all of the Kafka brokers.
+This use useful for development since you can test client code from a local shell instead of waiting to deploy a container to the Kubernetes cluster.
 
+To expose the Kafka brokers locally, run this line in a local shell:
+
+```bash
+telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless
+```
+
+Now you can run other Kafka clients in other shells.
+
+### Related reading
+
+- [Connecting to a Kafka cluster running in Kubernetes from outside](https://medium.com/@valercara/connecting-to-a-kafka-cluster-running-in-kubernetes-7601ae3a87d6)
