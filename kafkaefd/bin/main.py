@@ -5,22 +5,28 @@ __all__ = ('main',)
 
 import click
 
+from .helloworld import helloproducer, helloconsumer
+
 # Add -h as a help shortcut option
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
 
 @click.group(context_settings=CONTEXT_SETTINGS)
+@click.option(
+    '--broker', 'broker_url', envvar='BROKER', required=False, nargs=1,
+    help='Kafka broker (example: localhost:9092). '
+         'Also set via $BROKER env var.'
+)
 @click.version_option(message='%(version)s')
 @click.pass_context
-def main(ctx):
+def main(ctx, broker_url):
     """kafkaefd is a collection of subcommands that implement experimental
     Kafka producers and consumers. kafkaefd is a test bed for the Kafka
     technology that will underly the DM Engineering Facility Database (EFD).
     """
     # Subcommands should use the click.pass_obj decorator to get this
-    # ctx.obj object as the first argument. Subcommands shouldn't create their
-    # own Repo instance.
-    ctx.obj = {}
+    # ctx object as the first argument.
+    ctx.obj = {'broker_url': broker_url}
 
 
 @main.command()
@@ -35,3 +41,8 @@ def help(ctx, topic, **kw):
         click.echo(ctx.parent.get_help())
     else:
         click.echo(main.commands[topic].get_help(ctx))
+
+
+# Add subcommands from other modules
+main.add_command(helloproducer)
+main.add_command(helloconsumer)

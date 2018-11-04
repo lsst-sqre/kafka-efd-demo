@@ -20,6 +20,7 @@ with README.open() as f:
 
 install_requires = [
     'click>=7.0,<8.0',
+    'confluent-kafka==0.11.6',
 ]
 
 tests_require = [
