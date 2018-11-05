@@ -195,3 +195,10 @@ This is a simple example that shows how to send and receive plain text messages.
    You should see the consumer receive the messages.
 
 In this hello world demo, the topic is `mytopic`, and by default all messages are created with a key of `hello`.
+
+## Lessons learned
+
+### Keys and partitioning
+
+- Keys are hashed and the same key is always assigned to the same partition. Multiple keys can share the same partition (new partitions aren't automatically built). This means that a topic should be pre-populated with all the partitions it will ever need — never add partitions later.
+- A message whose key is `None` is automatically load-balanced across the available partitions.
