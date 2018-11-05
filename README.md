@@ -151,3 +151,45 @@ Now you can run other Kafka clients in other shells.
 ### Related reading
 
 - [Connecting to a Kafka cluster running in Kubernetes from outside](https://medium.com/@valercara/connecting-to-a-kafka-cluster-running-in-kubernetes-7601ae3a87d6)
+
+## The kafkaefd demo application
+
+This repository includes the kafkaefd Python packages, which includes the `kafkaefd` command-line client that implements several demonstration Kafka producers and consumers.
+Install the client in a Python 3.6+ virtual environment:
+
+```bash
+pip install -e .
+```
+
+Check that the command-line app is install
+
+```bash
+kafkaefd help
+```
+
+**Note:** The `--broker` option defaults to `confluent-kafka-cp-kafka-headless:9092`.
+This is the headless service for the Kafka brokers given the Kubernetes/Helm installation described above.
+This default should work both inside the cluster and via Telepresence.
+
+The next sections describe each demo.
+
+## Hello world demo
+
+This is a simple example that shows how to send and receive plain text messages.
+
+1. In one shell, run `telepresence`.
+
+2. In a second shell, run the consumer:
+
+   ```bash
+   kafkaefd helloconsumer`
+   ```
+
+3. In a third shell, fire off the producer:
+
+   ```bash
+   kafkaefd helloproducer
+   ```
+
+   Do this repeatedly.
+   You should see the consumer receive the messages.
