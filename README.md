@@ -188,8 +188,10 @@ This is a simple example that shows how to send and receive plain text messages.
 3. In a third shell, fire off the producer:
 
    ```bash
-   kafkaefd helloproducer
+   kafkaefd helloproducer "Hello world"
    ```
 
-   Do this repeatedly.
+   Do this repeatedly (and with different messages).
    You should see the consumer receive the messages.
+
+In this hello world demo, the topic is `mytopic`, and by default all messages are created with a key of `hello`.

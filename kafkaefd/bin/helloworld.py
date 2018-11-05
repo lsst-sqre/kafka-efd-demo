@@ -16,9 +16,20 @@ from .utils import get_broker_url
 
 
 @click.command()
+@click.argument(
+    'value', default="world", required=False, nargs=1
+)
+@click.option(
+    '--key', default='hello', show_default=True,
+    help='Key for the message.'
+)
+@click.option(
+    '--topic', default='mytopic', show_default=True,
+    help='Topic identifier'
+)
 @click.pass_context
-def helloproducer(ctx):
-    """Hello-world producer.
+def helloproducer(ctx, value, key, topic):
+    """Hello-world producer that produces plain text messages.
     """
     settings = {
         'bootstrap.servers': get_broker_url(ctx),
@@ -27,8 +38,7 @@ def helloproducer(ctx):
     p = Producer(settings)
 
     try:
-        p.produce('mytopic', key='hello', value='world',
-                  callback=producer_callback)
+        p.produce(topic, key=key, value=value, callback=producer_callback)
         # Could also do a p.poll(0.1) here to block and run the callback.
     except KeyboardInterrupt:
         pass
@@ -40,23 +50,44 @@ def helloproducer(ctx):
 
 def producer_callback(err, msg):
     if err is not None:
-        print("Failed to deliver message: {0}: {1}"
-              .format(msg.value(), err.str()))
+        print("Failed to deliver message:\n\tkey={0}\n\tvalue={1}\n\t{2}"
+              .format(msg.key(), msg.value(), err.str()))
     else:
-        print("Message produced: {0}".format(msg.value()))
+        print("Message produced:\n\tkey={0}\n\tvalue={1}"
+              .format(msg.key(), msg.value()))
 
 
 @click.command()
+@click.option(
+    '--group', default='mygroup', show_default=True,
+    help='ID of the consumer group.'
+)
+@click.option(
+    '--client', default='client-1', show_default=True,
+    help='ID of the client in the consumer group.'
+)
+@click.option(
+    '--topic', 'topics', default='mytopic', show_default=True, multiple=True,
+    help='Topic name. Provide multiple --topic options to subscribe to '
+         'multiple topics.'
+)
 @click.pass_context
-def helloconsumer(ctx):
+def helloconsumer(ctx, group, client, topics):
     """Hello-world consumer.
     """
+    if isinstance(topics, str):
+        topics = [topics]
+    topics = [str(t) for t in topics]
+    print('Starting consumer\n\tGroup: {group}\n\tClient: {client}\n\t'
+          'Topic(s): {topics}'.format(
+              group=group, client=client, topics=', '.join(topics)))
+
     settings = {
         'bootstrap.servers': get_broker_url(ctx),
         # Identify the consumer group
-        'group.id': 'mygroup',
+        'group.id': group,
         # Identify the client within the consumer group
-        'client.id': 'client-1',
+        'client.id': client,
         # Automatically commit the current offset for this consumer
         'enable.auto.commit': True,
         'session.timeout.ms': 6000,
@@ -69,19 +100,24 @@ def helloconsumer(ctx):
     }
 
     c = Consumer(settings)
-    c.subscribe(['mytopic'])
+    c.subscribe(topics)
 
     try:
         while True:
             msg = c.poll(0.1)
             if msg is None:
                 continue
+
             elif not msg.error():
-                print('Received message: {0}:{1}'
-                      .format(msg.key(), msg.value()))
+                print('Received message (topic={topic}, key={key}):'
+                      '\n\t{message}'
+                      .format(topic=msg.topic(), key=msg.key(),
+                              message=msg.value()))
+
             elif msg.error().code() == KafkaError._PARTITION_EOF:
                 print('End of partition reached {0}/{1}'
                       .format(msg.topic(), msg.partition()))
+
             else:
                 print('Error occured: {0}'.format(msg.error().str()))
 
