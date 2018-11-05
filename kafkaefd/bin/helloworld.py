@@ -25,11 +25,25 @@ def helloproducer(ctx):
     }
 
     p = Producer(settings)
-    p.produce('mytopic', key='hello', value='world')
+
+    try:
+        p.produce('mytopic', key='hello', value='world',
+                  callback=producer_callback)
+        # Could also do a p.poll(0.1) here to block and run the callback.
+    except KeyboardInterrupt:
+        pass
 
     if p.flush(30):
         print('Error: shutting down after flush timeout, '
               'but there are unsent messages.')
+
+
+def producer_callback(err, msg):
+    if err is not None:
+        print("Failed to deliver message: {0}: {1}"
+              .format(msg.value(), err.str()))
+    else:
+        print("Message produced: {0}".format(msg.value()))
 
 
 @click.command()
