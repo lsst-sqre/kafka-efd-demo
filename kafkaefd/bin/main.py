@@ -14,6 +14,7 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.group(context_settings=CONTEXT_SETTINGS)
 @click.option(
     '--broker', 'broker_url', envvar='BROKER', required=False, nargs=1,
+    default='confluent-kafka-cp-kafka-headless:9092',
     help='Kafka broker (example: localhost:9092). '
          'Also set via $BROKER env var.'
 )
