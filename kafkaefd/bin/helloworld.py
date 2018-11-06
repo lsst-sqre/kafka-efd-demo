@@ -67,7 +67,7 @@ def producer_callback(err, msg):
     help='ID of the client in the consumer group.'
 )
 @click.option(
-    '--topic', 'topics', default='mytopic', show_default=True, multiple=True,
+    '--topic', 'topics', default=['mytopic'], show_default=True, multiple=True,
     help='Topic name. Provide multiple --topic options to subscribe to '
          'multiple topics.'
 )
@@ -75,8 +75,6 @@ def producer_callback(err, msg):
 def helloconsumer(ctx, group, client, topics):
     """Hello-world consumer.
     """
-    if isinstance(topics, str):
-        topics = [topics]
     topics = [str(t) for t in topics]
     print('Starting consumer\n\tGroup: {group}\n\tClient: {client}\n\t'
           'Topic(s): {topics}'.format(
