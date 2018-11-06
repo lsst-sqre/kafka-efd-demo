@@ -25,10 +25,26 @@ limitations under the License.
 
 __all__ = ('admin',)
 
+import json
+import re
+
 import click
-from confluent_kafka.admin import AdminClient, NewTopic, NewPartitions
+from confluent_kafka.admin import (
+    AdminClient, NewTopic, NewPartitions, ConfigResource, RESOURCE_TOPIC,
+    ConfigSource)
 
 from .utils import get_broker_url
+
+"""Map of ConfigSource ints to label strings.
+
+AdminClient.describe_configs returns source data as an int. This mapping
+is between those ints and labels that match ConfigSource attributes.
+"""
+CONFIG_SOURCES = {
+    getattr(ConfigSource, a).value: a
+    for a in ('DEFAULT_CONFIG', 'DYNAMIC_BROKER_CONFIG',
+              'DYNAMIC_DEFAULT_BROKER_CONFIG', 'DYNAMIC_TOPIC_CONFIG',
+              'STATIC_BROKER_CONFIG', 'UNKNOWN_CONFIG')}
 
 
 @click.group()
@@ -204,3 +220,101 @@ def partition_topic(ctx, topic, count, dry_run):
                       .format(topic))
         except Exception as e:
             print("Failed to add partitions to topic {}: {}".format(topic, e))
+
+
+@topics.command('config')
+@click.argument('topic')
+@click.option('--set', 'settings', multiple=True, type=click.Tuple([str, str]))
+@click.option('--detail', 'show_details', is_flag=True)
+@click.pass_context
+def configure_topic(ctx, topic, settings, show_details):
+    """Show and optionally change configurations for a topic
+    """
+    client = ctx.parent.obj['client']
+
+    resource = ConfigResource(RESOURCE_TOPIC, topic)
+
+    if settings:
+        # Get the initial set of configurations. The alter_configs method
+        # works atomically so all of the existing and new configurations need
+        # to be passed, otherwise unset configurations get reverted to
+        # defaults.
+        fs = client.describe_configs([resource])
+        configs = fs[resource].result()  # raises on failure
+        configs = {k: c.value for k, c in configs.items()}
+
+        # Override new configurations
+        configs.update(dict(settings))
+
+        # Convert strings to their native types. describe_configs() provides
+        # all configuration values as str, but alter_configs wants values to
+        # be the actual types (int, float, bool, str). What can you do, eh?
+        convert_configs_to_native_types(configs)
+
+        # Apply the entire configuration set to the source
+        for key, value in configs.items():
+            resource.set_config(key, value)
+
+        # Alter the configurations on the server
+        fs = client.alter_configs([resource])
+        fs[resource].result()  # raises on failure
+
+    # Read configurations
+    fs = client.describe_configs([resource])
+    configs = fs[resource].result()  # raises on failure
+
+    if show_details:
+        # Show detailed information about each ConfigEntry
+        attrs = ('value', 'is_read_only', 'is_default',
+                 'is_sensitive', 'is_synonym')
+        config_data = {}
+        for k, config in configs.items():
+            config_data[k] = {a: getattr(config, a) for a in attrs
+                              if hasattr(config, a)}
+            # source and synonyms need some type transforms to be useful
+            try:
+                config_data[k]['source'] = CONFIG_SOURCES[config.source]
+            except KeyError:
+                pass
+            try:
+                config_data[k]['synonyms'] = [k for k, _
+                                              in config.synonyms.items()]
+            except AttributeError:
+                pass
+        print(json.dumps(config_data, sort_keys=True, indent=2))
+
+    else:
+        # Just show the values of each ConfigEntry
+        config_values = {k: config.value for k, config in configs.items()}
+        print(json.dumps(config_values, sort_keys=True, indent=2))
+
+
+def convert_configs_to_native_types(configs):
+    """Convert a mapping so that values take native types, rather than
+    string representations.
+
+    Parameters
+    ----------
+    configs : `dict`
+        Mapping of keys and values. Values are modified in place.
+    """
+    INT_PATTERN = re.compile(r'^[+-]?[0-9]*$')
+    FLOAT_PATTERN = re.compile(r'^[+-]?([0-9]*[.])?[0-9]+$')
+    TRUE_PATTERN = re.compile(r'^true$')
+    FALSE_PATTERN = re.compile(r'^false$')
+
+    for k, v in configs.items():
+        if not isinstance(v, str):
+            continue
+        elif v == '':
+            continue
+        elif INT_PATTERN.match(v):
+            configs[k] = int(v)
+        elif FLOAT_PATTERN.match(v):
+            configs[k] = float(v)
+        elif TRUE_PATTERN.match(v):
+            configs[k] = True
+        elif FALSE_PATTERN.match(v):
+            configs[k] = False
+        else:
+            continue

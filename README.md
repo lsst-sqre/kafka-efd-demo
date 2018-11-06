@@ -187,6 +187,14 @@ Create a topic:
 kafkaefd admin topics create topicname --partitions 3 --replication-factor 1
 ```
 
+View, and optionally modify, configurations for a topic:
+
+```bash
+kafkaefd admin topics config topicname
+kafkaefd admin topics config topicname --detail
+kafkaefd admin topics config topicname --set retention.ms 86400000
+```
+
 Add partitions to a topic:
 
 ```bash
@@ -214,7 +222,7 @@ This is a simple example that shows how to send and receive plain text messages.
 2. In a second shell, run the consumer:
 
    ```bash
-   kafkaefd helloconsumer`
+   kafkaefd helloconsumer
    ```
 
 3. In a third shell, fire off the producer:
