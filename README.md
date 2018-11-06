@@ -140,10 +140,10 @@ From the pod's shell,
 For example, [Telepresennce](https://www.telepresence.io) lets a Kafka client, running locally, see and connect to all of the Kafka brokers.
 This use useful for development since you can test client code from a local shell instead of waiting to deploy a container to the Kubernetes cluster.
 
-To expose the Kafka brokers locally, run this line in a local shell:
+To expose the Kafka brokers and Schema Registry locally, run this line in a local shell:
 
 ```bash
-telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless
+telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless --also-proxy confluent-kafka-cp-schema-registry
 ```
 
 Now you can run other Kafka clients in other shells.
@@ -235,6 +235,27 @@ This is a simple example that shows how to send and receive plain text messages.
    You should see the consumer receive the messages.
 
 In this hello world demo, the topic is `mytopic`, and by default all messages are created with a key of `hello`.
+
+### Hello world for Avro
+
+The `kafkaefd helloavro` command group shows how to send and receive Avro-serialized messages.
+These commands integrate with the Confluent Schema Registry deployed as part of the Helm deployment.
+
+In this demo, the default topic is called `helloavro`.
+
+1. In one shell, run `telepresence`.
+
+2. In a second shell, start a consumer:
+
+   ```bash
+   kafkaefd helloavro consume
+   ```
+
+3. In a third shell, fire off a producer:
+
+   ```bash
+   kafkaefd helloavro produce "Hello world"
+   ```
 
 ## Lessons learned
 

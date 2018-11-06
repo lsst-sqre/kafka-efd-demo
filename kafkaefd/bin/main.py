@@ -7,6 +7,7 @@ import click
 
 from .admin import admin
 from .helloworld import helloproducer, helloconsumer
+from .helloavro import helloavro
 
 # Add -h as a help shortcut option
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -17,19 +18,28 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     '--broker', 'broker_url', envvar='BROKER', required=False, nargs=1,
     default='confluent-kafka-cp-kafka-headless:9092',
     show_default=True,
-    help='Kafka broker (example: localhost:9092). '
-         'Also set via $BROKER env var.'
+    help='Kafka broker. Alternatively set via $BROKER env var.'
+)
+@click.option(
+    '--registry', 'schema_registry_url', envvar='SCHEMAREGISTRY',
+    required=False, nargs=1,
+    default='http://confluent-kafka-cp-schema-registry:8081',
+    show_default=True,
+    help='Schema Registry URL. Alternatively set via $SCHEMAREGISTRY env var.'
 )
 @click.version_option(message='%(version)s')
 @click.pass_context
-def main(ctx, broker_url):
+def main(ctx, broker_url, schema_registry_url):
     """kafkaefd is a collection of subcommands that implement experimental
     Kafka producers and consumers. kafkaefd is a test bed for the Kafka
     technology that will underly the DM Engineering Facility Database (EFD).
     """
     # Subcommands should use the click.pass_obj decorator to get this
     # ctx object as the first argument.
-    ctx.obj = {'broker_url': broker_url}
+    ctx.obj = {
+        'broker_url': broker_url,
+        'schema_registry_url': schema_registry_url,
+    }
 
 
 @main.command()
@@ -50,3 +60,4 @@ def help(ctx, topic, **kw):
 main.add_command(helloproducer)
 main.add_command(helloconsumer)
 main.add_command(admin)
+main.add_command(helloavro)
