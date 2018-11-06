@@ -5,6 +5,7 @@ __all__ = ('main',)
 
 import click
 
+from .admin import admin
 from .helloworld import helloproducer, helloconsumer
 
 # Add -h as a help shortcut option
@@ -48,3 +49,4 @@ def help(ctx, topic, **kw):
 # Add subcommands from other modules
 main.add_command(helloproducer)
 main.add_command(helloconsumer)
+main.add_command(admin)

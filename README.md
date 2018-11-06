@@ -154,7 +154,7 @@ Now you can run other Kafka clients in other shells.
 
 ## The kafkaefd demo application
 
-This repository includes the kafkaefd Python packages, which includes the `kafkaefd` command-line client that implements several demonstration Kafka producers and consumers.
+This repository includes the kafkaefd Python packages, which includes the `kafkaefd` command-line client that implements several demonstration Kafka producers and consumers, as well as administrative commands.
 Install the client in a Python 3.6+ virtual environment:
 
 ```bash
@@ -171,9 +171,41 @@ kafkaefd help
 This is the headless service for the Kafka brokers given the Kubernetes/Helm installation described above.
 This default should work both inside the cluster and via Telepresence.
 
-The next sections describe each demo.
+### The kafkaefd admin command
 
-## Hello world demo
+The `kafkaefd admin` command includes several subcommands that help administer a Kafka cluster and topics in it.
+
+List topics:
+
+```bash
+kafkaefd admin topics list
+```
+
+Create a topic:
+
+```bash
+kafkaefd admin topics create topicname --partitions 3 --replication-factor 1
+```
+
+Add partitions to a topic:
+
+```bash
+kafkaefd admin topics partition topicname 5
+```
+
+Delete a topic:
+
+```bash
+kafkaefd admin topics delete topicname
+```
+
+List brokers:
+
+```bash
+kafkaefd admin brokers
+```
+
+### Hello world demo
 
 This is a simple example that shows how to send and receive plain text messages.
 
