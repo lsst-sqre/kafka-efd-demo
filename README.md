@@ -263,3 +263,26 @@ In this demo, the default topic is called `helloavro`.
 
 - Keys are hashed and the same key is always assigned to the same partition. Multiple keys can share the same partition (new partitions aren't automatically built). This means that a topic should be pre-populated with all the partitions it will ever need — never add partitions later.
 - A message whose key is `None` is automatically load-balanced across the available partitions.
+
+### Avro and Schema Registry
+
+- [Terminology](https://docs.confluent.io/current/schema-registry/docs/schema_registry_tutorial.html#terminology):
+
+  - A Kafka **topic** contains **messages**.
+    A message is a key-value pair, and the key, message, or both, can be serialized as Avro.
+  - A **schema** defines the structure of the Avro data format.
+  - The Kafka topic name *can* be independent of the schema name.
+  - A **subject** is defined in the Schema Registry as a scope where a schema can evolve.
+    The name of the subject depends on the configured [subject name strategy](https://docs.confluent.io/current/schema-registry/docs/serializer-formatter.html#subject-name-strategy), which by default is set to derive subject name from topic name.
+
+- By default, clients automatically register new schemas.
+  In production, it's recommended that schemas should be registered outside of the producer app to provide control over schema evolution. To do this, set `auto.register.schemas=False`.
+  See [Auto Schema Registration](https://docs.confluent.io/current/schema-registry/docs/schema_registry_tutorial.html#auto-schema-registration).
+
+#### Futher reading
+
+- Confluent documentation: [Data Serialization and Evolution](https://docs.confluent.io/current/avro.html#data-serialization-and-evolution) (discusses Avro).
+
+- [Confluent Schema Registry documentation](https://docs.confluent.io/current/schema-registry/docs/index.html)
+
+- [Confluent Schema Registry RESTful API docs](https://docs.confluent.io/current/schema-registry/docs/api.html#schemaregistry-api)
