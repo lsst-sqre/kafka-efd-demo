@@ -7,7 +7,7 @@ This is based on the introductory post from Confluent:
 https://www.confluent.io/blog/introduction-to-apache-kafka-for-python-programmers/
 """
 
-__all__ = ('helloproducer', 'helloconsumer')
+__all__ = ('helloworld',)
 
 import click
 from confluent_kafka import Producer, Consumer, KafkaError
@@ -15,7 +15,14 @@ from confluent_kafka import Producer, Consumer, KafkaError
 from .utils import get_broker_url
 
 
-@click.command()
+@click.group()
+@click.pass_context
+def helloworld(ctx):
+    """Hello world demo of Kafka messaging with plain text messages.
+    """
+
+
+@helloworld.command()
 @click.argument(
     'value', default="world", required=False, nargs=1
 )
@@ -28,11 +35,11 @@ from .utils import get_broker_url
     help='Topic identifier'
 )
 @click.pass_context
-def helloproducer(ctx, value, key, topic):
+def produce(ctx, value, key, topic):
     """Hello-world producer that produces plain text messages.
     """
     settings = {
-        'bootstrap.servers': get_broker_url(ctx),
+        'bootstrap.servers': get_broker_url(ctx.parent),
     }
 
     p = Producer(settings)
@@ -57,7 +64,7 @@ def producer_callback(err, msg):
               .format(msg.key(), msg.value()))
 
 
-@click.command()
+@helloworld.command()
 @click.option(
     '--group', default='mygroup', show_default=True,
     help='ID of the consumer group.'
@@ -72,7 +79,7 @@ def producer_callback(err, msg):
          'multiple topics.'
 )
 @click.pass_context
-def helloconsumer(ctx, group, client, topics):
+def consume(ctx, group, client, topics):
     """Hello-world consumer.
     """
     topics = [str(t) for t in topics]
@@ -81,7 +88,7 @@ def helloconsumer(ctx, group, client, topics):
               group=group, client=client, topics=', '.join(topics)))
 
     settings = {
-        'bootstrap.servers': get_broker_url(ctx),
+        'bootstrap.servers': get_broker_url(ctx.parent),
         # Identify the consumer group
         'group.id': group,
         # Identify the client within the consumer group

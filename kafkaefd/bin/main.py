@@ -7,7 +7,7 @@ import click
 
 from .admin import admin
 from .registry import registry
-from .helloworld import helloproducer, helloconsumer
+from .helloworld import helloworld
 from .helloavro import helloavro
 
 # Add -h as a help shortcut option
@@ -58,8 +58,7 @@ def help(ctx, topic, **kw):
 
 
 # Add subcommands from other modules
-main.add_command(helloproducer)
-main.add_command(helloconsumer)
 main.add_command(admin)
 main.add_command(registry)
+main.add_command(helloworld)
 main.add_command(helloavro)

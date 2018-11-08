@@ -284,13 +284,13 @@ This is a simple example that shows how to send and receive plain text messages.
 2. In a second shell, run the consumer:
 
    ```bash
-   kafkaefd helloconsumer
+   kafkaefd helloworld consume
    ```
 
 3. In a third shell, fire off the producer:
 
    ```bash
-   kafkaefd helloproducer "Hello world"
+   kafkaefd helloworld produce "Hello world"
    ```
 
    Do this repeatedly (and with different messages).
@@ -341,7 +341,7 @@ In this demo, the default topic is called `helloavro`.
   In production, it's recommended that schemas should be registered outside of the producer app to provide control over schema evolution. To do this, set `auto.register.schemas=False`.
   See [Auto Schema Registration](https://docs.confluent.io/current/schema-registry/docs/schema_registry_tutorial.html#auto-schema-registration).
 
-#### Futher reading
+#### Further reading
 
 - Confluent documentation: [Data Serialization and Evolution](https://docs.confluent.io/current/avro.html#data-serialization-and-evolution) (discusses Avro).
 
