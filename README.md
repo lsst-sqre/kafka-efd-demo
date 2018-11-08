@@ -213,6 +213,68 @@ List brokers:
 kafkaefd admin brokers
 ```
 
+#### kafkaefd registry command
+
+The `kafkaefd registry` command group is a full-service admin client for the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/docs/index.html).
+Schemas for Avro-formatted messages are automatically maintained in the schema registry.
+
+List subjects (and optionally show details):
+
+```bash
+kafkaefd registry list --version --compatibility
+```
+
+Show a single version of a subject:
+
+```bash
+kafkaefd registry show subjectname  # defaults to latest
+kafkaefd registry show subjectname --version 1
+```
+
+Test the compatibility of a schema file to a version of a subject:
+
+```bash
+kafkaefd registry test subjectname ./schema.avsc
+kafkaefd registry test subjectname ./schema.avsc  --version 1
+```
+
+Upload a schema file for a subject:
+
+```bash
+kafkaefd registry upload subjectname ./schema.avsc
+```
+
+Delete a version (for development):
+
+```bash
+kafkaefd registry delete subjectname --version 1
+```
+
+Delete an entire subject (for development):
+
+```bash
+kafkaefd registry delete subjectname
+```
+
+Show the global compatibility configuration:
+
+```bash
+kafkaefd registry compat
+```
+
+Update the global compatibility configuration to one of `NONE`, 'FULL', 'FORWARD', `BACKWARD`:
+
+```bash
+kafkaefd registry compat --set BACKWARD
+```
+
+View and set the compatibility requirement for a specific subject:
+
+```bash
+kafkaefd registry compat --subject subjectname
+kafkaefd registry compat --subject subjectname --set BACKWARD
+```
+
 ### Hello world demo
 
 This is a simple example that shows how to send and receive plain text messages.
