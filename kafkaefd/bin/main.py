@@ -6,6 +6,7 @@ __all__ = ('main',)
 import click
 
 from .admin import admin
+from .registry import registry
 from .helloworld import helloproducer, helloconsumer
 from .helloavro import helloavro
 
@@ -60,4 +61,5 @@ def help(ctx, topic, **kw):
 main.add_command(helloproducer)
 main.add_command(helloconsumer)
 main.add_command(admin)
+main.add_command(registry)
 main.add_command(helloavro)
