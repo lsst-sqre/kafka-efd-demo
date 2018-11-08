@@ -36,6 +36,51 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
    install-tiller.sh
    ```
 
+### Related reading
+
+- [jonbcampos/kubernetes-series](https://github.com/jonbcampos/kubernetes-series): scripts for creating a secure Helm/Tiller deployment. Goes with these Medium articles:
+
+  - [Kubernetes: Day One](https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29)
+  - [Installing Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e)
+  - [Install Secure Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/install-secure-helm-in-gke-254d520061f7)
+
+## Prometheus and Grafana installation
+
+Install Prometheus and Grafana with Helm:
+
+```bash
+./install-prometheus.sh
+```
+
+Then access the various dashboards by port forwarding into the cluster:
+
+- Connect to the Prometheus server:
+
+  ```bash
+  ./port-forward-prometheus.sh
+  ```
+
+  Open http://localhost:9090 in a browser.
+
+- Connect to the Prometheus alert manager:
+
+  ```bash
+  ./port-forward-alertmanager.sh
+  ```
+
+  Open http://localhost:9093 in a browser.
+
+- Connect to Grafana:
+
+  ```bash
+  ./port-forward-grafana.sh
+  ```
+
+  Open http://localhost:3000 in your browser.
+  The username is "admin" and the password is printed by the port forwarding script.
+
+  Import the [confluent-open-source-grafana-dashboard.json](https://github.com/confluentinc/cp-helm-charts/blob/700b4326352cf5220e66e6976064740b8c1976c7/grafana-dashboard/confluent-open-source-grafana-dashboard.json) dashboard into Grafana to monitor Kafka.
+
 ## Kafka cluster installation
 
 From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts](https://github.com/confluentinc/cp-helm-charts):
@@ -44,7 +89,10 @@ From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts]
 ./install-confluent-kafka.sh
 ```
 
-See the [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html) for more information.
+### Related reading
+
+- [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html)
+- [Confluent Platform Helm charts repository](https://github.com/confluentinc/cp-helm-charts)
 
 ## Test the Kafka cluster
 
@@ -86,10 +134,217 @@ From the pod's shell,
    kafka-console-consumer --bootstrap-server confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic --from-beginning --timeout-ms 2000 --max-messages 1 | grep "$MESSAGE"
    ```
 
+## Connecting to Kafka via Telepresence
+
+[Telepresence](https://www.telepresence.io) is a tool that proxies the Kubernetes network onto your local development machine.
+For example, [Telepresennce](https://www.telepresence.io) lets a Kafka client, running locally, see and connect to all of the Kafka brokers.
+This use useful for development since you can test client code from a local shell instead of waiting to deploy a container to the Kubernetes cluster.
+
+To expose the Kafka brokers and Schema Registry locally, run this line in a local shell:
+
+```bash
+telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless --also-proxy confluent-kafka-cp-schema-registry
+```
+
+Now you can run other Kafka clients in other shells.
+
 ### Related reading
 
-- [jonbcampos/kubernetes-series](https://github.com/jonbcampos/kubernetes-series): scripts for creating a secure Helm/Tiller deployment. Goes with these Medium articles:
+- [Connecting to a Kafka cluster running in Kubernetes from outside](https://medium.com/@valercara/connecting-to-a-kafka-cluster-running-in-kubernetes-7601ae3a87d6)
 
-  - [Kubernetes: Day One](https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29)
-  - [Installing Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/installing-helm-in-google-kubernetes-engine-7f07f43c536e)
-  - [Install Secure Helm in Google Kubernetes Engine (GKE)](https://medium.com/google-cloud/install-secure-helm-in-gke-254d520061f7)
+## The kafkaefd demo application
+
+This repository includes the kafkaefd Python packages, which includes the `kafkaefd` command-line client that implements several demonstration Kafka producers and consumers, as well as administrative commands.
+Install the client in a Python 3.6+ virtual environment:
+
+```bash
+pip install -e .
+```
+
+Check that the command-line app is install
+
+```bash
+kafkaefd help
+```
+
+**Note:** The `--broker` option defaults to `confluent-kafka-cp-kafka-headless:9092`.
+This is the headless service for the Kafka brokers given the Kubernetes/Helm installation described above.
+This default should work both inside the cluster and via Telepresence.
+
+### The kafkaefd admin command
+
+The `kafkaefd admin` command includes several subcommands that help administer a Kafka cluster and topics in it.
+
+List topics:
+
+```bash
+kafkaefd admin topics list
+```
+
+Create a topic:
+
+```bash
+kafkaefd admin topics create topicname --partitions 3 --replication-factor 1
+```
+
+View, and optionally modify, configurations for a topic:
+
+```bash
+kafkaefd admin topics config topicname
+kafkaefd admin topics config topicname --detail
+kafkaefd admin topics config topicname --set retention.ms 86400000
+```
+
+Add partitions to a topic:
+
+```bash
+kafkaefd admin topics partition topicname 5
+```
+
+Delete a topic:
+
+```bash
+kafkaefd admin topics delete topicname
+```
+
+List brokers:
+
+```bash
+kafkaefd admin brokers
+```
+
+#### kafkaefd registry command
+
+The `kafkaefd registry` command group is a full-service admin client for the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/docs/index.html).
+Schemas for Avro-formatted messages are automatically maintained in the schema registry.
+
+List subjects (and optionally show details):
+
+```bash
+kafkaefd registry list --version --compatibility
+```
+
+Show a single version of a subject:
+
+```bash
+kafkaefd registry show subjectname  # defaults to latest
+kafkaefd registry show subjectname --version 1
+```
+
+Test the compatibility of a schema file to a version of a subject:
+
+```bash
+kafkaefd registry test subjectname ./schema.avsc
+kafkaefd registry test subjectname ./schema.avsc  --version 1
+```
+
+Upload a schema file for a subject:
+
+```bash
+kafkaefd registry upload subjectname ./schema.avsc
+```
+
+Delete a version (for development):
+
+```bash
+kafkaefd registry delete subjectname --version 1
+```
+
+Delete an entire subject (for development):
+
+```bash
+kafkaefd registry delete subjectname
+```
+
+Show the global compatibility configuration:
+
+```bash
+kafkaefd registry compat
+```
+
+Update the global compatibility configuration to one of `NONE`, 'FULL', 'FORWARD', `BACKWARD`:
+
+```bash
+kafkaefd registry compat --set BACKWARD
+```
+
+View and set the compatibility requirement for a specific subject:
+
+```bash
+kafkaefd registry compat --subject subjectname
+kafkaefd registry compat --subject subjectname --set BACKWARD
+```
+
+### Hello world demo
+
+This is a simple example that shows how to send and receive plain text messages.
+
+1. In one shell, run `telepresence`.
+
+2. In a second shell, run the consumer:
+
+   ```bash
+   kafkaefd helloworld consume
+   ```
+
+3. In a third shell, fire off the producer:
+
+   ```bash
+   kafkaefd helloworld produce "Hello world"
+   ```
+
+   Do this repeatedly (and with different messages).
+   You should see the consumer receive the messages.
+
+In this hello world demo, the topic is `mytopic`, and by default all messages are created with a key of `hello`.
+
+### Hello world for Avro
+
+The `kafkaefd helloavro` command group shows how to send and receive Avro-serialized messages.
+These commands integrate with the Confluent Schema Registry deployed as part of the Helm deployment.
+
+In this demo, the default topic is called `helloavro`.
+
+1. In one shell, run `telepresence`.
+
+2. In a second shell, start a consumer:
+
+   ```bash
+   kafkaefd helloavro consume
+   ```
+
+3. In a third shell, fire off a producer:
+
+   ```bash
+   kafkaefd helloavro produce "Hello world"
+   ```
+
+## Lessons learned
+
+### Keys and partitioning
+
+- Keys are hashed and the same key is always assigned to the same partition. Multiple keys can share the same partition (new partitions aren't automatically built). This means that a topic should be pre-populated with all the partitions it will ever need — never add partitions later.
+- A message whose key is `None` is automatically load-balanced across the available partitions.
+
+### Avro and Schema Registry
+
+- [Terminology](https://docs.confluent.io/current/schema-registry/docs/schema_registry_tutorial.html#terminology):
+
+  - A Kafka **topic** contains **messages**.
+    A message is a key-value pair, and the key, message, or both, can be serialized as Avro.
+  - A **schema** defines the structure of the Avro data format.
+  - The Kafka topic name *can* be independent of the schema name.
+  - A **subject** is defined in the Schema Registry as a scope where a schema can evolve.
+    The name of the subject depends on the configured [subject name strategy](https://docs.confluent.io/current/schema-registry/docs/serializer-formatter.html#subject-name-strategy), which by default is set to derive subject name from topic name.
+
+- By default, clients automatically register new schemas.
+  In production, it's recommended that schemas should be registered outside of the producer app to provide control over schema evolution. To do this, set `auto.register.schemas=False`.
+  See [Auto Schema Registration](https://docs.confluent.io/current/schema-registry/docs/schema_registry_tutorial.html#auto-schema-registration).
+
+#### Further reading
+
+- Confluent documentation: [Data Serialization and Evolution](https://docs.confluent.io/current/avro.html#data-serialization-and-evolution) (discusses Avro).
+
+- [Confluent Schema Registry documentation](https://docs.confluent.io/current/schema-registry/docs/index.html)
+
+- [Confluent Schema Registry RESTful API docs](https://docs.confluent.io/current/schema-registry/docs/api.html#schemaregistry-api)
