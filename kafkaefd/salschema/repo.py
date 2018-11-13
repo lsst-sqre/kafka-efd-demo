@@ -6,9 +6,9 @@ import asyncio
 import base64
 from io import BytesIO
 from pathlib import Path
+from collections.abc import Mapping
 
 from aiofile import AIOFile
-import aiohttp
 import cachetools
 from lxml import etree
 from gidgethub import aiohttp as gh_aiohttp
@@ -17,7 +17,7 @@ from gidgethub.sansio import accept_format
 cache = cachetools.LRUCache(maxsize=500)
 
 
-class SalXmlRepo():
+class SalXmlRepo(Mapping):
     """The ``ts_sal`` topic schema repository.
 
     Parameters
@@ -205,3 +205,10 @@ class SalXmlRepo():
 
     def __len__(self):
         return len(self._topics)
+
+    def __getitem__(self, topic_name):
+        return self._topics[topic_name]
+
+    def __iter__(self):
+        for key in self._topics:
+            yield key
