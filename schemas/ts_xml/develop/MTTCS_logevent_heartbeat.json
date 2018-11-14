@@ -4,6 +4,7 @@
     {
       "doc": "Heartbeat",
       "name": "heartbeat",
+      "sal_units": "NA",
       "type": "boolean"
     }
   ],

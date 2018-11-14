@@ -4,16 +4,19 @@
     {
       "doc": "Command Value",
       "name": "commandValue",
+      "sal_units": "NA",
       "type": "int"
     },
     {
       "doc": "Detailed State",
       "name": "detailedState",
+      "sal_units": "NA",
       "type": "int"
     },
     {
       "doc": "The system time.",
       "name": "timestamp",
+      "sal_units": "NA",
       "type": "double"
     }
   ],

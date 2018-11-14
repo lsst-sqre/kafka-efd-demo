@@ -3,6 +3,7 @@
     {
       "doc": "Encoder position of each axial encoder on sequence, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "axialEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": {
         "items": "double",
         "type": "array"

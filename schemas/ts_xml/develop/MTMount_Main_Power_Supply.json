@@ -13,21 +13,25 @@
     {
       "doc": "Power_Supply_DC_Voltage",
       "name": "Power_Supply_DC_Voltage",
+      "sal_units": "volt",
       "type": "double"
     },
     {
       "doc": "Power_Supply_Line_Voltage",
       "name": "Power_Supply_Line_Voltage",
+      "sal_units": "volt",
       "type": "double"
     },
     {
       "doc": "Power_Supply_Current",
       "name": "Power_Supply_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

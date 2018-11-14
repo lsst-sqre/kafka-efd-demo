@@ -7,6 +7,7 @@
     },
     {
       "name": "expTime",
+      "sal_units": "second",
       "type": "double"
     },
     {

@@ -3,11 +3,13 @@
   "fields": [
     {
       "name": "distance",
+      "sal_units": "millimeters",
       "type": "float"
     },
     {
       "doc": "The timestamp for when the event occurred.",
       "name": "timestamp",
+      "sal_units": "Seconds",
       "type": "double"
     }
   ],

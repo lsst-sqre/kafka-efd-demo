@@ -29,6 +29,7 @@
     {
       "doc": "Duration of the script process; 0 if still running.",
       "name": "duration",
+      "sal_units": "seconds",
       "type": "double"
     },
     {

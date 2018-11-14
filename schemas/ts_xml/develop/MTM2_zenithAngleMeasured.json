@@ -3,6 +3,7 @@
     {
       "doc": "Zenith angle is zero when the telescope is at zenith, and is always .ge. 0",
       "name": "zenithAngleMeasured",
+      "sal_units": "radians",
       "type": "double"
     }
   ],

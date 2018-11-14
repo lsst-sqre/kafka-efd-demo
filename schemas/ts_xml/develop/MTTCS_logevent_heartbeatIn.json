@@ -4,6 +4,7 @@
     {
       "doc": "Heartbeat to the controller.",
       "name": "heartbeatIn",
+      "sal_units": "NA",
       "type": "boolean"
     }
   ],

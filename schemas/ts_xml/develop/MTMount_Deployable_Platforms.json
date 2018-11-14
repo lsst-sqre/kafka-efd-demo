@@ -18,31 +18,37 @@
     {
       "doc": "DP_Current_Drive_2",
       "name": "DP_Current_Drive_2",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "DP_Current_Drive_1",
       "name": "DP_Current_Drive_1",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "DP_Position_Set_Section_1",
       "name": "DP_Position_Set_Section_1",
+      "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Position_Set_Section_2",
       "name": "DP_Position_Set_Section_2",
+      "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Position_Actual_Section_1",
       "name": "DP_Position_Actual_Section_1",
+      "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Position_Actual_Section_2",
       "name": "DP_Position_Actual_Section_2",
+      "sal_units": "meterm",
       "type": "double"
     },
     {
@@ -116,6 +122,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

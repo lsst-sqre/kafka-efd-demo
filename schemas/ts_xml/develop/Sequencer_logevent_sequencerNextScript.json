@@ -4,16 +4,19 @@
     {
       "doc": "Script name",
       "name": "sequencerScriptName",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the script",
       "name": "sequencerScriptIdentifier",
+      "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Script timestamp",
       "name": "sequencerScriptTimestamp",
+      "sal_units": "None",
       "type": "string"
     }
   ],

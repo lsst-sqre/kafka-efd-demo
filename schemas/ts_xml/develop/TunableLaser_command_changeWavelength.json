@@ -3,6 +3,7 @@
   "fields": [
     {
       "name": "wavelength",
+      "sal_units": "nanometers",
       "type": "long"
     }
   ],

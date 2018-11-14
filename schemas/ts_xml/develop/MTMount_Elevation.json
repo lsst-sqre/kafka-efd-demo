@@ -13,26 +13,31 @@
     {
       "doc": "Elevation_Angle_Set",
       "name": "Elevation_Angle_Set",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "Elevation_Aceleration_Actual",
       "name": "Elevation_Aceleration_Actual",
+      "sal_units": "deg/second^2",
       "type": "double"
     },
     {
       "doc": "Elevation_Velocity_Set",
       "name": "Elevation_Velocity_Set",
+      "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Elevation_Velocity_Actual",
       "name": "Elevation_Velocity_Actual",
+      "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Elevation_Torque_Actual",
       "name": "Elevation_Torque_Actual",
+      "sal_units": "Nmeter",
       "type": "double"
     },
     {
@@ -96,6 +101,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

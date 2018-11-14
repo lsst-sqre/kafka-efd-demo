@@ -3,31 +3,37 @@
     {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
       "name": "tangentLink0DegAbsoluteEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": "double"
     },
     {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
       "name": "tangentLink60DegAbsoluteEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": "double"
     },
     {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
       "name": "tangentLink120DegAbsoluteEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": "double"
     },
     {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
       "name": "tangentLink180DegAbsoluteEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": "double"
     },
     {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
       "name": "tangentLink240DegAbsoluteEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": "double"
     },
     {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
       "name": "tangentLink300DegAbsoluteEncoderPositionMeasured",
+      "sal_units": "microns",
       "type": "double"
     }
   ],

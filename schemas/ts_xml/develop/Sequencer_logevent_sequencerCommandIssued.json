@@ -4,31 +4,37 @@
     {
       "doc": "Command source",
       "name": "commandSource",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Sequence number",
       "name": "sequenceNumber",
+      "sal_units": "None",
       "type": "long"
     },
     {
       "doc": "identifier for the command",
       "name": "identifier",
+      "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Timestamp",
       "name": "timestamp",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Command sent",
       "name": "commandSent",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Command return code",
       "name": "returnValue",
+      "sal_units": "None",
       "type": "long"
     }
   ],

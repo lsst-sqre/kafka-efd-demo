@@ -6,10 +6,12 @@
     },
     {
       "name": "biasCurrent",
+      "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "biasVoltage",
+      "sal_units": "volt",
       "type": "float"
     },
     {
@@ -18,10 +20,12 @@
     },
     {
       "name": "clockCurrent",
+      "sal_units": "ampere",
       "type": "int"
     },
     {
       "name": "clockVoltage",
+      "sal_units": "volt",
       "type": "float"
     },
     {
@@ -30,10 +34,12 @@
     },
     {
       "name": "fpgaCurrent",
+      "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "fpgaVoltage",
+      "sal_units": "volt",
       "type": "float"
     },
     {
@@ -42,10 +48,12 @@
     },
     {
       "name": "lowCurrent",
+      "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "lowVoltage",
+      "sal_units": "volt",
       "type": "int"
     },
     {
@@ -54,10 +62,12 @@
     },
     {
       "name": "odCurrent",
+      "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "odVoltage",
+      "sal_units": "volt",
       "type": "float"
     },
     {

@@ -3,16 +3,19 @@
     {
       "doc": "Name for the sequencer instance",
       "name": "name",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the sequencer heartbeat",
       "name": "identifier",
+      "sal_units": "None",
       "type": "float"
     },
     {
       "doc": "Timestamp for the sequencer heartbeat",
       "name": "timestamp",
+      "sal_units": "None",
       "type": "string"
     }
   ],

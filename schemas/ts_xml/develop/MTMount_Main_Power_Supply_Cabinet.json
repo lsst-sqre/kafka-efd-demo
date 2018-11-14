@@ -3,21 +3,25 @@
     {
       "doc": "Power_Supply_Surface_Temperature",
       "name": "Power_Supply_Surface_Temperature",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Power_Supply_Internal_Temperature",
       "name": "Power_Supply_Internal_Temperature",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Power_Supply_Setpoint_Temperature",
       "name": "Power_Supply_Setpoint_Temperature",
+      "sal_units": "degC\"\"",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

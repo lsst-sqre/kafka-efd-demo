@@ -3,6 +3,7 @@
     {
       "doc": "Force measurement for each actuator in sequence, increasing force corresponds to increasing tension in the load cell",
       "name": "axialForceMeasured",
+      "sal_units": "radians",
       "type": {
         "items": "double",
         "type": "array"

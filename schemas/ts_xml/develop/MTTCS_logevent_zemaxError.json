@@ -2,7 +2,6 @@
   "doc": "http://sal.lsst.org/SAL/Events/MTTCS_logevent_zemaxError.html",
   "fields": [
     {
-      "doc": " ",
       "name": "details",
       "type": "string"
     }

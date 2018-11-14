@@ -19,11 +19,13 @@
     {
       "doc": "The effective time at which the image acquisition started (i.e. the end of the previous clear or readout)",
       "name": "timeStamp",
+      "sal_units": "second",
       "type": "double"
     },
     {
       "doc": "The requested exposure time",
       "name": "exposureTime",
+      "sal_units": "second",
       "type": "double"
     }
   ],

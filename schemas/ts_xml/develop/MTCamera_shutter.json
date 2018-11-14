@@ -9,6 +9,7 @@
     },
     {
       "name": "closeProfile",
+      "sal_units": "second",
       "type": {
         "items": "float",
         "type": "array"
@@ -16,6 +17,7 @@
     },
     {
       "name": "motorCurrent",
+      "sal_units": "ampere",
       "type": {
         "items": "float",
         "type": "array"
@@ -23,6 +25,7 @@
     },
     {
       "name": "motorTemp",
+      "sal_units": "Celsius",
       "type": {
         "items": "float",
         "type": "array"
@@ -34,6 +37,7 @@
     },
     {
       "name": "openProfile",
+      "sal_units": "second",
       "type": {
         "items": "float",
         "type": "array"

@@ -2,7 +2,6 @@
   "doc": "http://sal.lsst.org/SAL/Commands/MTMount_command_closeMirrorCover.html",
   "fields": [
     {
-      "doc": " ",
       "name": "state",
       "type": "boolean"
     }

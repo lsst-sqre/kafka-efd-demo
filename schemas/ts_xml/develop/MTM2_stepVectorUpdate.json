@@ -3,6 +3,7 @@
     {
       "doc": "Last step vector commands sent to actuators",
       "name": "steps",
+      "sal_units": "steps",
       "type": {
         "items": "long",
         "type": "array"

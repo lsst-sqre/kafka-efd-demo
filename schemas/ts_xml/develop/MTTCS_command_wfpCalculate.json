@@ -2,7 +2,6 @@
   "doc": "http://sal.lsst.org/SAL/Commands/MTTCS_command_wfpCalculate.html",
   "fields": [
     {
-      "doc": " ",
       "name": "uid",
       "type": "string"
     }

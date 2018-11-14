@@ -3,6 +3,7 @@
   "fields": [
     {
       "name": "vlimit",
+      "sal_units": "deg/s",
       "type": "double"
     }
   ],

@@ -3,6 +3,7 @@
     {
       "doc": "The wavelength for the laser",
       "name": "wavelength",
+      "sal_units": "nanometers",
       "type": "double"
     }
   ],

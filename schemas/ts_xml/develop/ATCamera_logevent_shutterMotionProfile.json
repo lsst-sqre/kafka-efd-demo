@@ -4,6 +4,7 @@
     {
       "doc": "The measured average exposure time",
       "name": "measuredExposureTime",
+      "sal_units": "seconds",
       "type": "double"
     }
   ],

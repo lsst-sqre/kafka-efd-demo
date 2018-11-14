@@ -4,6 +4,7 @@
     {
       "doc": "Event to announce to OCS that the telescope is in position.",
       "name": "targetInPosition",
+      "sal_units": "NA",
       "type": "boolean"
     }
   ],

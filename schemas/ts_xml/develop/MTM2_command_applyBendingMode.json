@@ -12,6 +12,7 @@
     {
       "doc": "Value for each bending mode",
       "name": "bendingModeValue",
+      "sal_units": "microns",
       "type": {
         "items": "double",
         "type": "array"

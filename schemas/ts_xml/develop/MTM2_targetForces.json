@@ -3,6 +3,7 @@
     {
       "doc": "Target set point values",
       "name": "setPoint",
+      "sal_units": "N",
       "type": {
         "items": "double",
         "type": "array"
@@ -11,6 +12,7 @@
     {
       "doc": "Target components",
       "name": "forceComponent",
+      "sal_units": "N",
       "type": {
         "items": "double",
         "type": "array"

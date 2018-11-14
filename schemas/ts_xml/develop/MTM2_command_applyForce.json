@@ -4,6 +4,7 @@
     {
       "doc": "Force in newtons, increasing force corresponds to increasing tension on the load cell",
       "name": "forceSetPoint",
+      "sal_units": "Newtons",
       "type": {
         "items": "double",
         "type": "array"

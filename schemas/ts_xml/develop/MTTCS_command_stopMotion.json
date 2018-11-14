@@ -2,7 +2,6 @@
   "doc": "Stop movion when in any motion state",
   "fields": [
     {
-      "doc": " ",
       "name": "stopMotion",
       "type": "boolean"
     }

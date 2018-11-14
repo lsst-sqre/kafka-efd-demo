@@ -17,6 +17,7 @@
     {
       "doc": "Longitude, latitude axes of position in coordinateSystem",
       "name": "position",
+      "sal_units": "degrees",
       "type": {
         "items": "double",
         "type": "array"
@@ -39,16 +40,19 @@
     {
       "doc": "Camera angle in rotationSystem",
       "name": "cameraAngle",
+      "sal_units": "degrees",
       "type": "double"
     },
     {
       "doc": "Comma-separated names of acceptable filters, or blank for any filter.",
       "name": "filters",
+      "sal_units": "seconds",
       "type": "string"
     },
     {
       "doc": "Desired dome state.",
       "name": "dome",
+      "sal_units": "seconds",
       "type": {
         "name": "dome",
         "symbols": [
@@ -62,6 +66,7 @@
     {
       "doc": "Estimated duration of the script, excluding slewing to the initial position required by the script.",
       "name": "duration",
+      "sal_units": "seconds",
       "type": "double"
     }
   ],

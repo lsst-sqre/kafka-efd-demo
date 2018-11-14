@@ -8,21 +8,25 @@
     {
       "doc": "Main_Cabinet_External_Temperature",
       "name": "Main_Cabinet_External_Temperature",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Main_Cabinet_Internal_Temperature_1",
       "name": "Main_Cabinet_Internal_Temperature_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Main_Cabinet_Internal_Temperature_2",
       "name": "Main_Cabinet_Internal_Temperature_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Main_Cabinet_Setpoint_Temperature",
       "name": "Main_Cabinet_Setpoint_Temperature",
+      "sal_units": "degC",
       "type": "double"
     },
     {
@@ -33,6 +37,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

@@ -3,6 +3,7 @@
   "fields": [
     {
       "name": "angle",
+      "sal_units": "deg",
       "type": "double"
     }
   ],

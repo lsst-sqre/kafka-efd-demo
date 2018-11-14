@@ -123,26 +123,31 @@
     {
       "doc": "TEC_Temperature_Area_1",
       "name": "TEC_Temperature_Area_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_2",
       "name": "TEC_Temperature_Area_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_3",
       "name": "TEC_Temperature_Area_3",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_4",
       "name": "TEC_Temperature_Area_4",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_5",
       "name": "TEC_Temperature_Area_5",
+      "sal_units": "degC",
       "type": "double"
     },
     {
@@ -178,61 +183,73 @@
     {
       "doc": "TEC_Internal_Temperature_Cabinet_1",
       "name": "TEC_Internal_Temperature_Cabinet_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_2",
       "name": "TEC_Internal_Temperature_Cabinet_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_3",
       "name": "TEC_Internal_Temperature_Cabinet_3",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_4",
       "name": "TEC_Internal_Temperature_Cabinet_4",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_5",
       "name": "TEC_Internal_Temperature_Cabinet_5",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_6",
       "name": "TEC_Internal_Temperature_Cabinet_6",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_1",
       "name": "TEC_Surface_Temperature_Cabinet_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_2",
       "name": "TEC_Surface_Temperature_Cabinet_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_3",
       "name": "TEC_Surface_Temperature_Cabinet_3",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_4",
       "name": "TEC_Surface_Temperature_Cabinet_4",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_5",
       "name": "TEC_Surface_Temperature_Cabinet_5",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_6",
       "name": "TEC_Surface_Temperature_Cabinet_6",
+      "sal_units": "degC",
       "type": "double"
     },
     {
@@ -263,26 +280,31 @@
     {
       "doc": "TEC_Temperature_Fan_13_Input",
       "name": "TEC_Temperature_Fan_13_Input",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Fan_14_Input",
       "name": "TEC_Temperature_Fan_14_Input",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Regulation_Chiller_1_Valve",
       "name": "TEC_Regulation_Chiller_1_Valve",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Regulation_Chiller_2_Valve",
       "name": "TEC_Regulation_Chiller_2_Valve",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

@@ -3,6 +3,7 @@
   "fields": [
     {
       "name": "moveLinearStage",
+      "sal_units": "m",
       "type": "double"
     }
   ],

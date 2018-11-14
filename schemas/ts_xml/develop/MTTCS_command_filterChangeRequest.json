@@ -2,7 +2,6 @@
   "doc": "Move to required position to execute a filter change",
   "fields": [
     {
-      "doc": " ",
       "name": "filterChangeRequest",
       "type": "string"
     }

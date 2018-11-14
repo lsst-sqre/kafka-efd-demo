@@ -2,6 +2,7 @@
   "fields": [
     {
       "name": "loopTime",
+      "sal_units": "ms",
       "type": "double"
     }
   ],

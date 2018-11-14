@@ -2,12 +2,10 @@
   "doc": "http://sal.lsst.org/SAL/Events/MTTCS_logevent_wfpDataReady.html",
   "fields": [
     {
-      "doc": " ",
       "name": "imagesLocationUri",
       "type": "string"
     },
     {
-      "doc": " ",
       "name": "imagesMatchUri",
       "type": "string"
     }

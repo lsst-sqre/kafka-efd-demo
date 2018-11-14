@@ -13,51 +13,61 @@
     {
       "doc": "Elevation_Surface_Temperature_Motor_1",
       "name": "Elevation_Surface_Temperature_Motor_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_2",
       "name": "Elevation_Surface_Temperature_Motor_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_3",
       "name": "Elevation_Surface_Temperature_Motor_3",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_4",
       "name": "Elevation_Surface_Temperature_Motor_4",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_5",
       "name": "Elevation_Surface_Temperature_Motor_5",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_6",
       "name": "Elevation_Surface_Temperature_Motor_6",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_7",
       "name": "Elevation_Surface_Temperature_Motor_7",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_8",
       "name": "Elevation_Surface_Temperature_Motor_8",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_9",
       "name": "Elevation_Surface_Temperature_Motor_9",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Motor_10",
       "name": "Elevation_Surface_Temperature_Motor_10",
+      "sal_units": "degC",
       "type": "double"
     },
     {
@@ -68,81 +78,97 @@
     {
       "doc": "Elevation_Surface_Temperature_Motor_12",
       "name": "Elevation_Surface_Temperature_Motor_12",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_1",
       "name": "Elevation_Surface_Temperature_Drive_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_2",
       "name": "Elevation_Surface_Temperature_Drive_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_3",
       "name": "Elevation_Surface_Temperature_Drive_3",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_4",
       "name": "Elevation_Surface_Temperature_Drive_4",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_5",
       "name": "Elevation_Surface_Temperature_Drive_5",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_6",
       "name": "Elevation_Surface_Temperature_Drive_6",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_7",
       "name": "Elevation_Surface_Temperature_Drive_7",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_8",
       "name": "Elevation_Surface_Temperature_Drive_8",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_9",
       "name": "Elevation_Surface_Temperature_Drive_9",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_10",
       "name": "Elevation_Surface_Temperature_Drive_10",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_11",
       "name": "Elevation_Surface_Temperature_Drive_11",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Drive_12",
       "name": "Elevation_Surface_Temperature_Drive_12",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Setpoint_Group_1",
       "name": "Elevation_Surface_Temperature_Setpoint_Group_1",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Elevation_Surface_Temperature_Setpoint_Group_2",
       "name": "Elevation_Surface_Temperature_Setpoint_Group_2",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

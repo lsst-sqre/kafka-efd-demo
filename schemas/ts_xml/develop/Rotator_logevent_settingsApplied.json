@@ -3,14 +3,17 @@
   "fields": [
     {
       "name": "positionAngleUpperLimit",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "velocityLimit",
+      "sal_units": "deg/s",
       "type": "double"
     },
     {
       "name": "accelerationLimit",
+      "sal_units": "deg/s^2",
       "type": "double"
     },
     {
@@ -19,6 +22,7 @@
     },
     {
       "name": "positionAngleLowerLimit",
+      "sal_units": "deg",
       "type": "double"
     },
     {

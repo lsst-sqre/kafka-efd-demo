@@ -8,26 +8,31 @@
     {
       "doc": "Azimuth_Angle_Actual",
       "name": "Azimuth_Angle_Actual",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "Azimuth_Angle_Set",
       "name": "Azimuth_Angle_Set",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "Azimuth_Aceleration_Actual",
       "name": "Azimuth_Aceleration_Actual",
+      "sal_units": "deg/second^2",
       "type": "double"
     },
     {
       "doc": "Azimuth_Velocity_Set",
       "name": "Azimuth_Velocity_Set",
+      "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Azimuth_Velocity_Actual",
       "name": "Azimuth_Velocity_Actual",
+      "sal_units": "deg/second",
       "type": "double"
     },
     {
@@ -86,6 +91,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

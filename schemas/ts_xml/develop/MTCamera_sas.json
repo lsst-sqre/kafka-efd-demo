@@ -6,6 +6,7 @@
     },
     {
       "name": "boardCurrent",
+      "sal_units": "ampere",
       "type": {
         "items": "float",
         "type": "array"
@@ -13,6 +14,7 @@
     },
     {
       "name": "boardTemp",
+      "sal_units": "kelvin",
       "type": {
         "items": "float",
         "type": "array"
@@ -20,6 +22,7 @@
     },
     {
       "name": "boardVoltage",
+      "sal_units": "volt",
       "type": {
         "items": "float",
         "type": "array"
@@ -38,6 +41,7 @@
     },
     {
       "name": "ccdtemp",
+      "sal_units": "kelvin",
       "type": "long"
     },
     {

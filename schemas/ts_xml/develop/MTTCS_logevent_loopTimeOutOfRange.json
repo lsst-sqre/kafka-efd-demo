@@ -4,6 +4,7 @@
     {
       "doc": "True if the actual loop time is outside the specified limits.",
       "name": "loopTimeOutOfRange",
+      "sal_units": "NA",
       "type": "boolean"
     }
   ],

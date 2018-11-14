@@ -3,171 +3,205 @@
     {
       "doc": "Actual parallel clock voltage",
       "name": "ckPSH_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Parallel clock lower voltage",
       "name": "ckPOV",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Applied OG voltage",
       "name": "ogoV",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "On-board temperature measurement 1",
       "name": "temp1",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "On-board temperature measurement 2",
       "name": "temp2",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "On-board temperature measurement 3",
       "name": "temp3",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "On-board temperature measurement 4",
       "name": "temp4",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "On-board temperature measurement 5",
       "name": "temp5",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "On-board temperature measurement 6",
       "name": "temp6",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "ASPIC temperature Upper",
       "name": "atemp0U",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "ASPIC temperature Lower",
       "name": "atemp0L",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "Temperature for CCD",
       "name": "ccdTemp0",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "RTD Temperature",
       "name": "rtdTemp",
+      "sal_units": "Celsius",
       "type": "float"
     },
     {
       "doc": "Digital PS voltage measured on REB",
       "name": "digPS_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Digital PS current measured on REB",
       "name": "digPS_I",
+      "sal_units": "milliampere",
       "type": "float"
     },
     {
       "doc": "Analog PS voltage measured on REB",
       "name": "anaPS_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Analog PS current measured on REB",
       "name": "anaPS_I",
+      "sal_units": "milliampere",
       "type": "float"
     },
     {
       "doc": "Clock High PS voltage measured on REB",
       "name": "clkHPS_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Clock High PS current measured on REB",
       "name": "clkHPS_I",
+      "sal_units": "milliampere",
       "type": "float"
     },
     {
       "doc": "Output Drain PS voltage (OD)",
       "name": "odPS_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Output Drain PS current (OD)",
       "name": "odPS_I",
+      "sal_units": "milliampere",
       "type": "float"
     },
     {
       "doc": "Heater PS voltage",
       "name": "htrPS_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Heater PS current",
       "name": "htrPS_I",
+      "sal_units": "milliampere",
       "type": "float"
     },
     {
       "doc": "Total power consumption of REB including heater by summing V*I for all power inputs",
       "name": "power",
+      "sal_units": "watt",
       "type": "float"
     },
     {
       "doc": "Serial Clock upper voltage",
       "name": "sckU_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Serial Clock lower voltage",
       "name": "sckL_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Reset Gate upper voltage",
       "name": "rgU_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Reset Gate lower voltage",
       "name": "rgL_V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Actual Serial Clock voltage",
       "name": "cks0V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Actual Reset Gate voltage",
       "name": "rg0V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Applied Output Drain voltage",
       "name": "od0V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Applied RD voltage",
       "name": "rd0V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Applied GD voltage",
       "name": "gd0V",
+      "sal_units": "volt",
       "type": "float"
     },
     {
       "doc": "Applied Output Drain current",
       "name": "od0I",
+      "sal_units": "milliampere",
       "type": "float"
     }
   ],

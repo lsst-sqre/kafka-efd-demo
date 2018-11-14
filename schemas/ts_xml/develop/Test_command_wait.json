@@ -9,6 +9,7 @@
     {
       "doc": "Desired command duration.",
       "name": "duration",
+      "sal_units": "seconds",
       "type": "double"
     }
   ],

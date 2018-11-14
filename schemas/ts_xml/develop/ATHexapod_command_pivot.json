@@ -3,14 +3,17 @@
   "fields": [
     {
       "name": "x",
+      "sal_units": "um",
       "type": "double"
     },
     {
       "name": "y",
+      "sal_units": "um",
       "type": "double"
     },
     {
       "name": "z",
+      "sal_units": "um",
       "type": "double"
     }
   ],

@@ -3,10 +3,12 @@
   "fields": [
     {
       "name": "offsetX",
+      "sal_units": "arcseconds",
       "type": "double"
     },
     {
       "name": "offsetY",
+      "sal_units": "arcseconds",
       "type": "double"
     }
   ],

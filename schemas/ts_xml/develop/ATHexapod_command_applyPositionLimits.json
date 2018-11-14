@@ -3,26 +3,32 @@
   "fields": [
     {
       "name": "xyMax",
+      "sal_units": "um",
       "type": "double"
     },
     {
       "name": "zMin",
+      "sal_units": "um",
       "type": "double"
     },
     {
       "name": "zMax",
+      "sal_units": "um",
       "type": "double"
     },
     {
       "name": "uvMax",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "wMin",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "wMax",
+      "sal_units": "deg",
       "type": "double"
     }
   ],

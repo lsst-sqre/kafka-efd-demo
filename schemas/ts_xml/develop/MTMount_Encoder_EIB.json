@@ -3,46 +3,55 @@
     {
       "doc": "Azimuth_Actual_Encoder_Head_1",
       "name": "Azimuth_Actual_Encoder_Head_1",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Azimuth_Actual_Encoder_Head_2",
       "name": "Azimuth_Actual_Encoder_Head_2",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Azimuth_Actual_Encoder_Head_3",
       "name": "Azimuth_Actual_Encoder_Head_3",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Azimuth_Actual_Encoder_Head_4",
       "name": "Azimuth_Actual_Encoder_Head_4",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Elevation_Actual_Encoder_Head_1",
       "name": "Elevation_Actual_Encoder_Head_1",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Elevation_Actual_Encoder_Head_2",
       "name": "Elevation_Actual_Encoder_Head_2",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Elevation_Actual_Encoder_Head_3",
       "name": "Elevation_Actual_Encoder_Head_3",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "Elevation_Actual_Encoder_Head_4",
       "name": "Elevation_Actual_Encoder_Head_4",
+      "sal_units": "deg",
       "type": "long"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

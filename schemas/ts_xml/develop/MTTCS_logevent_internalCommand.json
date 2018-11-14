@@ -4,6 +4,7 @@
     {
       "doc": "Command Object",
       "name": "commandObject",
+      "sal_units": "NA",
       "type": {
         "items": "bytes",
         "type": "array"

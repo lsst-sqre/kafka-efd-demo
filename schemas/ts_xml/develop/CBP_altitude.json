@@ -3,6 +3,7 @@
     {
       "doc": "The altitude of the CBP",
       "name": "altitude",
+      "sal_units": "Degrees",
       "type": "float"
     }
   ],

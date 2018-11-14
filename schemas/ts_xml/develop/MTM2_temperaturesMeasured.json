@@ -3,6 +3,7 @@
     {
       "doc": "As measured temperatures",
       "name": "temps",
+      "sal_units": "degC",
       "type": {
         "items": "double",
         "type": "array"
@@ -11,6 +12,7 @@
     {
       "doc": "As measured intake temperatures",
       "name": "intakeTemperatures",
+      "sal_units": "degC",
       "type": {
         "items": "double",
         "type": "array"
@@ -19,6 +21,7 @@
     {
       "doc": "As measured exhaust temperatures",
       "name": "exhaustTemperatures",
+      "sal_units": "degC",
       "type": {
         "items": "double",
         "type": "array"

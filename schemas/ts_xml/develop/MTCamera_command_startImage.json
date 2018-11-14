@@ -23,6 +23,7 @@
     },
     {
       "name": "timeout",
+      "sal_units": "second",
       "type": "double"
     }
   ],

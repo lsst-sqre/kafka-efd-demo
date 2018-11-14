@@ -18,41 +18,49 @@
     {
       "doc": "CameraRotatorPosition",
       "name": "CameraRotatorPosition",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "CCW_Angle_1",
       "name": "CCW_Angle_1",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "CCW_Angle_2",
       "name": "CCW_Angle_2",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "CCW_Camera_Position",
       "name": "CCW_Camera_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "CCW_Speed_1",
       "name": "CCW_Speed_1",
+      "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "CCW_Speed_2",
       "name": "CCW_Speed_2",
+      "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "CCW_Current_1",
       "name": "CCW_Current_1",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "CCW_Current_2",
       "name": "CCW_Current_2",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
@@ -76,6 +84,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

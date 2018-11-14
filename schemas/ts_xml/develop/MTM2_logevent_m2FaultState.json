@@ -2,7 +2,6 @@
   "doc": "http://sal.lsst.org/SAL/Events/MTM2_logevent_m2FaultState.html",
   "fields": [
     {
-      "doc": " ",
       "name": "state",
       "type": {
         "name": "state",

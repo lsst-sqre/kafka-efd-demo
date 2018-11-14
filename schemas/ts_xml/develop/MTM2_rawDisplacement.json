@@ -3,6 +3,7 @@
     {
       "doc": "Raw measurements from displacement sensors",
       "name": "rawPosition",
+      "sal_units": "microns",
       "type": {
         "items": "double",
         "type": "array"

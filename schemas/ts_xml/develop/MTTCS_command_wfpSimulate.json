@@ -2,12 +2,10 @@
   "doc": "http://sal.lsst.org/SAL/Commands/MTTCS_command_wfpSimulate.html",
   "fields": [
     {
-      "doc": " ",
       "name": "uid",
       "type": "string"
     },
     {
-      "doc": " ",
       "name": "z_arr",
       "type": {
         "items": "double",

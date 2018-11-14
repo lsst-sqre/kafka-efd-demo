@@ -28,41 +28,49 @@
     {
       "doc": "MirrorCover_1_Current",
       "name": "MirrorCover_1_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCover_2_Current",
       "name": "MirrorCover_2_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCover_3_Current",
       "name": "MirrorCover_3_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCover_4_Current",
       "name": "MirrorCover_4_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCover_1_Actual_Position",
       "name": "MirrorCover_1_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCover_2_Actual_Position",
       "name": "MirrorCover_2_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCover_3_Actual_Position",
       "name": "MirrorCover_3_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCover_4_Actual_Position",
       "name": "MirrorCover_4_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
@@ -116,6 +124,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

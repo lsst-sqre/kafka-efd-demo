@@ -198,26 +198,31 @@
     {
       "doc": "Temperature_Oil_from_bearings_XPos_side",
       "name": "Temperature_Oil_from_bearings_XPos_side",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Temperature_Oil_from_bearings_XNeg_side",
       "name": "Temperature_Oil_from_bearings_XNeg_side",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Temperature_Tank",
       "name": "Temperature_Tank",
+      "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Pressure_Tank",
       "name": "Pressure_Tank",
+      "sal_units": "bar",
       "type": "double"
     },
     {
       "doc": "Ambient_Temperature_Measured_by_OSS",
       "name": "Ambient_Temperature_Measured_by_OSS",
+      "sal_units": "degC",
       "type": "double"
     },
     {
@@ -1123,6 +1128,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

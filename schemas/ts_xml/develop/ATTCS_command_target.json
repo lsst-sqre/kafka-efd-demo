@@ -23,6 +23,7 @@
     },
     {
       "name": "exposureTime",
+      "sal_units": "seconds",
       "type": "double"
     }
   ],

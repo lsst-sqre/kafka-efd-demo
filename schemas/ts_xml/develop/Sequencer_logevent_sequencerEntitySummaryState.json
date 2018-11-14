@@ -4,46 +4,55 @@
     {
       "doc": "Name of (commandable) entity",
       "name": "name",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the (commandable) entity",
       "name": "identifier",
+      "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Timestamp of creation of the (commandable) entity",
       "name": "timestamp",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Address of (commandable) entity",
       "name": "address",
+      "sal_units": "None",
       "type": "long"
     },
     {
       "doc": "Current state of (commandable) entity",
       "name": "currentState",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Previous state of (commandable) entity",
       "name": "previousState",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Executing command of (commandable) entity",
       "name": "executing",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Commands available in this state of the (commandable) entity",
       "name": "commandsAvailable",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Configurations available in this state of the (commandable) entity",
       "name": "configurationsAvailable",
+      "sal_units": "None",
       "type": "string"
     }
   ],

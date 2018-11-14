@@ -38,6 +38,7 @@
     {
       "doc": "ACW_Angle_Setpoint",
       "name": "ACW_Angle_Setpoint",
+      "sal_units": "deg",
       "type": "double"
     },
     {
@@ -61,6 +62,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

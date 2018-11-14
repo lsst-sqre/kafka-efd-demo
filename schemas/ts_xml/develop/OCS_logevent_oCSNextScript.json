@@ -4,16 +4,19 @@
     {
       "doc": "Script name",
       "name": "oCSScriptName",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the script",
       "name": "oCSScriptIdentifier",
+      "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Script timestamp",
       "name": "oCSScriptTimestamp",
+      "sal_units": "None",
       "type": "string"
     }
   ],

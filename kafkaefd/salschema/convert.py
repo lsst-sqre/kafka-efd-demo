@@ -61,6 +61,7 @@ def convert_topic(root, validate=True):
 
         _copy_xml_tag(field, item.find('EFDB_Name'), key='name')
         _copy_xml_tag(field, item.find('Description'), key='doc')
+        _copy_xml_tag(field, item.find('Units'), key='sal_units')
 
         count_tag = item.find('Count')
         if count_tag is not None and count_tag.text is not None:
@@ -113,10 +114,12 @@ def _copy_xml_tag(avro_obj, xml_tag, key=None):
         name is used.
     """
     if xml_tag is not None and xml_tag.text is not None:
-        if key is None:
-            # Use the tag's name as the Avro key itself
-            key = xml_tag.tag
-        avro_obj[key] = xml_tag.text
+        text = xml_tag.text.strip()  # filter empty strings
+        if text:
+            if key is None:
+                # Use the tag's name as the Avro key itself
+                key = xml_tag.tag
+            avro_obj[key] = xml_tag.text
 
 
 def validate_schema(avsc, raise_error=False):

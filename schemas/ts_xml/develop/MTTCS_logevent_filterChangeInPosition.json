@@ -4,6 +4,7 @@
     {
       "doc": "Event to announce to OCS that rotator is in position for a filter change.",
       "name": "filterChangeInPosition",
+      "sal_units": "NA",
       "type": "boolean"
     }
   ],

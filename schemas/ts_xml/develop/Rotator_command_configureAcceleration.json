@@ -3,6 +3,7 @@
   "fields": [
     {
       "name": "alimit",
+      "sal_units": "deg/s^2",
       "type": "double"
     }
   ],

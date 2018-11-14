@@ -3,31 +3,37 @@
     {
       "doc": "Tilt in xy plane",
       "name": "xTilt",
+      "sal_units": "radians",
       "type": "double"
     },
     {
       "doc": "Tilt in xy plane",
       "name": "yTilt",
+      "sal_units": "radians",
       "type": "double"
     },
     {
       "doc": "Offset along z = optical axis",
       "name": "piston",
+      "sal_units": "microns",
       "type": "double"
     },
     {
       "doc": "Position in optical coordinate system per LTS-136",
       "name": "xPosition",
+      "sal_units": "radians",
       "type": "double"
     },
     {
       "doc": "Position in optical coordinate system per LTS-136",
       "name": "yPosition",
+      "sal_units": "radians",
       "type": "double"
     },
     {
       "doc": "Position in optical coordinate system per LTS-136",
       "name": "thetaZPosition",
+      "sal_units": "radians",
       "type": "double"
     }
   ],

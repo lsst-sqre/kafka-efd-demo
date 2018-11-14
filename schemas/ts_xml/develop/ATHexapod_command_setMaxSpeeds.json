@@ -3,18 +3,22 @@
   "fields": [
     {
       "name": "xyMax",
+      "sal_units": "um/s",
       "type": "double"
     },
     {
       "name": "rxryMax",
+      "sal_units": "deg/s",
       "type": "double"
     },
     {
       "name": "zMax",
+      "sal_units": "um/s",
       "type": "double"
     },
     {
       "name": "rzMax",
+      "sal_units": "deg/s",
       "type": "double"
     }
   ],

@@ -7,30 +7,37 @@
     },
     {
       "name": "startA",
+      "sal_units": "ms",
       "type": "float"
     },
     {
       "name": "startB",
+      "sal_units": "ms",
       "type": "float"
     },
     {
       "name": "travelDistance",
+      "sal_units": "mm",
       "type": "float"
     },
     {
       "name": "startVelocity",
+      "sal_units": "Steps/s",
       "type": "float"
     },
     {
       "name": "acceleration",
+      "sal_units": "m/s^2",
       "type": "float"
     },
     {
       "name": "maxVelocity",
+      "sal_units": "Steps/s",
       "type": "float"
     },
     {
       "name": "threshold",
+      "sal_units": "Steps",
       "type": "float"
     },
     {

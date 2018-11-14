@@ -2,27 +2,22 @@
   "doc": "Target to point the telescope",
   "fields": [
     {
-      "doc": " ",
       "name": "targetId",
       "type": "long"
     },
     {
-      "doc": " ",
       "name": "fieldId",
       "type": "long"
     },
     {
-      "doc": " ",
       "name": "groupId",
       "type": "long"
     },
     {
-      "doc": " ",
       "name": "filter",
       "type": "string"
     },
     {
-      "doc": " ",
       "name": "requestTime",
       "type": "double"
     },
@@ -37,22 +32,18 @@
       "type": "double"
     },
     {
-      "doc": " ",
       "name": "angle",
       "type": "double"
     },
     {
-      "doc": " ",
       "name": "num_exposures",
       "type": "long"
     },
     {
-      "doc": " ",
       "name": "exposure_times",
       "type": "long"
     },
     {
-      "doc": " ",
       "name": "slew_time",
       "type": "double"
     }

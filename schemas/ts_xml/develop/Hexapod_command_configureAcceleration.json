@@ -3,6 +3,7 @@
   "fields": [
     {
       "name": "accmax",
+      "sal_units": "um/s^2",
       "type": "double"
     }
   ],

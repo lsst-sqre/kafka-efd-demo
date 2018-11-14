@@ -3,6 +3,7 @@
     {
       "doc": "The azimuth of the CBP.",
       "name": "azimuth",
+      "sal_units": "Degrees",
       "type": "float"
     }
   ],

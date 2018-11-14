@@ -3,6 +3,7 @@
     {
       "doc": "The temperature sensors for the laser",
       "name": "temperature",
+      "sal_units": "degrees",
       "type": "float"
     }
   ],

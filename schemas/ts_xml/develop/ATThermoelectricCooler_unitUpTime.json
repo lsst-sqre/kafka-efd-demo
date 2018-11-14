@@ -2,6 +2,7 @@
   "fields": [
     {
       "name": "upTime",
+      "sal_units": "Minutes",
       "type": "long"
     },
     {

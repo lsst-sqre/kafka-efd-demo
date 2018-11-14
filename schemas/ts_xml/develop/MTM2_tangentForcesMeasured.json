@@ -3,31 +3,37 @@
     {
       "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
       "name": "tangentLink0DegForceMeasured",
+      "sal_units": "Newtons",
       "type": "double"
     },
     {
       "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
       "name": "tangentLink60DegForceMeasured",
+      "sal_units": "Newtons",
       "type": "double"
     },
     {
       "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
       "name": "tangentLink120DegForceMeasured",
+      "sal_units": "Newtons",
       "type": "double"
     },
     {
       "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
       "name": "tangentLink180DegForceMeasured",
+      "sal_units": "Newtons",
       "type": "double"
     },
     {
       "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
       "name": "tangentLink240DegForceMeasured",
+      "sal_units": "Newtons",
       "type": "double"
     },
     {
       "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
       "name": "tangentLink300DegForceMeasured",
+      "sal_units": "Newtons",
       "type": "double"
     }
   ],

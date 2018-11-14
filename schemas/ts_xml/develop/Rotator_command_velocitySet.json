@@ -3,10 +3,12 @@
   "fields": [
     {
       "name": "velocity",
+      "sal_units": "deg/s",
       "type": "double"
     },
     {
       "name": "moveDuration",
+      "sal_units": "s",
       "type": "double"
     }
   ],

@@ -23,41 +23,49 @@
     {
       "doc": "MirrorCoverLock_1_Actual_Position",
       "name": "MirrorCoverLock_1_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_2_Actual_Position",
       "name": "MirrorCoverLock_2_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_3_Actual_Position",
       "name": "MirrorCoverLock_3_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_4_Actual_Position",
       "name": "MirrorCoverLock_4_Actual_Position",
+      "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_1_Current",
       "name": "MirrorCoverLock_1_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_2_Current",
       "name": "MirrorCoverLock_2_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_3_Current",
       "name": "MirrorCoverLock_3_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "MirrorCoverLock_4_Current",
       "name": "MirrorCoverLock_4_Current",
+      "sal_units": "Amp",
       "type": "double"
     },
     {
@@ -111,6 +119,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_units": "second",
       "type": "double"
     }
   ],

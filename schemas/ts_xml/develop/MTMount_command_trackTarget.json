@@ -4,26 +4,30 @@
     {
       "doc": "Azimuth angle",
       "name": "az_angle",
+      "sal_units": "Degrees",
       "type": "double"
     },
     {
       "doc": "Azimuth velocity",
       "name": "az_velocity",
+      "sal_units": "Degrees/second",
       "type": "double"
     },
     {
       "doc": " Elevation angle",
       "name": "el_angle",
+      "sal_units": "Degrees",
       "type": "double"
     },
     {
       "doc": " Elevation velocity",
       "name": "el_velocity",
+      "sal_units": "Degrees/second",
       "type": "double"
     },
     {
-      "doc": " ",
       "name": "time",
+      "sal_units": "Seconds",
       "type": "double"
     },
     {

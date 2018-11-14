@@ -4,31 +4,37 @@
     {
       "doc": "Script name",
       "name": "oCSScriptName",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the script",
       "name": "oCSScriptIdentifier",
+      "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Script timestamp",
       "name": "oCSScriptTimestamp",
+      "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Error line number in the script",
       "name": "oCSScriptLineNumber",
+      "sal_units": "None",
       "type": "long"
     },
     {
       "doc": "Error code for the script",
       "name": "oCSScriptErrorCode",
+      "sal_units": "None",
       "type": "long"
     },
     {
       "doc": "Error text for the script",
       "name": "oCSScriptErrorText",
+      "sal_units": "None",
       "type": "string"
     }
   ],

@@ -3,6 +3,7 @@
     {
       "doc": "The system time (TAI).",
       "name": "flow",
+      "sal_units": "lpm",
       "type": "float"
     },
     {
