@@ -1,0 +1,13 @@
+{
+  "name": "key",
+  "namespace": "org.lsst.kafka_efd_demo.aioload.simple",
+  "type": "record",
+  "doc": "Key for a simple topic.",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "default": "default"
+    }
+  ]
+}
