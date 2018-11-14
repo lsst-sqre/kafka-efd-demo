@@ -81,7 +81,6 @@
   "name": "ATHexapod_logevent_settingsAppliedPositions",
   "namespace": "lsst.sal",
   "sal_alias": "settingsAppliedPositions",
-  "sal_author": null,
   "sal_subsystem": "ATHexapod",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

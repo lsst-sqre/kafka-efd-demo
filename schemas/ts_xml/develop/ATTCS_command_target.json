@@ -28,14 +28,9 @@
   ],
   "name": "ATTCS_command_target",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "target",
-  "sal_author": null,
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "ATTCS",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.8.2",
   "type": "record"
 }

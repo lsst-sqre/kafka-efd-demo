@@ -12,14 +12,12 @@
   ],
   "name": "MTM2_command_applyForce",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "applyForce",
   "sal_author": "salgenerator",
   "sal_device": "support",
   "sal_property": "actuators",
   "sal_subsystem": "MTM2",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.8.0",
   "type": "record"
 }

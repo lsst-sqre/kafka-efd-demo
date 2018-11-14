@@ -9,7 +9,6 @@
   "name": "Hexapod_logevent_inPosition",
   "namespace": "lsst.sal",
   "sal_alias": "inPosition",
-  "sal_author": null,
   "sal_subsystem": "Hexapod",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.5.1",

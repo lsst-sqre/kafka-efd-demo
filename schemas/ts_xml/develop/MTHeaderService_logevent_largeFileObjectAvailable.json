@@ -33,7 +33,6 @@
   "name": "MTHeaderService_logevent_largeFileObjectAvailable",
   "namespace": "lsst.sal",
   "sal_alias": "largeFileObjectAvailable",
-  "sal_author": null,
   "sal_subsystem": "MTHeaderService",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

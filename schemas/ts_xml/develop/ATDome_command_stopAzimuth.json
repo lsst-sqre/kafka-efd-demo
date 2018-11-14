@@ -8,14 +8,9 @@
   ],
   "name": "ATDome_command_stopAzimuth",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "stopAzimuth",
-  "sal_author": null,
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "ATDome",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.8.2",
   "type": "record"
 }

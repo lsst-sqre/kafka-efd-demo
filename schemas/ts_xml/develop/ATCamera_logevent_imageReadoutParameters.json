@@ -67,7 +67,6 @@
   "name": "ATCamera_logevent_imageReadoutParameters",
   "namespace": "lsst.sal",
   "sal_alias": "imageReadoutParameters",
-  "sal_author": null,
   "sal_subsystem": "ATCamera",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

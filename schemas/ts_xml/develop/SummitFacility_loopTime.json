@@ -8,7 +8,6 @@
   ],
   "name": "SummitFacility_loopTime",
   "namespace": "lsst.sal",
-  "sal_author": null,
   "sal_subsystem": "SummitFacility",
   "sal_topic_type": "SALTelemetry",
   "sal_version": "3.7.1",

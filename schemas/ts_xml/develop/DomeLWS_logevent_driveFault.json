@@ -14,7 +14,6 @@
   "name": "DomeLWS_logevent_driveFault",
   "namespace": "lsst.sal",
   "sal_alias": "driveFault",
-  "sal_author": null,
   "sal_subsystem": "DomeLWS",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

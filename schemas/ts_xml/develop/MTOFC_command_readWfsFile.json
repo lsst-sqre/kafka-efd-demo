@@ -15,14 +15,9 @@
   ],
   "name": "MTOFC_command_readWfsFile",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "readWfsFile",
-  "sal_author": null,
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "MTOFC",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.7.0",
   "type": "record"
 }

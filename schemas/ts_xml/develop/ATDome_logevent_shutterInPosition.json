@@ -9,7 +9,6 @@
   "name": "ATDome_logevent_shutterInPosition",
   "namespace": "lsst.sal",
   "sal_alias": "shutterInPosition",
-  "sal_author": null,
   "sal_subsystem": "ATDome",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8.2",

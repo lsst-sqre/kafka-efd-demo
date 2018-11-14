@@ -10,7 +10,6 @@
   "name": "MTCamera_logevent_availableFilters",
   "namespace": "lsst.sal",
   "sal_alias": "availableFilters",
-  "sal_author": null,
   "sal_subsystem": "MTCamera",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

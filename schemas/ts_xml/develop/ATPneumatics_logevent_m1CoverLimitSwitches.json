@@ -37,7 +37,6 @@
   "name": "ATPneumatics_logevent_m1CoverLimitSwitches",
   "namespace": "lsst.sal",
   "sal_alias": "m1CoverLimitSwitches",
-  "sal_author": null,
   "sal_subsystem": "ATPneumatics",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

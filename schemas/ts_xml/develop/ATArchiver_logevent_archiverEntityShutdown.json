@@ -21,7 +21,6 @@
   "name": "ATArchiver_logevent_archiverEntityShutdown",
   "namespace": "lsst.sal",
   "sal_alias": "archiverEntityShutdown",
-  "sal_author": null,
   "sal_subsystem": "ATArchiver",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

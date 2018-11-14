@@ -45,7 +45,6 @@
   "name": "ATCamera_logevent_bonnShutterSettingsApplied",
   "namespace": "lsst.sal",
   "sal_alias": "bonnShutterSettingsApplied",
-  "sal_author": null,
   "sal_subsystem": "ATCamera",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

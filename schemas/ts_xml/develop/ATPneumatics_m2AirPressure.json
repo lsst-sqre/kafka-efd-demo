@@ -7,7 +7,6 @@
   ],
   "name": "ATPneumatics_m2AirPressure",
   "namespace": "lsst.sal",
-  "sal_author": null,
   "sal_subsystem": "ATPneumatics",
   "sal_topic_type": "SALTelemetry",
   "sal_version": "3.7.1",

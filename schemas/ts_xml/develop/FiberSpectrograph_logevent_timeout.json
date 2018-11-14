@@ -9,7 +9,6 @@
   "name": "FiberSpectrograph_logevent_timeout",
   "namespace": "lsst.sal",
   "sal_alias": "timeout",
-  "sal_author": null,
   "sal_subsystem": "FiberSpectrograph",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

@@ -10,7 +10,6 @@
   "name": "MTOFC_logevent_noEnoughZernikeTerm",
   "namespace": "lsst.sal",
   "sal_alias": "noEnoughZernikeTerm",
-  "sal_author": null,
   "sal_subsystem": "MTOFC",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.0",

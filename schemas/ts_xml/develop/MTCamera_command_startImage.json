@@ -28,14 +28,9 @@
   ],
   "name": "MTCamera_command_startImage",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "startImage",
-  "sal_author": null,
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "MTCamera",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.7.1",
   "type": "record"
 }

@@ -8,14 +8,10 @@
   ],
   "name": "TunableLaser_command_startPropagateLaser",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "startPropagateLaser",
   "sal_author": "ecoughlin",
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "TunableLaser",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.8",
   "type": "record"
 }

@@ -9,7 +9,6 @@
   "name": "DomeADB_logevent_driveReady",
   "namespace": "lsst.sal",
   "sal_alias": "driveReady",
-  "sal_author": null,
   "sal_subsystem": "DomeADB",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

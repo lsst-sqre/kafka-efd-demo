@@ -15,7 +15,6 @@
   "name": "DomeLouvers_logevent_movementPrevented",
   "namespace": "lsst.sal",
   "sal_alias": "movementPrevented",
-  "sal_author": null,
   "sal_subsystem": "DomeLouvers",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

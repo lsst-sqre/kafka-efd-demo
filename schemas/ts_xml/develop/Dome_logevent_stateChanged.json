@@ -10,7 +10,6 @@
   "name": "Dome_logevent_stateChanged",
   "namespace": "lsst.sal",
   "sal_alias": "stateChanged",
-  "sal_author": null,
   "sal_subsystem": "Dome",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

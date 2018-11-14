@@ -4,7 +4,6 @@
   "name": "MTCamera_logevent_startShutterOpen",
   "namespace": "lsst.sal",
   "sal_alias": "startShutterOpen",
-  "sal_author": null,
   "sal_subsystem": "MTCamera",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

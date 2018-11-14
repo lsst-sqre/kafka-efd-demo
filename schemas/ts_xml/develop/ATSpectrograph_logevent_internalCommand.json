@@ -12,7 +12,6 @@
   "name": "ATSpectrograph_logevent_internalCommand",
   "namespace": "lsst.sal",
   "sal_alias": "internalCommand",
-  "sal_author": null,
   "sal_subsystem": "ATSpectrograph",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.2",

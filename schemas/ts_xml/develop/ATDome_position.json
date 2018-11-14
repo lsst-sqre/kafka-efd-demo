@@ -31,7 +31,6 @@
   ],
   "name": "ATDome_position",
   "namespace": "lsst.sal",
-  "sal_author": null,
   "sal_subsystem": "ATDome",
   "sal_topic_type": "SALTelemetry",
   "sal_version": "3.8.2",

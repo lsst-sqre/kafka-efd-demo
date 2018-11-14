@@ -13,7 +13,6 @@
   "name": "Scheduler_logevent_internalCommand",
   "namespace": "lsst.sal",
   "sal_alias": "internalCommand",
-  "sal_author": null,
   "sal_subsystem": "Scheduler",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8.13",

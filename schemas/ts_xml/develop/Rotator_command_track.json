@@ -16,14 +16,9 @@
   ],
   "name": "Rotator_command_track",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "track",
-  "sal_author": null,
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "Rotator",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "3.5.1",
   "type": "record"
 }

@@ -21,7 +21,6 @@
   "name": "CatchupArchiver_logevent_catchuparchiverEntityStartup",
   "namespace": "lsst.sal",
   "sal_alias": "catchuparchiverEntityStartup",
-  "sal_author": null,
   "sal_subsystem": "CatchupArchiver",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

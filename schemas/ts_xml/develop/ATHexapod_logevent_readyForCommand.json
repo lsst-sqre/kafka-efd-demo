@@ -9,7 +9,6 @@
   "name": "ATHexapod_logevent_readyForCommand",
   "namespace": "lsst.sal",
   "sal_alias": "readyForCommand",
-  "sal_author": null,
   "sal_subsystem": "ATHexapod",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

@@ -9,7 +9,6 @@
   "name": "DomeMONCS_logevent_subsystemError",
   "namespace": "lsst.sal",
   "sal_alias": "subsystemError",
-  "sal_author": null,
   "sal_subsystem": "DomeMONCS",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

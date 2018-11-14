@@ -9,7 +9,6 @@
   "name": "ATMCS_logevent_m3State",
   "namespace": "lsst.sal",
   "sal_alias": "m3State",
-  "sal_author": null,
   "sal_subsystem": "ATMCS",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

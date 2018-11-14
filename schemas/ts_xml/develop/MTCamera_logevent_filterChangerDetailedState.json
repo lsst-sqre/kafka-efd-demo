@@ -19,7 +19,6 @@
   "name": "MTCamera_logevent_filterChangerDetailedState",
   "namespace": "lsst.sal",
   "sal_alias": "filterChangerDetailedState",
-  "sal_author": null,
   "sal_subsystem": "MTCamera",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

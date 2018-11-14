@@ -9,7 +9,6 @@
   "name": "Rotator_logevent_tracking",
   "namespace": "lsst.sal",
   "sal_alias": "tracking",
-  "sal_author": null,
   "sal_subsystem": "Rotator",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.5.1",

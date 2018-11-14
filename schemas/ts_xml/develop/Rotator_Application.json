@@ -18,7 +18,6 @@
   ],
   "name": "Rotator_Application",
   "namespace": "lsst.sal",
-  "sal_author": null,
   "sal_subsystem": "Rotator",
   "sal_topic_type": "SALTelemetry",
   "sal_version": "3.5.1",

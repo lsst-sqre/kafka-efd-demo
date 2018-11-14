@@ -21,7 +21,6 @@
   "name": "ATMonochromator_logevent_selectedGrating",
   "namespace": "lsst.sal",
   "sal_alias": "selectedGrating",
-  "sal_author": null,
   "sal_subsystem": "ATMonochromator",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.5.2",

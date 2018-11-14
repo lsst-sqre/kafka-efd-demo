@@ -9,7 +9,6 @@
   "name": "SummitFacility_logevent_heartbeat",
   "namespace": "lsst.sal",
   "sal_alias": "heartbeat",
-  "sal_author": null,
   "sal_subsystem": "SummitFacility",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

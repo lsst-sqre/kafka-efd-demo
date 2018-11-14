@@ -83,7 +83,6 @@
   ],
   "name": "DomeLWS_status",
   "namespace": "lsst.sal",
-  "sal_author": null,
   "sal_subsystem": "DomeLWS",
   "sal_topic_type": "SALTelemetry",
   "sal_version": "3.7.1",

@@ -18,7 +18,6 @@
   "name": "MTCamera_logevent_imageReadinessDetailedState",
   "namespace": "lsst.sal",
   "sal_alias": "imageReadinessDetailedState",
-  "sal_author": null,
   "sal_subsystem": "MTCamera",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

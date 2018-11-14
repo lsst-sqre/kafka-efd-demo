@@ -18,7 +18,6 @@
   "name": "Electrometer_logevent_intensity",
   "namespace": "lsst.sal",
   "sal_alias": "intensity",
-  "sal_author": null,
   "sal_subsystem": "Electrometer",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

@@ -37,7 +37,6 @@
   "name": "Rotator_logevent_settingsApplied",
   "namespace": "lsst.sal",
   "sal_alias": "settingsApplied",
-  "sal_author": null,
   "sal_subsystem": "Rotator",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.5.1",

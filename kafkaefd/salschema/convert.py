@@ -30,12 +30,11 @@ def convert_topic(root, validate=True):
     avsc = {
         'type': 'record',
         'namespace': 'lsst.sal',
-        'name': root.find('EFDB_Topic').text,
         'fields': []
     }
 
-    if root.find('Explanation') is not None:
-        avsc['doc'] = root.find('Explanation').text
+    _copy_xml_tag(avsc, root.find('EFDB_Topic'), key='name')
+    _copy_xml_tag(avsc, root.find('Explanation'), key='doc')
 
     # Add SAL metadata. These are keys that don't match to core Avro schema.
     root_metadata_tags = (
@@ -49,9 +48,8 @@ def convert_topic(root, validate=True):
         'Value',
     )
     for tag in root_metadata_tags:
-        if root.find(tag) is not None:
-            metadata_key = '_'.join(('sal', tag.lower()))
-            avsc[metadata_key] = root.find(tag).text
+        metadata_key = '_'.join(('sal', tag.lower()))
+        _copy_xml_tag(avsc, root.find(tag), key=metadata_key)
 
     # The topic type itself is a special kind of metadata
     # (SALCommand, SALEvent, or SALTelemetry)
@@ -59,16 +57,13 @@ def convert_topic(root, validate=True):
 
     # Convert fields
     for item in root.iterfind('item'):
-        field = {
-            'name': item.find('EFDB_Name').text
-        }
+        field = dict()
 
-        if item.find('Description') is not None \
-                and item.find('Description').text is not None:
-            field['doc'] = item.find('Description').text
+        _copy_xml_tag(field, item.find('EFDB_Name'), key='name')
+        _copy_xml_tag(field, item.find('Description'), key='doc')
 
         count_tag = item.find('Count')
-        if count_tag is not None:
+        if count_tag is not None and count_tag.text is not None:
             count = int(count_tag.text)
         else:
             count = 1  # default
@@ -82,11 +77,12 @@ def convert_topic(root, validate=True):
                     sal_type, avsc['name'], field['name'])
                 )
 
-        if item.find('Enumeration') is not None:
+        enumeration = item.find('Enumeration')
+        if enumeration is not None and enumeration.text is not None:
             field['type'] = {
                 'type': 'enum',
                 'name': field['name'],
-                'symbols': item.find('Enumeration').text.split(',')
+                'symbols': enumeration.text.split(',')
             }
 
         elif count > 1:
@@ -101,6 +97,26 @@ def convert_topic(root, validate=True):
         validate_schema(avsc, raise_error=True)
 
     return avsc
+
+
+def _copy_xml_tag(avro_obj, xml_tag, key=None):
+    """Copy an XML tag into an avro schema object
+
+    Parameters
+    ----------
+    avro_obj : `dict`
+        Schema object to copy the tag into. This object is modified in place.
+    xml_tag : lxml element
+        XML element, generated from ``root.find('tagname')``.
+    key : `str`, optional
+        Key to create in the ``avro_obj`` `dict`. If not set, the xml tag's
+        name is used.
+    """
+    if xml_tag is not None and xml_tag.text is not None:
+        if key is None:
+            # Use the tag's name as the Avro key itself
+            key = xml_tag.tag
+        avro_obj[key] = xml_tag.text
 
 
 def validate_schema(avsc, raise_error=False):

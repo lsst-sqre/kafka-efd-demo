@@ -9,7 +9,6 @@
   "name": "ATDome_logevent_mainDoorState",
   "namespace": "lsst.sal",
   "sal_alias": "mainDoorState",
-  "sal_author": null,
   "sal_subsystem": "ATDome",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8.2",

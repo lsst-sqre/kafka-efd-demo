@@ -56,7 +56,6 @@
   "name": "ScriptQueue_logevent_script",
   "namespace": "lsst.sal",
   "sal_alias": "script",
-  "sal_author": null,
   "sal_subsystem": "ScriptQueue",
   "sal_topic_type": "SALEvent",
   "sal_version": "1.0.0",

@@ -16,7 +16,6 @@
   "name": "MTM1M3_logevent_hardpointMonitorState",
   "namespace": "lsst.sal",
   "sal_alias": "hardpointMonitorState",
-  "sal_author": null,
   "sal_subsystem": "MTM1M3",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.0",

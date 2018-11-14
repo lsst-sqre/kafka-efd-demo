@@ -41,7 +41,6 @@
   "name": "PromptProcessing_logevent_entitySummaryState",
   "namespace": "lsst.sal",
   "sal_alias": "entitySummaryState",
-  "sal_author": null,
   "sal_subsystem": "PromptProcessing",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8",

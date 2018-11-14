@@ -9,14 +9,9 @@
   ],
   "name": "ScriptQueue_command_showScript",
   "namespace": "lsst.sal",
-  "sal_action": null,
   "sal_alias": "showScript",
-  "sal_author": null,
-  "sal_device": null,
-  "sal_property": null,
   "sal_subsystem": "ScriptQueue",
   "sal_topic_type": "SALCommand",
-  "sal_value": null,
   "sal_version": "1.0.0",
   "type": "record"
 }

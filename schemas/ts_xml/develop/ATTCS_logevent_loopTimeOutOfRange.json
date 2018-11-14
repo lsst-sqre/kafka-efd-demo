@@ -9,7 +9,6 @@
   "name": "ATTCS_logevent_loopTimeOutOfRange",
   "namespace": "lsst.sal",
   "sal_alias": "loopTimeOutOfRange",
-  "sal_author": null,
   "sal_subsystem": "ATTCS",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.8.2",

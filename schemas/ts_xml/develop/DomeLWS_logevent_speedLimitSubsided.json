@@ -9,7 +9,6 @@
   "name": "DomeLWS_logevent_speedLimitSubsided",
   "namespace": "lsst.sal",
   "sal_alias": "speedLimitSubsided",
-  "sal_author": null,
   "sal_subsystem": "DomeLWS",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",

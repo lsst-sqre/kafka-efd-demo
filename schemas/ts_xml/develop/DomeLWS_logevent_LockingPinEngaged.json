@@ -10,7 +10,6 @@
   "name": "DomeLWS_logevent_LockingPinEngaged",
   "namespace": "lsst.sal",
   "sal_alias": "LockingPinEngaged",
-  "sal_author": null,
   "sal_subsystem": "DomeLWS",
   "sal_topic_type": "SALEvent",
   "sal_version": "3.7.1",
