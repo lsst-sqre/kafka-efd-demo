@@ -3,26 +3,31 @@
     {
       "doc": "MirrorCover_Status",
       "name": "MirrorCover_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCover_1_Status",
       "name": "MirrorCover_1_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCover_2_Status",
       "name": "MirrorCover_2_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCover_3_Status",
       "name": "MirrorCover_3_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCover_4_Status",
       "name": "MirrorCover_4_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -116,6 +121,7 @@
     {
       "doc": "MirrorCover_Interlocks",
       "name": "MirrorCover_Interlocks",
+      "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
         "type": "array"
@@ -124,6 +130,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

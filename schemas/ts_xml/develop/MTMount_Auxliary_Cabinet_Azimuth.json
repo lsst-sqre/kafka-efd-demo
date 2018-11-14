@@ -3,6 +3,7 @@
     {
       "doc": "Auxiliar_Azimuth_Cabinet_Status",
       "name": "Auxiliar_Azimuth_Cabinet_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -32,6 +33,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

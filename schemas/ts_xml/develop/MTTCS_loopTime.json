@@ -2,6 +2,10 @@
   "fields": [
     {
       "name": "loopTime",
+      "sal_frequency": 0.02,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
       "type": "double"
     }
   ],

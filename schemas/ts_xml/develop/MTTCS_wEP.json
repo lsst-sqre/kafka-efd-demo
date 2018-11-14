@@ -2,6 +2,12 @@
   "fields": [
     {
       "name": "basisSetName",
+      "sal_bytes_per_night": 597196,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 256,
+      "sal_values_per_publisher": 256,
       "type": {
         "items": "bytes",
         "type": "array"
@@ -9,10 +15,22 @@
     },
     {
       "name": "numberOfTerms",
+      "sal_bytes_per_night": 9331,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 4,
+      "sal_values_per_publisher": 1,
       "type": "long"
     },
     {
       "name": "zArr1",
+      "sal_bytes_per_night": 1194393,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 512,
+      "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
         "type": "array"
@@ -20,6 +38,12 @@
     },
     {
       "name": "zArr2",
+      "sal_bytes_per_night": 1194393,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 512,
+      "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
         "type": "array"
@@ -27,6 +51,12 @@
     },
     {
       "name": "zArr3",
+      "sal_bytes_per_night": 1194393,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 512,
+      "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
         "type": "array"
@@ -34,6 +64,12 @@
     },
     {
       "name": "zArr4",
+      "sal_bytes_per_night": 1194393,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 512,
+      "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
         "type": "array"

@@ -3,6 +3,7 @@
     {
       "doc": "Balancing_Status",
       "name": "Balancing_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -68,6 +69,7 @@
     {
       "doc": "Balancing_Interlocks",
       "name": "Balancing_Interlocks",
+      "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
         "type": "array"
@@ -76,6 +78,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

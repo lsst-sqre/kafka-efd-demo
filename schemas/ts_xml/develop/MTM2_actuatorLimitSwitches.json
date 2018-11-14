@@ -3,6 +3,10 @@
     {
       "doc": "Positive direction limit switch statuses",
       "name": "forward",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 4,
+      "sal_values_per_publisher": 1,
       "type": {
         "items": "boolean",
         "type": "array"
@@ -11,6 +15,10 @@
     {
       "doc": "Negative direction limit switch statuses",
       "name": "reverse",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 4,
+      "sal_values_per_publisher": 1,
       "type": {
         "items": "boolean",
         "type": "array"

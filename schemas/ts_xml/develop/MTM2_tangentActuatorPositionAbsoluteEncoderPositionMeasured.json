@@ -1,39 +1,63 @@
 {
   "fields": [
     {
-      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink0DegAbsoluteEncoderPositionMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
       "sal_units": "microns",
+      "sal_values_per_publisher": 1,
       "type": "double"
     },
     {
-      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink60DegAbsoluteEncoderPositionMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
       "sal_units": "microns",
+      "sal_values_per_publisher": 1,
       "type": "double"
     },
     {
-      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink120DegAbsoluteEncoderPositionMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
       "sal_units": "microns",
+      "sal_values_per_publisher": 1,
       "type": "double"
     },
     {
-      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink180DegAbsoluteEncoderPositionMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
       "sal_units": "microns",
+      "sal_values_per_publisher": 1,
       "type": "double"
     },
     {
-      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink240DegAbsoluteEncoderPositionMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
       "sal_units": "microns",
+      "sal_values_per_publisher": 1,
       "type": "double"
     },
     {
-      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink300DegAbsoluteEncoderPositionMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
       "sal_units": "microns",
+      "sal_values_per_publisher": 1,
       "type": "double"
     }
   ],

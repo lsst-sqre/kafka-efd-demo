@@ -3,21 +3,25 @@
     {
       "doc": "MirrorCoverLock_1_Status",
       "name": "MirrorCoverLock_1_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCoverLock_2_Status",
       "name": "MirrorCoverLock_2_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCoverLock_3_Status",
       "name": "MirrorCoverLock_3_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "MirrorCoverLock_4_Status",
       "name": "MirrorCoverLock_4_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -111,6 +115,7 @@
     {
       "doc": "MirrorCoverLock_Interlocks",
       "name": "MirrorCoverLock_Interlocks",
+      "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
         "type": "array"
@@ -119,6 +124,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

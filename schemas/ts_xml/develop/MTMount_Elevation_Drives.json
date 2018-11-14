@@ -3,61 +3,73 @@
     {
       "doc": "Elevation_Status_Drive_1",
       "name": "Elevation_Status_Drive_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_2",
       "name": "Elevation_Status_Drive_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_3",
       "name": "Elevation_Status_Drive_3",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_4",
       "name": "Elevation_Status_Drive_4",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_5",
       "name": "Elevation_Status_Drive_5",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_6",
       "name": "Elevation_Status_Drive_6",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_7",
       "name": "Elevation_Status_Drive_7",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_8",
       "name": "Elevation_Status_Drive_8",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_9",
       "name": "Elevation_Status_Drive_9",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_10",
       "name": "Elevation_Status_Drive_10",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_11",
       "name": "Elevation_Status_Drive_11",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Status_Drive_12",
       "name": "Elevation_Status_Drive_12",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -123,6 +135,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

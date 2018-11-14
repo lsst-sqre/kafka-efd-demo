@@ -3,11 +3,13 @@
     {
       "doc": "Power_Supply_Status",
       "name": "Power_Supply_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Power_Supply_Thermal_Status",
       "name": "Power_Supply_Thermal_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -31,6 +33,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

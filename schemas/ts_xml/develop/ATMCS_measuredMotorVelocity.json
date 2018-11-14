@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "doc": "Measured velocity in deg/sec for elevation. ",
+      "doc": "Measured velocity in deg/sec for elevation.",
       "name": "elevationMotorVelocity",
       "type": "double"
     },
@@ -16,12 +16,12 @@
       "type": "double"
     },
     {
-      "doc": "Measured velocity in deg/sec for nasmyth1. ",
+      "doc": "Measured velocity in deg/sec for nasmyth1.",
       "name": "nasmyth1MotorVelocity",
       "type": "double"
     },
     {
-      "doc": "Measured velocity in deg/sec for nasmyth2. ",
+      "doc": "Measured velocity in deg/sec for nasmyth2.",
       "name": "nasmyth2MotorVelocity",
       "type": "double"
     }

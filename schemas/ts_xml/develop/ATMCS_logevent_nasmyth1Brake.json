@@ -2,7 +2,7 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
-      "doc": "This telemetry item reports the auxiliary telescope elevation motor current. ",
+      "doc": "This telemetry item reports the auxiliary telescope elevation motor current.",
       "name": "engage",
       "type": "boolean"
     }

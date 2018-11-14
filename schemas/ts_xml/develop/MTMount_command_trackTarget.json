@@ -14,13 +14,13 @@
       "type": "double"
     },
     {
-      "doc": " Elevation angle",
+      "doc": "Elevation angle",
       "name": "el_angle",
       "sal_units": "Degrees",
       "type": "double"
     },
     {
-      "doc": " Elevation velocity",
+      "doc": "Elevation velocity",
       "name": "el_velocity",
       "sal_units": "Degrees/second",
       "type": "double"

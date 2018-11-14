@@ -1,12 +1,12 @@
 {
   "fields": [
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
       "name": "nasmyth1CalculatedAngle",
       "type": "double"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuthCalculatedAngle",
       "type": "double"
     },
@@ -36,32 +36,32 @@
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuthEncoder1Raw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuthEncoder2Raw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuthEncoder3Raw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
       "name": "nasmyth1Encoder1Raw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
       "name": "nasmyth1Encoder2Raw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
       "name": "nasmyth1Encoder3Raw",
       "type": "long"
     },

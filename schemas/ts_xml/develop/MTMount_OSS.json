@@ -3,171 +3,205 @@
     {
       "doc": "OSS_Status",
       "name": "OSS_Status",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_valve_5802",
       "name": "OSS_A_Status_valve_5802",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_valve_5801",
       "name": "OSS_A_Status_valve_5801",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_valve_5303",
       "name": "OSS_A_Status_valve_5303",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_valve_5302",
       "name": "OSS_A_Status_valve_5302",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_valve_5301",
       "name": "OSS_A_Status_valve_5301",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_valve_5011",
       "name": "OSS_A_Status_valve_5011",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_pump_5004",
       "name": "OSS_A_Status_pump_5004",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_A_Status_Filter_7",
       "name": "OSS_A_Status_Filter_7",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_centre_pump_5012",
       "name": "Status_Bottom_centre_pump_5012",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_centre_valve_5001",
       "name": "Status_Bottom_centre_valve_5001",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_heater_HET_5001",
       "name": "Status_Bottom_heater_HET_5001",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_left_pump_5011",
       "name": "Status_Bottom_left_pump_5011",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_left_valve_5000",
       "name": "Status_Bottom_left_valve_5000",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_right_pump_5013",
       "name": "Status_Bottom_right_pump_5013",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Bottom_right_valve_5002",
       "name": "Status_Bottom_right_valve_5002",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_bridge_pump_running_unit_1",
       "name": "Status_bridge_pump_running_unit_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_bridge_pump_running_unit_2",
       "name": "Status_bridge_pump_running_unit_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_cooler_running_unit_1",
       "name": "Status_cooler_running_unit_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_cooler_running_unit_2",
       "name": "Status_cooler_running_unit_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Filter_5",
       "name": "Status_Filter_5",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_Filter_6",
       "name": "Status_Filter_6",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_pump_5001",
       "name": "Status_pump_5001",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_valve_5201",
       "name": "Status_valve_5201",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_centre_valve_5009",
       "name": "OSS_MP_Status_centre_valve_5009",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_Filter_1",
       "name": "OSS_MP_Status_Filter_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_Filter_2",
       "name": "OSS_MP_Status_Filter_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_Filter_3",
       "name": "OSS_MP_Status_Filter_3",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_Filter_4",
       "name": "OSS_MP_Status_Filter_4",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_left_valve_5008",
       "name": "OSS_MP_Status_left_valve_5008",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_pump_5001",
       "name": "OSS_MP_Status_pump_5001",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_pump_5002",
       "name": "OSS_MP_Status_pump_5002",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_pump_5003",
       "name": "OSS_MP_Status_pump_5003",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "OSS_MP_Status_right_valve_5010",
       "name": "OSS_MP_Status_right_valve_5010",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -1128,6 +1162,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

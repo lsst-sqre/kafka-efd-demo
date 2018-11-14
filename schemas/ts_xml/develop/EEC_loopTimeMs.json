@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "doc": "The actual loop time is ms.\n",
+      "doc": "The actual loop time is ms.",
       "name": "loopTime_ms",
       "type": "double"
     }

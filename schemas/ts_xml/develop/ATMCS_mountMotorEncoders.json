@@ -6,17 +6,17 @@
       "type": "double"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuth1Encoder",
       "type": "double"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuth2Encoder",
       "type": "double"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
       "name": "nasmyth1Encoder",
       "type": "double"
     },
@@ -31,17 +31,17 @@
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuth1EncoderRaw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
       "name": "azimuth2EncoderRaw",
       "type": "long"
     },
     {
-      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder. ",
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
       "name": "nasmyth1EncoderRaw",
       "type": "long"
     },

@@ -24,7 +24,7 @@
       }
     },
     {
-      "doc": "Rotation system for cameraAngle:\n        * Rot_NONE: The camera rotator is not used; ignore cameraAngle.\n        * Rot_SKY: Position angle of focal plane +Y, measured from N through E.\n          At 0 degrees, +Y is along N and +X is along E/W depending on handedness.\n          At 90 degrees, +Y is along E and +X is along S/N depending on handedness.\n        * Rot_HORIZON: Position angle of focal plane +Y, measured from +Alt through +Az.\n          At 0 degrees, +Y is along +Alt and +X is along +/-Az, depending on handedness.\n          At 90 degrees, +Y is along +Az and +X is along -/+Alt, depending on handedness.\n        * Rot_MOUNT: The position sent to the instrument rotator; the details depend on the rotator.\n        ",
+      "doc": "Rotation system for cameraAngle:\n        * Rot_NONE: The camera rotator is not used; ignore cameraAngle.\n        * Rot_SKY: Position angle of focal plane +Y, measured from N through E.\n          At 0 degrees, +Y is along N and +X is along E/W depending on handedness.\n          At 90 degrees, +Y is along E and +X is along S/N depending on handedness.\n        * Rot_HORIZON: Position angle of focal plane +Y, measured from +Alt through +Az.\n          At 0 degrees, +Y is along +Alt and +X is along +/-Az, depending on handedness.\n          At 90 degrees, +Y is along +Az and +X is along -/+Alt, depending on handedness.\n        * Rot_MOUNT: The position sent to the instrument rotator; the details depend on the rotator.",
       "name": "rotationSystem",
       "type": {
         "name": "rotationSystem",

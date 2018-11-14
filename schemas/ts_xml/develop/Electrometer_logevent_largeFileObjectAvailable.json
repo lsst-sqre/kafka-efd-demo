@@ -32,7 +32,7 @@
       "type": "long"
     },
     {
-      "doc": "A generic identifier field\n",
+      "doc": "A generic identifier field",
       "name": "id",
       "type": "string"
     }

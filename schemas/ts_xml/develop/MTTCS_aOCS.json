@@ -2,6 +2,12 @@
   "fields": [
     {
       "name": "result",
+      "sal_bytes_per_night": 74649,
+      "sal_frequency": 0.054,
+      "sal_instances_per_night": 2332,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 32,
+      "sal_values_per_publisher": 32,
       "type": {
         "items": "string",
         "type": "array"

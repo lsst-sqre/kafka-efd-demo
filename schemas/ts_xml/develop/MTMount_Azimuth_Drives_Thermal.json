@@ -3,21 +3,25 @@
     {
       "doc": "Azimuth_Thermal_Status_Group_1",
       "name": "Azimuth_Thermal_Status_Group_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Thermal_Status_Group_2",
       "name": "Azimuth_Thermal_Status_Group_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Thermal_Status_Group_3",
       "name": "Azimuth_Thermal_Status_Group_3",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Thermal_Status_Group_4",
       "name": "Azimuth_Thermal_Status_Group_4",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -239,6 +243,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

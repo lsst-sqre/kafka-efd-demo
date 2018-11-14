@@ -7,7 +7,7 @@
       "type": "boolean"
     },
     {
-      "doc": "Filter status, if active will execute Average or Median filter when set, true for active. ",
+      "doc": "Filter status, if active will execute Average or Median filter when set, true for active.",
       "name": "activateAverageFilter",
       "type": "boolean"
     },

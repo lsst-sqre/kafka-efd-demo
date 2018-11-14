@@ -37,19 +37,7 @@ def convert_topic(root, validate=True):
     _copy_xml_tag(avsc, root.find('Explanation'), key='doc')
 
     # Add SAL metadata. These are keys that don't match to core Avro schema.
-    root_metadata_tags = (
-        'Subsystem',
-        'Version',
-        'Author',
-        'Alias',
-        'Device',
-        'Property',
-        'Action',
-        'Value',
-    )
-    for tag in root_metadata_tags:
-        metadata_key = '_'.join(('sal', tag.lower()))
-        _copy_xml_tag(avsc, root.find(tag), key=metadata_key)
+    _copy_sal_metadata(avsc, root, ROOT_METADATA_TAGS)
 
     # The topic type itself is a special kind of metadata
     # (SALCommand, SALEvent, or SALTelemetry)
@@ -62,6 +50,8 @@ def convert_topic(root, validate=True):
         _copy_xml_tag(field, item.find('EFDB_Name'), key='name')
         _copy_xml_tag(field, item.find('Description'), key='doc')
         _copy_xml_tag(field, item.find('Units'), key='sal_units')
+
+        _copy_sal_metadata(field, item, ITEM_METADATA_TAGS)
 
         count_tag = item.find('Count')
         if count_tag is not None and count_tag.text is not None:
@@ -100,7 +90,7 @@ def convert_topic(root, validate=True):
     return avsc
 
 
-def _copy_xml_tag(avro_obj, xml_tag, key=None):
+def _copy_xml_tag(avro_obj, xml_tag, key=None, converter=None):
     """Copy an XML tag into an avro schema object
 
     Parameters
@@ -112,6 +102,9 @@ def _copy_xml_tag(avro_obj, xml_tag, key=None):
     key : `str`, optional
         Key to create in the ``avro_obj`` `dict`. If not set, the xml tag's
         name is used.
+    converter : callable, optional
+        Callable that takes the XML element's text value and converts it before
+        insertion into the ``avro_obj``.
     """
     if xml_tag is not None and xml_tag.text is not None:
         text = xml_tag.text.strip()  # filter empty strings
@@ -119,7 +112,89 @@ def _copy_xml_tag(avro_obj, xml_tag, key=None):
             if key is None:
                 # Use the tag's name as the Avro key itself
                 key = xml_tag.tag
-            avro_obj[key] = xml_tag.text
+            if converter is not None:
+                avro_obj[key] = converter(text)
+            else:
+                avro_obj[key] = text
+
+
+def _copy_sal_metadata(avro_obj, xml_root, tags):
+    """Bulk copy and insert "metadata" tags from an XML element into the
+    Avro schema.
+
+    In the Avro schema, each metadata field if prefixed with ``"sal_"``,
+    followed by the tag name in all lowercase characters.
+
+    Parameters
+    ----------
+    avro_obj : `dict`
+        Schema object to copy the tags into. This object is modified in place.
+    xml_root : lxml element
+        XML element to find and copy tags from.
+    tags : `list` of `tuple`
+        Each tuple has two elements:
+
+        0. Name of the XML tag.
+        1. Callable function that takes the tag's text value and converts it
+           (such as converting strings to ints). Use `None` if no conversion
+           is necessary.
+    """
+    for tag_name, converter in tags:
+        key = '_'.join(('sal', tag_name.lower()))
+        _copy_xml_tag(avro_obj,
+                      xml_root.find(tag_name),
+                      key=key,
+                      converter=converter)
+
+
+def _convert_sal_bool(value):
+    """Convert a SAL XML schema boolean into a Python bool.
+    """
+    value = value.lower()
+    if value == 'true':
+        return True
+    elif value == 'false':
+        return False
+    else:
+        raise RuntimeError(
+            'Incompatible value for boolean conversion: {0!r}'.format(value))
+
+
+ROOT_METADATA_TAGS = (
+    ('Subsystem', None),
+    ('Version', None),
+    ('Author', None),
+    ('Alias', None),
+    ('Device', None),
+    ('Property', None),
+    ('Action', None),
+    ('Value', None),
+)
+"""Names of XML tags (and their conversion functions, if necessary) that are
+copied from the root SALEvent, SALCommand, or SALTelemetry tag.
+"""
+
+
+ITEM_METADATA_TAGS = (
+    ('Frequency', float),
+    ('Publishers', int),
+    ('Values_per_Publisher', int),
+    ('Size_in_bytes', int),
+    ('Conversion', None),
+    ('Sensor_location', None),
+    ('Instances_per_night', int),
+    ('Bytes_per_night', int),
+    ('Needed_by_DM', bool),
+    ('Needed_by_Camera', _convert_sal_bool),
+    ('Needed_by_OCS', _convert_sal_bool),
+    ('Needed_by_TCS', _convert_sal_bool),
+    ('Needed_by_EPO', _convert_sal_bool)
+)
+"""Names of XML tags (and their conversion functions, if necessary) that are
+copied from item tags of SALEvent, SALCommand, or SALTelemetry elements.
+
+This metadata is mostly used for SALTelemetry.
+"""
 
 
 def validate_schema(avsc, raise_error=False):

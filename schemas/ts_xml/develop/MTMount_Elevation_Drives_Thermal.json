@@ -3,11 +3,13 @@
     {
       "doc": "Elevation_Thermal_Status_Group_1",
       "name": "Elevation_Thermal_Status_Group_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Thermal_Status_Group_2",
       "name": "Elevation_Thermal_Status_Group_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -168,6 +170,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

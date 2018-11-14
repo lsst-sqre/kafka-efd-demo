@@ -3,11 +3,13 @@
     {
       "doc": "LP_Status_Drive_1",
       "name": "LP_Status_Drive_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "LP_Status_Drive_2",
       "name": "LP_Status_Drive_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -109,6 +111,7 @@
     {
       "doc": "LP_Interlocks",
       "name": "LP_Interlocks",
+      "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
         "type": "array"
@@ -117,6 +120,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

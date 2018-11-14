@@ -3,21 +3,25 @@
     {
       "doc": "Balancing_Status_Drive_1",
       "name": "Balancing_Status_Drive_1",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Status_Drive_2",
       "name": "Balancing_Status_Drive_2",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Status_Drive_3",
       "name": "Balancing_Status_Drive_3",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Status_Drive_4",
       "name": "Balancing_Status_Drive_4",
+      "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
@@ -67,6 +71,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
     }

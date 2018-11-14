@@ -7,7 +7,7 @@
       "type": "string"
     },
     {
-      "doc": "The total number of requested images in sequence\n",
+      "doc": "The total number of requested images in sequence",
       "name": "imagesInSequence",
       "type": "long"
     },
