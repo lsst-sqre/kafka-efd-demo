@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTTCS_logevent_wfpDataReady.html",
+  "fields": [
+    {
+      "doc": " ",
+      "name": "imagesLocationUri",
+      "type": "string"
+    },
+    {
+      "doc": " ",
+      "name": "imagesMatchUri",
+      "type": "string"
+    }
+  ],
+  "name": "MTTCS_logevent_wfpDataReady",
+  "namespace": "lsst.sal",
+  "sal_alias": "wfpDataReady",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "doc": "This telemetry item reports the auxiliary telescope elevation motor current. ",
+      "name": "elevationMotorTorque",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope azimuth motor current.  ",
+      "name": "azimuthMotor1Torque",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope azimuth motor current.  ",
+      "name": "azimuthMotor2Torque",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope nasmyth 1 motor current.",
+      "name": "nasmyth1MotorTorque",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope nasmyth 2 motor current.",
+      "name": "nasmyth2MotorTorque",
+      "type": "double"
+    }
+  ],
+  "name": "ATMCS_measuredTorque",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

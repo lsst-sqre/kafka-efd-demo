@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "name": "CopleyStatusWordDrive",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "CopleyLatchingFaultStatus",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Rotator_Electrical",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Rotator",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

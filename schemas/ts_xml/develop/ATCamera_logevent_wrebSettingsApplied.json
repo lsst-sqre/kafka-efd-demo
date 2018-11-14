@@ -1,0 +1,189 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_wrebSettingsApplied.html",
+  "fields": [
+    {
+      "name": "version",
+      "type": "long"
+    },
+    {
+      "name": "sequencerKey",
+      "type": "string"
+    },
+    {
+      "name": "daqVersion",
+      "type": "long"
+    },
+    {
+      "name": "firmwareVersion",
+      "type": "long"
+    },
+    {
+      "name": "aspic0_af1",
+      "type": "long"
+    },
+    {
+      "name": "aspic0_clamp",
+      "type": "long"
+    },
+    {
+      "name": "aspic0_gain",
+      "type": "long"
+    },
+    {
+      "name": "aspic0_rc",
+      "type": "long"
+    },
+    {
+      "name": "aspic0_tm",
+      "type": "long"
+    },
+    {
+      "name": "aspic1_af1",
+      "type": "long"
+    },
+    {
+      "name": "aspic1_clamp",
+      "type": "long"
+    },
+    {
+      "name": "aspic1_gain",
+      "type": "long"
+    },
+    {
+      "name": "aspic1_rc",
+      "type": "long"
+    },
+    {
+      "name": "aspic1_tm",
+      "type": "long"
+    },
+    {
+      "name": "bias0_csGate",
+      "type": "long"
+    },
+    {
+      "name": "bias0_csGateP",
+      "type": "long"
+    },
+    {
+      "name": "bias0_gd",
+      "type": "long"
+    },
+    {
+      "name": "bias0_gdP",
+      "type": "long"
+    },
+    {
+      "name": "bias0_od",
+      "type": "long"
+    },
+    {
+      "name": "bias0_odP",
+      "type": "long"
+    },
+    {
+      "name": "bias0_og",
+      "type": "long"
+    },
+    {
+      "name": "bias0_ogP",
+      "type": "long"
+    },
+    {
+      "name": "bias0_ogSh",
+      "type": "long"
+    },
+    {
+      "name": "bias0_rd",
+      "type": "long"
+    },
+    {
+      "name": "bias0_rdP",
+      "type": "long"
+    },
+    {
+      "name": "dac_csGate",
+      "type": "long"
+    },
+    {
+      "name": "dac_pclkHigh",
+      "type": "long"
+    },
+    {
+      "name": "dac_pclkHighP",
+      "type": "long"
+    },
+    {
+      "name": "dac_pclkHighSh",
+      "type": "long"
+    },
+    {
+      "name": "dac_pclkLow",
+      "type": "long"
+    },
+    {
+      "name": "dac_pclkLowP",
+      "type": "long"
+    },
+    {
+      "name": "dac_pclkLowSh",
+      "type": "long"
+    },
+    {
+      "name": "dac_rgHigh",
+      "type": "long"
+    },
+    {
+      "name": "dac_rgHighP",
+      "type": "long"
+    },
+    {
+      "name": "dac_rgHighSh",
+      "type": "long"
+    },
+    {
+      "name": "dac_rgLow",
+      "type": "long"
+    },
+    {
+      "name": "dac_rgLowP",
+      "type": "long"
+    },
+    {
+      "name": "dac_rgLowSh",
+      "type": "long"
+    },
+    {
+      "name": "dac_sclkHigh",
+      "type": "long"
+    },
+    {
+      "name": "dac_sclkHighP",
+      "type": "long"
+    },
+    {
+      "name": "dac_sclkHighSh",
+      "type": "long"
+    },
+    {
+      "name": "dac_sclkLow",
+      "type": "long"
+    },
+    {
+      "name": "dac_sclkLowP",
+      "type": "long"
+    },
+    {
+      "name": "dac_sclkLowSh",
+      "type": "long"
+    }
+  ],
+  "name": "ATCamera_logevent_wrebSettingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "wrebSettingsApplied",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

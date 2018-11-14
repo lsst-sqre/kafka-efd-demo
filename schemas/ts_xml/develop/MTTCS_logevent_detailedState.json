@@ -1,0 +1,18 @@
+{
+  "doc": "The current detailed state of the system.",
+  "fields": [
+    {
+      "doc": "The current detailed state of the system.",
+      "name": "detailedState",
+      "type": "int"
+    }
+  ],
+  "name": "MTTCS_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

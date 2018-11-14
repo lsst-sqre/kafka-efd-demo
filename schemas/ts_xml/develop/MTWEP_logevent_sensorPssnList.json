@@ -1,0 +1,31 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "pssnList",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "sensorIdList",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTWEP_logevent_sensorPssnList",
+  "namespace": "lsst.sal",
+  "sal_alias": "sensorPssnList",
+  "sal_author": null,
+  "sal_subsystem": "MTWEP",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

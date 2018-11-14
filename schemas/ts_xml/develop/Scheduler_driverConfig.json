@@ -1,0 +1,83 @@
+{
+  "fields": [
+    {
+      "name": "coaddValues",
+      "type": "boolean"
+    },
+    {
+      "name": "timeBalancing",
+      "type": "boolean"
+    },
+    {
+      "name": "timecostTimeMax",
+      "type": "double"
+    },
+    {
+      "name": "timecostTimeRef",
+      "type": "double"
+    },
+    {
+      "name": "timecostCostRef",
+      "type": "double"
+    },
+    {
+      "name": "timecostWeight",
+      "type": "double"
+    },
+    {
+      "name": "filtercostWeight",
+      "type": "double"
+    },
+    {
+      "name": "propboostWeight",
+      "type": "double"
+    },
+    {
+      "name": "nightBoundary",
+      "type": "double"
+    },
+    {
+      "name": "newMoonPhaseThreshold",
+      "type": "double"
+    },
+    {
+      "name": "ignoreSkyBrightness",
+      "type": "boolean"
+    },
+    {
+      "name": "ignoreAirmass",
+      "type": "boolean"
+    },
+    {
+      "name": "ignoreClouds",
+      "type": "boolean"
+    },
+    {
+      "name": "ignoreSeeing",
+      "type": "boolean"
+    },
+    {
+      "name": "lookaheadWindowSize",
+      "type": "float"
+    },
+    {
+      "name": "lookaheadBonusWeight",
+      "type": "double"
+    },
+    {
+      "name": "startupType",
+      "type": "string"
+    },
+    {
+      "name": "startupDatabase",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_driverConfig",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,18 @@
+{
+  "doc": "Rotator is in position for a filter change.",
+  "fields": [
+    {
+      "doc": "Event to announce to OCS that rotator is in position for a filter change.",
+      "name": "filterChangeInPosition",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTTCS_logevent_filterChangeInPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "filterChangeInPosition",
+  "sal_author": "aanania",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

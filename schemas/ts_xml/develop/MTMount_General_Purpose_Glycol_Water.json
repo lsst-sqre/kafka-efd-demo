@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "doc": "TMA_AZ_GP_CPM_0001",
+      "name": "TMA_AZ_GP_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GP_CPM_0002",
+      "name": "TMA_AZ_GP_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GP_CPM_0001",
+      "name": "TMA_PI_GP_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GP_CPM_0002",
+      "name": "TMA_PI_GP_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GP_CTM_0001",
+      "name": "TMA_PI_GP_CTM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GP_CTM_0002",
+      "name": "TMA_PI_GP_CTM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_General_Purpose_Glycol_Water",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

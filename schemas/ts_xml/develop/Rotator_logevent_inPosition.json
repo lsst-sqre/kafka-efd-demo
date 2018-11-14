@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "inPosition",
+      "type": "boolean"
+    }
+  ],
+  "name": "Rotator_logevent_inPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "inPosition",
+  "sal_author": null,
+  "sal_subsystem": "Rotator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

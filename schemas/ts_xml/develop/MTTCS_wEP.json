@@ -1,0 +1,50 @@
+{
+  "fields": [
+    {
+      "name": "basisSetName",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numberOfTerms",
+      "type": "long"
+    },
+    {
+      "name": "zArr1",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "zArr2",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "zArr3",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "zArr4",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTTCS_wEP",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

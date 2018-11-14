@@ -1,0 +1,199 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "anyWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anySafetyLimitWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "safetyLimitWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "xMomentWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "yMomentWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "zMomentWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyNearNeighborWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "nearNeighborWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "magnitudeWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyFarNeighborWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "farNeighborWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyElevationForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "elevationForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyAzimuthForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "azimuthForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyThermalForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "thermalForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyBalanceForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "balanceForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyAccelerationForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "accelerationForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "activeOpticNetForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyActiveOpticForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "activeOpticForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyStaticForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "staticForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "aberrationNetForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyAberrationForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "aberrationForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOffsetForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "offsetForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyVelocityForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "velocityForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "forceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_forceSetpointWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "forceSetpointWarning",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Calculated degree of freedom (DOF) based on the control algorithm.",
+      "name": "dof",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTOFC_logevent_degreeOfFreedom",
+  "namespace": "lsst.sal",
+  "sal_alias": "degreeOfFreedom",
+  "sal_author": null,
+  "sal_subsystem": "MTOFC",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

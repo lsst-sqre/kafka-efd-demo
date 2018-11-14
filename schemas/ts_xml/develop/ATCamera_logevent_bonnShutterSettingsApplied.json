@@ -1,0 +1,53 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_bonnShutterSettingsApplied.html",
+  "fields": [
+    {
+      "name": "version",
+      "type": "long"
+    },
+    {
+      "name": "startA",
+      "type": "float"
+    },
+    {
+      "name": "startB",
+      "type": "float"
+    },
+    {
+      "name": "travelDistance",
+      "type": "float"
+    },
+    {
+      "name": "startVelocity",
+      "type": "float"
+    },
+    {
+      "name": "acceleration",
+      "type": "float"
+    },
+    {
+      "name": "maxVelocity",
+      "type": "float"
+    },
+    {
+      "name": "threshold",
+      "type": "float"
+    },
+    {
+      "name": "shutterVersion",
+      "type": "string"
+    },
+    {
+      "name": "firmwareVersion",
+      "type": "string"
+    }
+  ],
+  "name": "ATCamera_logevent_bonnShutterSettingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "bonnShutterSettingsApplied",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,32 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "slit",
+      "type": {
+        "name": "slit",
+        "symbols": [
+          "slit_Slit_FrontEntrance",
+          "slit_Slit_FrontExit"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "name": "slitWidth",
+      "type": "float"
+    }
+  ],
+  "name": "ATMonochromator_command_changeSlitWidth",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "changeSlitWidth",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.5.2",
+  "type": "record"
+}

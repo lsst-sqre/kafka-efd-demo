@@ -1,0 +1,18 @@
+{
+  "doc": "Telescope is in position .",
+  "fields": [
+    {
+      "doc": "Event to announce to OCS that the telescope is in position.",
+      "name": "targetInPosition",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTTCS_logevent_targetInPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "targetInPosition",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

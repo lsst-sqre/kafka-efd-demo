@@ -1,0 +1,75 @@
+{
+  "fields": [
+    {
+      "name": "biasStatus",
+      "type": "int"
+    },
+    {
+      "name": "biasCurrent",
+      "type": "float"
+    },
+    {
+      "name": "biasVoltage",
+      "type": "float"
+    },
+    {
+      "name": "clockStatus",
+      "type": "int"
+    },
+    {
+      "name": "clockCurrent",
+      "type": "int"
+    },
+    {
+      "name": "clockVoltage",
+      "type": "float"
+    },
+    {
+      "name": "fpgaStatus",
+      "type": "int"
+    },
+    {
+      "name": "fpgaCurrent",
+      "type": "float"
+    },
+    {
+      "name": "fpgaVoltage",
+      "type": "float"
+    },
+    {
+      "name": "lowStatus",
+      "type": "int"
+    },
+    {
+      "name": "lowCurrent",
+      "type": "float"
+    },
+    {
+      "name": "lowVoltage",
+      "type": "int"
+    },
+    {
+      "name": "odStatus",
+      "type": "int"
+    },
+    {
+      "name": "odCurrent",
+      "type": "float"
+    },
+    {
+      "name": "odVoltage",
+      "type": "float"
+    },
+    {
+      "name": "rebID",
+      "type": "float"
+    }
+  ],
+  "name": "MTCamera_pcms",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,124 @@
+{
+  "fields": [
+    {
+      "doc": "MirrorCoverLock_1_Status",
+      "name": "MirrorCoverLock_1_Status",
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCoverLock_2_Status",
+      "name": "MirrorCoverLock_2_Status",
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCoverLock_3_Status",
+      "name": "MirrorCoverLock_3_Status",
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCoverLock_4_Status",
+      "name": "MirrorCoverLock_4_Status",
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCoverLock_1_Actual_Position",
+      "name": "MirrorCoverLock_1_Actual_Position",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_2_Actual_Position",
+      "name": "MirrorCoverLock_2_Actual_Position",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_3_Actual_Position",
+      "name": "MirrorCoverLock_3_Actual_Position",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_4_Actual_Position",
+      "name": "MirrorCoverLock_4_Actual_Position",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_1_Current",
+      "name": "MirrorCoverLock_1_Current",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_2_Current",
+      "name": "MirrorCoverLock_2_Current",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_3_Current",
+      "name": "MirrorCoverLock_3_Current",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_4_Current",
+      "name": "MirrorCoverLock_4_Current",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCoverLock_3_Unlocked_Limit_Switch",
+      "name": "MirrorCoverLock_3_Unlocked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_2_Unlocked_Limit_Switch",
+      "name": "MirrorCoverLock_2_Unlocked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_1_Unlocked_Limit_Switch",
+      "name": "MirrorCoverLock_1_Unlocked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_4_Unlocked_Limit_Switch",
+      "name": "MirrorCoverLock_4_Unlocked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_3_Locked_Limit_Switch",
+      "name": "MirrorCoverLock_3_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_2_Locked_Limit_Switch",
+      "name": "MirrorCoverLock_2_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_1_Locked_Limit_Switch",
+      "name": "MirrorCoverLock_1_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_4_Locked_Limit_Switch",
+      "name": "MirrorCoverLock_4_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCoverLock_Interlocks",
+      "name": "MirrorCoverLock_Interlocks",
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Mirror_Cover_Locks",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

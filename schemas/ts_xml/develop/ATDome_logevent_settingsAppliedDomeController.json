@@ -1,0 +1,50 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "rainSensorActivated",
+      "type": "boolean"
+    },
+    {
+      "name": "cloudSensorActivated",
+      "type": "boolean"
+    },
+    {
+      "doc": "minimum allowed move, in degrees, where 0.0 less or equal than value and value is less than 3.",
+      "name": "tolerance",
+      "type": "float"
+    },
+    {
+      "name": "highSpeedDistance",
+      "type": "float"
+    },
+    {
+      "doc": "allows for manual entry of the number of encoder counts per 360 degrees.",
+      "name": "learnManual",
+      "type": "long"
+    },
+    {
+      "doc": "sets the time interval between loss of communication and the dome closing, where 0 less than t and t is less than 1000. In practice, to allow for host computer reboots, etc., we have found a time of 600 seconds (10 minutes) to be an acceptable value. If bad weather occurs in the watchdog timer 600 seconds interval, the dome will close if the rain-snow sensor is enabled.",
+      "name": "watchdogTimer",
+      "type": "float"
+    },
+    {
+      "doc": "The t RD (Reversal Delay) sets the delay between reversing motor directions for the shutter doors, where 0 less than t and t is less or equal than 6 seconds. For a 240 VAC system this parameter can be set to 0.0.",
+      "name": "reversalDelay",
+      "type": "float"
+    },
+    {
+      "doc": "The AO (Automation On) command enables the automatic shutdown of the observatory.\nIf the SCB loses contact with the MCB or the MCB loses contact with the host computer then the watchdog will time out and the dome will close, without warning. This feature should be turned off when performing maintenance on the dome.\n\nThe AF (Automation oFf) command disables the automatic shutdown of the observatory. Issue this command when performing maintenance on the observatory. However, for normal operations this is an unsafe condition as the dome is not protected from failures and bad weather.",
+      "name": "autoShutdownActivated",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATDome_logevent_settingsAppliedDomeController",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedDomeController",
+  "sal_author": null,
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

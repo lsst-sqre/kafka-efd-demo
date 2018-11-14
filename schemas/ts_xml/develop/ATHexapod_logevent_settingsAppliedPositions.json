@@ -1,0 +1,89 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "limitXYMax",
+      "type": "double"
+    },
+    {
+      "name": "limitZMin",
+      "type": "double"
+    },
+    {
+      "name": "limitZMax",
+      "type": "double"
+    },
+    {
+      "name": "limitUVMax",
+      "type": "double"
+    },
+    {
+      "name": "limitWMin",
+      "type": "double"
+    },
+    {
+      "name": "limitWMax",
+      "type": "double"
+    },
+    {
+      "name": "velocityXYMax",
+      "type": "double"
+    },
+    {
+      "name": "velocityRxRyMax",
+      "type": "double"
+    },
+    {
+      "name": "velocityZMax",
+      "type": "double"
+    },
+    {
+      "name": "velocityRzMax",
+      "type": "double"
+    },
+    {
+      "name": "positionX",
+      "type": "double"
+    },
+    {
+      "name": "positionY",
+      "type": "double"
+    },
+    {
+      "name": "positionZ",
+      "type": "double"
+    },
+    {
+      "name": "positionU",
+      "type": "double"
+    },
+    {
+      "name": "positionV",
+      "type": "double"
+    },
+    {
+      "name": "positionW",
+      "type": "double"
+    },
+    {
+      "name": "pivotX",
+      "type": "double"
+    },
+    {
+      "name": "pivotY",
+      "type": "double"
+    },
+    {
+      "name": "pivotZ",
+      "type": "double"
+    }
+  ],
+  "name": "ATHexapod_logevent_settingsAppliedPositions",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedPositions",
+  "sal_author": null,
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

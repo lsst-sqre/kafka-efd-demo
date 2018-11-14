@@ -1,0 +1,23 @@
+{
+  "fields": [
+    {
+      "name": "ambient_temp",
+      "type": "double"
+    },
+    {
+      "name": "humidity",
+      "type": "double"
+    },
+    {
+      "name": "pressure",
+      "type": "double"
+    }
+  ],
+  "name": "Environment_weather",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "Environment",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5",
+  "type": "record"
+}

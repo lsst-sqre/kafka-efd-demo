@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/OCS_command_sequence.html",
+  "fields": [
+    {
+      "name": "command",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_command_sequence",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "sequence",
+  "sal_author": "Philip N. Daly",
+  "sal_device": "sequence",
+  "sal_property": null,
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.4",
+  "type": "record"
+}

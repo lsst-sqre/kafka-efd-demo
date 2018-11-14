@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "doc": "Power_Supply_Surface_Temperature",
+      "name": "Power_Supply_Surface_Temperature",
+      "type": "double"
+    },
+    {
+      "doc": "Power_Supply_Internal_Temperature",
+      "name": "Power_Supply_Internal_Temperature",
+      "type": "double"
+    },
+    {
+      "doc": "Power_Supply_Setpoint_Temperature",
+      "name": "Power_Supply_Setpoint_Temperature",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Main_Power_Supply_Cabinet",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

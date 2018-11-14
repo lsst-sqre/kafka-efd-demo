@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "The system time (TAI).",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTWEP_timestamp",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "MTWEP",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

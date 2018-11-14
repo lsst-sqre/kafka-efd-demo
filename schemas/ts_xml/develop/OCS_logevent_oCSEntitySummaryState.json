@@ -1,0 +1,58 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/OCS_logevent_OCSEntitySummaryState.html",
+  "fields": [
+    {
+      "doc": "Name of (commandable) entity",
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the (commandable) entity",
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "doc": "Timestamp of creation of the (commandable) entity",
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "doc": "Address of (commandable) entity",
+      "name": "address",
+      "type": "long"
+    },
+    {
+      "doc": "Current state of (commandable) entity",
+      "name": "currentState",
+      "type": "string"
+    },
+    {
+      "doc": "Previous state of (commandable) entity",
+      "name": "previousState",
+      "type": "string"
+    },
+    {
+      "doc": "Executing command of (commandable) entity",
+      "name": "executing",
+      "type": "string"
+    },
+    {
+      "doc": "Commands available in this state of the (commandable) entity",
+      "name": "commandsAvailable",
+      "type": "string"
+    },
+    {
+      "doc": "Configurations available in this state of the (commandable) entity",
+      "name": "configurationsAvailable",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_logevent_oCSEntitySummaryState",
+  "namespace": "lsst.sal",
+  "sal_alias": "oCSEntitySummaryState",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

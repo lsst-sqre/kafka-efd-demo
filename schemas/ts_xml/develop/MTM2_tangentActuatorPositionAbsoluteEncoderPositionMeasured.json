@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "name": "tangentLink0DegAbsoluteEncoderPositionMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "name": "tangentLink60DegAbsoluteEncoderPositionMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "name": "tangentLink120DegAbsoluteEncoderPositionMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "name": "tangentLink180DegAbsoluteEncoderPositionMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "name": "tangentLink240DegAbsoluteEncoderPositionMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136 ",
+      "name": "tangentLink300DegAbsoluteEncoderPositionMeasured",
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_tangentActuatorPositionAbsoluteEncoderPositionMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

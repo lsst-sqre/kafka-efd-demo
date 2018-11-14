@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "rawSensorData",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "xPosition",
+      "type": "float"
+    },
+    {
+      "name": "yPosition",
+      "type": "float"
+    },
+    {
+      "name": "zPosition",
+      "type": "float"
+    },
+    {
+      "name": "xRotation",
+      "type": "float"
+    },
+    {
+      "name": "yRotation",
+      "type": "float"
+    },
+    {
+      "name": "zRotation",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_imsData",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

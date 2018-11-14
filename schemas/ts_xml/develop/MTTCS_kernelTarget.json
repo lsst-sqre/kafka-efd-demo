@@ -1,0 +1,71 @@
+{
+  "fields": [
+    {
+      "name": "humid",
+      "type": "float"
+    },
+    {
+      "name": "press",
+      "type": "float"
+    },
+    {
+      "name": "tLR",
+      "type": "float"
+    },
+    {
+      "name": "tai",
+      "type": "float"
+    },
+    {
+      "name": "temp",
+      "type": "float"
+    },
+    {
+      "name": "wavel",
+      "type": "float"
+    },
+    {
+      "name": "xOffset",
+      "type": "float"
+    },
+    {
+      "name": "yOffset",
+      "type": "float"
+    },
+    {
+      "name": "az",
+      "type": "float"
+    },
+    {
+      "name": "azdot",
+      "type": "float"
+    },
+    {
+      "name": "el",
+      "type": "float"
+    },
+    {
+      "name": "eldot",
+      "type": "float"
+    },
+    {
+      "name": "focalPlaneX",
+      "type": "float"
+    },
+    {
+      "name": "focalPlaneY",
+      "type": "float"
+    },
+    {
+      "name": "t0",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelTarget",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

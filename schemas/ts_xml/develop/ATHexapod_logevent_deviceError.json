@@ -1,0 +1,29 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "device",
+      "type": "string"
+    },
+    {
+      "name": "severity",
+      "type": "long"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "code",
+      "type": "int"
+    }
+  ],
+  "name": "ATHexapod_logevent_deviceError",
+  "namespace": "lsst.sal",
+  "sal_alias": "deviceError",
+  "sal_author": null,
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

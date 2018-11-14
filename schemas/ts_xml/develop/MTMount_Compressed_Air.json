@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "doc": "TMA_AZ_CP_CPM_0001",
+      "name": "TMA_AZ_CP_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_CP_CPM_0002",
+      "name": "TMA_AZ_CP_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_EL_CP_CPM_0001",
+      "name": "TMA_EL_CP_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_EL_CP_CPM_0002",
+      "name": "TMA_EL_CP_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_CP_CPM_0101",
+      "name": "TMA_PI_CP_CPM_0101",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_CP_CTM_0101",
+      "name": "TMA_PI_CP_CTM_0101",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Compressed_Air",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

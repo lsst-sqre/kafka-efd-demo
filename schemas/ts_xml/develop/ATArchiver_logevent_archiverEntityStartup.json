@@ -1,0 +1,29 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATArchiver_logevent_archiverEntityStartup.html",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "long"
+    }
+  ],
+  "name": "ATArchiver_logevent_archiverEntityStartup",
+  "namespace": "lsst.sal",
+  "sal_alias": "archiverEntityStartup",
+  "sal_author": null,
+  "sal_subsystem": "ATArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "doc": "Force measurement for each actuator in sequence, increasing force corresponds to increasing tension in the load cell",
+      "name": "axialForceMeasured",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_axialForcesMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

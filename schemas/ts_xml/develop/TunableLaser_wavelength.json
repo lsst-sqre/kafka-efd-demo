@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "The wavelength for the laser",
+      "name": "wavelength",
+      "type": "double"
+    }
+  ],
+  "name": "TunableLaser_wavelength",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "TunableLaser",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

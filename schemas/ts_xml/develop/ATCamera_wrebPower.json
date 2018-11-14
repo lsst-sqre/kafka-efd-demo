@@ -1,0 +1,75 @@
+{
+  "fields": [
+    {
+      "name": "digital_V",
+      "type": "float"
+    },
+    {
+      "name": "digital_I",
+      "type": "float"
+    },
+    {
+      "name": "analog_V",
+      "type": "float"
+    },
+    {
+      "name": "analog_I",
+      "type": "float"
+    },
+    {
+      "name": "clkHigh_V",
+      "type": "float"
+    },
+    {
+      "name": "clkHigh_I",
+      "type": "float"
+    },
+    {
+      "name": "clkLow_V",
+      "type": "float"
+    },
+    {
+      "name": "clkLow_I",
+      "type": "float"
+    },
+    {
+      "name": "od_V",
+      "type": "float"
+    },
+    {
+      "name": "od_I",
+      "type": "float"
+    },
+    {
+      "name": "dphi_V",
+      "type": "float"
+    },
+    {
+      "name": "dphi_I",
+      "type": "float"
+    },
+    {
+      "name": "heater_V",
+      "type": "float"
+    },
+    {
+      "name": "heater_I",
+      "type": "float"
+    },
+    {
+      "name": "hvbias_V",
+      "type": "float"
+    },
+    {
+      "name": "hvbias_I",
+      "type": "float"
+    }
+  ],
+  "name": "ATCamera_wrebPower",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

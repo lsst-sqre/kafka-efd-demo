@@ -1,0 +1,28 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/OCS_logevent_OCSNextScript.html",
+  "fields": [
+    {
+      "doc": "Script name",
+      "name": "oCSScriptName",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the script",
+      "name": "oCSScriptIdentifier",
+      "type": "double"
+    },
+    {
+      "doc": "Script timestamp",
+      "name": "oCSScriptTimestamp",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_logevent_oCSNextScript",
+  "namespace": "lsst.sal",
+  "sal_alias": "oCSNextScript",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

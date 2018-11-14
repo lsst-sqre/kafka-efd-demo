@@ -1,0 +1,25 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_offlineDetailedState.html",
+  "fields": [
+    {
+      "doc": "Enumeration of valid substates",
+      "name": "substate",
+      "type": {
+        "name": "substate",
+        "symbols": [
+          "OFFLINE_AVAILABLE",
+          "OFFLINE_PUBLISH_ONLY"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "ATCamera_logevent_offlineDetailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "offlineDetailedState",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

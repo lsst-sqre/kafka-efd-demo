@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "open",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATDome_command_openShutter",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "openShutter",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.8.2",
+  "type": "record"
+}

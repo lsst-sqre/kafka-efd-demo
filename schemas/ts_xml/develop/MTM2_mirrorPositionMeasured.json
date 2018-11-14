@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "doc": "Tilt in xy plane",
+      "name": "xTilt",
+      "type": "double"
+    },
+    {
+      "doc": "Tilt in xy plane",
+      "name": "yTilt",
+      "type": "double"
+    },
+    {
+      "doc": "Offset along z = optical axis",
+      "name": "piston",
+      "type": "double"
+    },
+    {
+      "doc": "Position in optical coordinate system per LTS-136",
+      "name": "xPosition",
+      "type": "double"
+    },
+    {
+      "doc": "Position in optical coordinate system per LTS-136",
+      "name": "yPosition",
+      "type": "double"
+    },
+    {
+      "doc": "Position in optical coordinate system per LTS-136",
+      "name": "thetaZPosition",
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_mirrorPositionMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

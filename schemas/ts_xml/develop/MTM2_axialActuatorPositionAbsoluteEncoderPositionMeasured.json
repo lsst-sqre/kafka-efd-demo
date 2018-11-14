@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "doc": "Encoder position of each axial encoder on sequence, the sign of the position is consistent with the optical coordinate system as per LTS-136",
+      "name": "axialEncoderPositionMeasured",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_axialActuatorPositionAbsoluteEncoderPositionMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

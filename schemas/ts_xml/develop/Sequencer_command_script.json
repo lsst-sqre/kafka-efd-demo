@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/Sequencer_command_script.html",
+  "fields": [
+    {
+      "name": "location",
+      "type": "string"
+    }
+  ],
+  "name": "Sequencer_command_script",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "script",
+  "sal_author": "salgenerator",
+  "sal_device": "script",
+  "sal_property": null,
+  "sal_subsystem": "Sequencer",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "doc": "Status_TMA_AZ_PD_CBT_0001",
+      "name": "Status_TMA_AZ_PD_CBT_0001",
+      "type": "string"
+    },
+    {
+      "doc": "Status_TMA_EL_PD_CBT_0001",
+      "name": "Status_TMA_EL_PD_CBT_0001",
+      "type": "string"
+    },
+    {
+      "doc": "Status_TMA_EL_PD_CBT_0002",
+      "name": "Status_TMA_EL_PD_CBT_0002",
+      "type": "string"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Auxiliary_Boxes",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

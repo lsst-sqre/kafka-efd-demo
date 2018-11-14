@@ -1,0 +1,29 @@
+{
+  "fields": [
+    {
+      "name": "telOpticsOlSlope",
+      "type": "double"
+    },
+    {
+      "name": "telOpticsClAltLimit",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "telOpticsClDelay",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Scheduler_opticsLoopCorrConfig",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,124 @@
+{
+  "fields": [
+    {
+      "doc": "LP_Status_Drive_1",
+      "name": "LP_Status_Drive_1",
+      "type": "string"
+    },
+    {
+      "doc": "LP_Status_Drive_2",
+      "name": "LP_Status_Drive_2",
+      "type": "string"
+    },
+    {
+      "doc": "LP_Position_Drive_1",
+      "name": "LP_Position_Drive_1",
+      "type": "double"
+    },
+    {
+      "doc": "LP_Position_Drive_2",
+      "name": "LP_Position_Drive_2",
+      "type": "double"
+    },
+    {
+      "doc": "LP_Current_Drive_1",
+      "name": "LP_Current_Drive_1",
+      "type": "double"
+    },
+    {
+      "doc": "LP_Current_Drive_2",
+      "name": "LP_Current_Drive_2",
+      "type": "double"
+    },
+    {
+      "doc": "LP_Position_Setpoint_1",
+      "name": "LP_Position_Setpoint_1",
+      "type": "double"
+    },
+    {
+      "doc": "LP_Position_Setpoint_2",
+      "name": "LP_Position_Setpoint_2",
+      "type": "double"
+    },
+    {
+      "doc": "LP_Free_Limit_1",
+      "name": "LP_Free_Limit_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "LP_Free_Limit_2",
+      "name": "LP_Free_Limit_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "LP_Lock_Limit_1",
+      "name": "LP_Lock_Limit_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "LP_Lock_Limit_2",
+      "name": "LP_Lock_Limit_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "LP_Test_Limit_1",
+      "name": "LP_Test_Limit_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "LP_Test_Limit_2",
+      "name": "LP_Test_Limit_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Locking_Pin_1_Retracted",
+      "name": "Elevation_Locking_Pin_1_Retracted",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Locking_Pin_2_Retracted",
+      "name": "Elevation_Locking_Pin_2_Retracted",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Locking_Pin_1_Inserted",
+      "name": "Elevation_Locking_Pin_1_Inserted",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Locking_Pin_2_Inserted",
+      "name": "Elevation_Locking_Pin_2_Inserted",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Locking_Pin_1_Test",
+      "name": "Elevation_Locking_Pin_1_Test",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Locking_Pin_2_Test",
+      "name": "Elevation_Locking_Pin_2_Test",
+      "type": "boolean"
+    },
+    {
+      "doc": "LP_Interlocks",
+      "name": "LP_Interlocks",
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Locking_Pins",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

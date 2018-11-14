@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "The altitude of the CBP",
+      "name": "altitude",
+      "type": "float"
+    }
+  ],
+  "name": "CBP_altitude",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

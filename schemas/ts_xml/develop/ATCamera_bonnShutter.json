@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "shutter5V",
+      "type": "float"
+    },
+    {
+      "name": "shutter36V",
+      "type": "float"
+    }
+  ],
+  "name": "ATCamera_bonnShutter",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

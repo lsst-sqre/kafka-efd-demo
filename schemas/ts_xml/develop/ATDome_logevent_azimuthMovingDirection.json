@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "motionStatus",
+      "type": "long"
+    }
+  ],
+  "name": "ATDome_logevent_azimuthMovingDirection",
+  "namespace": "lsst.sal",
+  "sal_alias": "azimuthMovingDirection",
+  "sal_author": null,
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

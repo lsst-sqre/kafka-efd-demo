@@ -1,0 +1,21 @@
+{
+  "fields": [
+    {
+      "doc": "Whether the CBP has been autoparked or not.",
+      "name": "autoparked",
+      "type": "float"
+    },
+    {
+      "doc": "Whether the CBP is parked or not.",
+      "name": "parked",
+      "type": "float"
+    }
+  ],
+  "name": "CBP_parked",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

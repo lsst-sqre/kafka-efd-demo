@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "detail",
+      "type": "string"
+    }
+  ],
+  "name": "DomeMONCS_logevent_interlock",
+  "namespace": "lsst.sal",
+  "sal_alias": "interlock",
+  "sal_author": null,
+  "sal_subsystem": "DomeMONCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

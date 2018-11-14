@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The error code being published.",
+      "name": "commandObject",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "ATMonochromator_logevent_internalCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "internalCommand",
+  "sal_author": null,
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

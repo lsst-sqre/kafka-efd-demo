@@ -1,0 +1,49 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "turnPowerNetworkAOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnPowerNetworkBOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnPowerNetworkCOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnPowerNetworkDOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnAuxPowerNetworkAOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnAuxPowerNetworkBOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnAuxPowerNetworkCOn",
+      "type": "boolean"
+    },
+    {
+      "name": "turnAuxPowerNetworkDOn",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTM1M3_command_turnPowerOn",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "turnPowerOn",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.7.0",
+  "type": "record"
+}

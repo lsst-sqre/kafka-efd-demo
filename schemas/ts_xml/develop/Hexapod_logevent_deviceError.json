@@ -1,0 +1,29 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "device",
+      "type": "string"
+    },
+    {
+      "name": "severity",
+      "type": "long"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "code",
+      "type": "string"
+    }
+  ],
+  "name": "Hexapod_logevent_deviceError",
+  "namespace": "lsst.sal",
+  "sal_alias": "deviceError",
+  "sal_author": null,
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

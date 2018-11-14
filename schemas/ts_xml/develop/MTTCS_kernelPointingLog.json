@@ -1,0 +1,78 @@
+{
+  "fields": [
+    {
+      "name": "aux",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "casspa",
+      "type": "float"
+    },
+    {
+      "name": "decl",
+      "type": "float"
+    },
+    {
+      "name": "fl",
+      "type": "float"
+    },
+    {
+      "name": "humid",
+      "type": "float"
+    },
+    {
+      "name": "marked",
+      "type": "long"
+    },
+    {
+      "name": "pitch",
+      "type": "float"
+    },
+    {
+      "name": "press",
+      "type": "float"
+    },
+    {
+      "name": "ra",
+      "type": "float"
+    },
+    {
+      "name": "rcorr",
+      "type": "float"
+    },
+    {
+      "name": "roll",
+      "type": "float"
+    },
+    {
+      "name": "temp",
+      "type": "float"
+    },
+    {
+      "name": "tlr",
+      "type": "float"
+    },
+    {
+      "name": "wavel",
+      "type": "float"
+    },
+    {
+      "name": "xr",
+      "type": "float"
+    },
+    {
+      "name": "yr",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelPointingLog",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

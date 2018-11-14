@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "inclinometerAngle",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_inclinometerData",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

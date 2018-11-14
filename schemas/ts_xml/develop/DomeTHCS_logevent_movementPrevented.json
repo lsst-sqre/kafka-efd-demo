@@ -1,0 +1,18 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Unique identifier of the cause",
+      "name": "causeId",
+      "type": "string"
+    }
+  ],
+  "name": "DomeTHCS_logevent_movementPrevented",
+  "namespace": "lsst.sal",
+  "sal_alias": "movementPrevented",
+  "sal_author": null,
+  "sal_subsystem": "DomeTHCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

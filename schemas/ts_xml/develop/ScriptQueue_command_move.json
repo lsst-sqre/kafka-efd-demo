@@ -1,0 +1,41 @@
+{
+  "doc": "Move a script elsewhere in the queue. This will fail if the script is already running.",
+  "fields": [
+    {
+      "doc": "Index of Script SAL component to move.",
+      "name": "salIndex",
+      "type": "int"
+    },
+    {
+      "doc": "Queue location.",
+      "name": "location",
+      "type": {
+        "name": "location",
+        "symbols": [
+          "First",
+          "Last",
+          "Before",
+          "After"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Index of Script SAL component referred to by `location`; ignored unless `location` is `Before` or `After`.",
+      "name": "locationSalIndex",
+      "type": "int"
+    }
+  ],
+  "name": "ScriptQueue_command_move",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "move",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "1.0.0",
+  "type": "record"
+}

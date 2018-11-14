@@ -1,0 +1,12 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_notReadyToTakeImage.html",
+  "fields": [],
+  "name": "ATCamera_logevent_notReadyToTakeImage",
+  "namespace": "lsst.sal",
+  "sal_alias": "notReadyToTakeImage",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

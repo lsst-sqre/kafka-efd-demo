@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTVMS_M2",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "MTVMS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.6.0",
+  "type": "record"
+}

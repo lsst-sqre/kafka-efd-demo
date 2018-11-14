@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "upTime",
+      "type": "long"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "ATThermoelectricCooler_unitUpTime",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

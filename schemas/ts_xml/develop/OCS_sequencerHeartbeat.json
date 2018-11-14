@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "doc": "Name for the sequencer instance",
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the sequencer heartbeat",
+      "name": "identifier",
+      "type": "float"
+    },
+    {
+      "doc": "Timestamp for the sequencer heartbeat",
+      "name": "timestamp",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_sequencerHeartbeat",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

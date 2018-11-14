@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "state",
+      "type": "boolean"
+    }
+  ],
+  "name": "Hexapod_logevent_commandableByDDS",
+  "namespace": "lsst.sal",
+  "sal_alias": "commandableByDDS",
+  "sal_author": null,
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

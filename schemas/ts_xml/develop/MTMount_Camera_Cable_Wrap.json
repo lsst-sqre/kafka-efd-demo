@@ -1,0 +1,89 @@
+{
+  "fields": [
+    {
+      "doc": "CCW_Status",
+      "name": "CCW_Status",
+      "type": "string"
+    },
+    {
+      "doc": "CCW_Status_Drive_1",
+      "name": "CCW_Status_Drive_1",
+      "type": "string"
+    },
+    {
+      "doc": "CCW_Status_Drive_2",
+      "name": "CCW_Status_Drive_2",
+      "type": "string"
+    },
+    {
+      "doc": "CameraRotatorPosition",
+      "name": "CameraRotatorPosition",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Angle_1",
+      "name": "CCW_Angle_1",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Angle_2",
+      "name": "CCW_Angle_2",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Camera_Position",
+      "name": "CCW_Camera_Position",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Speed_1",
+      "name": "CCW_Speed_1",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Speed_2",
+      "name": "CCW_Speed_2",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Current_1",
+      "name": "CCW_Current_1",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Current_2",
+      "name": "CCW_Current_2",
+      "type": "double"
+    },
+    {
+      "doc": "CCW_Positive_Directional_limit_switch",
+      "name": "CCW_Positive_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "CCW_Negative_Directional_limit_switch",
+      "name": "CCW_Negative_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "CCW_Interlocks",
+      "name": "CCW_Interlocks",
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Camera_Cable_Wrap",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

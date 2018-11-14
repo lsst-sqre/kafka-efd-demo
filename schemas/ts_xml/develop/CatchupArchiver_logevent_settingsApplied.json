@@ -1,0 +1,17 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/CatchupArchiver_logevent_settingsApplied.html",
+  "fields": [
+    {
+      "name": "settings",
+      "type": "string"
+    }
+  ],
+  "name": "CatchupArchiver_logevent_settingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsApplied",
+  "sal_author": null,
+  "sal_subsystem": "CatchupArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

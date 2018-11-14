@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "doc": "Measured velocity in deg/sec for elevation. ",
+      "name": "elevationMotorVelocity",
+      "type": "double"
+    },
+    {
+      "doc": "Measured velocity in deg/sec for the Azimuth",
+      "name": "azimuthMotor1Velocity",
+      "type": "double"
+    },
+    {
+      "doc": "Measured velocity in deg/sec for the Azimuth",
+      "name": "azimuthMotor2Velocity",
+      "type": "double"
+    },
+    {
+      "doc": "Measured velocity in deg/sec for nasmyth1. ",
+      "name": "nasmyth1MotorVelocity",
+      "type": "double"
+    },
+    {
+      "doc": "Measured velocity in deg/sec for nasmyth2. ",
+      "name": "nasmyth2MotorVelocity",
+      "type": "double"
+    }
+  ],
+  "name": "ATMCS_measuredMotorVelocity",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

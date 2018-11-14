@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "name": "positionX",
+      "type": "float"
+    },
+    {
+      "name": "positionY",
+      "type": "float"
+    },
+    {
+      "name": "t0",
+      "type": "float"
+    },
+    {
+      "name": "velocityX",
+      "type": "float"
+    },
+    {
+      "name": "velocityY",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelTrackingTarget",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

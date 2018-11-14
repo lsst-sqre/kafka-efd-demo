@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "temperature",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "FiberSpectrograph_spectTemperature",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "FiberSpectrograph",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

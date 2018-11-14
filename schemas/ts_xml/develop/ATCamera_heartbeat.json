@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "heartbeat",
+      "type": "boolean"
+    },
+    {
+      "name": "priority",
+      "type": "long"
+    }
+  ],
+  "name": "ATCamera_heartbeat",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

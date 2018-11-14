@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink0DegForceMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink60DegForceMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink120DegForceMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink180DegForceMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink240DegForceMeasured",
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink300DegForceMeasured",
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_tangentForcesMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

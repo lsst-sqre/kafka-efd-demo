@@ -1,0 +1,296 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "propId",
+      "type": "long"
+    },
+    {
+      "name": "twilightBoundary",
+      "type": "double"
+    },
+    {
+      "name": "deltaLst",
+      "type": "double"
+    },
+    {
+      "name": "decWindow",
+      "type": "double"
+    },
+    {
+      "name": "maxAirmass",
+      "type": "double"
+    },
+    {
+      "name": "maxCloud",
+      "type": "double"
+    },
+    {
+      "name": "minDistanceMoon",
+      "type": "double"
+    },
+    {
+      "name": "excludePlanets",
+      "type": "boolean"
+    },
+    {
+      "name": "numUserRegions",
+      "type": "long"
+    },
+    {
+      "name": "userRegionIds",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numSubSequences",
+      "type": "long"
+    },
+    {
+      "name": "subSequenceNames",
+      "type": "string"
+    },
+    {
+      "name": "numSubSequenceFilters",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "subSequenceFilters",
+      "type": "string"
+    },
+    {
+      "name": "numSubSequenceFilterVisits",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numSubSequenceEvents",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numSubSequenceMaxMissed",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "subSequenceTimeIntervals",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "subSequenceTimeWindowStarts",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "subSequenceTimeWindowMaximums",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "subSequenceTimeWindowEnds",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "subSequenceTimeWeights",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numMasterSubSequences",
+      "type": "long"
+    },
+    {
+      "name": "masterSubSequenceNames",
+      "type": "string"
+    },
+    {
+      "name": "numNestedSubSequences",
+      "type": "long"
+    },
+    {
+      "name": "nestedSubSequenceNames",
+      "type": "string"
+    },
+    {
+      "name": "numMasterSubSequenceEvents",
+      "type": "long"
+    },
+    {
+      "name": "numMasterSubSequenceMaxMissed",
+      "type": "long"
+    },
+    {
+      "name": "masterSubSequenceTimeIntervals",
+      "type": "double"
+    },
+    {
+      "name": "masterSubSequenceTimeWindowStarts",
+      "type": "double"
+    },
+    {
+      "name": "masterSubSequenceTimeWindowMaximums",
+      "type": "double"
+    },
+    {
+      "name": "masterSubSequenceTimeWindowEnds",
+      "type": "double"
+    },
+    {
+      "name": "masterSubSequenceTimeWeights",
+      "type": "double"
+    },
+    {
+      "name": "numNestedSubSequenceFilters",
+      "type": "long"
+    },
+    {
+      "name": "nestedSubSequenceFilters",
+      "type": "string"
+    },
+    {
+      "name": "numNestedSubSequenceFilterVisits",
+      "type": "long"
+    },
+    {
+      "name": "numNestedSubSequenceEvents",
+      "type": "long"
+    },
+    {
+      "name": "numNestedSubSequenceMaxMissed",
+      "type": "long"
+    },
+    {
+      "name": "nestedSubSequenceTimeIntervals",
+      "type": "double"
+    },
+    {
+      "name": "nestedSubSequenceTimeWindowStarts",
+      "type": "double"
+    },
+    {
+      "name": "nestedSubSequenceTimeWindowMaximums",
+      "type": "double"
+    },
+    {
+      "name": "nestedSubSequenceTimeWindowEnds",
+      "type": "double"
+    },
+    {
+      "name": "nestedSubSequenceTimeWights",
+      "type": "double"
+    },
+    {
+      "name": "numFilters",
+      "type": "long"
+    },
+    {
+      "name": "filterNames",
+      "type": "string"
+    },
+    {
+      "name": "brightLimit",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "darkLimit",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "maxSeeing",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numFilterExposures",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "exposures",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "maxNumTargets",
+      "type": "long"
+    },
+    {
+      "name": "acceptSerendipity",
+      "type": "boolean"
+    },
+    {
+      "name": "acceptConsecutiveVisits",
+      "type": "boolean"
+    },
+    {
+      "name": "restartLostSequences",
+      "type": "boolean"
+    },
+    {
+      "name": "restartCompleteSequences",
+      "type": "boolean"
+    },
+    {
+      "name": "maxVisitsGoal",
+      "type": "long"
+    },
+    {
+      "name": "airmassBonus",
+      "type": "double"
+    },
+    {
+      "name": "hourAngleBonus",
+      "type": "double"
+    },
+    {
+      "name": "hourAngleMax",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_sequencePropConfig",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

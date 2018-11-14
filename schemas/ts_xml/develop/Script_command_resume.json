@@ -1,0 +1,21 @@
+{
+  "doc": "Resume a paused script.",
+  "fields": [
+    {
+      "name": "ignored",
+      "type": "bytes"
+    }
+  ],
+  "name": "Script_command_resume",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "resume",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "Script",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "1.0.0",
+  "type": "record"
+}

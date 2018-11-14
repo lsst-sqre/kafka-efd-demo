@@ -1,0 +1,72 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "ilcState",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "slewFlag",
+      "type": "boolean"
+    },
+    {
+      "name": "staticForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "elevationForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "azimuthForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "thermalForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "offsetForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "accelerationForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "velocityForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "activeOpticForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "aberrationForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "balanceForcesApplied",
+      "type": "boolean"
+    },
+    {
+      "name": "supportPercentage",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_logevent_forceActuatorState",
+  "namespace": "lsst.sal",
+  "sal_alias": "forceActuatorState",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

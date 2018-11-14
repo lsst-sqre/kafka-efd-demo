@@ -1,0 +1,43 @@
+{
+  "fields": [
+    {
+      "name": "decl",
+      "type": "float"
+    },
+    {
+      "name": "epoc",
+      "type": "float"
+    },
+    {
+      "name": "equinox",
+      "type": "float"
+    },
+    {
+      "name": "parallax",
+      "type": "float"
+    },
+    {
+      "name": "pmDec",
+      "type": "float"
+    },
+    {
+      "name": "pmRA",
+      "type": "float"
+    },
+    {
+      "name": "ra",
+      "type": "float"
+    },
+    {
+      "name": "rv",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelFK5Target",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

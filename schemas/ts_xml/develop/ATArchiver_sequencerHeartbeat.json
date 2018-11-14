@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "heartbeat",
+      "type": "boolean"
+    },
+    {
+      "name": "priority",
+      "type": "long"
+    }
+  ],
+  "name": "ATArchiver_sequencerHeartbeat",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATArchiver",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "doc": "Checkpoint(s) at which to pause, as a regular expression. No checkpoints if blank; all checkpoints if \".*\".",
+      "name": "pause",
+      "type": "string"
+    },
+    {
+      "doc": "Checkpoint(s) at which to stop, as a regular expression. No checkpoints if blank; all checkpoints if \".*\".",
+      "name": "stop",
+      "type": "string"
+    }
+  ],
+  "name": "Script_logevent_checkpoints",
+  "namespace": "lsst.sal",
+  "sal_alias": "checkpoints",
+  "sal_author": null,
+  "sal_subsystem": "Script",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

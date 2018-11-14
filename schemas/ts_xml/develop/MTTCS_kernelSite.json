@@ -1,0 +1,121 @@
+{
+  "fields": [
+    {
+      "name": "amprms",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "aoprms",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "daz",
+      "type": "float"
+    },
+    {
+      "name": "diurab",
+      "type": "float"
+    },
+    {
+      "name": "elong",
+      "type": "float"
+    },
+    {
+      "name": "lat",
+      "type": "float"
+    },
+    {
+      "name": "refa",
+      "type": "float"
+    },
+    {
+      "name": "refb",
+      "type": "float"
+    },
+    {
+      "name": "st0",
+      "type": "float"
+    },
+    {
+      "name": "t0",
+      "type": "float"
+    },
+    {
+      "name": "tt0",
+      "type": "float"
+    },
+    {
+      "name": "ttj",
+      "type": "float"
+    },
+    {
+      "name": "ttmtai",
+      "type": "float"
+    },
+    {
+      "name": "uau",
+      "type": "float"
+    },
+    {
+      "name": "ukm",
+      "type": "float"
+    },
+    {
+      "name": "vau",
+      "type": "float"
+    },
+    {
+      "name": "vkm",
+      "type": "float"
+    },
+    {
+      "name": "delat",
+      "type": "float"
+    },
+    {
+      "name": "delut",
+      "type": "float"
+    },
+    {
+      "name": "elongm",
+      "type": "float"
+    },
+    {
+      "name": "hm",
+      "type": "float"
+    },
+    {
+      "name": "latm",
+      "type": "float"
+    },
+    {
+      "name": "tai",
+      "type": "float"
+    },
+    {
+      "name": "ttmtat",
+      "type": "float"
+    },
+    {
+      "name": "xpm",
+      "type": "float"
+    },
+    {
+      "name": "ypm",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelSite",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

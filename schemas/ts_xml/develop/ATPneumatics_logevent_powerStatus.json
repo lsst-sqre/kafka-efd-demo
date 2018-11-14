@@ -1,0 +1,28 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Status Power line 1",
+      "name": "powerOnL1",
+      "type": "boolean"
+    },
+    {
+      "doc": "Status Power line 2",
+      "name": "powerOnL2",
+      "type": "boolean"
+    },
+    {
+      "doc": "Status Power line 3",
+      "name": "powerOnL3",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATPneumatics_logevent_powerStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "powerStatus",
+  "sal_author": null,
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

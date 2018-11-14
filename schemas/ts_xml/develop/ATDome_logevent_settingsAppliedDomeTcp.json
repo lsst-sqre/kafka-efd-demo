@@ -1,0 +1,34 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "ip",
+      "type": "string"
+    },
+    {
+      "doc": "port range, it will try to connect to any of the ports in this range",
+      "name": "portRange",
+      "type": "long"
+    },
+    {
+      "name": "readTimeout",
+      "type": "float"
+    },
+    {
+      "name": "writeTimeout",
+      "type": "float"
+    },
+    {
+      "name": "connectionTimeout",
+      "type": "float"
+    }
+  ],
+  "name": "ATDome_logevent_settingsAppliedDomeTcp",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedDomeTcp",
+  "sal_author": null,
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

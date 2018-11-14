@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTMount_mountWarning.html",
+  "fields": [
+    {
+      "doc": "Identifier of the warning",
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "doc": "The warning info",
+      "name": "text",
+      "type": "string"
+    }
+  ],
+  "name": "MTMount_logevent_mountWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "mountWarning",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

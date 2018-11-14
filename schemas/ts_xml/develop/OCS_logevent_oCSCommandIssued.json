@@ -1,0 +1,43 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/OCS_logevent_OCSCommandIssued.html",
+  "fields": [
+    {
+      "doc": "Command source",
+      "name": "commandSource",
+      "type": "string"
+    },
+    {
+      "doc": "Sequence number",
+      "name": "sequenceNumber",
+      "type": "long"
+    },
+    {
+      "doc": "identifier for the command",
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "doc": "Timestamp",
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "doc": "Command sent",
+      "name": "commandSent",
+      "type": "string"
+    },
+    {
+      "doc": "Command return code",
+      "name": "returnValue",
+      "type": "long"
+    }
+  ],
+  "name": "OCS_logevent_oCSCommandIssued",
+  "namespace": "lsst.sal",
+  "sal_alias": "oCSCommandIssued",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

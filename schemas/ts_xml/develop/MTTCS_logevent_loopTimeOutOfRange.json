@@ -1,0 +1,18 @@
+{
+  "doc": "True if the actual loop time is outside the specified limits.",
+  "fields": [
+    {
+      "doc": "True if the actual loop time is outside the specified limits.",
+      "name": "loopTimeOutOfRange",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTTCS_logevent_loopTimeOutOfRange",
+  "namespace": "lsst.sal",
+  "sal_alias": "loopTimeOutOfRange",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

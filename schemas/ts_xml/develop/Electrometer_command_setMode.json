@@ -1,0 +1,22 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Set electrometer to use different modes:\n\n1.- Current\n2.- Volt\n3.- Charge\n4.- Resistance\n",
+      "name": "mode",
+      "type": "long"
+    }
+  ],
+  "name": "Electrometer_command_setMode",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "setMode",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.8",
+  "type": "record"
+}

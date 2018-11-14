@@ -1,0 +1,77 @@
+{
+  "fields": [
+    {
+      "name": "ae2mt",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "amprms",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "cst",
+      "type": "float"
+    },
+    {
+      "name": "diurab",
+      "type": "float"
+    },
+    {
+      "name": "hm",
+      "type": "float"
+    },
+    {
+      "name": "humid",
+      "type": "float"
+    },
+    {
+      "name": "press",
+      "type": "float"
+    },
+    {
+      "name": "refa",
+      "type": "float"
+    },
+    {
+      "name": "refb",
+      "type": "float"
+    },
+    {
+      "name": "sst",
+      "type": "float"
+    },
+    {
+      "name": "tdbj",
+      "type": "float"
+    },
+    {
+      "name": "temp",
+      "type": "float"
+    },
+    {
+      "name": "tlat",
+      "type": "float"
+    },
+    {
+      "name": "tlr",
+      "type": "float"
+    },
+    {
+      "name": "wavel",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelTrackRefSys",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

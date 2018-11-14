@@ -1,0 +1,156 @@
+{
+  "fields": [
+    {
+      "doc": "Elevation_Thermal_Status_Group_1",
+      "name": "Elevation_Thermal_Status_Group_1",
+      "type": "string"
+    },
+    {
+      "doc": "Elevation_Thermal_Status_Group_2",
+      "name": "Elevation_Thermal_Status_Group_2",
+      "type": "string"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_1",
+      "name": "Elevation_Surface_Temperature_Motor_1",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_2",
+      "name": "Elevation_Surface_Temperature_Motor_2",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_3",
+      "name": "Elevation_Surface_Temperature_Motor_3",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_4",
+      "name": "Elevation_Surface_Temperature_Motor_4",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_5",
+      "name": "Elevation_Surface_Temperature_Motor_5",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_6",
+      "name": "Elevation_Surface_Temperature_Motor_6",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_7",
+      "name": "Elevation_Surface_Temperature_Motor_7",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_8",
+      "name": "Elevation_Surface_Temperature_Motor_8",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_9",
+      "name": "Elevation_Surface_Temperature_Motor_9",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_10",
+      "name": "Elevation_Surface_Temperature_Motor_10",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_11",
+      "name": "Elevation_Surface_Temperature_Motor_11",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Motor_12",
+      "name": "Elevation_Surface_Temperature_Motor_12",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_1",
+      "name": "Elevation_Surface_Temperature_Drive_1",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_2",
+      "name": "Elevation_Surface_Temperature_Drive_2",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_3",
+      "name": "Elevation_Surface_Temperature_Drive_3",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_4",
+      "name": "Elevation_Surface_Temperature_Drive_4",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_5",
+      "name": "Elevation_Surface_Temperature_Drive_5",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_6",
+      "name": "Elevation_Surface_Temperature_Drive_6",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_7",
+      "name": "Elevation_Surface_Temperature_Drive_7",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_8",
+      "name": "Elevation_Surface_Temperature_Drive_8",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_9",
+      "name": "Elevation_Surface_Temperature_Drive_9",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_10",
+      "name": "Elevation_Surface_Temperature_Drive_10",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_11",
+      "name": "Elevation_Surface_Temperature_Drive_11",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Drive_12",
+      "name": "Elevation_Surface_Temperature_Drive_12",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Setpoint_Group_1",
+      "name": "Elevation_Surface_Temperature_Setpoint_Group_1",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Surface_Temperature_Setpoint_Group_2",
+      "name": "Elevation_Surface_Temperature_Setpoint_Group_2",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Elevation_Drives_Thermal",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

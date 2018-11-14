@@ -1,0 +1,77 @@
+{
+  "fields": [
+    {
+      "name": "positionError",
+      "type": "float"
+    },
+    {
+      "name": "positionActual",
+      "type": "float"
+    },
+    {
+      "name": "positionCmd",
+      "type": "float"
+    },
+    {
+      "name": "driveTorqueActual",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "driveTorqueError",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "driveTorqueCmd",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "driveCurrentActual",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "driveTempActual",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "resolverHeadRaw",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "resolverHeadCalibrated",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Current total power absorption",
+      "name": "powerAbsortion",
+      "type": "float"
+    }
+  ],
+  "name": "DomeAPS_status",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "DomeAPS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

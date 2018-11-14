@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "stop",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATMCS_command_stopTracking",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "stopTracking",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.7.1",
+  "type": "record"
+}

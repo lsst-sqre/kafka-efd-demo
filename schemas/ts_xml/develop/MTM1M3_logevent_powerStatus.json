@@ -1,0 +1,81 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "powerNetworkACommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkAOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkBCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkBOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkCCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkCOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkDCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "powerNetworkDOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkACommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkAOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkBCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkBOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkCCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkCOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkDCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworkDOutputOn",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTM1M3_logevent_powerStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "powerStatus",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

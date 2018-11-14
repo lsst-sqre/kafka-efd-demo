@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "active",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATMCS_logevent_nasmyth1LimitSwitchCW",
+  "namespace": "lsst.sal",
+  "sal_alias": "nasmyth1LimitSwitchCW",
+  "sal_author": null,
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

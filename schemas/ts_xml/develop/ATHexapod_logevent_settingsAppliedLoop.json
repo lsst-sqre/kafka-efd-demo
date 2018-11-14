@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "period",
+      "type": "double"
+    },
+    {
+      "name": "periodAllowedJitter",
+      "type": "double"
+    }
+  ],
+  "name": "ATHexapod_logevent_settingsAppliedLoop",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedLoop",
+  "sal_author": null,
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

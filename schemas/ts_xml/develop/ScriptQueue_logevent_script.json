@@ -1,0 +1,64 @@
+{
+  "doc": "Information about a queued script.",
+  "fields": [
+    {
+      "doc": "ID of command which queued this script.",
+      "name": "cmdId",
+      "type": "int"
+    },
+    {
+      "doc": "Index of Script SAL component.",
+      "name": "salIndex",
+      "type": "int"
+    },
+    {
+      "doc": "True if this is a standard script, False if an external script.",
+      "name": "isStandard",
+      "type": "boolean"
+    },
+    {
+      "doc": "Path of script, relative to standard or external root directory.",
+      "name": "path",
+      "type": "string"
+    },
+    {
+      "doc": "Time at which the script process started.",
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "doc": "Duration of the script process; 0 if still running.",
+      "name": "duration",
+      "type": "double"
+    },
+    {
+      "doc": "State of script process. Loading means the script is still being loaded and is not yet configured. Configured means the script has been configured and can be run. Running means the script has been commanded to run. Done means the script has finished (see scriptState to see whether it ran successfully). ConfigureFailed means the process was terminated because the `configure` command failed. Terminated means the process was terminated due to calling the `terminate` command, or due to calling the `stop` command when the script was not running or if running but stopping the script gently failed.",
+      "name": "processState",
+      "type": {
+        "name": "processState",
+        "symbols": [
+          "Loading",
+          "Configured",
+          "Running",
+          "Done",
+          "ConfigureFailed",
+          "Terminated"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "State of the script; see Script_Events.xml for enum values; 0 if the script is not yet loaded.",
+      "name": "scriptState",
+      "type": "bytes"
+    }
+  ],
+  "name": "ScriptQueue_logevent_script",
+  "namespace": "lsst.sal",
+  "sal_alias": "script",
+  "sal_author": null,
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

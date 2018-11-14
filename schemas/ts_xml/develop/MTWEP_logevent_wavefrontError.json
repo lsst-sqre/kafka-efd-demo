@@ -1,0 +1,31 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Wavefront sensor ID.",
+      "name": "sensorId",
+      "type": "int"
+    },
+    {
+      "doc": "z4-z22 terms of annular Zernike polynomials.The unit should be decided in a latter time.",
+      "name": "annularZernikePoly",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "The time stamp for when the telemetry was sampled.",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTWEP_logevent_wavefrontError",
+  "namespace": "lsst.sal",
+  "sal_alias": "wavefrontError",
+  "sal_author": null,
+  "sal_subsystem": "MTWEP",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

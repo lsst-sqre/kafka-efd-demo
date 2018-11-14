@@ -1,0 +1,27 @@
+{
+  "fields": [
+    {
+      "name": "aGuide",
+      "type": "float"
+    },
+    {
+      "name": "aLocal",
+      "type": "float"
+    },
+    {
+      "name": "bGuide",
+      "type": "float"
+    },
+    {
+      "name": "bLocal",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelPointingControl",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,43 @@
+{
+  "fields": [
+    {
+      "doc": "Voltages",
+      "name": "voltages",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Currents",
+      "name": "currents",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "On/Of state",
+      "name": "onOff",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "State bitmask",
+      "name": "states",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_powerStatus",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

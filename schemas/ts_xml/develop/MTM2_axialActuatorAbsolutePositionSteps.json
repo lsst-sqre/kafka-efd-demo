@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "doc": "array of steps for each axial actuator in sequence. Increasing steps corresponds to counterclockwise rotation of the motor shaft, looking along the shaft in the direction of the motor",
+      "name": "axialAbsolutePositionSteps",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_axialActuatorAbsolutePositionSteps",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

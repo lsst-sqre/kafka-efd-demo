@@ -1,0 +1,27 @@
+{
+  "doc": "Wait for the specified period.",
+  "fields": [
+    {
+      "doc": "Final ack code, typically a SAL__CMD constant.",
+      "name": "ack",
+      "type": "int"
+    },
+    {
+      "doc": "Desired command duration.",
+      "name": "duration",
+      "type": "double"
+    }
+  ],
+  "name": "Test_command_wait",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "wait",
+  "sal_author": "rowen",
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "Test",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "1.0.0",
+  "type": "record"
+}

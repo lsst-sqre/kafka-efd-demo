@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "Zenith angle is zero when the telescope is at zenith, and is always .ge. 0",
+      "name": "zenithAngleMeasured",
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_zenithAngleMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

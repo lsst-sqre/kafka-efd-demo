@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "doc": "Last step vector commands sent to actuators",
+      "name": "steps",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_stepVectorUpdate",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

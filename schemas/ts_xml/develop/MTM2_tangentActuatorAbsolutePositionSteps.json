@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink0DegAbsolutePositionSteps",
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink60DegAbsolutePositionSteps",
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink120DegAbsolutePositionSteps",
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink180DegAbsolutePositionSteps",
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink240DegAbsolutePositionSteps",
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink300DegAbsolutePositionSteps",
+      "type": "long"
+    }
+  ],
+  "name": "MTM2_tangentActuatorAbsolutePositionSteps",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

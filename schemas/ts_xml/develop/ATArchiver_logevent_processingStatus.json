@@ -1,0 +1,21 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATArchiver_logevent_processingStatus.html",
+  "fields": [
+    {
+      "name": "statusCode",
+      "type": "long"
+    },
+    {
+      "name": "description",
+      "type": "string"
+    }
+  ],
+  "name": "ATArchiver_logevent_processingStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "processingStatus",
+  "sal_author": null,
+  "sal_subsystem": "ATArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

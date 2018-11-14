@@ -1,0 +1,39 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "powerNetworkACurrent",
+      "type": "float"
+    },
+    {
+      "name": "powerNetworkBCurrent",
+      "type": "float"
+    },
+    {
+      "name": "powerNetworkCCurrent",
+      "type": "float"
+    },
+    {
+      "name": "powerNetworkDCurrent",
+      "type": "float"
+    },
+    {
+      "name": "lightPowerNetworkCurrent",
+      "type": "float"
+    },
+    {
+      "name": "controlsPowerNetworkCurrent",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_powerSupplyData",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

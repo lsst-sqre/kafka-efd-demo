@@ -1,0 +1,274 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "anyWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyMajorFault",
+      "type": "boolean"
+    },
+    {
+      "name": "majorFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMinorFault",
+      "type": "boolean"
+    },
+    {
+      "name": "minorFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyFaultOverride",
+      "type": "boolean"
+    },
+    {
+      "name": "faultOverride",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMainCalibrationError",
+      "type": "boolean"
+    },
+    {
+      "name": "mainCalibrationError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyBackupCalibrationError",
+      "type": "boolean"
+    },
+    {
+      "name": "backupCalibrationError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyLimitSwitch1Operated",
+      "type": "boolean"
+    },
+    {
+      "name": "limitSwitch1Operated",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyLimitSwitch2Operated",
+      "type": "boolean"
+    },
+    {
+      "name": "limitSwitch2Operated",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyUniqueIdCRCError",
+      "type": "boolean"
+    },
+    {
+      "name": "uniqueIdCRCError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyApplicationTypeMismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "applicationTypeMismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyApplicationMissing",
+      "type": "boolean"
+    },
+    {
+      "name": "applicationMissing",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyApplicationCRCMismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "applicationCRCMismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOneWireMissing",
+      "type": "boolean"
+    },
+    {
+      "name": "oneWireMissing",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOneWire1Mismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "oneWire1Mismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOneWire2Mismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "oneWire2Mismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyWatchdogReset",
+      "type": "boolean"
+    },
+    {
+      "name": "watchdogReset",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyBrownOut",
+      "type": "boolean"
+    },
+    {
+      "name": "brownOut",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyEventTrapReset",
+      "type": "boolean"
+    },
+    {
+      "name": "eventTrapReset",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMotorDriverFault",
+      "type": "boolean"
+    },
+    {
+      "name": "motorDriverFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anySSRPowerFault",
+      "type": "boolean"
+    },
+    {
+      "name": "ssrPowerFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyAuxPowerFault",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anySMCPowerFault",
+      "type": "boolean"
+    },
+    {
+      "name": "smcPowerFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyILCFault",
+      "type": "boolean"
+    },
+    {
+      "name": "ilcFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyBroadcastCounterWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "broadcastCounterWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_hardpointActuatorWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "hardpointActuatorWarning",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

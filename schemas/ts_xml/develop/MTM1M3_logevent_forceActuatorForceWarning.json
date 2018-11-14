@@ -1,0 +1,65 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "anyWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyPrimaryAxisMeasuredForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "primaryAxisMeasuredForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anySecondaryAxisMeasuredForceWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "secondaryAxisMeasuredForceWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyPrimaryAxisFollowingErrorWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "primaryAxisFollowingErrorWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anySecondaryAxisFollowingErrorWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "secondaryAxisFollowingErrorWarning",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_forceActuatorForceWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "forceActuatorForceWarning",
+  "sal_author": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

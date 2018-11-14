@@ -1,0 +1,35 @@
+{
+  "fields": [
+    {
+      "name": "cst",
+      "type": "float"
+    },
+    {
+      "name": "dcst",
+      "type": "float"
+    },
+    {
+      "name": "dsst",
+      "type": "float"
+    },
+    {
+      "name": "sst",
+      "type": "float"
+    },
+    {
+      "name": "tai",
+      "type": "float"
+    },
+    {
+      "name": "tt",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelTimeKeeper",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

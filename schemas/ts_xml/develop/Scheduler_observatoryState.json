@@ -1,0 +1,79 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "pointingRa",
+      "type": "double"
+    },
+    {
+      "name": "pointingDec",
+      "type": "double"
+    },
+    {
+      "name": "pointingAngle",
+      "type": "double"
+    },
+    {
+      "name": "pointingAltitude",
+      "type": "double"
+    },
+    {
+      "name": "pointingAzimuth",
+      "type": "double"
+    },
+    {
+      "name": "pointingPa",
+      "type": "double"
+    },
+    {
+      "name": "pointingRot",
+      "type": "double"
+    },
+    {
+      "name": "tracking",
+      "type": "boolean"
+    },
+    {
+      "name": "telescopeAltitude",
+      "type": "double"
+    },
+    {
+      "name": "telescopeAzimuth",
+      "type": "double"
+    },
+    {
+      "name": "telescopeRotator",
+      "type": "double"
+    },
+    {
+      "name": "domeAltitude",
+      "type": "double"
+    },
+    {
+      "name": "domeAzimuth",
+      "type": "double"
+    },
+    {
+      "name": "filterPosition",
+      "type": "string"
+    },
+    {
+      "name": "filterMounted",
+      "type": "string"
+    },
+    {
+      "name": "filterUnmounted",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_observatoryState",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,49 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/MTArchiver_logevent_mtArchiverEntitySummaryState.html",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "long"
+    },
+    {
+      "name": "currentState",
+      "type": "string"
+    },
+    {
+      "name": "previousState",
+      "type": "string"
+    },
+    {
+      "name": "executing",
+      "type": "string"
+    },
+    {
+      "name": "commandsAvailable",
+      "type": "string"
+    },
+    {
+      "name": "configurationsAvailable",
+      "type": "string"
+    }
+  ],
+  "name": "MTArchiver_logevent_mtArchiverEntitySummaryState",
+  "namespace": "lsst.sal",
+  "sal_alias": "mtArchiverEntitySummaryState",
+  "sal_author": null,
+  "sal_subsystem": "MTArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

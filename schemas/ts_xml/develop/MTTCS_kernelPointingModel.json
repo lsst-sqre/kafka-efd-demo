@@ -1,0 +1,37 @@
+{
+  "fields": [
+    {
+      "name": "coeffv",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "model",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "nTerml",
+      "type": "long"
+    },
+    {
+      "name": "nTerms",
+      "type": "long"
+    },
+    {
+      "name": "nTermx",
+      "type": "long"
+    }
+  ],
+  "name": "MTTCS_kernelPointingModel",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

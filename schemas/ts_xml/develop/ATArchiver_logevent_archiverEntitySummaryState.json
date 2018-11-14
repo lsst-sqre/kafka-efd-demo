@@ -1,0 +1,49 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATArchiver_logevent_archiverEntitySummaryState.html",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "long"
+    },
+    {
+      "name": "currentState",
+      "type": "string"
+    },
+    {
+      "name": "previousState",
+      "type": "string"
+    },
+    {
+      "name": "executing",
+      "type": "string"
+    },
+    {
+      "name": "commandsAvailable",
+      "type": "string"
+    },
+    {
+      "name": "configurationsAvailable",
+      "type": "string"
+    }
+  ],
+  "name": "ATArchiver_logevent_archiverEntitySummaryState",
+  "namespace": "lsst.sal",
+  "sal_alias": "archiverEntitySummaryState",
+  "sal_author": null,
+  "sal_subsystem": "ATArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

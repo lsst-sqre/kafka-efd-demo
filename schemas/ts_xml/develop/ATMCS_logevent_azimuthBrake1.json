@@ -1,0 +1,18 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "This telemetry item reports the auxiliary telescope elevation motor current. ",
+      "name": "engage",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATMCS_logevent_azimuthBrake1",
+  "namespace": "lsst.sal",
+  "sal_alias": "azimuthBrake1",
+  "sal_author": null,
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

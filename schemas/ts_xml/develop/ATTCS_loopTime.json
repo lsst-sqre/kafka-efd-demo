@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "name": "loopTime",
+      "type": "double"
+    }
+  ],
+  "name": "ATTCS_loopTime",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "ATTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

@@ -1,0 +1,18 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Reached state",
+      "name": "newState",
+      "type": "int"
+    }
+  ],
+  "name": "DomeADB_logevent_stateChanged",
+  "namespace": "lsst.sal",
+  "sal_alias": "stateChanged",
+  "sal_author": null,
+  "sal_subsystem": "DomeADB",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

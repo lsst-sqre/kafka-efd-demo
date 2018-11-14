@@ -1,0 +1,103 @@
+{
+  "doc": "Array values.",
+  "fields": [
+    {
+      "name": "boolean0",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "byte0",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    },
+    {
+      "name": "char0",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    },
+    {
+      "name": "short0",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "int0",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "long0",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "longLong0",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "octet0",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    },
+    {
+      "name": "unsignedShort0",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "unsignedInt0",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "unsignedLong0",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "float0",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "double0",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Test_arrays",
+  "namespace": "lsst.sal",
+  "sal_author": "rowen",
+  "sal_subsystem": "Test",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "2.0.0",
+  "type": "record"
+}

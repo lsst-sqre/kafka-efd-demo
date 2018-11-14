@@ -1,0 +1,12 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/MTCamera_logevent_startRotateCarousel.html",
+  "fields": [],
+  "name": "MTCamera_logevent_startRotateCarousel",
+  "namespace": "lsst.sal",
+  "sal_alias": "startRotateCarousel",
+  "sal_author": null,
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

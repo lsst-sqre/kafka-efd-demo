@@ -1,0 +1,68 @@
+{
+  "doc": "Scalar values.",
+  "fields": [
+    {
+      "name": "boolean0",
+      "type": "boolean"
+    },
+    {
+      "name": "byte0",
+      "type": "bytes"
+    },
+    {
+      "name": "char0",
+      "type": "bytes"
+    },
+    {
+      "name": "short0",
+      "type": "int"
+    },
+    {
+      "name": "int0",
+      "type": "int"
+    },
+    {
+      "name": "long0",
+      "type": "long"
+    },
+    {
+      "name": "longLong0",
+      "type": "long"
+    },
+    {
+      "name": "octet0",
+      "type": "bytes"
+    },
+    {
+      "name": "unsignedShort0",
+      "type": "int"
+    },
+    {
+      "name": "unsignedInt0",
+      "type": "int"
+    },
+    {
+      "name": "unsignedLong0",
+      "type": "long"
+    },
+    {
+      "name": "float0",
+      "type": "float"
+    },
+    {
+      "name": "double0",
+      "type": "double"
+    },
+    {
+      "name": "string0",
+      "type": "string"
+    }
+  ],
+  "name": "Test_scalars",
+  "namespace": "lsst.sal",
+  "sal_author": "rowen",
+  "sal_subsystem": "Test",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "2.0.0",
+  "type": "record"
+}

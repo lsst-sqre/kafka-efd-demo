@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "placeholder",
+      "name": "size",
+      "type": "long"
+    }
+  ],
+  "name": "EFD_Summary",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "EFD",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5.0",
+  "type": "record"
+}

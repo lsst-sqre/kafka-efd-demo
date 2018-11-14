@@ -1,0 +1,89 @@
+{
+  "fields": [
+    {
+      "doc": "Balancing_Status",
+      "name": "Balancing_Status",
+      "type": "string"
+    },
+    {
+      "doc": "Balancing_Actual_Position_Drive_1",
+      "name": "Balancing_Actual_Position_Drive_1",
+      "type": "double"
+    },
+    {
+      "doc": "Balancing_Actual_Position_Drive_2",
+      "name": "Balancing_Actual_Position_Drive_2",
+      "type": "double"
+    },
+    {
+      "doc": "Balancing_Actual_Position_Drive_3",
+      "name": "Balancing_Actual_Position_Drive_3",
+      "type": "double"
+    },
+    {
+      "doc": "Balancing_Actual_Position_Drive_4",
+      "name": "Balancing_Actual_Position_Drive_4",
+      "type": "double"
+    },
+    {
+      "doc": "Balancing_Positive_Limit_Switch_Drive_1",
+      "name": "Balancing_Positive_Limit_Switch_Drive_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Positive_Limit_Switch_Drive_2",
+      "name": "Balancing_Positive_Limit_Switch_Drive_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Positive_Limit_Switch_Drive_3",
+      "name": "Balancing_Positive_Limit_Switch_Drive_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Positive_Limit_Switch_Drive_4",
+      "name": "Balancing_Positive_Limit_Switch_Drive_4",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Negative_Limit_Switch_Drive_1",
+      "name": "Balancing_Negative_Limit_Switch_Drive_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Negative_Limit_Switch_Drive_2",
+      "name": "Balancing_Negative_Limit_Switch_Drive_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Negative_Limit_Switch_Drive_3",
+      "name": "Balancing_Negative_Limit_Switch_Drive_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Negative_Limit_Switch_Drive_4",
+      "name": "Balancing_Negative_Limit_Switch_Drive_4",
+      "type": "boolean"
+    },
+    {
+      "doc": "Balancing_Interlocks",
+      "name": "Balancing_Interlocks",
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Balancing",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

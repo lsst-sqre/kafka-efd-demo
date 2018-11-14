@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "gwState",
+      "type": "long"
+    }
+  ],
+  "name": "ATSpectrograph_logevent_gwState",
+  "namespace": "lsst.sal",
+  "sal_alias": "gwState",
+  "sal_author": null,
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "steps",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_command_moveHardpointActuators",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "moveHardpointActuators",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.7.0",
+  "type": "record"
+}

@@ -1,0 +1,55 @@
+{
+  "fields": [
+    {
+      "name": "altitudeMinpos",
+      "type": "double"
+    },
+    {
+      "name": "altitudeMaxpos",
+      "type": "double"
+    },
+    {
+      "name": "azimuthMinpos",
+      "type": "double"
+    },
+    {
+      "name": "azimuthMaxpos",
+      "type": "double"
+    },
+    {
+      "name": "altitudeMaxspeed",
+      "type": "double"
+    },
+    {
+      "name": "altitudeAccel",
+      "type": "double"
+    },
+    {
+      "name": "altitudeDecel",
+      "type": "double"
+    },
+    {
+      "name": "azimuthMaxspeed",
+      "type": "double"
+    },
+    {
+      "name": "azimuthAccel",
+      "type": "double"
+    },
+    {
+      "name": "azimuthDecel",
+      "type": "double"
+    },
+    {
+      "name": "settleTime",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_telescopeConfig",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

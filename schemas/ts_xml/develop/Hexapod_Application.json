@@ -1,0 +1,35 @@
+{
+  "fields": [
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/Hexapod_Application_Demand.html",
+      "name": "Demand",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/Hexapod_Application_Error.html",
+      "name": "Error",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/Hexapod_Application_Position.html",
+      "name": "Position",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Hexapod_Application",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

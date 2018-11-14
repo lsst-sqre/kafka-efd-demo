@@ -1,0 +1,21 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "name": "value",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATCamera_command_endImage",
+  "namespace": "lsst.sal",
+  "sal_action": null,
+  "sal_alias": "endImage",
+  "sal_author": null,
+  "sal_device": null,
+  "sal_property": null,
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALCommand",
+  "sal_value": null,
+  "sal_version": "3.7.1",
+  "type": "record"
+}

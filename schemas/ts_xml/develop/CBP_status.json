@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "doc": "The status of the CBP.",
+      "name": "panic",
+      "type": "float"
+    },
+    {
+      "doc": "The status of the azimuth",
+      "name": "azimuth",
+      "type": "float"
+    },
+    {
+      "doc": "The status of the altitude motor",
+      "name": "altitude",
+      "type": "float"
+    },
+    {
+      "doc": "The status of the mask encoder",
+      "name": "mask",
+      "type": "float"
+    },
+    {
+      "doc": "The status of the mask rotation motor",
+      "name": "mask_rotation",
+      "type": "float"
+    },
+    {
+      "doc": "The status of the focus encoder",
+      "name": "focus",
+      "type": "float"
+    }
+  ],
+  "name": "CBP_status",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

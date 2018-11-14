@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "needSwap",
+      "type": "boolean"
+    },
+    {
+      "name": "filterToUnmount",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_logevent_needFilterSwap",
+  "namespace": "lsst.sal",
+  "sal_alias": "needFilterSwap",
+  "sal_author": null,
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

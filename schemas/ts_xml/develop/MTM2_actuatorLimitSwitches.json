@@ -1,0 +1,27 @@
+{
+  "fields": [
+    {
+      "doc": "Positive direction limit switch statuses",
+      "name": "forward",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Negative direction limit switch statuses",
+      "name": "reverse",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_actuatorLimitSwitches",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,216 @@
+{
+  "fields": [
+    {
+      "doc": "Azimuth_Thermal_Status_Group_1",
+      "name": "Azimuth_Thermal_Status_Group_1",
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Thermal_Status_Group_2",
+      "name": "Azimuth_Thermal_Status_Group_2",
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Thermal_Status_Group_3",
+      "name": "Azimuth_Thermal_Status_Group_3",
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Thermal_Status_Group_4",
+      "name": "Azimuth_Thermal_Status_Group_4",
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_1",
+      "name": "Azimuth_Surface_Temperature_Motor_1",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_2",
+      "name": "Azimuth_Surface_Temperature_Motor_2",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_3",
+      "name": "Azimuth_Surface_Temperature_Motor_3",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_4",
+      "name": "Azimuth_Surface_Temperature_Motor_4",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_5",
+      "name": "Azimuth_Surface_Temperature_Motor_5",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_6",
+      "name": "Azimuth_Surface_Temperature_Motor_6",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_7",
+      "name": "Azimuth_Surface_Temperature_Motor_7",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_8",
+      "name": "Azimuth_Surface_Temperature_Motor_8",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_9",
+      "name": "Azimuth_Surface_Temperature_Motor_9",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_10",
+      "name": "Azimuth_Surface_Temperature_Motor_10",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_11",
+      "name": "Azimuth_Surface_Temperature_Motor_11",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_12",
+      "name": "Azimuth_Surface_Temperature_Motor_12",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_13",
+      "name": "Azimuth_Surface_Temperature_Motor_13",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_14",
+      "name": "Azimuth_Surface_Temperature_Motor_14",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_15",
+      "name": "Azimuth_Surface_Temperature_Motor_15",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Motor_16",
+      "name": "Azimuth_Surface_Temperature_Motor_16",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_1",
+      "name": "Azimuth_Surface_Temperature_Drive_1",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_2",
+      "name": "Azimuth_Surface_Temperature_Drive_2",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_3",
+      "name": "Azimuth_Surface_Temperature_Drive_3",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_4",
+      "name": "Azimuth_Surface_Temperature_Drive_4",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_5",
+      "name": "Azimuth_Surface_Temperature_Drive_5",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_6",
+      "name": "Azimuth_Surface_Temperature_Drive_6",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_7",
+      "name": "Azimuth_Surface_Temperature_Drive_7",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_8",
+      "name": "Azimuth_Surface_Temperature_Drive_8",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_9",
+      "name": "Azimuth_Surface_Temperature_Drive_9",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_10",
+      "name": "Azimuth_Surface_Temperature_Drive_10",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_11",
+      "name": "Azimuth_Surface_Temperature_Drive_11",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_12",
+      "name": "Azimuth_Surface_Temperature_Drive_12",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_13",
+      "name": "Azimuth_Surface_Temperature_Drive_13",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_14",
+      "name": "Azimuth_Surface_Temperature_Drive_14",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_15",
+      "name": "Azimuth_Surface_Temperature_Drive_15",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Drive_16",
+      "name": "Azimuth_Surface_Temperature_Drive_16",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Setpoint_Group_1",
+      "name": "Azimuth_Surface_Temperature_Setpoint_Group_1",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Setpoint_Group_2",
+      "name": "Azimuth_Surface_Temperature_Setpoint_Group_2",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Setpoint_Group_3",
+      "name": "Azimuth_Surface_Temperature_Setpoint_Group_3",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Surface_Temperature_Setpoint_Group_4",
+      "name": "Azimuth_Surface_Temperature_Setpoint_Group_4",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Azimuth_Drives_Thermal",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

@@ -1,0 +1,48 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/Sequencer_logevent_SequencerCommandStatus.html",
+  "fields": [
+    {
+      "doc": "Command source",
+      "name": "commandSource",
+      "type": "string"
+    },
+    {
+      "doc": "Sequence number",
+      "name": "sequenceNumber",
+      "type": "long"
+    },
+    {
+      "doc": "identifier for the command",
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "doc": "Timestamp",
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "doc": "Command sent",
+      "name": "commandSent",
+      "type": "string"
+    },
+    {
+      "doc": "Command status code",
+      "name": "statusValue",
+      "type": "long"
+    },
+    {
+      "doc": "Command status string",
+      "name": "status",
+      "type": "string"
+    }
+  ],
+  "name": "Sequencer_logevent_sequencerCommandStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "sequencerCommandStatus",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "Sequencer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

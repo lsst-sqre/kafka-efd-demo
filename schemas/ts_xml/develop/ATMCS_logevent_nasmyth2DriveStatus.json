@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "enable",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATMCS_logevent_nasmyth2DriveStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "nasmyth2DriveStatus",
+  "sal_author": null,
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

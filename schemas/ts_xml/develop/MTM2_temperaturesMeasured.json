@@ -1,0 +1,35 @@
+{
+  "fields": [
+    {
+      "doc": "As measured temperatures",
+      "name": "temps",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "As measured intake temperatures",
+      "name": "intakeTemperatures",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "As measured exhaust temperatures",
+      "name": "exhaustTemperatures",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_temperaturesMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

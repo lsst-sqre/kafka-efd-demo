@@ -1,0 +1,18 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "blabla",
+      "name": "driveId",
+      "type": "int"
+    }
+  ],
+  "name": "DomeADB_logevent_driveEnabled",
+  "namespace": "lsst.sal",
+  "sal_alias": "driveEnabled",
+  "sal_author": null,
+  "sal_subsystem": "DomeADB",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

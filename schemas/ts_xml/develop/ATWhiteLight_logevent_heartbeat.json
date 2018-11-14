@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "heartbeat",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATWhiteLight_logevent_heartbeat",
+  "namespace": "lsst.sal",
+  "sal_alias": "heartbeat",
+  "sal_author": null,
+  "sal_subsystem": "ATWhiteLight",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

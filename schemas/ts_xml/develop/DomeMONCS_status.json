@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "name": "data",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "DomeMONCS_status",
+  "namespace": "lsst.sal",
+  "sal_author": null,
+  "sal_subsystem": "DomeMONCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

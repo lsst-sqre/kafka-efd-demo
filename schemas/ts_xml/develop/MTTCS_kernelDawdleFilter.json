@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "name": "bypass",
+      "type": "long"
+    },
+    {
+      "name": "t",
+      "type": "float"
+    }
+  ],
+  "name": "MTTCS_kernelDawdleFilter",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}
