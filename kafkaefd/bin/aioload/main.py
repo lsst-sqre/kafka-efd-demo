@@ -12,7 +12,10 @@ from pathlib import Path
 
 import click
 import fastavro
+import requests
+from uritemplate import URITemplate
 
+from ..utils import get_registry_url
 from ...salschema.convert import validate_schema
 
 
@@ -52,6 +55,44 @@ def test_schemas(ctx):
     )
     print('Got value:')
     print(value_data)
+
+
+@aioload.command('upload-schemas')
+@click.option(
+    '--name', 'root_name', type=click.Choice(['simple']), show_default=True,
+    default='simple',
+    help='Root name of the topic schema (without -value/-key and json '
+         'extension.'
+)
+@click.option(
+    '--count', type=int, default=1, show_default=True,
+    help='Number of indexed schemas to generate. This is also the number of '
+         'simultaneous topics that can be run.'
+)
+@click.pass_context
+def upload_schemas(ctx, root_name, count):
+    """Synchronize Avro schemas to the registry.
+    """
+    schema_registry_url = get_registry_url(ctx.parent.parent)
+
+    session = requests.Session()
+    session.headers.update({
+        'Accept': 'application/vnd.schemaregistry.v1+json'
+    })
+    uri = URITemplate(schema_registry_url + '/subjects{/subject}/versions')
+
+    for i in range(count):
+        names = [f'{root_name}-key', f'{root_name}-value']
+        subjects = [f'{root_name}{i:d}-key', f'{root_name}{i:d}-value']
+        for name, subject in zip(names, subjects):
+            schema = create_indexed_schema(name, index=i)
+            data = {'schema': json.dumps(schema, sort_keys=True)}
+            url = uri.expand({'subject': subject})
+            r = session.post(url, json=data)
+            data = r.json()
+            r.raise_for_status()
+            print("Uploaded {0} schema ID: {1:d}".format(
+                subject, data['id']))
 
 
 def create_indexed_schema(name, index=0):
