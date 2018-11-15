@@ -1,0 +1,12 @@
+{
+  "name" : "influxdb-sink",
+  "config" : {
+    "connector.class" : "com.datamountaineer.streamreactor.connect.influx.InfluxSinkConnector",
+    "tasks.max" : "1",
+    "topics" : "helloavro",
+    "connect.influx.url" : "http://influxdb-influxdb.default:8086",
+    "connect.influx.db": "kafka",
+    "connect.influx.kcql": "INSERT INTO influxMeasure SELECT * FROM helloavro WITHTIMESTAMP sys_time()",
+    "connect.influx.username": "-"
+  }
+}
