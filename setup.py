@@ -26,6 +26,7 @@ install_requires = [
     'cachetools==3.0.0',
     'aiohttp==3.4.4',
     'aiofile==1.4.3',
+    'aiokafka==0.4.3',
     'gidgethub==3.0.0',
 ]
 
