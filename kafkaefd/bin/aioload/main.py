@@ -36,7 +36,7 @@ def test_schemas(ctx):
     """Test Avro schemas.
     """
     value_schema = fastavro.parse_schema(
-        create_indexed_schema('simple-value', index=0))
+        create_indexed_schema('aioload-simple-value', index=0))
 
     print('value schema:')
     print(json.dumps(value_schema, indent=2, sort_keys=True))
@@ -59,8 +59,8 @@ def test_schemas(ctx):
 
 @aioload.command('upload-schemas')
 @click.option(
-    '--name', 'root_name', type=click.Choice(['simple']), show_default=True,
-    default='simple',
+    '--name', 'root_name', type=click.Choice(['aioload-simple']),
+    show_default=True, default='aioload-simple',
     help='Root name of the topic schema (without -value/-key and json '
          'extension.'
 )
