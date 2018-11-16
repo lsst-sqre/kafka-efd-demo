@@ -9,6 +9,7 @@ import asyncio
 import datetime
 from io import BytesIO
 import json
+import logging
 from pathlib import Path
 import re
 
@@ -18,6 +19,7 @@ import click
 import fastavro
 import requests
 from uritemplate import URITemplate
+import structlog
 
 from ..utils import get_registry_url, get_broker_url
 from ...salschema.convert import validate_schema
@@ -73,10 +75,20 @@ def test_schemas(ctx):
     help='Number of indexed schemas to generate. This is also the number of '
          'simultaneous topics that can be run.'
 )
+@click.option(
+    '--log-level', 'log_level',
+    type=click.Choice(['debug', 'info', 'warning']),
+    default='info', help='Logging level'
+)
 @click.pass_context
-def upload_schemas(ctx, root_name, count):
+def upload_schemas(ctx, root_name, count, log_level):
     """Synchronize Avro schemas to the registry.
     """
+    configure_logging(level=log_level)
+    logger = structlog.get_logger(__name__).bind(
+        role='upload-schemas',
+    )
+
     schema_registry_url = get_registry_url(ctx.parent.parent)
 
     session = requests.Session()
@@ -95,8 +107,7 @@ def upload_schemas(ctx, root_name, count):
             r = session.post(url, json=data)
             data = r.json()
             r.raise_for_status()
-            print("Uploaded {0} schema ID: {1:d}".format(
-                subject, data['id']))
+            logger.info('Uploaded schema', subject=subject, id=data['id'])
 
 
 @aioload.command('produce')
@@ -115,10 +126,17 @@ def upload_schemas(ctx, root_name, count):
     '--hertz', type=float, default=1., show_default=True,
     help="Frequency of messages (hertz)"
 )
+@click.option(
+    '--log-level', 'log_level',
+    type=click.Choice(['debug', 'info', 'warning']),
+    default='info', help='Logging level'
+)
 @click.pass_context
-def produce(ctx, root_topic_name, count, hertz):
+def produce(ctx, root_topic_name, count, hertz, log_level):
     """Produce messages for a given topic with a given frequency.
     """
+    configure_logging(level=log_level)
+
     schema_registry_url = get_registry_url(ctx.parent.parent)
     producer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
@@ -154,10 +172,17 @@ def produce(ctx, root_topic_name, count, hertz):
     '--count', 'consumer_count', type=int, default=1, show_default=True,
     help='Number of consumer threads to run.'
 )
+@click.option(
+    '--log-level', 'log_level',
+    type=click.Choice(['debug', 'info', 'warning']),
+    default='info', help='Logging level'
+)
 @click.pass_context
-def consume(ctx, root_topic_name, consumer_count):
+def consume(ctx, root_topic_name, consumer_count, log_level):
     """Consume messages for a set of topics.
     """
+    configure_logging(level=log_level)
+
     schema_registry_url = get_registry_url(ctx.parent.parent)
     consumer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
@@ -235,7 +260,12 @@ async def producer_main(*, loop, producer, root_producer_settings,
 
 async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
                                    schema_registry_url, topic_name, period):
-    print(f'Getting schemas for topic {topic_name}')
+    logger = structlog.get_logger(__name__).bind(
+        role='producer',
+        topic=topic_name,
+    )
+
+    logger.info('Getting schemas')
     schema_uri = URITemplate(
         schema_registry_url + '/subjects{/subject}/versions/latest'
     )
@@ -265,7 +295,7 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
     # Set up producer
     producer = aiokafka.AIOKafkaProducer(loop=loop, **producer_settings)
     await producer.start()
-    print(f'Started producer for topic {topic_name}')
+    logger.info(f'Started producer')
 
     try:
         while True:
@@ -278,7 +308,7 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
             # May want to adjust this control batching latency
             await producer.send_and_wait(
                 topic_name, key=default_key, value=message_fh.read())
-            print('Sent message')
+            logger.debug('Sent message')
             # naieve message period; need to correct for production time
             await asyncio.sleep(period)
     finally:
@@ -307,7 +337,12 @@ async def consumer_main(*, loop, consumer, root_consumer_settings,
 
 async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
                                     schema_registry_url, root_topic_name):
-    print(f'Getting schemas for root topic {root_topic_name}')
+    logger = structlog.get_logger(__name__).bind(
+        role='consumer',
+        group=consumer_settings['group_id'],
+        client_id=consumer_settings['client_id']
+    )
+    logger.info(f'Getting schemas for root topic {root_topic_name}')
 
     registry_headers = {'Accept': 'application/vnd.schemaregistry.v1+json'}
 
@@ -340,6 +375,9 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
         m = general_subject_pattern.match(subject_name)
         topic_name = m.group('topic')
         subject_type = m.group('type')
+        logger.debug('Adding schema',
+                     topic=topic_name,
+                     subject_type=subject_type)
         if topic_name not in schemas:
             schemas[topic_name] = {'key': None, 'value': None}
         schemas[topic_name][subject_type] = schema
@@ -357,7 +395,7 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
 
         # await consumer.seek_to_end()
 
-        print(f'Started consumer for topic pattern {topic_pattern}')
+        logger.info(f'Started consumer for topic pattern {topic_pattern}')
         while True:
             async for message in consumer:
                 value_fh = BytesIO(message.value)
@@ -367,6 +405,35 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
                     schemas[message.topic]['value'])
                 now = datetime.datetime.now(datetime.timezone.utc)
                 latency = now - value['timestamp']
-                print('Latency {0!s}'.format(latency))
+                logger.debug(
+                    'latency',
+                    latency_millisec=latency.microseconds / 1000)
     finally:
         consumer.stop()
+
+
+def configure_logging(level='info'):
+    ch = logging.StreamHandler()
+    formatter = logging.Formatter('%(message)s')
+    ch.setFormatter(formatter)
+    logger = logging.getLogger('kafkaefd')
+    logger.addHandler(ch)
+    logger.setLevel(getattr(logging, level.upper()))
+
+    structlog.configure(
+        processors=[
+            structlog.stdlib.filter_by_level,
+            structlog.stdlib.add_logger_name,
+            structlog.stdlib.add_log_level,
+            structlog.stdlib.PositionalArgumentsFormatter(),
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.processors.StackInfoRenderer(),
+            structlog.processors.format_exc_info,
+            structlog.processors.UnicodeDecoder(),
+            structlog.processors.JSONRenderer()
+        ],
+        context_class=dict,
+        logger_factory=structlog.stdlib.LoggerFactory(),
+        wrapper_class=structlog.stdlib.BoundLogger,
+        cache_logger_on_first_use=True,
+    )

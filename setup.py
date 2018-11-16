@@ -28,6 +28,7 @@ install_requires = [
     'aiofile==1.4.3',
     'aiokafka==0.4.3',
     'gidgethub==3.0.0',
+    'structlog==18.2.0',
 ]
 
 tests_require = [
