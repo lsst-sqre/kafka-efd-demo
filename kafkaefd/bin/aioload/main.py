@@ -143,6 +143,44 @@ def produce(ctx, root_topic_name, count, hertz):
     )
 
 
+@aioload.command('consume')
+@click.option(
+    '--name',  'root_topic_name', type=click.Choice(['aioload-simple']),
+    show_default=True, default='aioload-simple',
+    help='Root topic name. This should match the --name argument for '
+         'upload-schemas.'
+)
+@click.option(
+    '--count', 'consumer_count', type=int, default=1, show_default=True,
+    help='Number of consumer threads to run.'
+)
+@click.pass_context
+def consume(ctx, root_topic_name, consumer_count):
+    """Consume messages for a set of topics.
+    """
+    schema_registry_url = get_registry_url(ctx.parent.parent)
+    consumer_settings = {
+        'bootstrap_servers': get_broker_url(ctx.parent.parent),
+        'group_id': root_topic_name,
+        'auto_offset_reset': 'latest'
+    }
+
+    if root_topic_name == 'aioload-simple':
+        consumer = consume_for_simple_topics
+    else:
+        raise RuntimeError(f'No consumer for topic {root_topic_name}')
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(
+        consumer_main(loop=loop,
+                      consumer=consumer,
+                      root_consumer_settings=consumer_settings,
+                      schema_registry_url=schema_registry_url,
+                      consumer_count=consumer_count,
+                      root_topic_name=root_topic_name)
+    )
+
+
 def create_indexed_schema(name, index=0):
     """Create a schema with an indexed namespace based on a template.
 
@@ -245,3 +283,90 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
             await asyncio.sleep(period)
     finally:
         await producer.stop()
+
+
+async def consumer_main(*, loop, consumer, root_consumer_settings,
+                        root_topic_name, schema_registry_url,
+                        consumer_count):
+    async with aiohttp.ClientSession() as httpsession:
+        tasks = []
+        for index in range(consumer_count):
+            consumer_settings = dict(root_consumer_settings)
+            consumer_settings['client_id'] = \
+                consumer_settings['group_id'] + f'-{index:d}'
+
+            tasks.append(asyncio.ensure_future(
+                consumer(loop=loop,
+                         httpsession=httpsession,
+                         consumer_settings=consumer_settings,
+                         schema_registry_url=schema_registry_url,
+                         root_topic_name=root_topic_name)
+            ))
+        await asyncio.gather(*tasks)
+
+
+async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
+                                    schema_registry_url, root_topic_name):
+    print(f'Getting schemas for root topic {root_topic_name}')
+
+    registry_headers = {'Accept': 'application/vnd.schemaregistry.v1+json'}
+
+    # Get names of subject for topic keys and values in the experiment
+    r = await httpsession.get(
+        schema_registry_url + '/subjects',
+        headers=registry_headers)
+    subject_names = await r.json()
+    # Filter subjects to just ones that correspond to topics in the experiment
+    subject_pattern = re.compile(
+        r'^' + root_topic_name + r'[\d]+-((key)|(value))$')
+    subject_names = [n for n in subject_names
+                     if subject_pattern.match(n) is not None]
+
+    # Get schemas for these subjects
+    schemas = {}
+    # This pattern extracts the topic name and whether it is a key or value
+    # schema from the subject name
+    general_subject_pattern = re.compile(
+        r'^(?P<topic>[a-zA-Z0-9_\-\.]+)-(?P<type>(key)|(value))$')
+    schema_uri = URITemplate(
+        schema_registry_url + '/subjects{/subject}/versions/latest')
+    for subject_name in subject_names:
+        r = await httpsession.get(
+            schema_uri.expand(subject=subject_name),
+            headers=registry_headers)
+        data = await r.json()
+        schema = fastavro.parse_schema(json.loads(data['schema']))
+
+        m = general_subject_pattern.match(subject_name)
+        topic_name = m.group('topic')
+        subject_type = m.group('type')
+        if topic_name not in schemas:
+            schemas[topic_name] = {'key': None, 'value': None}
+        schemas[topic_name][subject_type] = schema
+
+    # Start up the Kafka consumer
+    consumer = aiokafka.AIOKafkaConsumer(loop=loop, **consumer_settings)
+
+    # Main loop for consuming messages
+    try:
+        await consumer.start()
+
+        # Subscribe to all topics in the experiment
+        topic_pattern = r'^' + root_topic_name + r'[\d]+$'
+        consumer.subscribe(pattern=topic_pattern)
+
+        # await consumer.seek_to_end()
+
+        print(f'Started consumer for topic pattern {topic_pattern}')
+        while True:
+            async for message in consumer:
+                value_fh = BytesIO(message.value)
+                value_fh.seek(0)
+                value = fastavro.schemaless_reader(
+                    value_fh,
+                    schemas[message.topic]['value'])
+                now = datetime.datetime.now(datetime.timezone.utc)
+                latency = now - value['timestamp']
+                print('Latency {0!s}'.format(latency))
+    finally:
+        consumer.stop()
