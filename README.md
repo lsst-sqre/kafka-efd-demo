@@ -319,6 +319,29 @@ In this demo, the default topic is called `helloavro`.
    kafkaefd helloavro produce "Hello world"
    ```
 
+## InfluxDB installation (optional)
+
+Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
+
+### InfluxDB Sink Connector configuration
+
+The [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) consumes Kafka Avro-serialized messages and send them to InfluxDB.
+
+From the `k8s-cluster` directory, connect to the Kafka Connect server:
+
+```bash
+./port-forward-kafka-connect.sh
+```
+
+From the `k8s-cluster/cp-kafka-connect` directory, configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html):
+
+```bash
+./configure-influxdb-connector.sh
+```
+
+With this example configuration the `kafkaefd helloavro` command will send messages to
+InfluxDB.
+
 ## Lessons learned
 
 ### Keys and partitioning
