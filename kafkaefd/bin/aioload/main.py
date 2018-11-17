@@ -20,9 +20,16 @@ import fastavro
 import requests
 from uritemplate import URITemplate
 import structlog
+from prometheus_client import Histogram, Counter
+import prometheus_async.aio.web
 
 from ..utils import get_registry_url, get_broker_url
 from ...salschema.convert import validate_schema
+
+
+CONSUMED = Counter('consumed', 'Topics consumed')
+LATENCY = Histogram('consumer_latency_seconds', 'Consumer latency (seconds)')
+PRODUCED = Counter('produced', 'Topics produced')
 
 
 @click.group()
@@ -143,9 +150,13 @@ def upload_schemas(ctx, root_name, count, log_level):
     type=click.Choice(['debug', 'info', 'warning']),
     default='info', help='Logging level'
 )
+@click.option(
+    '--prometheus-port', 'prometheus_port', type=int, default=9092,
+    help='Port for the Prometheus metrics scraping endpoint.'
+)
 @click.pass_context
 def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
-            producer_id, hertz, log_level):
+            producer_id, hertz, log_level, prometheus_port):
     """Produce messages for one or more topics with a given frequency.
 
     This command is designed to produce messages for a set of related topics.
@@ -189,7 +200,8 @@ def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
                       topic_count=total_topic_count,
                       period=period,
                       total_producer_count=total_producer_count,
-                      producer_id=producer_id)
+                      producer_id=producer_id,
+                      prometheus_port=prometheus_port)
     )
 
 
@@ -209,8 +221,12 @@ def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
     type=click.Choice(['debug', 'info', 'warning']),
     default='info', help='Logging level'
 )
+@click.option(
+    '--prometheus-port', 'prometheus_port', type=int, default=9092,
+    help='Port for the Prometheus metrics scraping endpoint.'
+)
 @click.pass_context
-def consume(ctx, root_topic_name, consumer_count, log_level):
+def consume(ctx, root_topic_name, consumer_count, log_level, prometheus_port):
     """Consume messages for a set of topics.
     """
     configure_logging(level=log_level)
@@ -234,7 +250,8 @@ def consume(ctx, root_topic_name, consumer_count, log_level):
                       root_consumer_settings=consumer_settings,
                       schema_registry_url=schema_registry_url,
                       consumer_count=consumer_count,
-                      root_topic_name=root_topic_name)
+                      root_topic_name=root_topic_name,
+                      prometheus_port=prometheus_port)
     )
 
 
@@ -273,7 +290,14 @@ def create_indexed_schema(name, index=0):
 
 async def producer_main(*, loop, producer, root_producer_settings,
                         root_topic_name, schema_registry_url, topic_count,
-                        period, total_producer_count, producer_id):
+                        period, total_producer_count, producer_id,
+                        prometheus_port):
+    # Start the Prometheus endpoint
+    asyncio.ensure_future(
+        prometheus_async.aio.web.start_http_server(
+            port=prometheus_port)
+    )
+
     async with aiohttp.ClientSession() as httpsession:
         tasks = []
         # Create async tasks that generate different topics. The assignment
@@ -346,6 +370,7 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
             # May want to adjust this control batching latency
             await producer.send_and_wait(
                 topic_name, key=default_key, value=message_fh.read())
+            PRODUCED.inc()  # increment prometheus production counter
             logger.debug('Sent message')
             # naieve message period; need to correct for production time
             await asyncio.sleep(period)
@@ -355,7 +380,13 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
 
 async def consumer_main(*, loop, consumer, root_consumer_settings,
                         root_topic_name, schema_registry_url,
-                        consumer_count):
+                        consumer_count, prometheus_port):
+    # Start the Prometheus endpoint
+    asyncio.ensure_future(
+        prometheus_async.aio.web.start_http_server(
+            port=prometheus_port)
+    )
+
     async with aiohttp.ClientSession() as httpsession:
         tasks = []
         for index in range(consumer_count):
@@ -441,10 +472,13 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
                     schemas[message.topic]['value'])
                 now = datetime.datetime.now(datetime.timezone.utc)
                 latency = now - value['timestamp']
+                latency_millisec = \
+                    latency.seconds * 1000 + latency.microseconds / 1000
+                CONSUMED.inc()  # increment prometheus consumption counter
+                LATENCY.observe(latency_millisec * 1000)
                 logger.debug(
                     'latency',
-                    latency_millisec=latency.seconds * 1000
-                    + latency.microseconds / 1000,
+                    latency_millisec=latency_millisec,
                     topic=message.topic)
     finally:
         consumer.stop()

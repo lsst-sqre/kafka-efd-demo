@@ -16,4 +16,7 @@ RUN        pip install /dist/kafkaefd-$VERSION.tar.gz
 USER app
 WORKDIR /home/app
 
+# Expose Prometheus metrics
+EXPOSE 9092
+
 CMD [ "kafkaefd", "--version" ]

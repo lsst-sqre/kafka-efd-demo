@@ -29,6 +29,8 @@ install_requires = [
     'aiokafka==0.4.3',
     'gidgethub==3.0.0',
     'structlog==18.2.0',
+    'prometheus-async==18.3.0',
+    'prometheus-client==0.4.2',
 ]
 
 tests_require = [
