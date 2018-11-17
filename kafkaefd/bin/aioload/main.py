@@ -118,9 +118,21 @@ def upload_schemas(ctx, root_name, count, log_level):
          'upload-schemas.'
 )
 @click.option(
-    '--count', type=int, default=1, show_default=True,
+    '--count', 'total_topic_count', type=int, default=1, show_default=True,
     help='Number of independent topics to produce. This count should match '
          'the number of schemas created with the upload-schemas command.'
+)
+@click.option(
+    '--producer-count', 'total_producer_count', type=int, default=1,
+    show_default=True,
+    help='Total number of producers that are run.'
+)
+@click.option(
+    '--producer-id', 'producer_id', type=int, default=0,
+    show_default=True,
+    help='Unique integer identifying the producer. If --producer-count=4, '
+         'then producer-id can be 0, 1, 2, or 3. This ID is used as an offset '
+         'to slice topics across all the producer nodes.'
 )
 @click.option(
     '--hertz', type=float, default=1., show_default=True,
@@ -132,8 +144,26 @@ def upload_schemas(ctx, root_name, count, log_level):
     default='info', help='Logging level'
 )
 @click.pass_context
-def produce(ctx, root_topic_name, count, hertz, log_level):
-    """Produce messages for a given topic with a given frequency.
+def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
+            producer_id, hertz, log_level):
+    """Produce messages for one or more topics with a given frequency.
+
+    This command is designed to produce messages for a set of related topics.
+    The root topic name is the --name argument.
+
+    **Single node usage**
+
+    - Set --count to the total number of topics to produce for.
+    - Set --producer-count=1 (default)
+    - Set --producer-id=0 (default)
+
+    **Multi-node usage**
+
+    - Set --count to the total number of topics to produce for, across all
+      nodes.
+    - Set --producer-count to the total number of nodes.
+    - Set --producer-id to a integer from 0 to producer-count-1. Each
+      producer node needs to have a unique ID.
     """
     configure_logging(level=log_level)
 
@@ -156,8 +186,10 @@ def produce(ctx, root_topic_name, count, hertz, log_level):
                       root_topic_name=root_topic_name,
                       root_producer_settings=producer_settings,
                       schema_registry_url=schema_registry_url,
-                      topic_count=count,
-                      period=period)
+                      topic_count=total_topic_count,
+                      period=period,
+                      total_producer_count=total_producer_count,
+                      producer_id=producer_id)
     )
 
 
@@ -241,10 +273,16 @@ def create_indexed_schema(name, index=0):
 
 async def producer_main(*, loop, producer, root_producer_settings,
                         root_topic_name, schema_registry_url, topic_count,
-                        period):
+                        period, total_producer_count, producer_id):
     async with aiohttp.ClientSession() as httpsession:
         tasks = []
-        for index in range(topic_count):
+        # Create async tasks that generate different topics. The assignment
+        # is done to systematically spread topics across multiple nodes, if
+        # configured.
+        # The range strides over the total number of producer nodes. But the
+        # producer_id serves as an offset so that each producer node produces
+        # different topics.
+        for index in range(producer_id, topic_count, total_producer_count):
             topic_name = f'{root_topic_name}{index:d}'
             producer_settings = dict(root_producer_settings)
             tasks.append(asyncio.ensure_future(
@@ -393,8 +431,6 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
         topic_pattern = r'^' + root_topic_name + r'[\d]+$'
         consumer.subscribe(pattern=topic_pattern)
 
-        # await consumer.seek_to_end()
-
         logger.info(f'Started consumer for topic pattern {topic_pattern}')
         while True:
             async for message in consumer:
@@ -407,7 +443,9 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
                 latency = now - value['timestamp']
                 logger.debug(
                     'latency',
-                    latency_millisec=latency.microseconds / 1000)
+                    latency_millisec=latency.seconds * 1000
+                    + latency.microseconds / 1000,
+                    topic=message.topic)
     finally:
         consumer.stop()
 
