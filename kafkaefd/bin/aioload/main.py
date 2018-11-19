@@ -20,7 +20,7 @@ import fastavro
 import requests
 from uritemplate import URITemplate
 import structlog
-from prometheus_client import Histogram, Counter
+from prometheus_client import Histogram, Counter, Summary
 import prometheus_async.aio.web
 
 from ..utils import get_registry_url, get_broker_url
@@ -29,6 +29,7 @@ from ...salschema.convert import validate_schema
 
 CONSUMED = Counter('consumed', 'Topics consumed')
 LATENCY = Histogram('consumer_latency_seconds', 'Consumer latency (seconds)')
+LATENCY_SUMMARY = Summary('consumer_latency_summ_seconds', 'Consumer latency (seconds)')
 PRODUCED = Counter('produced', 'Topics produced')
 
 
@@ -476,6 +477,7 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
                     latency.seconds * 1000 + latency.microseconds / 1000
                 CONSUMED.inc()  # increment prometheus consumption counter
                 LATENCY.observe(latency_millisec * 1000)
+                LATENCY_SUMMARY.observe(latency_millisec * 1000)
                 logger.debug(
                     'latency',
                     latency_millisec=latency_millisec,
