@@ -22,6 +22,7 @@ from uritemplate import URITemplate
 import structlog
 from prometheus_client import Histogram, Counter, Summary
 import prometheus_async.aio.web
+from confluent_kafka.admin import AdminClient, NewTopic
 
 from ..utils import get_registry_url, get_broker_url
 from ...salschema.convert import validate_schema
@@ -71,7 +72,7 @@ def test_schemas(ctx):
     print(value_data)
 
 
-@aioload.command('upload-schemas')
+@aioload.command('init-topics')
 @click.option(
     '--name', 'root_name', type=click.Choice(['aioload-simple']),
     show_default=True, default='aioload-simple',
@@ -89,15 +90,49 @@ def test_schemas(ctx):
     default='info', help='Logging level'
 )
 @click.pass_context
-def upload_schemas(ctx, root_name, count, log_level):
-    """Synchronize Avro schemas to the registry.
+def initialize_topics(ctx, root_name, count, log_level):
+    """Initialize topics and synchronize Avro schemas to the registry.
     """
     configure_logging(level=log_level)
     logger = structlog.get_logger(__name__).bind(
-        role='upload-schemas',
+        role='init-topics',
     )
 
     schema_registry_url = get_registry_url(ctx.parent.parent)
+    broker_url = get_broker_url(ctx.parent.parent)
+
+    _create_topics(broker_url, root_name, count)
+    _create_schemas(schema_registry_url, root_name, count)
+
+
+def _create_topics(broker_url, root_name, count):
+    logger = structlog.get_logger(__name__)
+    settings = {'bootstrap.servers': broker_url}
+    client = AdminClient(settings)
+
+    names = [f'{root_name}{i}' for i in range(count)]
+
+    topics = [NewTopic(name, num_partitions=1, replication_factor=1)
+              for name in names]
+
+    # Call create_topics to asynchronously create topics.
+    # A dict of <topic,future> is returned.
+    fs = client.create_topics(topics)
+
+    # Wait for operation to finish.
+    # Timeouts are preferably controlled by passing request_timeout=15.0
+    # to the create_topics() call.
+    # All futures will finish at the same time.
+    for topic, f in fs.items():
+        try:
+            f.result()  # The result itself is None
+            print("Topic {} created".format(topic))
+        except Exception as e:
+            print("Failed to create topic {}: {}".format(topic, e))
+
+
+def _create_schemas(schema_registry_url, root_name, count):
+    logger = structlog.get_logger(__name__)
 
     session = requests.Session()
     session.headers.update({
