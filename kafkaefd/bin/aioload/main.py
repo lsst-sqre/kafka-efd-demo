@@ -476,8 +476,8 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
                 latency_millisec = \
                     latency.seconds * 1000 + latency.microseconds / 1000
                 CONSUMED.inc()  # increment prometheus consumption counter
-                LATENCY.observe(latency_millisec * 1000)
-                LATENCY_SUMMARY.observe(latency_millisec * 1000)
+                LATENCY.observe(latency_millisec / 1000)
+                LATENCY_SUMMARY.observe(latency_millisec / 1000)
                 logger.debug(
                     'latency',
                     latency_millisec=latency_millisec,
