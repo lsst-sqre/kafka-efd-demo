@@ -1,0 +1,106 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "aioload-simple-producer-0"
+spec:
+  template:
+    metadata:
+      labels:
+        role: "producer"
+        producerId: "0"
+        experiment: "aioload-simple"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: consumer
+        image: lsstsqre/kafka-efd-demo:tickets-DM-16500
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "aioload"
+          - "produce"
+          - "--name"
+          - "aioload-simple"
+          - "--count"
+          - "100"
+          - "--producer-count"
+          - "3"
+          - "--producer-id"
+          - "0"
+          - "--hertz"
+          - "1"
+      restartPolicy: Never
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "aioload-simple-producer-1"
+spec:
+  template:
+    metadata:
+      labels:
+        role: "producer"
+        producerId: "1"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: consumer
+        image: lsstsqre/kafka-efd-demo:tickets-DM-16500
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "aioload"
+          - "produce"
+          - "--name"
+          - "aioload-simple"
+          - "--count"
+          - "100"
+          - "--producer-count"
+          - "3"
+          - "--producer-id"
+          - "1"
+          - "--hertz"
+          - "1"
+      restartPolicy: Never
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "aioload-simple-producer-2"
+spec:
+  template:
+    metadata:
+      labels:
+        role: "producer"
+        producerId: "2"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: consumer
+        image: lsstsqre/kafka-efd-demo:tickets-DM-16500
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "aioload"
+          - "produce"
+          - "--name"
+          - "aioload-simple"
+          - "--count"
+          - "100"
+          - "--producer-count"
+          - "3"
+          - "--producer-id"
+          - "2"
+          - "--hertz"
+          - "1"
+      restartPolicy: Never
+  backoffLimit: 4
