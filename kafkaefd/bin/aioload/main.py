@@ -249,8 +249,10 @@ def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
          'upload-schemas.'
 )
 @click.option(
-    '--count', 'consumer_count', type=int, default=1, show_default=True,
-    help='Number of consumer threads to run.'
+    '--client-id', 'consumer_ids', type=int, multiple=True, required=True,
+    show_default=True, default=[0],
+    help='Unique serial number for the client. Provide several --client-id '
+         'flags to start multple consumer threads.'
 )
 @click.option(
     '--log-level', 'log_level',
@@ -262,7 +264,7 @@ def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
     help='Port for the Prometheus metrics scraping endpoint.'
 )
 @click.pass_context
-def consume(ctx, root_topic_name, consumer_count, log_level, prometheus_port):
+def consume(ctx, root_topic_name, consumer_ids, log_level, prometheus_port):
     """Consume messages for a set of topics.
     """
     configure_logging(level=log_level)
@@ -285,7 +287,7 @@ def consume(ctx, root_topic_name, consumer_count, log_level, prometheus_port):
                       consumer=consumer,
                       root_consumer_settings=consumer_settings,
                       schema_registry_url=schema_registry_url,
-                      consumer_count=consumer_count,
+                      consumer_ids=consumer_ids,
                       root_topic_name=root_topic_name,
                       prometheus_port=prometheus_port)
     )
@@ -416,7 +418,7 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
 
 async def consumer_main(*, loop, consumer, root_consumer_settings,
                         root_topic_name, schema_registry_url,
-                        consumer_count, prometheus_port):
+                        consumer_ids, prometheus_port):
     # Start the Prometheus endpoint
     asyncio.ensure_future(
         prometheus_async.aio.web.start_http_server(
@@ -425,10 +427,10 @@ async def consumer_main(*, loop, consumer, root_consumer_settings,
 
     async with aiohttp.ClientSession() as httpsession:
         tasks = []
-        for index in range(consumer_count):
+        for index in consumer_ids:
             consumer_settings = dict(root_consumer_settings)
-            consumer_settings['client_id'] = \
-                consumer_settings['group_id'] + f'-{index:d}'
+            # consumer_settings['client_id'] = \
+            #     consumer_settings['group_id'] + f'-{index:d}'
 
             tasks.append(asyncio.ensure_future(
                 consumer(loop=loop,
