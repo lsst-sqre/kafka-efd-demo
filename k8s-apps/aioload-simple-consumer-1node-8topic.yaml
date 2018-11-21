@@ -16,6 +16,17 @@ spec:
       - name: consumer
         image: lsstsqre/kafka-efd-demo:tickets-DM-16500
         imagePullPolicy: Always
-        command: ["kafkaefd",  "aioload", "consume", "--name", "aioload-simple"]
+        command:
+          - "kafkaefd"
+          - "aioload"
+          - "consume"
+          - "--name"
+          - "aioload-simple"
+          - "--count"
+          - "8"
+          - "--consumer-count"
+          - "1"
+          - "--consumer-id"
+          - "0"
       restartPolicy: Never
   backoffLimit: 4

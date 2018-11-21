@@ -249,10 +249,22 @@ def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
          'upload-schemas.'
 )
 @click.option(
-    '--client-id', 'consumer_ids', type=int, multiple=True, required=True,
-    show_default=True, default=[0],
-    help='Unique serial number for the client. Provide several --client-id '
-         'flags to start multple consumer threads.'
+    '--count', 'total_topic_count', type=int, default=1, show_default=True,
+    help='Number of independent topics to produce. This count should match '
+         'the number of schemas created with the upload-schemas command.'
+)
+@click.option(
+    '--consumer-count', 'total_consumer_count', type=int, default=1,
+    show_default=True,
+    help='Total number of consumer nodes that are run.'
+)
+@click.option(
+    '--consumer-id', 'consumer_id', type=int, default=0,
+    show_default=True,
+    help='Unique integer identifying the consumer node. If '
+         '--consumer-count=4, then --consumer-id can be 0, 1, 2, or 3. '
+         'This ID is used as an offset to slice topics across all the '
+         'consumer nodes.'
 )
 @click.option(
     '--log-level', 'log_level',
@@ -264,7 +276,8 @@ def produce(ctx, root_topic_name, total_topic_count, total_producer_count,
     help='Port for the Prometheus metrics scraping endpoint.'
 )
 @click.pass_context
-def consume(ctx, root_topic_name, consumer_ids, log_level, prometheus_port):
+def consume(ctx, root_topic_name, total_topic_count, total_consumer_count,
+            consumer_id, log_level, prometheus_port):
     """Consume messages for a set of topics.
     """
     configure_logging(level=log_level)
@@ -272,7 +285,6 @@ def consume(ctx, root_topic_name, consumer_ids, log_level, prometheus_port):
     schema_registry_url = get_registry_url(ctx.parent.parent)
     consumer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
-        'group_id': root_topic_name,
         'auto_offset_reset': 'latest'
     }
 
@@ -287,7 +299,9 @@ def consume(ctx, root_topic_name, consumer_ids, log_level, prometheus_port):
                       consumer=consumer,
                       root_consumer_settings=consumer_settings,
                       schema_registry_url=schema_registry_url,
-                      consumer_ids=consumer_ids,
+                      total_topic_count=total_topic_count,
+                      total_consumer_count=total_consumer_count,
+                      consumer_id=consumer_id,
                       root_topic_name=root_topic_name,
                       prometheus_port=prometheus_port)
     )
@@ -418,7 +432,8 @@ async def produce_for_simple_topic(*, loop, httpsession, producer_settings,
 
 async def consumer_main(*, loop, consumer, root_consumer_settings,
                         root_topic_name, schema_registry_url,
-                        consumer_ids, prometheus_port):
+                        prometheus_port, total_topic_count,
+                        total_consumer_count, consumer_id):
     # Start the Prometheus endpoint
     asyncio.ensure_future(
         prometheus_async.aio.web.start_http_server(
@@ -427,67 +442,54 @@ async def consumer_main(*, loop, consumer, root_consumer_settings,
 
     async with aiohttp.ClientSession() as httpsession:
         tasks = []
-        for index in consumer_ids:
+        # Stride over topics to evenly distribute them across all consumer
+        # nodes.
+        for index in range(consumer_id,
+                           total_topic_count,
+                           total_consumer_count):
             consumer_settings = dict(root_consumer_settings)
-            # consumer_settings['client_id'] = \
-            #     consumer_settings['group_id'] + f'-{index:d}'
+            topic_name = f'{root_topic_name}{index:d}'
 
             tasks.append(asyncio.ensure_future(
                 consumer(loop=loop,
                          httpsession=httpsession,
                          consumer_settings=consumer_settings,
                          schema_registry_url=schema_registry_url,
-                         root_topic_name=root_topic_name)
+                         topic_name=topic_name)
             ))
         await asyncio.gather(*tasks)
 
 
 async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
-                                    schema_registry_url, root_topic_name):
+                                    schema_registry_url, topic_name):
+    consumer_settings.update({
+        'group_id': topic_name,
+        'client_id': f'{topic_name}-0'  # always only one consumer per topic
+    })
     logger = structlog.get_logger(__name__).bind(
         role='consumer',
         group=consumer_settings['group_id'],
         client_id=consumer_settings['client_id']
     )
-    logger.info(f'Getting schemas for root topic {root_topic_name}')
+    logger.info(f'Getting schemas for topic {topic_name}')
 
     registry_headers = {'Accept': 'application/vnd.schemaregistry.v1+json'}
-
-    # Get names of subject for topic keys and values in the experiment
-    r = await httpsession.get(
-        schema_registry_url + '/subjects',
-        headers=registry_headers)
-    subject_names = await r.json()
-    # Filter subjects to just ones that correspond to topics in the experiment
-    subject_pattern = re.compile(
-        r'^' + root_topic_name + r'[\d]+-((key)|(value))$')
-    subject_names = [n for n in subject_names
-                     if subject_pattern.match(n) is not None]
-
-    # Get schemas for these subjects
-    schemas = {}
-    # This pattern extracts the topic name and whether it is a key or value
-    # schema from the subject name
-    general_subject_pattern = re.compile(
-        r'^(?P<topic>[a-zA-Z0-9_\-\.]+)-(?P<type>(key)|(value))$')
     schema_uri = URITemplate(
-        schema_registry_url + '/subjects{/subject}/versions/latest')
-    for subject_name in subject_names:
-        r = await httpsession.get(
-            schema_uri.expand(subject=subject_name),
-            headers=registry_headers)
-        data = await r.json()
-        schema = fastavro.parse_schema(json.loads(data['schema']))
+        schema_registry_url + '/subjects{/subject}/versions/latest'
+    )
 
-        m = general_subject_pattern.match(subject_name)
-        topic_name = m.group('topic')
-        subject_type = m.group('type')
-        logger.debug('Adding schema',
-                     topic=topic_name,
-                     subject_type=subject_type)
-        if topic_name not in schemas:
-            schemas[topic_name] = {'key': None, 'value': None}
-        schemas[topic_name][subject_type] = schema
+    # Get schemas
+    r = await httpsession.get(
+        schema_uri.expand(subject=f'{topic_name}-key'),
+        headers=registry_headers)
+    data = await r.json()
+    key_schema = fastavro.parse_schema(json.loads(data['schema']))
+
+    r = await httpsession.get(
+        schema_uri.expand(subject=f'{topic_name}-value'),
+        headers=registry_headers)
+    data = await r.json()
+    value_schema = fastavro.parse_schema(json.loads(data['schema']))
 
     # Start up the Kafka consumer
     consumer = aiokafka.AIOKafkaConsumer(loop=loop, **consumer_settings)
@@ -497,17 +499,16 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
         await consumer.start()
 
         # Subscribe to all topics in the experiment
-        topic_pattern = r'^' + root_topic_name + r'[\d]+$'
-        consumer.subscribe(pattern=topic_pattern)
+        consumer.subscribe([topic_name])
 
-        logger.info(f'Started consumer for topic pattern {topic_pattern}')
+        logger.info(f'Started consumer for topic {topic_name}')
         while True:
             async for message in consumer:
                 value_fh = BytesIO(message.value)
                 value_fh.seek(0)
                 value = fastavro.schemaless_reader(
                     value_fh,
-                    schemas[message.topic]['value'])
+                    value_schema)
                 now = datetime.datetime.now(datetime.timezone.utc)
                 latency = now - value['timestamp']
                 latency_millisec = \
