@@ -7,6 +7,21 @@ See [DMTN-082](https://dmtn-082.lsst.io/) for details of how this works.
 
 This repository contains early explorations of deploying Kafka on Kubernetes and exercising the Kafka cluster with publishers, subscribers, and stream processors.
 
+## Contents
+
+- [Kubernetes cluster set up](#kubernetes-cluster-set-up)
+- [Prometheus and Grafana installation](#prometheus-and-grafana-installation)
+- [Kafka cluster installation](#kafka-cluster-installation)
+- [Test the Kafka cluster](#test-the-kafka-cluster)
+- [Connecting to Kafka via Telepresence](#connecting-to-kafka-via-telepresence)
+- [The kafkaefd demo application](#the-kafkaefd-demo-application)
+  - [kafkaefd admin — Kafka broker and topic administration](#kafkaefd-admin--kafka-broker-and-topic-administration)
+  - [kafkaefd registry — Avro Schema Registry management](#kafkaefd-registry--avro-schema-registry-management)
+  - [kafkaefd helloworld — Hello world demo](#kafkaefd-helloworld--hello-world-demo)
+  - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
+- [InfluxDB installation (optional)](#influxdb-installation-optional)
+- [Lessons learned](#lessons-learned)
+
 ## Kubernetes cluster set up
 
 1. `cd k8s-cluster`
@@ -171,7 +186,7 @@ kafkaefd help
 This is the headless service for the Kafka brokers given the Kubernetes/Helm installation described above.
 This default should work both inside the cluster and via Telepresence.
 
-### The kafkaefd admin command
+### kafkaefd admin — Kafka broker and topic administration
 
 The `kafkaefd admin` command includes several subcommands that help administer a Kafka cluster and topics in it.
 
@@ -213,7 +228,7 @@ List brokers:
 kafkaefd admin brokers
 ```
 
-#### kafkaefd registry command
+### kafkaefd registry — Avro Schema Registry management
 
 The `kafkaefd registry` command group is a full-service admin client for the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/docs/index.html).
 Schemas for Avro-formatted messages are automatically maintained in the schema registry.
@@ -275,7 +290,7 @@ kafkaefd registry compat --subject subjectname
 kafkaefd registry compat --subject subjectname --set BACKWARD
 ```
 
-### Hello world demo
+### kafkaefd helloworld — Hello world demo
 
 This is a simple example that shows how to send and receive plain text messages.
 
@@ -298,7 +313,7 @@ This is a simple example that shows how to send and receive plain text messages.
 
 In this hello world demo, the topic is `mytopic`, and by default all messages are created with a key of `hello`.
 
-### Hello world for Avro
+### kafkaefd helloavro — Hello world for Avro
 
 The `kafkaefd helloavro` command group shows how to send and receive Avro-serialized messages.
 These commands integrate with the Confluent Schema Registry deployed as part of the Helm deployment.
