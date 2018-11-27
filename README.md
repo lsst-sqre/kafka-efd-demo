@@ -334,6 +334,27 @@ In this demo, the default topic is called `helloavro`.
    kafkaefd helloavro produce "Hello world"
    ```
 
+### kafkaefd salschema — ts\_sal schema conversion
+
+The `kafkaefd salschema` command group includes commands for managing Avro translations of the Telescope & Site SAL schemas published at [https://github.com/lsst-ts/ts_xml](https://github.com/lsst-ts/ts_xml).
+
+`kafkaefd salschema` currently uses the GitHub API to retrieve schemas from [ts_xml](https://github.com/lsst-ts/ts_xml).
+Before running `kafkaefd salschema`, set up a GitHub Personal Access Token from https://github.com/settings/tokens and add them to the shell environment:
+
+```bash
+export GITHUB_USER="..."   # your GitHub username
+export GITHUB_TOKEN="..."  # your personal access token
+```
+
+To convert the [ts_xml](https://github.com/lsst-ts/ts_xml) files into Avro, and persist those Avro schemas to a local directory `ts_xml_avro`, run:
+
+```bash
+kafkaefd salschema --write ts_xml_avro
+```
+
+See `kafkaefd salschema -h` for other options.
+The `--xml-repo-ref` option, in particular, allows you to select a specific branch or tag of the [ts_xml](https://github.com/lsst-ts/ts_xml) repository for conversion.
+
 ## InfluxDB installation (optional)
 
 Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
