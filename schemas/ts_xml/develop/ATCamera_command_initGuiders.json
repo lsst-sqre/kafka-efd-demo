@@ -1,0 +1,16 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "name": "roiSpec",
+      "type": "string"
+    }
+  ],
+  "name": "ATCamera_command_initGuiders",
+  "namespace": "lsst.sal",
+  "sal_alias": "initGuiders",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

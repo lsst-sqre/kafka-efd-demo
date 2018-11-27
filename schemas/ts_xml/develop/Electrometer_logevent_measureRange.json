@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The range for the intensity for measure selected.",
+      "name": "rangeValue",
+      "type": "double"
+    }
+  ],
+  "name": "Electrometer_logevent_measureRange",
+  "namespace": "lsst.sal",
+  "sal_alias": "measureRange",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

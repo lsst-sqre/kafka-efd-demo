@@ -1,0 +1,28 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "inPosition",
+      "type": "boolean"
+    },
+    {
+      "name": "device",
+      "type": {
+        "name": "device",
+        "symbols": [
+          "device_Device_Monochromator",
+          "device_Device_LightSource",
+          "device_Device_ThermoelectricCooler"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "ATMonochromator_logevent_inPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "inPosition",
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

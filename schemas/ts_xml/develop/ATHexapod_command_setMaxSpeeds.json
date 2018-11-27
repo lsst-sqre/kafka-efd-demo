@@ -1,0 +1,32 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "xyMax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "rxryMax",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "zMax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "rzMax",
+      "sal_units": "deg/s",
+      "type": "double"
+    }
+  ],
+  "name": "ATHexapod_command_setMaxSpeeds",
+  "namespace": "lsst.sal",
+  "sal_alias": "setMaxSpeeds",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "command",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "ATThermoelectricCooler_logevent_rejectedCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "rejectedCommand",
+  "sal_author": "Andy W. Clements",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

@@ -1,0 +1,19 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "position",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Dome_command_setLouvers",
+  "namespace": "lsst.sal",
+  "sal_alias": "setLouvers",
+  "sal_subsystem": "Dome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

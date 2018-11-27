@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "louverId",
+      "type": "int"
+    },
+    {
+      "name": "position",
+      "type": "int"
+    }
+  ],
+  "name": "DomeLouvers_command_setPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "setPosition",
+  "sal_subsystem": "DomeLouvers",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

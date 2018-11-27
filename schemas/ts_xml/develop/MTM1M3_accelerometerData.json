@@ -1,0 +1,40 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "rawAccelerometer",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "accelerometer",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "angularAccelerationX",
+      "type": "float"
+    },
+    {
+      "name": "angularAccelerationY",
+      "type": "float"
+    },
+    {
+      "name": "angularAccelerationZ",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_accelerometerData",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

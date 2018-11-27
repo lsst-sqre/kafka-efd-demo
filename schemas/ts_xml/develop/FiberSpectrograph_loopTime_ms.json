@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "name": "loopTime_ms",
+      "type": "double"
+    }
+  ],
+  "name": "FiberSpectrograph_loopTime_ms",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "FiberSpectrograph",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,141 @@
+{
+  "fields": [
+    {
+      "doc": "DP_Status",
+      "name": "DP_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "DP_Status_Drive_1",
+      "name": "DP_Status_Drive_1",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "DP_Status_Drive_2",
+      "name": "DP_Status_Drive_2",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "DP_Current_Drive_2",
+      "name": "DP_Current_Drive_2",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "DP_Current_Drive_1",
+      "name": "DP_Current_Drive_1",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "DP_Position_Set_Section_1",
+      "name": "DP_Position_Set_Section_1",
+      "sal_units": "meterm",
+      "type": "double"
+    },
+    {
+      "doc": "DP_Position_Set_Section_2",
+      "name": "DP_Position_Set_Section_2",
+      "sal_units": "meterm",
+      "type": "double"
+    },
+    {
+      "doc": "DP_Position_Actual_Section_1",
+      "name": "DP_Position_Actual_Section_1",
+      "sal_units": "meterm",
+      "type": "double"
+    },
+    {
+      "doc": "DP_Position_Actual_Section_2",
+      "name": "DP_Position_Actual_Section_2",
+      "sal_units": "meterm",
+      "type": "double"
+    },
+    {
+      "doc": "DP_Extended_Directional_Limit_Switch_Section_1",
+      "name": "DP_Extended_Directional_Limit_Switch_Section_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Extended_Directional_Limit_Switch_Section_2",
+      "name": "DP_Extended_Directional_Limit_Switch_Section_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Retracted_Directional_Limit_Switch_Section_1",
+      "name": "DP_Retracted_Directional_Limit_Switch_Section_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Retracted_Directional_Limit_Switch_Section_2",
+      "name": "DP_Retracted_Directional_Limit_Switch_Section_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_1_Extension_1_Locked_Limit_Switch",
+      "name": "DP_Platform_1_Extension_1_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_1_Extension_1_Retracted_Limit_Switch",
+      "name": "DP_Platform_1_Extension_1_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_1_Extension_2_Locked_Limit_Switch",
+      "name": "DP_Platform_1_Extension_2_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_1_Extension_2_Retracted_Limit_Switch",
+      "name": "DP_Platform_1_Extension_2_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_2_Extension_1_Locked_Limit_Switch",
+      "name": "DP_Platform_2_Extension_1_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_2_Extension_1_Retracted_Limit_Switch",
+      "name": "DP_Platform_2_Extension_1_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_2_Extension_2_Locked_Limit_Switch",
+      "name": "DP_Platform_2_Extension_2_Locked_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Platform_2_Extension_2_Retracted_Limit_Switch",
+      "name": "DP_Platform_2_Extension_2_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "DP_Interlocks",
+      "name": "DP_Interlocks",
+      "sal_size_in_bytes": 1,
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Deployable_Platforms",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

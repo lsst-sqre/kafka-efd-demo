@@ -1,0 +1,42 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "xymax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "zmin",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "zmax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "uvmax",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "wmin",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "wmax",
+      "sal_units": "deg",
+      "type": "double"
+    }
+  ],
+  "name": "Hexapod_command_configureLimits",
+  "namespace": "lsst.sal",
+  "sal_alias": "configureLimits",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

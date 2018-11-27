@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "temperature",
+      "type": "float"
+    }
+  ],
+  "name": "ATThermoelectricCooler_command_setTemperature",
+  "namespace": "lsst.sal",
+  "sal_alias": "setTemperature",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

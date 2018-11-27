@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "doc": "Power_Supply_Status",
+      "name": "Power_Supply_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Power_Supply_Thermal_Status",
+      "name": "Power_Supply_Thermal_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Power_Supply_DC_Voltage",
+      "name": "Power_Supply_DC_Voltage",
+      "sal_units": "volt",
+      "type": "double"
+    },
+    {
+      "doc": "Power_Supply_Line_Voltage",
+      "name": "Power_Supply_Line_Voltage",
+      "sal_units": "volt",
+      "type": "double"
+    },
+    {
+      "doc": "Power_Supply_Current",
+      "name": "Power_Supply_Current",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Main_Power_Supply",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

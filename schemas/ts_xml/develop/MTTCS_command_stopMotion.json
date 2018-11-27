@@ -1,0 +1,17 @@
+{
+  "doc": "Stop movion when in any motion state",
+  "fields": [
+    {
+      "name": "stopMotion",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTTCS_command_stopMotion",
+  "namespace": "lsst.sal",
+  "sal_alias": "stopMotion",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

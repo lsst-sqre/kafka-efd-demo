@@ -1,0 +1,118 @@
+{
+  "fields": [
+    {
+      "doc": "Elevation_Status",
+      "name": "Elevation_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Elevation_Angle_Actual",
+      "name": "Elevation_Angle_Actual",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Angle_Set",
+      "name": "Elevation_Angle_Set",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Aceleration_Actual",
+      "name": "Elevation_Aceleration_Actual",
+      "sal_units": "deg/second^2",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Velocity_Set",
+      "name": "Elevation_Velocity_Set",
+      "sal_units": "deg/second",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Velocity_Actual",
+      "name": "Elevation_Velocity_Actual",
+      "sal_units": "deg/second",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Torque_Actual",
+      "name": "Elevation_Torque_Actual",
+      "sal_units": "Nmeter",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation_Positive_Software_limit",
+      "name": "Elevation_Positive_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Negative_Software_limit",
+      "name": "Elevation_Negative_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Positive_Power_Off_switch",
+      "name": "Elevation_Positive_Power_Off_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Negative_Power_Off_switch",
+      "name": "Elevation_Negative_Power_Off_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Positive_Directional_limit_switch",
+      "name": "Elevation_Positive_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Negative_Directional_limit_switch",
+      "name": "Elevation_Negative_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Positive_Adjustable_Software_limit",
+      "name": "Elevation_Positive_Adjustable_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Negative_Adjustable_Software_limit",
+      "name": "Elevation_Negative_Adjustable_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Positive_Operational_Directional_limit_switch",
+      "name": "Elevation_Positive_Operational_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Negative_Operational_Directional_limit_switch",
+      "name": "Elevation_Negative_Operational_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Interlocks",
+      "name": "Elevation_Interlocks",
+      "sal_size_in_bytes": 1,
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Elevation",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

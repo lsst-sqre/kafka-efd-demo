@@ -1,0 +1,48 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "anyWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "heartbeatStateOutputMismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerNetworksOff",
+      "type": "boolean"
+    },
+    {
+      "name": "thermalEquipmentOff",
+      "type": "boolean"
+    },
+    {
+      "name": "airSupplyOff",
+      "type": "boolean"
+    },
+    {
+      "name": "tmaMotionStop",
+      "type": "boolean"
+    },
+    {
+      "name": "gisHeartbeatLost",
+      "type": "boolean"
+    },
+    {
+      "name": "cabinetDoorOpen",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTM1M3_logevent_interlockWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "interlockWarning",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

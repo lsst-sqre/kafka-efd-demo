@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "state",
+      "type": "long"
+    }
+  ],
+  "name": "ATPneumatics_logevent_instrumentState",
+  "namespace": "lsst.sal",
+  "sal_alias": "instrumentState",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

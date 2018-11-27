@@ -1,0 +1,53 @@
+{
+  "fields": [
+    {
+      "doc": "Main_Cabinet_Status",
+      "name": "Main_Cabinet_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Main_Cabinet_External_Temperature",
+      "name": "Main_Cabinet_External_Temperature",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Main_Cabinet_Internal_Temperature_1",
+      "name": "Main_Cabinet_Internal_Temperature_1",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Main_Cabinet_Internal_Temperature_2",
+      "name": "Main_Cabinet_Internal_Temperature_2",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Main_Cabinet_Setpoint_Temperature",
+      "name": "Main_Cabinet_Setpoint_Temperature",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Main_Cabinet_Doors_Open",
+      "name": "Main_Cabinet_Doors_Open",
+      "type": "boolean"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Mount_Control_Main_Cabinet",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

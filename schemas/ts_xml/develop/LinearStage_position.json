@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "doc": "The position of the linear stage along the track",
+      "name": "position",
+      "sal_units": "millimeters",
+      "type": "float"
+    }
+  ],
+  "name": "LinearStage_position",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "LinearStage",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,33 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "ip",
+      "type": "string"
+    },
+    {
+      "doc": "port range, it will try to connect to any of the ports in this range",
+      "name": "port",
+      "type": "long"
+    },
+    {
+      "name": "readTimeout",
+      "type": "float"
+    },
+    {
+      "name": "writeTimeout",
+      "type": "float"
+    },
+    {
+      "name": "connectionTimeout",
+      "type": "float"
+    }
+  ],
+  "name": "ATHexapod_logevent_settingsAppliedTcp",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedTcp",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

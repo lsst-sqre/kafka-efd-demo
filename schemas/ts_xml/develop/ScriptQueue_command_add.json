@@ -1,0 +1,51 @@
+{
+  "doc": "Add a script to the queue and configure it.",
+  "fields": [
+    {
+      "doc": "Is this a standard script (True) or an external script (False)?",
+      "name": "isStandard",
+      "type": "boolean"
+    },
+    {
+      "doc": "Path to script, relative to the root directory for standard or external scripts.",
+      "name": "path",
+      "type": "string"
+    },
+    {
+      "doc": "Configuration as yaml text that is parsed to make a keyword argument dict for the script's configure method.",
+      "name": "config",
+      "type": "string"
+    },
+    {
+      "doc": "Short description of why you are running this script.",
+      "name": "descr",
+      "type": "string"
+    },
+    {
+      "doc": "Queue location.",
+      "name": "location",
+      "type": {
+        "name": "location",
+        "symbols": [
+          "First",
+          "Last",
+          "Before",
+          "After"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Index of Script SAL component referred to by `location`; ignored unless `location` is `Before` or `After`.",
+      "name": "locationSalIndex",
+      "type": "int"
+    }
+  ],
+  "name": "ScriptQueue_command_add",
+  "namespace": "lsst.sal",
+  "sal_alias": "add",
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

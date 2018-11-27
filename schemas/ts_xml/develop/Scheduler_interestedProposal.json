@@ -1,0 +1,53 @@
+{
+  "fields": [
+    {
+      "name": "observationId",
+      "type": "long"
+    },
+    {
+      "name": "numProposals",
+      "type": "long"
+    },
+    {
+      "name": "proposalIds",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "proposalValues",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "proposalNeeds",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "proposalBonuses",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "proposalBoosts",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Scheduler_interestedProposal",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

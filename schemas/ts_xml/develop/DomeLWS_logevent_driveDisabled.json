@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Unique identifier of the drive (1 to 2)",
+      "name": "driveId",
+      "type": "int"
+    }
+  ],
+  "name": "DomeLWS_logevent_driveDisabled",
+  "namespace": "lsst.sal",
+  "sal_alias": "driveDisabled",
+  "sal_subsystem": "DomeLWS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

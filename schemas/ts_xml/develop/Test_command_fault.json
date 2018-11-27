@@ -1,0 +1,18 @@
+{
+  "doc": "Enter the Fault summary state.",
+  "fields": [
+    {
+      "doc": "Ignored.",
+      "name": "ignored",
+      "type": "boolean"
+    }
+  ],
+  "name": "Test_command_fault",
+  "namespace": "lsst.sal",
+  "sal_alias": "fault",
+  "sal_author": "rowen",
+  "sal_subsystem": "Test",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

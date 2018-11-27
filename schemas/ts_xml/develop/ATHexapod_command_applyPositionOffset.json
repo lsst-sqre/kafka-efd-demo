@@ -1,0 +1,42 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "x",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "y",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "z",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "u",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "v",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "w",
+      "sal_units": "deg",
+      "type": "double"
+    }
+  ],
+  "name": "ATHexapod_command_applyPositionOffset",
+  "namespace": "lsst.sal",
+  "sal_alias": "applyPositionOffset",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

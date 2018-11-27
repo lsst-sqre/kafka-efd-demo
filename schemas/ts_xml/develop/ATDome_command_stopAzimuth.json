@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "value",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATDome_command_stopAzimuth",
+  "namespace": "lsst.sal",
+  "sal_alias": "stopAzimuth",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

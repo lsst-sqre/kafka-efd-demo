@@ -1,0 +1,22 @@
+{
+  "doc": "Validate Command received from Datalistener",
+  "fields": [
+    {
+      "doc": "Command Object",
+      "name": "commandObject",
+      "sal_units": "NA",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTTCS_logevent_internalCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "internalCommand",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

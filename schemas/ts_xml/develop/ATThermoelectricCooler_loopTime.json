@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "doc": "The actual loop time is ms.",
+      "name": "loopTime",
+      "type": "double"
+    }
+  ],
+  "name": "ATThermoelectricCooler_loopTime",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

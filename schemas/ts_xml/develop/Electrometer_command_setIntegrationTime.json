@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "set voltage, will have to be within limits",
+      "name": "intTime",
+      "type": "float"
+    }
+  ],
+  "name": "Electrometer_command_setIntegrationTime",
+  "namespace": "lsst.sal",
+  "sal_alias": "setIntegrationTime",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

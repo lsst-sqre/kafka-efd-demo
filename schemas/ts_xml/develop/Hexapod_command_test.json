@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "ivalue1",
+      "type": "long"
+    },
+    {
+      "name": "ivalue2",
+      "type": "long"
+    }
+  ],
+  "name": "Hexapod_command_test",
+  "namespace": "lsst.sal",
+  "sal_alias": "test",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

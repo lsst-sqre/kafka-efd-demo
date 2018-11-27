@@ -1,0 +1,19 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "coefficients",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_command_applyActiveOpticForcesByBendingModes",
+  "namespace": "lsst.sal",
+  "sal_alias": "applyActiveOpticForcesByBendingModes",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

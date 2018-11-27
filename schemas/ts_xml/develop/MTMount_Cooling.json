@@ -1,0 +1,183 @@
+{
+  "fields": [
+    {
+      "doc": "TMA_AZ_GW_CPM_0001",
+      "name": "TMA_AZ_GW_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0002",
+      "name": "TMA_AZ_GW_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0021",
+      "name": "TMA_AZ_GW_CPM_0021",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0022",
+      "name": "TMA_AZ_GW_CPM_0022",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CTM_0001",
+      "name": "TMA_AZ_GW_CTM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CTM_0002",
+      "name": "TMA_AZ_GW_CTM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CTM_0021",
+      "name": "TMA_AZ_GW_CTM_0021",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CTM_0022",
+      "name": "TMA_AZ_GW_CTM_0022",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GW_CPM_0101",
+      "name": "TMA_PI_GW_CPM_0101",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GW_CPM_0102",
+      "name": "TMA_PI_GW_CPM_0102",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GW_CTM_0101",
+      "name": "TMA_PI_GW_CTM_0101",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_GW_CTM_0102",
+      "name": "TMA_PI_GW_CTM_0102",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0003",
+      "name": "TMA_AZ_GW_CPM_0003",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0004",
+      "name": "TMA_AZ_GW_CPM_0004",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0005",
+      "name": "TMA_AZ_GW_CPM_0005",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0006",
+      "name": "TMA_AZ_GW_CPM_0006",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0007",
+      "name": "TMA_AZ_GW_CPM_0007",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0008",
+      "name": "TMA_AZ_GW_CPM_0008",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0009",
+      "name": "TMA_AZ_GW_CPM_0009",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0010",
+      "name": "TMA_AZ_GW_CPM_0010",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0011",
+      "name": "TMA_AZ_GW_CPM_0011",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0012",
+      "name": "TMA_AZ_GW_CPM_0012",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0013",
+      "name": "TMA_AZ_GW_CPM_0013",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0014",
+      "name": "TMA_AZ_GW_CPM_0014",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0015",
+      "name": "TMA_AZ_GW_CPM_0015",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0016",
+      "name": "TMA_AZ_GW_CPM_0016",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0017",
+      "name": "TMA_AZ_GW_CPM_0017",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0018",
+      "name": "TMA_AZ_GW_CPM_0018",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0019",
+      "name": "TMA_AZ_GW_CPM_0019",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_GW_CPM_0020",
+      "name": "TMA_AZ_GW_CPM_0020",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_EL_GW_CPM_0001",
+      "name": "TMA_EL_GW_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_EL_GW_CPM_0002",
+      "name": "TMA_EL_GW_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_EL_GW_CTM_0001",
+      "name": "TMA_EL_GW_CTM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Cooling",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

@@ -1,0 +1,44 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "cover1ClosedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover2ClosedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover3ClosedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover4ClosedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover1OpenedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover2OpenedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover3OpenedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "cover4OpenedActive",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATPneumatics_logevent_m1CoverLimitSwitches",
+  "namespace": "lsst.sal",
+  "sal_alias": "m1CoverLimitSwitches",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

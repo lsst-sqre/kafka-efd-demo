@@ -1,0 +1,34 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "commandValue",
+      "type": "int"
+    },
+    {
+      "name": "detailedState",
+      "type": {
+        "name": "detailedState",
+        "symbols": [
+          "detailedState_detailedState_disabledState",
+          "detailedState_detailedState_enabledState",
+          "detailedState_detailedState_faultState",
+          "detailedState_detailedState_offlineState",
+          "detailedState_detailedState_standbyState"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "ATWhiteLight_logevent_rejectedCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "rejectedCommand",
+  "sal_subsystem": "ATWhiteLight",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

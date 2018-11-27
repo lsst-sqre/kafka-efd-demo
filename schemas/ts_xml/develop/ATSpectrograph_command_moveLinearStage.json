@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "moveLinearStage",
+      "sal_units": "m",
+      "type": "double"
+    }
+  ],
+  "name": "ATSpectrograph_command_moveLinearStage",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveLinearStage",
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

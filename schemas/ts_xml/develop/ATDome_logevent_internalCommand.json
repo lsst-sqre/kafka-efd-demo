@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The error code being published.",
+      "name": "commandObject",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "ATDome_logevent_internalCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "internalCommand",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

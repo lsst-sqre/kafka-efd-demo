@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "name": "minpos",
+      "type": "double"
+    },
+    {
+      "name": "maxpos",
+      "type": "double"
+    },
+    {
+      "name": "filterChangePos",
+      "type": "double"
+    },
+    {
+      "name": "maxspeed",
+      "type": "double"
+    },
+    {
+      "name": "accel",
+      "type": "double"
+    },
+    {
+      "name": "decel",
+      "type": "double"
+    },
+    {
+      "name": "manualRotator",
+      "type": "boolean"
+    },
+    {
+      "name": "followsky",
+      "type": "boolean"
+    },
+    {
+      "name": "resumeAngle",
+      "type": "boolean"
+    }
+  ],
+  "name": "Scheduler_rotatorConfig",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "wavelength",
+      "type": "float"
+    }
+  ],
+  "name": "ATMonochromator_command_changeWavelength",
+  "namespace": "lsst.sal",
+  "sal_alias": "changeWavelength",
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "status",
+      "type": "int"
+    }
+  ],
+  "name": "EEC_logevent_nightTimeFail",
+  "namespace": "lsst.sal",
+  "sal_alias": "nightTimeFail",
+  "sal_author": "gschumacher",
+  "sal_subsystem": "EEC",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

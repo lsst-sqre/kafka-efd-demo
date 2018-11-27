@@ -1,0 +1,17 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "name": "value",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATArchiver_command_resetFromFault",
+  "namespace": "lsst.sal",
+  "sal_alias": "resetFromFault",
+  "sal_author": "Htut Khine Win(hwin16@illinois.edu)",
+  "sal_subsystem": "ATArchiver",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

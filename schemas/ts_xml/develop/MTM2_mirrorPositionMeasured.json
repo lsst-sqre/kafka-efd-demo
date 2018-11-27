@@ -1,0 +1,71 @@
+{
+  "fields": [
+    {
+      "doc": "Tilt in xy plane",
+      "name": "xTilt",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "radians",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Tilt in xy plane",
+      "name": "yTilt",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "radians",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Offset along z = optical axis",
+      "name": "piston",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "microns",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Position in optical coordinate system per LTS-136",
+      "name": "xPosition",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "radians",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Position in optical coordinate system per LTS-136",
+      "name": "yPosition",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "radians",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Position in optical coordinate system per LTS-136",
+      "name": "thetaZPosition",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "radians",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_mirrorPositionMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

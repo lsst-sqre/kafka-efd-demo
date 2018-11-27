@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "disperser",
+      "type": "long"
+    }
+  ],
+  "name": "ATSpectrograph_command_changeDisperser",
+  "namespace": "lsst.sal",
+  "sal_alias": "changeDisperser",
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

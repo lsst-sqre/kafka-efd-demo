@@ -1,0 +1,57 @@
+{
+  "fields": [
+    {
+      "name": "bladeHome",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "closeProfile",
+      "sal_units": "second",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "motorCurrent",
+      "sal_units": "ampere",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "motorTemp",
+      "sal_units": "Celsius",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "openDirection",
+      "type": "int"
+    },
+    {
+      "name": "openProfile",
+      "sal_units": "second",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "profileFunction",
+      "type": "string"
+    }
+  ],
+  "name": "MTCamera_shutter",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTTCS_logevent_zemaxError.html",
+  "fields": [
+    {
+      "name": "details",
+      "type": "string"
+    }
+  ],
+  "name": "MTTCS_logevent_zemaxError",
+  "namespace": "lsst.sal",
+  "sal_alias": "zemaxError",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

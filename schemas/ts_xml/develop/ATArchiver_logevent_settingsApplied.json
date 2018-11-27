@@ -1,0 +1,29 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATArchiver_logevent_settingsApplied.html",
+  "fields": [
+    {
+      "name": "settings",
+      "type": "string"
+    },
+    {
+      "name": "tsXMLVersion",
+      "type": "string"
+    },
+    {
+      "name": "tsSALVersion",
+      "type": "string"
+    },
+    {
+      "name": "l1dmRepoTag",
+      "type": "string"
+    }
+  ],
+  "name": "ATArchiver_logevent_settingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsApplied",
+  "sal_author": "Htut Khine Win(hwin16@illinois.edu)",
+  "sal_subsystem": "ATArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

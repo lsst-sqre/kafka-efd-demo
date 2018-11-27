@@ -1,0 +1,19 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "zForces",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_command_applyActiveOpticForces",
+  "namespace": "lsst.sal",
+  "sal_alias": "applyActiveOpticForces",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

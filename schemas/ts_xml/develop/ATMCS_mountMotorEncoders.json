@@ -1,0 +1,60 @@
+{
+  "fields": [
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount elevation encoders in degrees + 1 Motor encoder.",
+      "name": "elevationEncoder",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
+      "name": "azimuth1Encoder",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
+      "name": "azimuth2Encoder",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
+      "name": "nasmyth1Encoder",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 2 encoders readings in degrees  + 1 Motor encoder.",
+      "name": "nasmyth2Encoder",
+      "type": "double"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount elevation encoders in degrees + 1 Motor encoder.",
+      "name": "elevationEncoderRaw",
+      "type": "long"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
+      "name": "azimuth1EncoderRaw",
+      "type": "long"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount azimuth encoders in degrees  + 2 Motor encoders.",
+      "name": "azimuth2EncoderRaw",
+      "type": "long"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 1 encoders readings in degrees  + 1 Motor encoder.",
+      "name": "nasmyth1EncoderRaw",
+      "type": "long"
+    },
+    {
+      "doc": "This telemetry item reports the auxiliary telescope 3 mount nasmyth 2 encoders readings in degrees  + 1 Motor encoder.",
+      "name": "nasmyth2EncoderRaw",
+      "type": "long"
+    }
+  ],
+  "name": "ATMCS_mountMotorEncoders",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

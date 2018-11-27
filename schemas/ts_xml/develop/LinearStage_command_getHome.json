@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "homed",
+      "type": "boolean"
+    },
+    {
+      "doc": "The timestamp for when the event occurred.",
+      "name": "timestamp",
+      "sal_units": "Seconds",
+      "type": "double"
+    }
+  ],
+  "name": "LinearStage_command_getHome",
+  "namespace": "lsst.sal",
+  "sal_alias": "getHome",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "LinearStage",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

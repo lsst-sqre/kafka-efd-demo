@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "powerOn",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATThermoelectricCooler_command_powerChillerOn",
+  "namespace": "lsst.sal",
+  "sal_alias": "powerChillerOn",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

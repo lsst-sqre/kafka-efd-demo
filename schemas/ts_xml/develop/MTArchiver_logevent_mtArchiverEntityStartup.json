@@ -1,0 +1,28 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/MTArchiver_logevent_mtArchiverEntityStartup.html",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "long"
+    }
+  ],
+  "name": "MTArchiver_logevent_mtArchiverEntityStartup",
+  "namespace": "lsst.sal",
+  "sal_alias": "mtArchiverEntityStartup",
+  "sal_subsystem": "MTArchiver",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "detail",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "Hexapod_logevent_interlock",
+  "namespace": "lsst.sal",
+  "sal_alias": "interlock",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

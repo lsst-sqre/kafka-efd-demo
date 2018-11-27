@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTVMS_TMA",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTVMS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.6.0",
+  "type": "record"
+}

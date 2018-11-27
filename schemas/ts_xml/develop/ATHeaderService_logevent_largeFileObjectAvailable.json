@@ -1,0 +1,40 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "url",
+      "type": "string"
+    },
+    {
+      "name": "generator",
+      "type": "string"
+    },
+    {
+      "name": "version",
+      "type": "float"
+    },
+    {
+      "name": "checkSum",
+      "type": "string"
+    },
+    {
+      "name": "mimeType",
+      "type": "string"
+    },
+    {
+      "name": "byteSize",
+      "type": "long"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    }
+  ],
+  "name": "ATHeaderService_logevent_largeFileObjectAvailable",
+  "namespace": "lsst.sal",
+  "sal_alias": "largeFileObjectAvailable",
+  "sal_subsystem": "ATHeaderService",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

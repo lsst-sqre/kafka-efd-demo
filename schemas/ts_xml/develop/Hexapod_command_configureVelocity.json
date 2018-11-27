@@ -1,0 +1,32 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "xymax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "rxrymax",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "zmax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "rzmax",
+      "sal_units": "deg/s",
+      "type": "double"
+    }
+  ],
+  "name": "Hexapod_command_configureVelocity",
+  "namespace": "lsst.sal",
+  "sal_alias": "configureVelocity",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

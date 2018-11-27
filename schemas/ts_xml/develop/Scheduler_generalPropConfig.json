@@ -1,0 +1,268 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "propId",
+      "type": "long"
+    },
+    {
+      "name": "twilightBoundary",
+      "type": "double"
+    },
+    {
+      "name": "deltaLst",
+      "type": "double"
+    },
+    {
+      "name": "decWindow",
+      "type": "double"
+    },
+    {
+      "name": "maxAirmass",
+      "type": "double"
+    },
+    {
+      "name": "maxCloud",
+      "type": "double"
+    },
+    {
+      "name": "minDistanceMoon",
+      "type": "double"
+    },
+    {
+      "name": "excludePlanets",
+      "type": "boolean"
+    },
+    {
+      "name": "numRegionSelections",
+      "type": "long"
+    },
+    {
+      "name": "regionTypes",
+      "type": "string"
+    },
+    {
+      "name": "regionMinimums",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "regionMaximums",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "regionBounds",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "regionCombiners",
+      "type": "string"
+    },
+    {
+      "name": "numTimeRanges",
+      "type": "long"
+    },
+    {
+      "name": "timeRangeStarts",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "timeRangeEnds",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numSelectionMappings",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "selectionMappings",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numExclusionSelections",
+      "type": "long"
+    },
+    {
+      "name": "exclusionTypes",
+      "type": "string"
+    },
+    {
+      "name": "exclusionMinimums",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "exclusionMaximums",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "exclusionBounds",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "fieldRevisitLimit",
+      "type": "long"
+    },
+    {
+      "name": "numFilters",
+      "type": "long"
+    },
+    {
+      "name": "filterNames",
+      "type": "string"
+    },
+    {
+      "name": "numVisits",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numGroupedVisits",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "maxGroupedVisits",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "brightLimit",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "darkLimit",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "maxSeeing",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "numFilterExposures",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "exposures",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "maxNumTargets",
+      "type": "long"
+    },
+    {
+      "name": "acceptSerendipity",
+      "type": "boolean"
+    },
+    {
+      "name": "acceptConsecutiveVisits",
+      "type": "boolean"
+    },
+    {
+      "name": "restartLostSequences",
+      "type": "boolean"
+    },
+    {
+      "name": "restartCompleteSequences",
+      "type": "boolean"
+    },
+    {
+      "name": "maxVisitsGoal",
+      "type": "long"
+    },
+    {
+      "name": "airmassBonus",
+      "type": "double"
+    },
+    {
+      "name": "hourAngleBonus",
+      "type": "double"
+    },
+    {
+      "name": "hourAngleMax",
+      "type": "double"
+    },
+    {
+      "name": "restrictGroupedVisits",
+      "type": "boolean"
+    },
+    {
+      "name": "timeInterval",
+      "type": "double"
+    },
+    {
+      "name": "timeWindowStart",
+      "type": "double"
+    },
+    {
+      "name": "timeWindowMax",
+      "type": "double"
+    },
+    {
+      "name": "timeWindowEnd",
+      "type": "double"
+    },
+    {
+      "name": "timeWeight",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_generalPropConfig",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

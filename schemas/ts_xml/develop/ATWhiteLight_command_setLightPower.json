@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Power intensity, it could a value between 800 to 1200W. Any value under this range will power the light off safely.",
+      "name": "power",
+      "type": "float"
+    }
+  ],
+  "name": "ATWhiteLight_command_setLightPower",
+  "namespace": "lsst.sal",
+  "sal_alias": "setLightPower",
+  "sal_subsystem": "ATWhiteLight",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

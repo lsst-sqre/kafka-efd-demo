@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "clearFaultState",
+      "type": "boolean"
+    }
+  ],
+  "name": "TunableLaser_command_clearFaultState",
+  "namespace": "lsst.sal",
+  "sal_alias": "clearFaultState",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "TunableLaser",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

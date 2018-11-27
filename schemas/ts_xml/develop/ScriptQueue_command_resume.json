@@ -1,0 +1,16 @@
+{
+  "doc": "Resume normal operation (unpause the queue).",
+  "fields": [
+    {
+      "name": "ignored",
+      "type": "boolean"
+    }
+  ],
+  "name": "ScriptQueue_command_resume",
+  "namespace": "lsst.sal",
+  "sal_alias": "resume",
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

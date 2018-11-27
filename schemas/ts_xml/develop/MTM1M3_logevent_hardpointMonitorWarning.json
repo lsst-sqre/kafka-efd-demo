@@ -1,0 +1,317 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "anyWarning",
+      "type": "boolean"
+    },
+    {
+      "name": "anyMajorFault",
+      "type": "boolean"
+    },
+    {
+      "name": "majorFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMinorFault",
+      "type": "boolean"
+    },
+    {
+      "name": "minorFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyFaultOverride",
+      "type": "boolean"
+    },
+    {
+      "name": "faultOverride",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyInstrumentError",
+      "type": "boolean"
+    },
+    {
+      "name": "instrumentError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineError",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineBootloaderActive",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineBootloaderActive",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyUniqueIdCRCError",
+      "type": "boolean"
+    },
+    {
+      "name": "uniqueIdCRCError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyApplicationTypeMismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "applicationTypeMismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyApplicationMissing",
+      "type": "boolean"
+    },
+    {
+      "name": "applicationMissing",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyApplicationCRCMismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "applicationCRCMismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOneWireMissing",
+      "type": "boolean"
+    },
+    {
+      "name": "oneWireMissing",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOneWire1Mismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "oneWire1Mismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyOneWire2Mismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "oneWire2Mismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyWatchdogReset",
+      "type": "boolean"
+    },
+    {
+      "name": "watchdogReset",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyBrownOut",
+      "type": "boolean"
+    },
+    {
+      "name": "brownOut",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyEventTrapReset",
+      "type": "boolean"
+    },
+    {
+      "name": "eventTrapReset",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anySSRPowerFault",
+      "type": "boolean"
+    },
+    {
+      "name": "ssrPowerFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyAuxPowerFault",
+      "type": "boolean"
+    },
+    {
+      "name": "auxPowerFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineS1AInterface1Fault",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineS1AInterface1Fault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineS1ALVDT1Fault",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineS1ALVDT1Fault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineS1AInterface2Fault",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineS1AInterface2Fault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineS1ALVDT2Fault",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineS1ALVDT2Fault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineUniqueIdCRCError",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineUniqueIdCRCError",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineEventTrapReset",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineEventTrapReset",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineDCPRS422ChipFault",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineDCPRS422ChipFault",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineApplicationMissing",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineApplicationMissing",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "name": "anyMezzanineApplicationCRCMismatch",
+      "type": "boolean"
+    },
+    {
+      "name": "mezzanineApplicationCRCMismatch",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_hardpointMonitorWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "hardpointMonitorWarning",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "doc": "The system time (TAI).",
+      "name": "setTemperature",
+      "type": "float"
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "supplyTemperature",
+      "type": "float"
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "externalRTD",
+      "type": "float"
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "externalThermistor",
+      "type": "float"
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "returnTemperature",
+      "type": "float"
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "ambientTemperature",
+      "type": "float"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "ATThermoelectricCooler_temperatureSensors",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

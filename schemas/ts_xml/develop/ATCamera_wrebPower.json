@@ -1,0 +1,90 @@
+{
+  "fields": [
+    {
+      "name": "digital_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "digital_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "analog_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "analog_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "clkHigh_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "clkHigh_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "clkLow_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "clkLow_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "od_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "od_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "dphi_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "dphi_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "heater_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "heater_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    },
+    {
+      "name": "hvbias_V",
+      "sal_units": "volt",
+      "type": "float"
+    },
+    {
+      "name": "hvbias_I",
+      "sal_units": "milliampere",
+      "type": "float"
+    }
+  ],
+  "name": "ATCamera_wrebPower",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

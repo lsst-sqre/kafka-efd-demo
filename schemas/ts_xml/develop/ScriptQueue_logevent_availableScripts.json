@@ -1,0 +1,22 @@
+{
+  "doc": "List of available scripts.",
+  "fields": [
+    {
+      "doc": "Colon-separated paths to standard scripts, relative to the standard root directory.",
+      "name": "standard",
+      "type": "string"
+    },
+    {
+      "doc": "Colon-separated paths to external scripts, relative to the external root directory.",
+      "name": "external",
+      "type": "string"
+    }
+  ],
+  "name": "ScriptQueue_logevent_availableScripts",
+  "namespace": "lsst.sal",
+  "sal_alias": "availableScripts",
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

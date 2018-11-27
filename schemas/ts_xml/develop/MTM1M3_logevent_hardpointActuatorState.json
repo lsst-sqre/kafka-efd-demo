@@ -1,0 +1,30 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "ilcState",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "motionState",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_hardpointActuatorState",
+  "namespace": "lsst.sal",
+  "sal_alias": "hardpointActuatorState",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

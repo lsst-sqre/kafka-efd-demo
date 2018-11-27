@@ -1,0 +1,22 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "offsetX",
+      "sal_units": "arcseconds",
+      "type": "double"
+    },
+    {
+      "name": "offsetY",
+      "sal_units": "arcseconds",
+      "type": "double"
+    }
+  ],
+  "name": "ATTCS_command_offset",
+  "namespace": "lsst.sal",
+  "sal_alias": "offset",
+  "sal_subsystem": "ATTCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

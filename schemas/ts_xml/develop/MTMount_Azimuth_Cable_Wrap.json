@@ -1,0 +1,81 @@
+{
+  "fields": [
+    {
+      "doc": "ACW_Status",
+      "name": "ACW_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "ACW_Status_Drive_1",
+      "name": "ACW_Status_Drive_1",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "ACW_Status_Drive_2",
+      "name": "ACW_Status_Drive_2",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "ACW_Current_Drive_1",
+      "name": "ACW_Current_Drive_1",
+      "type": "double"
+    },
+    {
+      "doc": "ACW_Current_Drive_2",
+      "name": "ACW_Current_Drive_2",
+      "type": "double"
+    },
+    {
+      "doc": "ACW_AngleDif_Actual",
+      "name": "ACW_AngleDif_Actual",
+      "type": "double"
+    },
+    {
+      "doc": "ACW_AngleDif_ActualLVDT",
+      "name": "ACW_AngleDif_ActualLVDT",
+      "type": "double"
+    },
+    {
+      "doc": "ACW_Angle_Setpoint",
+      "name": "ACW_Angle_Setpoint",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "ACW_Positive_Power_Off_switch",
+      "name": "ACW_Positive_Power_Off_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "ACW_Negative_Power_Off_switch",
+      "name": "ACW_Negative_Power_Off_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "ACW_Interlocks",
+      "name": "ACW_Interlocks",
+      "sal_size_in_bytes": 1,
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Azimuth_Cable_Wrap",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

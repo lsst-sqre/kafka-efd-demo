@@ -1,0 +1,48 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "positionAngleUpperLimit",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "velocityLimit",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "accelerationLimit",
+      "sal_units": "deg/s^2",
+      "type": "double"
+    },
+    {
+      "name": "positionErrorThreshold",
+      "type": "double"
+    },
+    {
+      "name": "positionAngleLowerLimit",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "followingErrorThreshold",
+      "type": "double"
+    },
+    {
+      "name": "trackingSuccessPositionThreshold",
+      "type": "double"
+    },
+    {
+      "name": "trackingLostTimeout",
+      "type": "double"
+    }
+  ],
+  "name": "Rotator_logevent_settingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsApplied",
+  "sal_subsystem": "Rotator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

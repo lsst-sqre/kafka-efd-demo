@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "azimuth",
+      "type": "float"
+    }
+  ],
+  "name": "ATDome_command_moveAzimuth",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveAzimuth",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

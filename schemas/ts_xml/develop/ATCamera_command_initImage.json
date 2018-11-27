@@ -1,0 +1,16 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "name": "deltaT",
+      "type": "double"
+    }
+  ],
+  "name": "ATCamera_command_initImage",
+  "namespace": "lsst.sal",
+  "sal_alias": "initImage",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

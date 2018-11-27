@@ -1,0 +1,58 @@
+{
+  "fields": [
+    {
+      "name": "readoutTime",
+      "type": "double"
+    },
+    {
+      "name": "shutterTime",
+      "type": "double"
+    },
+    {
+      "name": "filterMountTime",
+      "type": "double"
+    },
+    {
+      "name": "filterChangeTime",
+      "type": "double"
+    },
+    {
+      "name": "filterMaxChangesBurstNum",
+      "type": "long"
+    },
+    {
+      "name": "filterMaxChangesBurstTime",
+      "type": "double"
+    },
+    {
+      "name": "filterMaxChangesAvgNum",
+      "type": "long"
+    },
+    {
+      "name": "filterMaxChangesAvgTime",
+      "type": "double"
+    },
+    {
+      "name": "filterMounted",
+      "type": "string"
+    },
+    {
+      "name": "filterPos",
+      "type": "string"
+    },
+    {
+      "name": "filterRemovable",
+      "type": "string"
+    },
+    {
+      "name": "filterUnmounted",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_cameraConfig",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

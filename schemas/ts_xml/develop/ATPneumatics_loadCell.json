@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "name": "cellLoad",
+      "type": "double"
+    }
+  ],
+  "name": "ATPneumatics_loadCell",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

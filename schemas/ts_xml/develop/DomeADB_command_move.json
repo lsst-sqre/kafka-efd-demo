@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "angle",
+      "type": "double"
+    }
+  ],
+  "name": "DomeADB_command_move",
+  "namespace": "lsst.sal",
+  "sal_alias": "move",
+  "sal_subsystem": "DomeADB",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

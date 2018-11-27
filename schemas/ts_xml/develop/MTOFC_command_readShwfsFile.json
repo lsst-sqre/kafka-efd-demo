@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "fileName",
+      "type": "string"
+    }
+  ],
+  "name": "MTOFC_command_readShwfsFile",
+  "namespace": "lsst.sal",
+  "sal_alias": "readShwfsFile",
+  "sal_subsystem": "MTOFC",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

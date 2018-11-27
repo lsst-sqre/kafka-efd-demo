@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "scheduledDowntime",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "unscheduledDowntimes",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_downtime",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

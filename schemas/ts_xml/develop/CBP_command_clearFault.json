@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "clearFault",
+      "type": "boolean"
+    }
+  ],
+  "name": "CBP_command_clearFault",
+  "namespace": "lsst.sal",
+  "sal_alias": "clearFault",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

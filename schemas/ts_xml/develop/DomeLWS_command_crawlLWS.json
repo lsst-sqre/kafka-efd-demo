@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "angle",
+      "type": "double"
+    },
+    {
+      "name": "demandTime",
+      "type": "long"
+    }
+  ],
+  "name": "DomeLWS_command_crawlLWS",
+  "namespace": "lsst.sal",
+  "sal_alias": "crawlLWS",
+  "sal_subsystem": "DomeLWS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

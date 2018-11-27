@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "azPosition",
+      "type": "double"
+    },
+    {
+      "name": "elPosition",
+      "type": "double"
+    },
+    {
+      "name": "demandTime",
+      "type": "double"
+    }
+  ],
+  "name": "Dome_command_crawl",
+  "namespace": "lsst.sal",
+  "sal_alias": "crawl",
+  "sal_subsystem": "Dome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

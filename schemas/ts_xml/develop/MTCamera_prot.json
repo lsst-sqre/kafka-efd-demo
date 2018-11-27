@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "name": "status",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTCamera_prot",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

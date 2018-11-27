@@ -1,0 +1,25 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_calibrationDetailedState.html",
+  "fields": [
+    {
+      "doc": "Enumeration of valid substates",
+      "name": "substate",
+      "type": {
+        "name": "substate",
+        "symbols": [
+          "DISABLED",
+          "ENABLED",
+          "INTEGRATING"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "ATCamera_logevent_calibrationDetailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "calibrationDetailedState",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

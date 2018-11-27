@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "fileName",
+      "type": "string"
+    },
+    {
+      "name": "sensorIdList",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTOFC_command_readWfsFile",
+  "namespace": "lsst.sal",
+  "sal_alias": "readWfsFile",
+  "sal_subsystem": "MTOFC",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

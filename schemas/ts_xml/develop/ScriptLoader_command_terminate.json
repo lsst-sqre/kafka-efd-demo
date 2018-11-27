@@ -1,0 +1,17 @@
+{
+  "doc": "Terminate the specified script by sending SIGTERM.",
+  "fields": [
+    {
+      "doc": "Index of Script SAL component.",
+      "name": "ind",
+      "type": "int"
+    }
+  ],
+  "name": "ScriptLoader_command_terminate",
+  "namespace": "lsst.sal",
+  "sal_alias": "terminate",
+  "sal_subsystem": "ScriptLoader",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

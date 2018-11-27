@@ -1,0 +1,163 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "referenceId",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "referencePosition",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "modbusSubnet",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "modbusAddress",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "xPosition",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "yPosition",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "zPosition",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "ilcUniqueId",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "ilcApplicationType",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "networkNodeType",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "ilcSelectedOptions",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "networkNodeOptions",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "majorRevision",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "minorRevision",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "adcScanRate",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "mainLoadCellCoefficient",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "mainLoadCellOffset",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "mainLoadCellSensitivity",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "backupLoadCellCoefficient",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "backupLoadCellOffset",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "backupLoadCellSensitivity",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_hardpointActuatorInfo",
+  "namespace": "lsst.sal",
+  "sal_alias": "hardpointActuatorInfo",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

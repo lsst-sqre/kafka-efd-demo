@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Actuators_Raw.html",
+      "name": "raw",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Actuators_Calibrated.html",
+      "name": "calibrated",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "ATHexapod_actuatorPositions",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

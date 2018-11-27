@@ -1,0 +1,18 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTMount_mountInPosition.html",
+  "fields": [
+    {
+      "doc": "Whether the mount is in position or not",
+      "name": "inposition",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTMount_logevent_mountInPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "mountInPosition",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

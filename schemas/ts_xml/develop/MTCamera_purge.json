@@ -1,0 +1,70 @@
+{
+  "fields": [
+    {
+      "name": "accelerometer",
+      "sal_units": "meter",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "blowerSetting",
+      "sal_units": "hertz",
+      "type": "float"
+    },
+    {
+      "name": "blowerSpeed",
+      "sal_units": "hertz",
+      "type": "float"
+    },
+    {
+      "name": "bodyFlowMeter",
+      "sal_units": "lps",
+      "type": "float"
+    },
+    {
+      "name": "bodyTemp",
+      "sal_units": "Celsius",
+      "type": "float"
+    },
+    {
+      "name": "heaterCurrent",
+      "sal_units": "ampere",
+      "type": "float"
+    },
+    {
+      "name": "heaters",
+      "sal_units": "ampere",
+      "type": "float"
+    },
+    {
+      "name": "microphone",
+      "type": "long"
+    },
+    {
+      "name": "trunkFlowMeter",
+      "sal_units": "lps",
+      "type": "float"
+    },
+    {
+      "name": "trunkTemp",
+      "sal_units": "Celsius",
+      "type": "float"
+    },
+    {
+      "name": "valveSetting",
+      "type": "long"
+    },
+    {
+      "name": "valves",
+      "type": "long"
+    }
+  ],
+  "name": "MTCamera_purge",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

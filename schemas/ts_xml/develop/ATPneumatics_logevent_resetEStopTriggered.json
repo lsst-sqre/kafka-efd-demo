@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "triggered",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATPneumatics_logevent_resetEStopTriggered",
+  "namespace": "lsst.sal",
+  "sal_alias": "resetEStopTriggered",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

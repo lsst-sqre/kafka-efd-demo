@@ -1,0 +1,38 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "imageName",
+      "type": "string"
+    },
+    {
+      "name": "wavelength",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "intensity",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "integrationTime",
+      "type": "float"
+    },
+    {
+      "name": "temperature",
+      "type": "double"
+    }
+  ],
+  "name": "FiberSpectrograph_logevent_measuredSpectrum",
+  "namespace": "lsst.sal",
+  "sal_alias": "measuredSpectrum",
+  "sal_subsystem": "FiberSpectrograph",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

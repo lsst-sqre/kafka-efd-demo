@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "The focus of the CBP.",
+      "name": "focus",
+      "type": "float"
+    }
+  ],
+  "name": "CBP_focus",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,22 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The error code being published.",
+      "name": "errorCode",
+      "type": "long"
+    },
+    {
+      "doc": "handle a few sentences of higher-level information describing the error.",
+      "name": "errorReport",
+      "type": "string"
+    }
+  ],
+  "name": "Electrometer_logevent_deviceErrorCode",
+  "namespace": "lsst.sal",
+  "sal_alias": "deviceErrorCode",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

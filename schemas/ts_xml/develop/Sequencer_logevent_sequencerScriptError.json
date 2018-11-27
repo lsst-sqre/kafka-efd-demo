@@ -1,0 +1,49 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/Sequencer_logevent_SequencerScriptError.html",
+  "fields": [
+    {
+      "doc": "Script name",
+      "name": "sequencerScriptName",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the script",
+      "name": "sequencerScriptIdentifier",
+      "sal_units": "None",
+      "type": "double"
+    },
+    {
+      "doc": "Script timestamp",
+      "name": "sequencerScriptTimestamp",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Error line number in the script",
+      "name": "sequencerScriptLineNumber",
+      "sal_units": "None",
+      "type": "long"
+    },
+    {
+      "doc": "Error code for the script",
+      "name": "sequencerScriptErrorCode",
+      "sal_units": "None",
+      "type": "long"
+    },
+    {
+      "doc": "Error text for the script",
+      "name": "sequencerScriptErrorText",
+      "sal_units": "None",
+      "type": "string"
+    }
+  ],
+  "name": "Sequencer_logevent_sequencerScriptError",
+  "namespace": "lsst.sal",
+  "sal_alias": "sequencerScriptError",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "Sequencer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,47 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTM2_logevent_m2FaultState.html",
+  "fields": [
+    {
+      "name": "state",
+      "type": {
+        "name": "state",
+        "symbols": [
+          "FaultStates_ActuatorPlusLimit",
+          "FaultStates_ActuatorMinusLimit",
+          "FaultStates_ActuatorPlusForceLimit",
+          "FaultStates_ActuatorMinusForceLimit",
+          "FaultStates_ActuatorCommTimeout",
+          "FaultStates_FollowingError",
+          "FaultStates_ConfigurationError",
+          "FaultStates_UnresponsiveActuator",
+          "FaultStates_TangentLinkStrainFault",
+          "FaultStates_cRIOCommFailure",
+          "FaultStates_cRIOHeartbeatFailure",
+          "FaultStates_CurrentError",
+          "FaultStates_VoltageError",
+          "FaultStates_PowerRelayFault",
+          "FaultStates_PowerSupplyFault",
+          "FaultStates_TemperatureFault",
+          "FaultStates_TempSensorFailure",
+          "FaultStates_TelescopeElevationFault",
+          "FaultStates_GravitySensorFailure",
+          "FaultStates_ILCFault",
+          "FaultStates_CelRBPositionError",
+          "FaultStates_DisplacementSensor",
+          "FaultStates_ActuatorPlusSoftLimit",
+          "FaultStates_ActuatorMinusSoftLimit",
+          "FaultStates_CelTemperatureWarning\n      "
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "MTM2_logevent_m2FaultState",
+  "namespace": "lsst.sal",
+  "sal_alias": "m2FaultState",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

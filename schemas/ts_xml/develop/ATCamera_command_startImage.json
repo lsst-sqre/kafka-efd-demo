@@ -1,0 +1,37 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "name": "imageSequenceName",
+      "type": "string"
+    },
+    {
+      "name": "shutter",
+      "type": "boolean"
+    },
+    {
+      "name": "science",
+      "type": "boolean"
+    },
+    {
+      "name": "guide",
+      "type": "boolean"
+    },
+    {
+      "name": "wfs",
+      "type": "boolean"
+    },
+    {
+      "name": "timeout",
+      "sal_units": "seconds",
+      "type": "double"
+    }
+  ],
+  "name": "ATCamera_command_startImage",
+  "namespace": "lsst.sal",
+  "sal_alias": "startImage",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,19 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/MTMount_command_enableCamWrap.html",
+  "fields": [
+    {
+      "name": "state",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTMount_command_enableCamWrap",
+  "namespace": "lsst.sal",
+  "sal_alias": "enableCamWrap",
+  "sal_author": "Ander Ansuategi",
+  "sal_device": "wrap",
+  "sal_property": "mode",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.0",
+  "type": "record"
+}

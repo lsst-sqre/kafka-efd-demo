@@ -1,0 +1,80 @@
+{
+  "fields": [
+    {
+      "doc": "Coordinate system for position. CSys_Observed is refracted apparent topocentric, e.g. similar to CSys_Mount but the telescope model is applied and the azimuth is wrapped. If CSys_None then position should be ignored.",
+      "name": "coordinateSystem",
+      "type": {
+        "name": "coordinateSystem",
+        "symbols": [
+          "CSys_None",
+          " CSys_ICRS",
+          " CSys_Observed",
+          " CSys_Mount"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Longitude, latitude axes of position in coordinateSystem",
+      "name": "position",
+      "sal_units": "degrees",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Rotation system for cameraAngle:\n        * Rot_NONE: The camera rotator is not used; ignore cameraAngle.\n        * Rot_SKY: Position angle of focal plane +Y, measured from N through E.\n          At 0 degrees, +Y is along N and +X is along E/W depending on handedness.\n          At 90 degrees, +Y is along E and +X is along S/N depending on handedness.\n        * Rot_HORIZON: Position angle of focal plane +Y, measured from +Alt through +Az.\n          At 0 degrees, +Y is along +Alt and +X is along +/-Az, depending on handedness.\n          At 90 degrees, +Y is along +Az and +X is along -/+Alt, depending on handedness.\n        * Rot_MOUNT: The position sent to the instrument rotator; the details depend on the rotator.",
+      "name": "rotationSystem",
+      "type": {
+        "name": "rotationSystem",
+        "symbols": [
+          "Rot_None",
+          "Rot_Sky",
+          "Rot_Horizon",
+          "Rot_Mount"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Camera angle in rotationSystem",
+      "name": "cameraAngle",
+      "sal_units": "degrees",
+      "type": "double"
+    },
+    {
+      "doc": "Comma-separated names of acceptable filters, or blank for any filter.",
+      "name": "filters",
+      "sal_units": "seconds",
+      "type": "string"
+    },
+    {
+      "doc": "Desired dome state.",
+      "name": "dome",
+      "sal_units": "seconds",
+      "type": {
+        "name": "dome",
+        "symbols": [
+          "Dome_Closed",
+          "Dome_Open",
+          "Dome_Either"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Estimated duration of the script, excluding slewing to the initial position required by the script.",
+      "name": "duration",
+      "sal_units": "seconds",
+      "type": "double"
+    }
+  ],
+  "name": "Script_logevent_metadata",
+  "namespace": "lsst.sal",
+  "sal_alias": "metadata",
+  "sal_subsystem": "Script",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

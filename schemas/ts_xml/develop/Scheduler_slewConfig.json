@@ -1,0 +1,74 @@
+{
+  "fields": [
+    {
+      "name": "prereqDomalt",
+      "type": "string"
+    },
+    {
+      "name": "prereqDomaz",
+      "type": "string"
+    },
+    {
+      "name": "prereqDomazSettle",
+      "type": "string"
+    },
+    {
+      "name": "prereqTelalt",
+      "type": "string"
+    },
+    {
+      "name": "prereqTelaz",
+      "type": "string"
+    },
+    {
+      "name": "prereqTelOpticsOpenLoop",
+      "type": "string"
+    },
+    {
+      "name": "prereqTelOpticsClosedLoop",
+      "type": "string"
+    },
+    {
+      "name": "prereqTelSettle",
+      "type": "string"
+    },
+    {
+      "name": "prereqTelRot",
+      "type": "string"
+    },
+    {
+      "name": "prereqFilter",
+      "type": "string"
+    },
+    {
+      "name": "prereqExposures",
+      "type": "string"
+    },
+    {
+      "name": "prereqReadout",
+      "type": "string"
+    },
+    {
+      "name": "prereqAdc",
+      "type": "string"
+    },
+    {
+      "name": "prereqInsOptics",
+      "type": "string"
+    },
+    {
+      "name": "prereqGuiderPos",
+      "type": "string"
+    },
+    {
+      "name": "prereqGuiderAdq",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_slewConfig",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

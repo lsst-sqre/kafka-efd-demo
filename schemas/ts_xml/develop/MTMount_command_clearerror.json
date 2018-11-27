@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/MTMount_command_clearerror.html",
+  "fields": [
+    {
+      "name": "state",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTMount_command_clearerror",
+  "namespace": "lsst.sal",
+  "sal_alias": "clearerror",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.0",
+  "type": "record"
+}

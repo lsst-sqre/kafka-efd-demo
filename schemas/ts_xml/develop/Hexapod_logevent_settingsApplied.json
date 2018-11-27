@@ -1,0 +1,269 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "accelerationAccmax",
+      "sal_units": "um/s^2",
+      "type": "double"
+    },
+    {
+      "name": "limitXYMax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "limitZMin",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "limitZMax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "limitUVMax",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "limitWMin",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "limitWMax",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "velocityXYMax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "velocityRxRyMax",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "velocityZMax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "velocityRzMax",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "positionX",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "positionY",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "positionZ",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "positionU",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "positionV",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "positionW",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "pivotX",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "pivotY",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "pivotZ",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "elevationRawLUTElevIndex",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "elevationRawLUTX",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "elevationRawLUTY",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "elevationRawLUTZ",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "elevationRawLUTRx",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "elevationRawLUTRy",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "elevationRawLUTRz",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTAzIndex",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTX",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTY",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTZ",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTRx",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTRy",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "azimuthRawLUTRz",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTTempIndex",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTX",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTY",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTZ",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTRx",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTRy",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "temperatureRawLUTRz",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "strutDisplacementMax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "strutVelocityMax",
+      "sal_units": "um/s",
+      "type": "double"
+    }
+  ],
+  "name": "Hexapod_logevent_settingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsApplied",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "ventsClosedActive",
+      "type": "boolean"
+    },
+    {
+      "name": "ventsOpenedActive",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATPneumatics_logevent_m1VentsLimitSwitches",
+  "namespace": "lsst.sal",
+  "sal_alias": "m1VentsLimitSwitches",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

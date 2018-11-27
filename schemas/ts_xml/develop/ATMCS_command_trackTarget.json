@@ -1,0 +1,66 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Mount azimuth angle in deg",
+      "name": "azimuth",
+      "type": "double"
+    },
+    {
+      "doc": "Rotator angle velocity in deg/sec",
+      "name": "azimuthDirection",
+      "type": "long"
+    },
+    {
+      "doc": "Mount azimuth velocity in deg/sec",
+      "name": "azimuthVelocity",
+      "type": "double"
+    },
+    {
+      "doc": "Mount elevation angle in deg",
+      "name": "elevation",
+      "type": "double"
+    },
+    {
+      "doc": "Mount elevation angle velocity in deg/ec",
+      "name": "elevationVelocity",
+      "type": "double"
+    },
+    {
+      "doc": "Rotator angle in deg",
+      "name": "nasmyth1RotatorAngle",
+      "type": "double"
+    },
+    {
+      "doc": "Rotator angle velocity in deg/sec",
+      "name": "nasmyth1RotatorAngleVelocity",
+      "type": "double"
+    },
+    {
+      "doc": "Rotator angle in deg",
+      "name": "nasmyth2RotatorAngle",
+      "type": "double"
+    },
+    {
+      "doc": "Rotator angle velocity in deg/sec",
+      "name": "nasmyth2RotatorAngleVelocity",
+      "type": "double"
+    },
+    {
+      "doc": "tai time in seconds",
+      "name": "time",
+      "type": "double"
+    },
+    {
+      "name": "trackId",
+      "type": "long"
+    }
+  ],
+  "name": "ATMCS_command_trackTarget",
+  "namespace": "lsst.sal",
+  "sal_alias": "trackTarget",
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

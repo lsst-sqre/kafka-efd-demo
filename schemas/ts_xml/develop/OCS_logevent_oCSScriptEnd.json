@@ -1,0 +1,43 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/OCS_logevent_OCSScriptEnd.html",
+  "fields": [
+    {
+      "doc": "Script name",
+      "name": "oCSScriptName",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the script",
+      "name": "oCSScriptIdentifier",
+      "sal_units": "None",
+      "type": "double"
+    },
+    {
+      "doc": "Script timestamp",
+      "name": "oCSScriptTimestamp",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Script status code",
+      "name": "oCSScriptStatusCode",
+      "sal_units": "None",
+      "type": "long"
+    },
+    {
+      "doc": "Script status text",
+      "name": "oCSScriptStatusText",
+      "sal_units": "None",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_logevent_oCSScriptEnd",
+  "namespace": "lsst.sal",
+  "sal_alias": "oCSScriptEnd",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

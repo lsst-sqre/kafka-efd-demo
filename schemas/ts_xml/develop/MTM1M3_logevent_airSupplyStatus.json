@@ -1,0 +1,32 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "airCommandedOn",
+      "type": "boolean"
+    },
+    {
+      "name": "airCommandOutputOn",
+      "type": "boolean"
+    },
+    {
+      "name": "airValveOpened",
+      "type": "boolean"
+    },
+    {
+      "name": "airValveClosed",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTM1M3_logevent_airSupplyStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "airSupplyStatus",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

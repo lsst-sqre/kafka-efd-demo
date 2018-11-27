@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTMount_mountError.html",
+  "fields": [
+    {
+      "doc": "Identifier of the error",
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "doc": "The error info",
+      "name": "text",
+      "type": "string"
+    }
+  ],
+  "name": "MTMount_logevent_mountError",
+  "namespace": "lsst.sal",
+  "sal_alias": "mountError",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

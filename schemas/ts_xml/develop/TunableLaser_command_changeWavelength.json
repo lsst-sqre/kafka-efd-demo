@@ -1,0 +1,18 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "wavelength",
+      "sal_units": "nanometers",
+      "type": "long"
+    }
+  ],
+  "name": "TunableLaser_command_changeWavelength",
+  "namespace": "lsst.sal",
+  "sal_alias": "changeWavelength",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "TunableLaser",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

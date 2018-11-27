@@ -1,0 +1,31 @@
+{
+  "doc": "Rejected Command",
+  "fields": [
+    {
+      "doc": "Command Value",
+      "name": "commandValue",
+      "sal_units": "NA",
+      "type": "int"
+    },
+    {
+      "doc": "Detailed State",
+      "name": "detailedState",
+      "sal_units": "NA",
+      "type": "int"
+    },
+    {
+      "doc": "The system time.",
+      "name": "timestamp",
+      "sal_units": "NA",
+      "type": "double"
+    }
+  ],
+  "name": "MTTCS_logevent_rejectedCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "rejectedCommand",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

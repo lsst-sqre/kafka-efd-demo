@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "value",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATSpectrograph_command_stopAllAxes",
+  "namespace": "lsst.sal",
+  "sal_alias": "stopAllAxes",
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

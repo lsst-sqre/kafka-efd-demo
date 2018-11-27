@@ -1,0 +1,108 @@
+{
+  "fields": [
+    {
+      "doc": "Azimuth_Status",
+      "name": "Azimuth_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Angle_Actual",
+      "name": "Azimuth_Angle_Actual",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Angle_Set",
+      "name": "Azimuth_Angle_Set",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Aceleration_Actual",
+      "name": "Azimuth_Aceleration_Actual",
+      "sal_units": "deg/second^2",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Velocity_Set",
+      "name": "Azimuth_Velocity_Set",
+      "sal_units": "deg/second",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Velocity_Actual",
+      "name": "Azimuth_Velocity_Actual",
+      "sal_units": "deg/second",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Torque_Actual",
+      "name": "Azimuth_Torque_Actual",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Positive_Software_limit",
+      "name": "Azimuth_Positive_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Negative_Software_limit",
+      "name": "Azimuth_Negative_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Positive_Power_Off_switch",
+      "name": "Azimuth_Positive_Power_Off_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Negative_Power_Off_switch",
+      "name": "Azimuth_Negative_Power_Off_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Positive_Directional_limit_switch",
+      "name": "Azimuth_Positive_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Negative_Directional_limit_switch",
+      "name": "Azimuth_Negative_Directional_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Positive_Adjustable_Software_limit",
+      "name": "Azimuth_Positive_Adjustable_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Negative_Adjustable_Software_limit",
+      "name": "Azimuth_Negative_Adjustable_Software_limit",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Interlocks",
+      "name": "Azimuth_Interlocks",
+      "sal_size_in_bytes": 1,
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Azimuth",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

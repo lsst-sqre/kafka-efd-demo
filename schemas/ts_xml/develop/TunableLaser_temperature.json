@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "doc": "The temperature sensors for the laser",
+      "name": "temperature",
+      "sal_units": "degrees",
+      "type": "float"
+    }
+  ],
+  "name": "TunableLaser_temperature",
+  "namespace": "lsst.sal",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "TunableLaser",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

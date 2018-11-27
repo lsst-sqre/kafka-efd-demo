@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Events/MTMount_mountState.html",
+  "fields": [
+    {
+      "doc": "Identifier of the state",
+      "name": "id",
+      "type": "long"
+    },
+    {
+      "doc": "The state of the state machine",
+      "name": "text",
+      "type": "string"
+    }
+  ],
+  "name": "MTMount_logevent_mountState",
+  "namespace": "lsst.sal",
+  "sal_alias": "mountState",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

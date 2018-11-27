@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "doc": "Auxiliar_Azimuth_Cabinet_Status",
+      "name": "Auxiliar_Azimuth_Cabinet_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Auxiliar_Azimuth_Cabinet_External_Temperature",
+      "name": "Auxiliar_Azimuth_Cabinet_External_Temperature",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Auxiliar_Azimuth_Cabinet_Internal_Temperature_1",
+      "name": "Auxiliar_Azimuth_Cabinet_Internal_Temperature_1",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Auxiliar_Azimuth_Cabinet_Internal_Temperature_2",
+      "name": "Auxiliar_Azimuth_Cabinet_Internal_Temperature_2",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Auxiliar_Azimuth_Cabinet_Setpoint_Temperature",
+      "name": "Auxiliar_Azimuth_Cabinet_Setpoint_Temperature",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Auxliary_Cabinet_Azimuth",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

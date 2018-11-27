@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "mode",
+      "type": "int"
+    }
+  ],
+  "name": "EEC_command_dayTimeMode",
+  "namespace": "lsst.sal",
+  "sal_alias": "dayTimeMode",
+  "sal_author": "gschumacher",
+  "sal_subsystem": "EEC",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

@@ -1,0 +1,12 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [],
+  "name": "CBP_command_park",
+  "namespace": "lsst.sal",
+  "sal_alias": "park",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

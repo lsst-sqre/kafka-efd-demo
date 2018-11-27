@@ -1,0 +1,36 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "commandValue",
+      "type": "int"
+    },
+    {
+      "name": "detailedState",
+      "type": {
+        "name": "detailedState",
+        "symbols": [
+          "detailedState_DetailedState_DisabledState",
+          "detailedState_DetailedState_EnabledState",
+          "detailedState_DetailedState_FaultState",
+          "detailedState_DetailedState_OfflineState",
+          "detailedState_DetailedState_StandbyState",
+          "detailedState_DetailedState_GetWfState",
+          "detailedState_DetailedState_CalcDofState"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTOFC_logevent_rejectedCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "rejectedCommand",
+  "sal_subsystem": "MTOFC",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

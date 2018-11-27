@@ -1,0 +1,55 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/OCS_logevent_OCSCommandStatus.html",
+  "fields": [
+    {
+      "doc": "Command source",
+      "name": "commandSource",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Sequence number",
+      "name": "sequenceNumber",
+      "sal_units": "None",
+      "type": "long"
+    },
+    {
+      "doc": "identifier for the command",
+      "name": "identifier",
+      "sal_units": "None",
+      "type": "double"
+    },
+    {
+      "doc": "Timestamp",
+      "name": "timestamp",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Command sent",
+      "name": "commandSent",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Command status code",
+      "name": "statusValue",
+      "sal_units": "None",
+      "type": "long"
+    },
+    {
+      "doc": "Command status string",
+      "name": "status",
+      "sal_units": "None",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_logevent_oCSCommandStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "oCSCommandStatus",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "stopPropagateLaser",
+      "type": "boolean"
+    }
+  ],
+  "name": "TunableLaser_command_stopPropagateLaser",
+  "namespace": "lsst.sal",
+  "sal_alias": "stopPropagateLaser",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "TunableLaser",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

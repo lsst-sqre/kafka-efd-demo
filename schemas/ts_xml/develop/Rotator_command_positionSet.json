@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "angle",
+      "sal_units": "deg",
+      "type": "double"
+    }
+  ],
+  "name": "Rotator_command_positionSet",
+  "namespace": "lsst.sal",
+  "sal_alias": "positionSet",
+  "sal_subsystem": "Rotator",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

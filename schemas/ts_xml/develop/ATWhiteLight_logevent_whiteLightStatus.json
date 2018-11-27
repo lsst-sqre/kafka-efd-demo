@@ -1,0 +1,27 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Blue LED status from the digital output",
+      "name": "coolingDown",
+      "type": "boolean"
+    },
+    {
+      "doc": "Red LED status from the digital output. The kiloarc has some safe switches.\n\nThe lamp system immediately extinguishes the bulb, the status indicator turns red, and the error indicator flashes the error code cycle (see above) continuously.",
+      "name": "error",
+      "type": "boolean"
+    },
+    {
+      "doc": "Greed LED status from the digital output. It could be in Standby or operation.",
+      "name": "acceptingCommands",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATWhiteLight_logevent_whiteLightStatus",
+  "namespace": "lsst.sal",
+  "sal_alias": "whiteLightStatus",
+  "sal_subsystem": "ATWhiteLight",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

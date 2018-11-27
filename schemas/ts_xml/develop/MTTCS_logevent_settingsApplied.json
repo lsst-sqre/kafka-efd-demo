@@ -1,0 +1,23 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "settings",
+      "type": "string"
+    },
+    {
+      "doc": "The timestamp for when the event occurred.",
+      "name": "timestamp",
+      "sal_units": "Seconds",
+      "type": "double"
+    }
+  ],
+  "name": "MTTCS_logevent_settingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsApplied",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

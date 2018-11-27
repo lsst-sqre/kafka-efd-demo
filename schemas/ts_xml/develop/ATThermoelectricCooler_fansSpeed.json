@@ -1,0 +1,30 @@
+{
+  "fields": [
+    {
+      "name": "fan1Speed",
+      "type": "long"
+    },
+    {
+      "name": "fan2Speed",
+      "type": "long"
+    },
+    {
+      "name": "fan3Speed",
+      "type": "long"
+    },
+    {
+      "name": "fan4Speed",
+      "type": "long"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "ATThermoelectricCooler_fansSpeed",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

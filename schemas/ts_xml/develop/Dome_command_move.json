@@ -1,0 +1,20 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "azimuth",
+      "type": "double"
+    },
+    {
+      "name": "elevation",
+      "type": "double"
+    }
+  ],
+  "name": "Dome_command_move",
+  "namespace": "lsst.sal",
+  "sal_alias": "move",
+  "sal_subsystem": "Dome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,59 @@
+{
+  "fields": [
+    {
+      "doc": "Voltages",
+      "name": "voltages",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Currents",
+      "name": "currents",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "On/Of state",
+      "name": "onOff",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 4,
+      "sal_values_per_publisher": 1,
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "State bitmask",
+      "name": "states",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 4,
+      "sal_values_per_publisher": 1,
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_powerStatus",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

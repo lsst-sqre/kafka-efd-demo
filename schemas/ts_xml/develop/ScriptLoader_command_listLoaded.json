@@ -1,0 +1,17 @@
+{
+  "doc": "List the scripts that are currently loaded.",
+  "fields": [
+    {
+      "doc": "Dummy value that is ignored.",
+      "name": "ignored",
+      "type": "boolean"
+    }
+  ],
+  "name": "ScriptLoader_command_listLoaded",
+  "namespace": "lsst.sal",
+  "sal_alias": "listLoaded",
+  "sal_subsystem": "ScriptLoader",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

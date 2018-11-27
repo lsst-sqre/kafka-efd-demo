@@ -1,0 +1,39 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Enum",
+      "name": "filterActive",
+      "type": "boolean"
+    },
+    {
+      "name": "avgFilterActive",
+      "type": "boolean"
+    },
+    {
+      "doc": "The timestamp for when the event occurred.",
+      "name": "inputRange",
+      "type": "double"
+    },
+    {
+      "name": "integrationTime",
+      "type": "double"
+    },
+    {
+      "name": "medianFilterActive",
+      "type": "boolean"
+    },
+    {
+      "doc": "enum:\n\n0-Current\n1-Charge\n2-Voltage\n3-Resistance",
+      "name": "mode",
+      "type": "long"
+    }
+  ],
+  "name": "Electrometer_logevent_settingsAppliedReadSets",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedReadSets",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,71 @@
+{
+  "fields": [
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink0DegForceMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "Newtons",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink60DegForceMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "Newtons",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink120DegForceMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "Newtons",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink180DegForceMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "Newtons",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink240DegForceMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "Newtons",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Force measurement for each tangent actuator, increasing force corresponds to increasing tension in the load cell",
+      "name": "tangentLink300DegForceMeasured",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "Newtons",
+      "sal_values_per_publisher": 1,
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_tangentForcesMeasured",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

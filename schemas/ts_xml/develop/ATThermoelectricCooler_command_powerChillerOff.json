@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "powerOffTime",
+      "type": "float"
+    }
+  ],
+  "name": "ATThermoelectricCooler_command_powerChillerOff",
+  "namespace": "lsst.sal",
+  "sal_alias": "powerChillerOff",
+  "sal_subsystem": "ATThermoelectricCooler",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

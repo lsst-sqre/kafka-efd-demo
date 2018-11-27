@@ -7,6 +7,7 @@ import click
 
 from .admin import admin
 from .registry import registry
+from .salschema import salschema
 from .helloworld import helloworld
 from .helloavro import helloavro
 
@@ -60,5 +61,6 @@ def help(ctx, topic, **kw):
 # Add subcommands from other modules
 main.add_command(admin)
 main.add_command(registry)
+main.add_command(salschema)
 main.add_command(helloworld)
 main.add_command(helloavro)

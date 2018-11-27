@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "name": "totalVisits",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_nightSummary",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

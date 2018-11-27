@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "stopAllAxes",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATHexapod_command_stopAllAxes",
+  "namespace": "lsst.sal",
+  "sal_alias": "stopAllAxes",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

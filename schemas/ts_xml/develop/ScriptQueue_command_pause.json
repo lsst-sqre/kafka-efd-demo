@@ -1,0 +1,16 @@
+{
+  "doc": "Pause the queue. If a script is executing it will continue, but once that script is done no new script will be run.",
+  "fields": [
+    {
+      "name": "ignored",
+      "type": "boolean"
+    }
+  ],
+  "name": "ScriptQueue_command_pause",
+  "namespace": "lsst.sal",
+  "sal_alias": "pause",
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

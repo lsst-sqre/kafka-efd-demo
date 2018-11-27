@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "gratingType",
+      "type": {
+        "name": "gratingType",
+        "symbols": [
+          "gratingType_Grating_Blue",
+          "gratingType_Grating_Red",
+          "gratingType_Grating_Mirror"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "ATMonochromator_command_selectGrating",
+  "namespace": "lsst.sal",
+  "sal_alias": "selectGrating",
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

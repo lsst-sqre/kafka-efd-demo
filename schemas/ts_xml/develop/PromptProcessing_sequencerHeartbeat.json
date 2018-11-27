@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "float"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    }
+  ],
+  "name": "PromptProcessing_sequencerHeartbeat",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "PromptProcessing",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

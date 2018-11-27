@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "name": "example",
+      "type": {
+        "items": "boolean",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "Dome_summary",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Dome",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

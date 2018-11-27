@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "response",
+      "type": "string"
+    }
+  ],
+  "name": "DomeLWS_logevent_echoResponse",
+  "namespace": "lsst.sal",
+  "sal_alias": "echoResponse",
+  "sal_subsystem": "DomeLWS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

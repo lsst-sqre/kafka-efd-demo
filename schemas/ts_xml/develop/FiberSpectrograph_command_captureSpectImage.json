@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "integrationTime",
+      "type": "float"
+    },
+    {
+      "name": "imageType",
+      "type": "string"
+    },
+    {
+      "name": "lamp",
+      "type": "string"
+    }
+  ],
+  "name": "FiberSpectrograph_command_captureSpectImage",
+  "namespace": "lsst.sal",
+  "sal_alias": "captureSpectImage",
+  "sal_subsystem": "FiberSpectrograph",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

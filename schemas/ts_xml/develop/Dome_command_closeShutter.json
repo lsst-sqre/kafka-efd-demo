@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "state",
+      "type": "boolean"
+    }
+  ],
+  "name": "Dome_command_closeShutter",
+  "namespace": "lsst.sal",
+  "sal_alias": "closeShutter",
+  "sal_subsystem": "Dome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

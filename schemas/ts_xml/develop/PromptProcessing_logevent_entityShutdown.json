@@ -1,0 +1,28 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/PromptProcessing_entityShutdown.html",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "long"
+    }
+  ],
+  "name": "PromptProcessing_logevent_entityShutdown",
+  "namespace": "lsst.sal",
+  "sal_alias": "entityShutdown",
+  "sal_subsystem": "PromptProcessing",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,17 @@
+{
+  "doc": "Move to required position to execute a filter change",
+  "fields": [
+    {
+      "name": "filterChangeRequest",
+      "type": "string"
+    }
+  ],
+  "name": "MTTCS_command_filterChangeRequest",
+  "namespace": "lsst.sal",
+  "sal_alias": "filterChangeRequest",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

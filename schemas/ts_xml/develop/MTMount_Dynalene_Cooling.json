@@ -1,0 +1,93 @@
+{
+  "fields": [
+    {
+      "doc": "TMA_AZ_DY_CPM_0001",
+      "name": "TMA_AZ_DY_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_DY_CPM_0002",
+      "name": "TMA_AZ_DY_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_DY_CTM_0001",
+      "name": "TMA_AZ_DY_CTM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_DY_CTM_0002",
+      "name": "TMA_AZ_DY_CTM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0001",
+      "name": "TMA_AZ_EL_CPM_0001",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0007",
+      "name": "TMA_AZ_EL_CPM_0007",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_DY_CPM_0101",
+      "name": "TMA_PI_DY_CPM_0101",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_DY_CPM_0102",
+      "name": "TMA_PI_DY_CPM_0102",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_DY_CTM_0101",
+      "name": "TMA_PI_DY_CTM_0101",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_PI_DY_CTM_0102",
+      "name": "TMA_PI_DY_CTM_0102",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0002",
+      "name": "TMA_AZ_EL_CPM_0002",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0003",
+      "name": "TMA_AZ_EL_CPM_0003",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0004",
+      "name": "TMA_AZ_EL_CPM_0004",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0005",
+      "name": "TMA_AZ_EL_CPM_0005",
+      "type": "double"
+    },
+    {
+      "doc": "TMA_AZ_EL_CPM_0006",
+      "name": "TMA_AZ_EL_CPM_0006",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Dynalene_Cooling",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

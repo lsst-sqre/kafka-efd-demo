@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "inPosition",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATDome_logevent_azimuthInPosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "azimuthInPosition",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

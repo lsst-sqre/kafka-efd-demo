@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "close",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATPneumatics_command_closeM1CellVents",
+  "namespace": "lsst.sal",
+  "sal_alias": "closeM1CellVents",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

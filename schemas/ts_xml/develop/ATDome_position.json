@@ -1,0 +1,38 @@
+{
+  "fields": [
+    {
+      "doc": "Dropout door opening percentage.",
+      "name": "dropoutOpeningPercentage",
+      "type": "float"
+    },
+    {
+      "doc": "Main door opening percentage.",
+      "name": "mainDoorOpeningPercentage",
+      "type": "float"
+    },
+    {
+      "name": "azimuthPosition",
+      "type": "double"
+    },
+    {
+      "doc": "Dropout door opening percentage.",
+      "name": "dropoutOpeningPercentageSet",
+      "type": "float"
+    },
+    {
+      "doc": "Main door opening percentage.",
+      "name": "mainDoorOpeningPercentageSet",
+      "type": "float"
+    },
+    {
+      "name": "azimuthPositionSet",
+      "type": "double"
+    }
+  ],
+  "name": "ATDome_position",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

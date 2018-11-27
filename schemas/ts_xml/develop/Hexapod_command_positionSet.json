@@ -1,0 +1,46 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "x",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "y",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "z",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "u",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "v",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "w",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "sync",
+      "type": "boolean"
+    }
+  ],
+  "name": "Hexapod_command_positionSet",
+  "namespace": "lsst.sal",
+  "sal_alias": "positionSet",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

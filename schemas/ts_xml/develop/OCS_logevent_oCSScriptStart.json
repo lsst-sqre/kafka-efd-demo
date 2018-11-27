@@ -1,0 +1,31 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/OCS_logevent_OCSScriptStart.html",
+  "fields": [
+    {
+      "doc": "Script name",
+      "name": "oCSScriptName",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the script",
+      "name": "oCSScriptIdentifier",
+      "sal_units": "None",
+      "type": "double"
+    },
+    {
+      "doc": "Script timestamp",
+      "name": "oCSScriptTimestamp",
+      "sal_units": "None",
+      "type": "string"
+    }
+  ],
+  "name": "OCS_logevent_oCSScriptStart",
+  "namespace": "lsst.sal",
+  "sal_alias": "oCSScriptStart",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

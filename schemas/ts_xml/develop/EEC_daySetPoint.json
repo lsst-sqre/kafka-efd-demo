@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "name": "setpoint",
+      "type": "double"
+    }
+  ],
+  "name": "EEC_daySetPoint",
+  "namespace": "lsst.sal",
+  "sal_author": "gschumacher",
+  "sal_subsystem": "EEC",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

@@ -1,0 +1,18 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_shutterMotionProfile.html",
+  "fields": [
+    {
+      "doc": "The measured average exposure time",
+      "name": "measuredExposureTime",
+      "sal_units": "seconds",
+      "type": "double"
+    }
+  ],
+  "name": "ATCamera_logevent_shutterMotionProfile",
+  "namespace": "lsst.sal",
+  "sal_alias": "shutterMotionProfile",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

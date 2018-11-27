@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "name": "ambient_temp",
+      "sal_units": "degreesC",
+      "type": "double"
+    },
+    {
+      "name": "humidity",
+      "sal_units": "percent",
+      "type": "double"
+    },
+    {
+      "name": "pressure",
+      "sal_units": "Hpa",
+      "type": "double"
+    }
+  ],
+  "name": "Environment_weather",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "Environment",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5",
+  "type": "record"
+}

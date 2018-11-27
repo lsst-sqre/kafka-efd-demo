@@ -1,0 +1,19 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The amount to move the altitude by.",
+      "name": "altitude",
+      "sal_units": "degrees",
+      "type": "float"
+    }
+  ],
+  "name": "CBP_command_moveAltitude",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveAltitude",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "CBP",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

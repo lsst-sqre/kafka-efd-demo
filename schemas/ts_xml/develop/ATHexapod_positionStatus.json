@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Application_Demand.html",
+      "name": "setpointPosition",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Application_Position.html",
+      "name": "reportedPosition",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Application_Error.html",
+      "name": "positionFollowingError",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "ATHexapod_positionStatus",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,11 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_endShutterOpen.html",
+  "fields": [],
+  "name": "ATCamera_logevent_endShutterOpen",
+  "namespace": "lsst.sal",
+  "sal_alias": "endShutterOpen",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "-1 for automatic range.",
+      "name": "setRange",
+      "type": "float"
+    }
+  ],
+  "name": "Electrometer_command_setRange",
+  "namespace": "lsst.sal",
+  "sal_alias": "setRange",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

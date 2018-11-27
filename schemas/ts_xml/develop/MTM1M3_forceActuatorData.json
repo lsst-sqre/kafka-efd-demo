@@ -1,0 +1,77 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "primaryCylinderForces",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "secondaryCylinderForces",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "xForces",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "yForces",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "zForces",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "fX",
+      "type": "float"
+    },
+    {
+      "name": "fY",
+      "type": "float"
+    },
+    {
+      "name": "fZ",
+      "type": "float"
+    },
+    {
+      "name": "mX",
+      "type": "float"
+    },
+    {
+      "name": "mY",
+      "type": "float"
+    },
+    {
+      "name": "mZ",
+      "type": "float"
+    },
+    {
+      "name": "forceMagnitude",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_forceActuatorData",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

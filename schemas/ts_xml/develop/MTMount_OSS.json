@@ -1,0 +1,1177 @@
+{
+  "fields": [
+    {
+      "doc": "OSS_Status",
+      "name": "OSS_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_valve_5802",
+      "name": "OSS_A_Status_valve_5802",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_valve_5801",
+      "name": "OSS_A_Status_valve_5801",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_valve_5303",
+      "name": "OSS_A_Status_valve_5303",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_valve_5302",
+      "name": "OSS_A_Status_valve_5302",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_valve_5301",
+      "name": "OSS_A_Status_valve_5301",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_valve_5011",
+      "name": "OSS_A_Status_valve_5011",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_pump_5004",
+      "name": "OSS_A_Status_pump_5004",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_Status_Filter_7",
+      "name": "OSS_A_Status_Filter_7",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_centre_pump_5012",
+      "name": "Status_Bottom_centre_pump_5012",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_centre_valve_5001",
+      "name": "Status_Bottom_centre_valve_5001",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_heater_HET_5001",
+      "name": "Status_Bottom_heater_HET_5001",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_left_pump_5011",
+      "name": "Status_Bottom_left_pump_5011",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_left_valve_5000",
+      "name": "Status_Bottom_left_valve_5000",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_right_pump_5013",
+      "name": "Status_Bottom_right_pump_5013",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Bottom_right_valve_5002",
+      "name": "Status_Bottom_right_valve_5002",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_bridge_pump_running_unit_1",
+      "name": "Status_bridge_pump_running_unit_1",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_bridge_pump_running_unit_2",
+      "name": "Status_bridge_pump_running_unit_2",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_cooler_running_unit_1",
+      "name": "Status_cooler_running_unit_1",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_cooler_running_unit_2",
+      "name": "Status_cooler_running_unit_2",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Filter_5",
+      "name": "Status_Filter_5",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_Filter_6",
+      "name": "Status_Filter_6",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_pump_5001",
+      "name": "Status_pump_5001",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Status_valve_5201",
+      "name": "Status_valve_5201",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_centre_valve_5009",
+      "name": "OSS_MP_Status_centre_valve_5009",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_Filter_1",
+      "name": "OSS_MP_Status_Filter_1",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_Filter_2",
+      "name": "OSS_MP_Status_Filter_2",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_Filter_3",
+      "name": "OSS_MP_Status_Filter_3",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_Filter_4",
+      "name": "OSS_MP_Status_Filter_4",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_left_valve_5008",
+      "name": "OSS_MP_Status_left_valve_5008",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_pump_5001",
+      "name": "OSS_MP_Status_pump_5001",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_pump_5002",
+      "name": "OSS_MP_Status_pump_5002",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_pump_5003",
+      "name": "OSS_MP_Status_pump_5003",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_MP_Status_right_valve_5010",
+      "name": "OSS_MP_Status_right_valve_5010",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "OSS_A_CPM_5007",
+      "name": "OSS_A_CPM_5007",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_A_CPM_5008",
+      "name": "OSS_A_CPM_5008",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_A_CPM_5021",
+      "name": "OSS_A_CPM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_A_CPM_5031",
+      "name": "OSS_A_CPM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_A_CPM_5053",
+      "name": "OSS_A_CPM_5053",
+      "type": "double"
+    },
+    {
+      "doc": "Temperature_Oil_from_bearings_XPos_side",
+      "name": "Temperature_Oil_from_bearings_XPos_side",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Temperature_Oil_from_bearings_XNeg_side",
+      "name": "Temperature_Oil_from_bearings_XNeg_side",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Temperature_Tank",
+      "name": "Temperature_Tank",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "Pressure_Tank",
+      "name": "Pressure_Tank",
+      "sal_units": "bar",
+      "type": "double"
+    },
+    {
+      "doc": "Ambient_Temperature_Measured_by_OSS",
+      "name": "Ambient_Temperature_Measured_by_OSS",
+      "sal_units": "degC",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_Oil_Valve_feedback",
+      "name": "OSS_Oil_Valve_feedback",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_Oil_Cooling_Valve_control_signal",
+      "name": "OSS_Oil_Cooling_Valve_control_signal",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_Oil_Cooling_CTM_5013",
+      "name": "OSS_Oil_Cooling_CTM_5013",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_Oil_Cooling_CTM_5012",
+      "name": "OSS_Oil_Cooling_CTM_5012",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_Oil_Cooling_CPM_5052",
+      "name": "OSS_Oil_Cooling_CPM_5052",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_Oil_Cooling_CPM_5051",
+      "name": "OSS_Oil_Cooling_CPM_5051",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CTM_5002",
+      "name": "OSS_MP_CTM_5002",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CTM_5001",
+      "name": "OSS_MP_CTM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5057",
+      "name": "OSS_MP_CPM_5057",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5056",
+      "name": "OSS_MP_CPM_5056",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5055",
+      "name": "OSS_MP_CPM_5055",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5054",
+      "name": "OSS_MP_CPM_5054",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5013",
+      "name": "OSS_MP_CPM_5013",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5012",
+      "name": "OSS_MP_CPM_5012",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5011",
+      "name": "OSS_MP_CPM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5006",
+      "name": "OSS_MP_CPM_5006",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5005",
+      "name": "OSS_MP_CPM_5005",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5004",
+      "name": "OSS_MP_CPM_5004",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5003",
+      "name": "OSS_MP_CPM_5003",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5002",
+      "name": "OSS_MP_CPM_5002",
+      "type": "double"
+    },
+    {
+      "doc": "OSS_MP_CPM_5001",
+      "name": "OSS_MP_CPM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_left_Bearing_1",
+      "name": "AZ_XPos_M1_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_left_Bearing_2",
+      "name": "AZ_XPos_M1_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_left_Bearing_3",
+      "name": "AZ_XPos_M1_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_left_Bearing_calculated",
+      "name": "AZ_XPos_M1_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_right_Bearing_1",
+      "name": "AZ_XPos_M1_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_right_Bearing_2",
+      "name": "AZ_XPos_M1_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_right_Bearing_3",
+      "name": "AZ_XPos_M1_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M1_right_Bearing_calculated",
+      "name": "AZ_XPos_M1_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_left_Bearing_1",
+      "name": "AZ_XPos_M2_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_left_Bearing_2",
+      "name": "AZ_XPos_M2_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_left_Bearing_3",
+      "name": "AZ_XPos_M2_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_left_Bearing_calculated",
+      "name": "AZ_XPos_M2_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_right_Bearing_1",
+      "name": "AZ_XPos_M2_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_right_Bearing_2",
+      "name": "AZ_XPos_M2_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_right_Bearing_3",
+      "name": "AZ_XPos_M2_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M2_right_Bearing_calculated",
+      "name": "AZ_XPos_M2_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_left_Bearing_1",
+      "name": "AZ_XNeg_M1_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_left_Bearing_2",
+      "name": "AZ_XNeg_M1_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_left_Bearing_3",
+      "name": "AZ_XNeg_M1_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_left_Bearing_calculated",
+      "name": "AZ_XNeg_M1_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_right_Bearing_1",
+      "name": "AZ_XNeg_M1_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_right_Bearing_2",
+      "name": "AZ_XNeg_M1_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_right_Bearing_3",
+      "name": "AZ_XNeg_M1_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M1_right_Bearing_calculated",
+      "name": "AZ_XNeg_M1_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_left_Bearing_1",
+      "name": "AZ_XNeg_M2_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_left_Bearing_2",
+      "name": "AZ_XNeg_M2_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_left_Bearing_3",
+      "name": "AZ_XNeg_M2_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_left_Bearing_calculated",
+      "name": "AZ_XNeg_M2_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_right_Bearing_1",
+      "name": "AZ_XNeg_M2_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_right_Bearing_2",
+      "name": "AZ_XNeg_M2_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_right_Bearing_3",
+      "name": "AZ_XNeg_M2_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M2_right_Bearing_calculated",
+      "name": "AZ_XNeg_M2_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5001",
+      "name": "CFM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5002",
+      "name": "CFM_5002",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5021",
+      "name": "CFM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5022",
+      "name": "CFM_5022",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5031",
+      "name": "CFM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5032",
+      "name": "CFM_5032",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5051",
+      "name": "CFM_5051",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5052",
+      "name": "CFM_5052",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5001",
+      "name": "CPM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5002",
+      "name": "CPM_5002",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5003",
+      "name": "CPM_5003",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5021",
+      "name": "CPM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5022",
+      "name": "CPM_5022",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5023",
+      "name": "CPM_5023",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5031",
+      "name": "CPM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5032",
+      "name": "CPM_5032",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5033",
+      "name": "CPM_5033",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5034",
+      "name": "CPM_5034",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5051",
+      "name": "CPM_5051",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5052",
+      "name": "CPM_5052",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5053",
+      "name": "CPM_5053",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5054",
+      "name": "CPM_5054",
+      "type": "double"
+    },
+    {
+      "doc": "CTM_5001",
+      "name": "CTM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "CTM_5021",
+      "name": "CTM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "CTM_5031",
+      "name": "CTM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "CTM_5051",
+      "name": "CTM_5051",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_left_Bearing_1",
+      "name": "AZ_XPos_M3_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_left_Bearing_2",
+      "name": "AZ_XPos_M3_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_left_Bearing_3",
+      "name": "AZ_XPos_M3_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_left_Bearing_calculated",
+      "name": "AZ_XPos_M3_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_middle_Bearing_1",
+      "name": "AZ_XPos_M3_middle_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_middle_Bearing_2",
+      "name": "AZ_XPos_M3_middle_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_middle_Bearing_3",
+      "name": "AZ_XPos_M3_middle_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_middle_Bearing_calculated",
+      "name": "AZ_XPos_M3_middle_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_right_Bearing_1",
+      "name": "AZ_XPos_M3_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_right_Bearing_2",
+      "name": "AZ_XPos_M3_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_right_Bearing_3",
+      "name": "AZ_XPos_M3_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XPos_M3_right_Bearing_calculated",
+      "name": "AZ_XPos_M3_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_left_Bearing_1",
+      "name": "AZ_XNeg_M3_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_left_Bearing_2",
+      "name": "AZ_XNeg_M3_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_left_Bearing_3",
+      "name": "AZ_XNeg_M3_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_left_Bearing_calculated",
+      "name": "AZ_XNeg_M3_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_middle_Bearing_1",
+      "name": "AZ_XNeg_M3_middle_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_middle_Bearing_2",
+      "name": "AZ_XNeg_M3_middle_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_middle_Bearing_3",
+      "name": "AZ_XNeg_M3_middle_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_middle_Bearing_calculated",
+      "name": "AZ_XNeg_M3_middle_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_right_Bearing_1",
+      "name": "AZ_XNeg_M3_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_right_Bearing_2",
+      "name": "AZ_XNeg_M3_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_right_Bearing_3",
+      "name": "AZ_XNeg_M3_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "AZ_XNeg_M3_right_Bearing_calculated",
+      "name": "AZ_XNeg_M3_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5011",
+      "name": "CFM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5012",
+      "name": "CFM_5012",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5013",
+      "name": "CFM_5013",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5041",
+      "name": "CFM_5041",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5042",
+      "name": "CFM_5042",
+      "type": "double"
+    },
+    {
+      "doc": "CFM_5043",
+      "name": "CFM_5043",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5011",
+      "name": "CPM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5012",
+      "name": "CPM_5012",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5013",
+      "name": "CPM_5013",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5014",
+      "name": "CPM_5014",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5015",
+      "name": "CPM_5015",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5016",
+      "name": "CPM_5016",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5041",
+      "name": "CPM_5041",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5042",
+      "name": "CPM_5042",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5043",
+      "name": "CPM_5043",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5044",
+      "name": "CPM_5044",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5045",
+      "name": "CPM_5045",
+      "type": "double"
+    },
+    {
+      "doc": "CPM_5046",
+      "name": "CPM_5046",
+      "type": "double"
+    },
+    {
+      "doc": "CTM_5011",
+      "name": "CTM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "CTM_5041",
+      "name": "CTM_5041",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_left_Bearing_1",
+      "name": "EL_XPos_M1_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_left_Bearing_2",
+      "name": "EL_XPos_M1_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_left_Bearing_3",
+      "name": "EL_XPos_M1_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_left_Bearing_calculated",
+      "name": "EL_XPos_M1_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_right_Bearing_1",
+      "name": "EL_XPos_M1_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_right_Bearing_2",
+      "name": "EL_XPos_M1_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_right_Bearing_3",
+      "name": "EL_XPos_M1_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M1_right_Bearing_calculated",
+      "name": "EL_XPos_M1_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_left_Bearing_1",
+      "name": "EL_XPos_M2_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_left_Bearing_2",
+      "name": "EL_XPos_M2_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_left_Bearing_3",
+      "name": "EL_XPos_M2_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_left_Bearing_calculated",
+      "name": "EL_XPos_M2_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_right_Bearing_1",
+      "name": "EL_XPos_M2_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_right_Bearing_2",
+      "name": "EL_XPos_M2_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XPos_M2_right_Bearing_3",
+      "name": "EL_XPos_M2_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "El_XPos_M2_right_Bearing_calculated",
+      "name": "El_XPos_M2_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_left_Bearing_1",
+      "name": "EL_XNeg_M1_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_left_Bearing_2",
+      "name": "EL_XNeg_M1_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_left_Bearing_3",
+      "name": "EL_XNeg_M1_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_left_Bearing_calculated",
+      "name": "EL_XNeg_M1_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_right_Bearing_1",
+      "name": "EL_XNeg_M1_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_right_Bearing_2",
+      "name": "EL_XNeg_M1_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_right_Bearing_3",
+      "name": "EL_XNeg_M1_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M1_right_Bearing_calculated",
+      "name": "EL_XNeg_M1_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_left_Bearing_1",
+      "name": "EL_XNeg_M2_left_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_left_Bearing_2",
+      "name": "EL_XNeg_M2_left_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_left_Bearing_3",
+      "name": "EL_XNeg_M2_left_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_left_Bearing_calculated",
+      "name": "EL_XNeg_M2_left_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_right_Bearing_1",
+      "name": "EL_XNeg_M2_right_Bearing_1",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_right_Bearing_2",
+      "name": "EL_XNeg_M2_right_Bearing_2",
+      "type": "double"
+    },
+    {
+      "doc": "EL_XNeg_M2_right_Bearing_3",
+      "name": "EL_XNeg_M2_right_Bearing_3",
+      "type": "double"
+    },
+    {
+      "doc": "El_XNeg_M2_right_Bearing_calculated",
+      "name": "El_XNeg_M2_right_Bearing_calculated",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5001",
+      "name": "EL_CFM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5002",
+      "name": "EL_CFM_5002",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5011",
+      "name": "EL_CFM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5012",
+      "name": "EL_CFM_5012",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5021",
+      "name": "EL_CFM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5022",
+      "name": "EL_CFM_5022",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5031",
+      "name": "EL_CFM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CFM_5032",
+      "name": "EL_CFM_5032",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5001",
+      "name": "EL_CPM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5002",
+      "name": "EL_CPM_5002",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5003",
+      "name": "EL_CPM_5003",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5011",
+      "name": "EL_CPM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5012",
+      "name": "EL_CPM_5012",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5013",
+      "name": "EL_CPM_5013",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5021",
+      "name": "EL_CPM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5022",
+      "name": "EL_CPM_5022",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5023",
+      "name": "EL_CPM_5023",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5024",
+      "name": "EL_CPM_5024",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5031",
+      "name": "EL_CPM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5032",
+      "name": "EL_CPM_5032",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CPM_5033",
+      "name": "EL_CPM_5033",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CTM_5001",
+      "name": "EL_CTM_5001",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CTM_5011",
+      "name": "EL_CTM_5011",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CTM_5021",
+      "name": "EL_CTM_5021",
+      "type": "double"
+    },
+    {
+      "doc": "EL_CTM_5031",
+      "name": "EL_CTM_5031",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_OSS",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

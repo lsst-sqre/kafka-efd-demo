@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "doc": "The system time (TAI).",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "SummitFacility_timestamp",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "SummitFacility",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

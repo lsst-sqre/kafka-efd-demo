@@ -1,0 +1,30 @@
+{
+  "fields": [
+    {
+      "name": "ra",
+      "type": "double"
+    },
+    {
+      "name": "decl",
+      "type": "double"
+    },
+    {
+      "name": "skyAngle",
+      "type": "double"
+    },
+    {
+      "name": "visitTime",
+      "type": "double"
+    },
+    {
+      "name": "filter",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_predictedSchedule",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "direction",
+      "type": "int"
+    }
+  ],
+  "name": "DomeADB_command_velocityMove",
+  "namespace": "lsst.sal",
+  "sal_alias": "velocityMove",
+  "sal_subsystem": "DomeADB",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

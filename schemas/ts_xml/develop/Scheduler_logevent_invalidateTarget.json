@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "targetId",
+      "type": "long"
+    },
+    {
+      "name": "invalid",
+      "type": "boolean"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_logevent_invalidateTarget",
+  "namespace": "lsst.sal",
+  "sal_alias": "invalidateTarget",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,41 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "commandValue",
+      "type": "int"
+    },
+    {
+      "name": "detailedState",
+      "type": {
+        "name": "detailedState",
+        "symbols": [
+          "detailedState_DetailedState_DisabledState",
+          "detailedState_DetailedState_EnabledState",
+          "detailedState_DetailedState_FaultState",
+          "detailedState_DetailedState_OfflineState",
+          "detailedState_DetailedState_StandbyState",
+          "detailedState_DetailedState_MonoSettingUpState",
+          "detailedState_DetailedState_StoppedState",
+          "detailedState_DetailedState_StoppedCoolerOffState",
+          "detailedState_DetailedState_StoppedLightOffState",
+          "detailedState_DetailedState_StoppedLightOnState",
+          "detailedState_DetailedState_MonoManualSetup",
+          "detailedState_DetailedState_MonoAutomaticSetup"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "ATMonochromator_logevent_rejectedCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "rejectedCommand",
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

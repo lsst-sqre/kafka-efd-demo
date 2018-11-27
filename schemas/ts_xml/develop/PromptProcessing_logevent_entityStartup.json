@@ -1,0 +1,28 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/PromptProcessing_entityStartup.html",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "identifier",
+      "type": "double"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "long"
+    }
+  ],
+  "name": "PromptProcessing_logevent_entityStartup",
+  "namespace": "lsst.sal",
+  "sal_alias": "entityStartup",
+  "sal_subsystem": "PromptProcessing",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "clearActiveOpticForces",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTM1M3_command_clearActiveOpticForces",
+  "namespace": "lsst.sal",
+  "sal_alias": "clearActiveOpticForces",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

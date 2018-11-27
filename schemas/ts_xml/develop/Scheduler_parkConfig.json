@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "name": "telescopeAltitude",
+      "type": "double"
+    },
+    {
+      "name": "telescopeAzimuth",
+      "type": "double"
+    },
+    {
+      "name": "telescopeRotator",
+      "type": "double"
+    },
+    {
+      "name": "domeAltitude",
+      "type": "double"
+    },
+    {
+      "name": "domeAzimuth",
+      "type": "double"
+    },
+    {
+      "name": "filterPosition",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_parkConfig",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

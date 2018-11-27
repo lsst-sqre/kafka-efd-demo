@@ -1,0 +1,33 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/MTM2_command_positionMirror.html",
+  "fields": [
+    {
+      "doc": "Tilt in xy plane",
+      "name": "xTilt",
+      "sal_units": "radians",
+      "type": "double"
+    },
+    {
+      "doc": "Tilt in xy plane",
+      "name": "yTilt",
+      "sal_units": "radians",
+      "type": "double"
+    },
+    {
+      "doc": "Position in Z (along optical axis)",
+      "name": "piston",
+      "sal_units": "microns",
+      "type": "double"
+    }
+  ],
+  "name": "MTM2_command_positionMirror",
+  "namespace": "lsst.sal",
+  "sal_alias": "positionMirror",
+  "sal_author": "salgenerator",
+  "sal_device": "support",
+  "sal_property": "actuators",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

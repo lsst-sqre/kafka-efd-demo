@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "doc": "The actual loop time is ms.",
+      "name": "loopTimeMs",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_loopTimeMs",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,16 @@
+{
+  "doc": "Run a script.",
+  "fields": [
+    {
+      "name": "ignored",
+      "type": "bytes"
+    }
+  ],
+  "name": "Script_command_run",
+  "namespace": "lsst.sal",
+  "sal_alias": "run",
+  "sal_subsystem": "Script",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

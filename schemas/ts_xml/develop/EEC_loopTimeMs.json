@@ -1,0 +1,16 @@
+{
+  "fields": [
+    {
+      "doc": "The actual loop time is ms.",
+      "name": "loopTime_ms",
+      "type": "double"
+    }
+  ],
+  "name": "EEC_loopTimeMs",
+  "namespace": "lsst.sal",
+  "sal_author": "aanania",
+  "sal_subsystem": "EEC",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

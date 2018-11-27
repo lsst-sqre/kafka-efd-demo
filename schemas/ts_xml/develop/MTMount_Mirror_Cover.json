@@ -1,0 +1,145 @@
+{
+  "fields": [
+    {
+      "doc": "MirrorCover_Status",
+      "name": "MirrorCover_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCover_1_Status",
+      "name": "MirrorCover_1_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCover_2_Status",
+      "name": "MirrorCover_2_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCover_3_Status",
+      "name": "MirrorCover_3_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCover_4_Status",
+      "name": "MirrorCover_4_Status",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "MirrorCover_1_Current",
+      "name": "MirrorCover_1_Current",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_2_Current",
+      "name": "MirrorCover_2_Current",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_3_Current",
+      "name": "MirrorCover_3_Current",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_4_Current",
+      "name": "MirrorCover_4_Current",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_1_Actual_Position",
+      "name": "MirrorCover_1_Actual_Position",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_2_Actual_Position",
+      "name": "MirrorCover_2_Actual_Position",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_3_Actual_Position",
+      "name": "MirrorCover_3_Actual_Position",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_4_Actual_Position",
+      "name": "MirrorCover_4_Actual_Position",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "doc": "MirrorCover_1_Deployed_Limit_Switch",
+      "name": "MirrorCover_1_Deployed_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_2_Deployed_Limit_Switch",
+      "name": "MirrorCover_2_Deployed_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_3_Deployed_Limit_Switch",
+      "name": "MirrorCover_3_Deployed_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_4_Deployed_Limit_Switch",
+      "name": "MirrorCover_4_Deployed_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_1_Retracted_Limit_Switch",
+      "name": "MirrorCover_1_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_2_Retracted_Limit_Switch",
+      "name": "MirrorCover_2_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_3_Retracted_Limit_Switch",
+      "name": "MirrorCover_3_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_4_Retracted_Limit_Switch",
+      "name": "MirrorCover_4_Retracted_Limit_Switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "MirrorCover_Interlocks",
+      "name": "MirrorCover_Interlocks",
+      "sal_size_in_bytes": 1,
+      "type": {
+        "items": "string",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Mirror_Cover",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

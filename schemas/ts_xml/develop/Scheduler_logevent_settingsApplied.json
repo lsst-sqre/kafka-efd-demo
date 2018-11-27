@@ -1,0 +1,44 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "version",
+      "type": "string"
+    },
+    {
+      "name": "scheduler",
+      "type": "string"
+    },
+    {
+      "name": "cloudModel",
+      "type": "string"
+    },
+    {
+      "name": "downtimeModel",
+      "type": "string"
+    },
+    {
+      "name": "seeingModel",
+      "type": "string"
+    },
+    {
+      "name": "skybrightnessModel",
+      "type": "string"
+    },
+    {
+      "name": "observatoryModel",
+      "type": "string"
+    },
+    {
+      "name": "observatoryLocation",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_logevent_settingsApplied",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsApplied",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

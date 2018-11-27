@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "close",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATPneumatics_command_m2CloseAirValve",
+  "namespace": "lsst.sal",
+  "sal_alias": "m2CloseAirValve",
+  "sal_subsystem": "ATPneumatics",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

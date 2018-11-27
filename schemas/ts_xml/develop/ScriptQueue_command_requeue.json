@@ -1,0 +1,36 @@
+{
+  "doc": "Put a script back on the queue that has already run, is running or is queued.",
+  "fields": [
+    {
+      "doc": "Index of Script SAL component to requeue.",
+      "name": "salIndex",
+      "type": "int"
+    },
+    {
+      "doc": "Queue location.",
+      "name": "location",
+      "type": {
+        "name": "location",
+        "symbols": [
+          "First",
+          "Last",
+          "Before",
+          "After"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Index of Script SAL component referred to by `location`; ignored unless `location` is `Before` or `After`.",
+      "name": "locationSalIndex",
+      "type": "int"
+    }
+  ],
+  "name": "ScriptQueue_command_requeue",
+  "namespace": "lsst.sal",
+  "sal_alias": "requeue",
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

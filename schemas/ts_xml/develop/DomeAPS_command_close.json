@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "state",
+      "type": "boolean"
+    }
+  ],
+  "name": "DomeAPS_command_close",
+  "namespace": "lsst.sal",
+  "sal_alias": "close",
+  "sal_subsystem": "DomeAPS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

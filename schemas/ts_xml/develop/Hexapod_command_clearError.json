@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "state",
+      "type": "boolean"
+    }
+  ],
+  "name": "Hexapod_command_clearError",
+  "namespace": "lsst.sal",
+  "sal_alias": "clearError",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

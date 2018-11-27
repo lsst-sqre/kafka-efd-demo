@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "loopTimeOutOfRange",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTWEP_logevent_loopTimeOutOfRange",
+  "namespace": "lsst.sal",
+  "sal_alias": "loopTimeOutOfRange",
+  "sal_subsystem": "MTWEP",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

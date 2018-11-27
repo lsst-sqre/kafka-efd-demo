@@ -1,0 +1,154 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "targetId",
+      "type": "long"
+    },
+    {
+      "name": "requestTime",
+      "type": "double"
+    },
+    {
+      "name": "requestMjd",
+      "type": "double"
+    },
+    {
+      "name": "ra",
+      "type": "double"
+    },
+    {
+      "name": "decl",
+      "type": "double"
+    },
+    {
+      "name": "skyAngle",
+      "type": "double"
+    },
+    {
+      "name": "filter",
+      "type": "string"
+    },
+    {
+      "name": "numExposures",
+      "type": "long"
+    },
+    {
+      "name": "exposureTimes",
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "name": "slewTime",
+      "type": "double"
+    },
+    {
+      "name": "offsetX",
+      "type": "double"
+    },
+    {
+      "name": "offsetY",
+      "type": "double"
+    },
+    {
+      "name": "numProposals",
+      "type": "long"
+    },
+    {
+      "name": "proposalId",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "isSequence",
+      "type": "boolean"
+    },
+    {
+      "name": "sequenceNVisits",
+      "type": "long"
+    },
+    {
+      "name": "sequenceVisits",
+      "type": "long"
+    },
+    {
+      "name": "sequenceDuration",
+      "type": "double"
+    },
+    {
+      "name": "airmass",
+      "type": "double"
+    },
+    {
+      "name": "skyBrightness",
+      "type": "double"
+    },
+    {
+      "name": "cloud",
+      "type": "double"
+    },
+    {
+      "name": "seeing",
+      "type": "double"
+    },
+    {
+      "name": "moonRa",
+      "type": "double"
+    },
+    {
+      "name": "moonDec",
+      "type": "double"
+    },
+    {
+      "name": "moonAlt",
+      "type": "double"
+    },
+    {
+      "name": "moonAz",
+      "type": "double"
+    },
+    {
+      "name": "moonDistance",
+      "type": "double"
+    },
+    {
+      "name": "moonPhase",
+      "type": "double"
+    },
+    {
+      "name": "sunRa",
+      "type": "double"
+    },
+    {
+      "name": "sunDec",
+      "type": "double"
+    },
+    {
+      "name": "sunAlt",
+      "type": "double"
+    },
+    {
+      "name": "sunAz",
+      "type": "double"
+    },
+    {
+      "name": "solarElong",
+      "type": "double"
+    },
+    {
+      "name": "note",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_logevent_target",
+  "namespace": "lsst.sal",
+  "sal_alias": "target",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Unique identifier of the drive (1 to 2)",
+      "name": "driveId",
+      "type": "int"
+    },
+    {
+      "name": "errorCode",
+      "type": "string"
+    }
+  ],
+  "name": "DomeLWS_logevent_driveFault",
+  "namespace": "lsst.sal",
+  "sal_alias": "driveFault",
+  "sal_subsystem": "DomeLWS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

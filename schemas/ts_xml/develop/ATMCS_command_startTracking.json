@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "activate",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATMCS_command_startTracking",
+  "namespace": "lsst.sal",
+  "sal_alias": "startTracking",
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

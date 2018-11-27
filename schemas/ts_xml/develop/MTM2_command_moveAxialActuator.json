@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/MTM2_command_moveAxialActuator.html",
+  "fields": [
+    {
+      "doc": "ID number of an actuator",
+      "name": "axialActuatorID",
+      "type": "int"
+    },
+    {
+      "doc": "Increasing steps correspond to counterclockwise rotation of th motor shaft, looking along the motor shaft in the direction of the motor",
+      "name": "relativeStepsToMove",
+      "type": "long"
+    }
+  ],
+  "name": "MTM2_command_moveAxialActuator",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveAxialActuator",
+  "sal_author": "salgenerator",
+  "sal_device": "support",
+  "sal_property": "actuators",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,28 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string"
+    },
+    {
+      "name": "device",
+      "type": "string"
+    },
+    {
+      "name": "severity",
+      "type": "long"
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "Rotator_logevent_deviceError",
+  "namespace": "lsst.sal",
+  "sal_alias": "deviceError",
+  "sal_subsystem": "Rotator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

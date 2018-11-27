@@ -1,0 +1,59 @@
+{
+  "doc": "Target to point the telescope",
+  "fields": [
+    {
+      "name": "targetId",
+      "type": "long"
+    },
+    {
+      "name": "fieldId",
+      "type": "long"
+    },
+    {
+      "name": "groupId",
+      "type": "long"
+    },
+    {
+      "name": "filter",
+      "type": "string"
+    },
+    {
+      "name": "requestTime",
+      "type": "double"
+    },
+    {
+      "doc": "Right ascension",
+      "name": "ra",
+      "type": "double"
+    },
+    {
+      "doc": "Declination",
+      "name": "decl",
+      "type": "double"
+    },
+    {
+      "name": "angle",
+      "type": "double"
+    },
+    {
+      "name": "num_exposures",
+      "type": "long"
+    },
+    {
+      "name": "exposure_times",
+      "type": "long"
+    },
+    {
+      "name": "slew_time",
+      "type": "double"
+    }
+  ],
+  "name": "MTTCS_command_target",
+  "namespace": "lsst.sal",
+  "sal_alias": "target",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

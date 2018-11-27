@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "heartbeat",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATHeaderService_logevent_heartbeat",
+  "namespace": "lsst.sal",
+  "sal_alias": "heartbeat",
+  "sal_subsystem": "ATHeaderService",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

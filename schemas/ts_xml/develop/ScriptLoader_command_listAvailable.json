@@ -1,0 +1,17 @@
+{
+  "doc": "List the scripts that are available.",
+  "fields": [
+    {
+      "doc": "Dummy value that is ignored.",
+      "name": "ignored",
+      "type": "boolean"
+    }
+  ],
+  "name": "ScriptLoader_command_listAvailable",
+  "namespace": "lsst.sal",
+  "sal_alias": "listAvailable",
+  "sal_subsystem": "ScriptLoader",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

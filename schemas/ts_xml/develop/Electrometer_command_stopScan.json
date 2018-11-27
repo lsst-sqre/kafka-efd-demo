@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "value",
+      "type": "boolean"
+    }
+  ],
+  "name": "Electrometer_command_stopScan",
+  "namespace": "lsst.sal",
+  "sal_alias": "stopScan",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

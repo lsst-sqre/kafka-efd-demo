@@ -114,7 +114,6 @@ def test_compatibility(ctx, subject, schema, version):
     schemadata = schema.read()  # click automatically closes the file
 
     requestdata = {'schema': schemadata}
-    print(json.dumps(requestdata))
 
     uri = host + '/compatibility/subjects{/subject}/versions{/version}'
     uri = uriexpand(uri, subject=subject, version=version)

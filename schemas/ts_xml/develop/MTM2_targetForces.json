@@ -1,0 +1,37 @@
+{
+  "fields": [
+    {
+      "doc": "Target set point values",
+      "name": "setPoint",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "N",
+      "sal_values_per_publisher": 1,
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Target components",
+      "name": "forceComponent",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_units": "N",
+      "sal_values_per_publisher": 1,
+      "type": {
+        "items": "double",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM2_targetForces",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

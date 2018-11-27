@@ -1,0 +1,74 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_imageReadoutParameters.html",
+  "fields": [
+    {
+      "doc": "The imageName for this specific exposure",
+      "name": "imageName",
+      "type": "string"
+    },
+    {
+      "doc": "A list of all ccds currently configured, of the form RnnSnn, : delimited (empty if entry not used)",
+      "name": "ccdNames",
+      "type": "string"
+    },
+    {
+      "doc": "The type of each CCD, this determines segRows, segCols and serCols",
+      "name": "ccdType",
+      "type": {
+        "name": "ccdType",
+        "symbols": [
+          "E2V",
+          "ITL"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "overRows",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "overCols",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "readRows",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "readCols",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "readCols2",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "preCols",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "preRows",
+      "type": "long"
+    },
+    {
+      "doc": "See CCD Readout Parameters Diagram",
+      "name": "postCols",
+      "type": "long"
+    }
+  ],
+  "name": "ATCamera_logevent_imageReadoutParameters",
+  "namespace": "lsst.sal",
+  "sal_alias": "imageReadoutParameters",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

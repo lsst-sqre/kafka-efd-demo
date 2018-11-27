@@ -1,0 +1,53 @@
+{
+  "doc": "SAL indices of scripts on the queue.",
+  "fields": [
+    {
+      "doc": "Is the ScriptQueue CSC enabled? New scripts will only be started if both `running` and `enable` are True.",
+      "name": "enabled",
+      "type": "boolean"
+    },
+    {
+      "doc": "Is the queue running (True) or paused (False)? New scripts will only be started if both `running` and `enable` are True.",
+      "name": "running",
+      "type": "boolean"
+    },
+    {
+      "doc": "SAL index of script being run; 0 if none.",
+      "name": "currentSalIndex",
+      "type": "int"
+    },
+    {
+      "doc": "Number of valid entries in salIndices.",
+      "name": "length",
+      "type": "int"
+    },
+    {
+      "doc": "SAL index of each Script on the queue. Item 0 is the next script to be run.",
+      "name": "salIndices",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "Number of valid entries in pastSalIndices.",
+      "name": "pastLength",
+      "type": "int"
+    },
+    {
+      "doc": "SAL index of scripts that have been run. Item 0 is the script most recently run.",
+      "name": "pastSalIndices",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "ScriptQueue_logevent_queue",
+  "namespace": "lsst.sal",
+  "sal_alias": "queue",
+  "sal_subsystem": "ScriptQueue",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

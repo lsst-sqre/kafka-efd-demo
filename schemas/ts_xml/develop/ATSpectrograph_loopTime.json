@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "name": "loopTime",
+      "type": "double"
+    }
+  ],
+  "name": "ATSpectrograph_loopTime",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

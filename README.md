@@ -3,9 +3,24 @@
 DM uses Kafka to distribute messages from the LSST EFD (Engineering Facility Database) to subscribers like the DM-EFD and stream monitoring tools.
 See [DMTN-082](https://dmtn-082.lsst.io/) for details of how this works.
 
-![Diagram of the LSST EFD and DM-EFD components, showing Kafka as a glue between them.](https://dmtn-082.lsst.io/_images/dm-efd-concept.png)
+<img src="https://dmtn-082.lsst.io/_images/dm-efd-concept.png" width="600px" alt="Diagram of the LSST EFD and DM-EFD components, showing Kafka as a glue between them.">
 
 This repository contains early explorations of deploying Kafka on Kubernetes and exercising the Kafka cluster with publishers, subscribers, and stream processors.
+
+## Contents
+
+- [Kubernetes cluster set up](#kubernetes-cluster-set-up)
+- [Prometheus and Grafana installation](#prometheus-and-grafana-installation)
+- [Kafka cluster installation](#kafka-cluster-installation)
+- [Test the Kafka cluster](#test-the-kafka-cluster)
+- [Connecting to Kafka via Telepresence](#connecting-to-kafka-via-telepresence)
+- [The kafkaefd demo application](#the-kafkaefd-demo-application)
+  - [kafkaefd admin — Kafka broker and topic administration](#kafkaefd-admin--kafka-broker-and-topic-administration)
+  - [kafkaefd registry — Avro Schema Registry management](#kafkaefd-registry--avro-schema-registry-management)
+  - [kafkaefd helloworld — Hello world demo](#kafkaefd-helloworld--hello-world-demo)
+  - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
+- [InfluxDB installation (optional)](#influxdb-installation-optional)
+- [Lessons learned](#lessons-learned)
 
 ## Kubernetes cluster set up
 
@@ -171,7 +186,7 @@ kafkaefd help
 This is the headless service for the Kafka brokers given the Kubernetes/Helm installation described above.
 This default should work both inside the cluster and via Telepresence.
 
-### The kafkaefd admin command
+### kafkaefd admin — Kafka broker and topic administration
 
 The `kafkaefd admin` command includes several subcommands that help administer a Kafka cluster and topics in it.
 
@@ -213,7 +228,7 @@ List brokers:
 kafkaefd admin brokers
 ```
 
-#### kafkaefd registry command
+### kafkaefd registry — Avro Schema Registry management
 
 The `kafkaefd registry` command group is a full-service admin client for the [Confluent Schema Registry](https://docs.confluent.io/current/schema-registry/docs/index.html).
 Schemas for Avro-formatted messages are automatically maintained in the schema registry.
@@ -275,7 +290,7 @@ kafkaefd registry compat --subject subjectname
 kafkaefd registry compat --subject subjectname --set BACKWARD
 ```
 
-### Hello world demo
+### kafkaefd helloworld — Hello world demo
 
 This is a simple example that shows how to send and receive plain text messages.
 
@@ -298,7 +313,7 @@ This is a simple example that shows how to send and receive plain text messages.
 
 In this hello world demo, the topic is `mytopic`, and by default all messages are created with a key of `hello`.
 
-### Hello world for Avro
+### kafkaefd helloavro — Hello world for Avro
 
 The `kafkaefd helloavro` command group shows how to send and receive Avro-serialized messages.
 These commands integrate with the Confluent Schema Registry deployed as part of the Helm deployment.
@@ -318,6 +333,27 @@ In this demo, the default topic is called `helloavro`.
    ```bash
    kafkaefd helloavro produce "Hello world"
    ```
+
+### kafkaefd salschema — ts\_sal schema conversion
+
+The `kafkaefd salschema` command group includes commands for managing Avro translations of the Telescope & Site SAL schemas published at [https://github.com/lsst-ts/ts_xml](https://github.com/lsst-ts/ts_xml).
+
+`kafkaefd salschema` currently uses the GitHub API to retrieve schemas from [ts_xml](https://github.com/lsst-ts/ts_xml).
+Before running `kafkaefd salschema`, set up a GitHub Personal Access Token from https://github.com/settings/tokens and add them to the shell environment:
+
+```bash
+export GITHUB_USER="..."   # your GitHub username
+export GITHUB_TOKEN="..."  # your personal access token
+```
+
+To convert the [ts_xml](https://github.com/lsst-ts/ts_xml) files into Avro, and persist those Avro schemas to a local directory `ts_xml_avro`, run:
+
+```bash
+kafkaefd salschema --write ts_xml_avro
+```
+
+See `kafkaefd salschema -h` for other options.
+The `--xml-repo-ref` option, in particular, allows you to select a specific branch or tag of the [ts_xml](https://github.com/lsst-ts/ts_xml) repository for conversion.
 
 ## InfluxDB installation (optional)
 

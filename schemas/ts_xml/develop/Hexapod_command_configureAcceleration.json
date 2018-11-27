@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "accmax",
+      "sal_units": "um/s^2",
+      "type": "double"
+    }
+  ],
+  "name": "Hexapod_command_configureAcceleration",
+  "namespace": "lsst.sal",
+  "sal_alias": "configureAcceleration",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

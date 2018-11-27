@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "vlimit",
+      "sal_units": "deg/s",
+      "type": "double"
+    }
+  ],
+  "name": "Rotator_command_configureVelocity",
+  "namespace": "lsst.sal",
+  "sal_alias": "configureVelocity",
+  "sal_subsystem": "Rotator",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

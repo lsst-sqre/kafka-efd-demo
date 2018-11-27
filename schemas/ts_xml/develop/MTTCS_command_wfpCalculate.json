@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/MTTCS_command_wfpCalculate.html",
+  "fields": [
+    {
+      "name": "uid",
+      "type": "string"
+    }
+  ],
+  "name": "MTTCS_command_wfpCalculate",
+  "namespace": "lsst.sal",
+  "sal_alias": "wfpCalculate",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Aperture percentage.",
+      "name": "mainDoorOpening",
+      "type": "float"
+    }
+  ],
+  "name": "ATDome_command_moveShutterMainDoor",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveShutterMainDoor",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

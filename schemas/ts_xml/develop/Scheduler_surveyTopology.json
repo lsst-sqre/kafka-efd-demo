@@ -1,0 +1,26 @@
+{
+  "fields": [
+    {
+      "name": "numGeneralProps",
+      "type": "long"
+    },
+    {
+      "name": "generalPropos",
+      "type": "string"
+    },
+    {
+      "name": "numSeqProps",
+      "type": "long"
+    },
+    {
+      "name": "sequencePropos",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_surveyTopology",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

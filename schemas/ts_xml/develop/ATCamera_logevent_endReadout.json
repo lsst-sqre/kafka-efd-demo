@@ -1,0 +1,44 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_endReadout.html",
+  "fields": [
+    {
+      "doc": "The imageSequenceName as passed to the takeImages command",
+      "name": "imageSequenceName",
+      "type": "string"
+    },
+    {
+      "doc": "The total  number of requested images in sequence",
+      "name": "imagesInSequence",
+      "type": "long"
+    },
+    {
+      "doc": "The imageName for this specific exposure",
+      "name": "imageName",
+      "type": "string"
+    },
+    {
+      "doc": "The zero based index number for this specific exposure within the sequence",
+      "name": "imageIndex",
+      "type": "long"
+    },
+    {
+      "doc": "The effective time at which the image acquisition started (i.e. the end of the previous clear or readout)",
+      "name": "timeStamp",
+      "sal_units": "seconds",
+      "type": "double"
+    },
+    {
+      "doc": "The requested exposure time",
+      "name": "exposureTime",
+      "sal_units": "seconds",
+      "type": "double"
+    }
+  ],
+  "name": "ATCamera_logevent_endReadout",
+  "namespace": "lsst.sal",
+  "sal_alias": "endReadout",
+  "sal_subsystem": "ATCamera",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

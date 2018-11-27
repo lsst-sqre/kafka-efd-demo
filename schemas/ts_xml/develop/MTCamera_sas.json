@@ -1,0 +1,65 @@
+{
+  "fields": [
+    {
+      "name": "boardID",
+      "type": "int"
+    },
+    {
+      "name": "boardCurrent",
+      "sal_units": "ampere",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "boardTemp",
+      "sal_units": "kelvin",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "boardVoltage",
+      "sal_units": "volt",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "cabacMUX",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "ccdID",
+      "type": "int"
+    },
+    {
+      "name": "ccdtemp",
+      "sal_units": "kelvin",
+      "type": "long"
+    },
+    {
+      "name": "fpgaCheckSum",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "rebID",
+      "type": "int"
+    }
+  ],
+  "name": "MTCamera_sas",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

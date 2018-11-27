@@ -1,0 +1,48 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Size of file in bytes",
+      "name": "byteSize",
+      "type": "long"
+    },
+    {
+      "doc": "Hexadecimal character string holding the checksum of the file",
+      "name": "checksum",
+      "type": "string"
+    },
+    {
+      "doc": "Name of the package which generated the file being announced",
+      "name": "generator",
+      "type": "string"
+    },
+    {
+      "doc": "Mime Type code for the file",
+      "name": "mimeType",
+      "type": "string"
+    },
+    {
+      "doc": "A Uniform Resource Locator which links to a Large File Object\neither for ingest into the EFD Large File Annex, or to announce\nthe successful copy of same to the EFD Large File Annex.\nProtocols are those supported by the cURL library.",
+      "name": "url",
+      "type": "string"
+    },
+    {
+      "doc": "A dotted x.y version number denoting the file format revision",
+      "name": "version",
+      "type": "float"
+    },
+    {
+      "doc": "A generic identifier field",
+      "name": "id",
+      "type": "string"
+    }
+  ],
+  "name": "EFD_logevent_largeFileObjectAvailable",
+  "namespace": "lsst.sal",
+  "sal_alias": "largeFileObjectAvailable",
+  "sal_author": "EFD",
+  "sal_subsystem": "EFD",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

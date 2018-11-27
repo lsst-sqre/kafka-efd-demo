@@ -1,0 +1,101 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "stepsQueued",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "stepsCommanded",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "measuredForce",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "encoder",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "displacement",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "fX",
+      "type": "float"
+    },
+    {
+      "name": "fY",
+      "type": "float"
+    },
+    {
+      "name": "fZ",
+      "type": "float"
+    },
+    {
+      "name": "mX",
+      "type": "float"
+    },
+    {
+      "name": "mY",
+      "type": "float"
+    },
+    {
+      "name": "mZ",
+      "type": "float"
+    },
+    {
+      "name": "forceMagnitude",
+      "type": "float"
+    },
+    {
+      "name": "xPosition",
+      "type": "float"
+    },
+    {
+      "name": "yPosition",
+      "type": "float"
+    },
+    {
+      "name": "zPosition",
+      "type": "float"
+    },
+    {
+      "name": "xRotation",
+      "type": "float"
+    },
+    {
+      "name": "yRotation",
+      "type": "float"
+    },
+    {
+      "name": "zRotation",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_hardpointActuatorData",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

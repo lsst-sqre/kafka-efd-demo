@@ -1,0 +1,210 @@
+{
+  "fields": [
+    {
+      "doc": "Azimuth_Status_Drive_1",
+      "name": "Azimuth_Status_Drive_1",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_2",
+      "name": "Azimuth_Status_Drive_2",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_3",
+      "name": "Azimuth_Status_Drive_3",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_4",
+      "name": "Azimuth_Status_Drive_4",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_5",
+      "name": "Azimuth_Status_Drive_5",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_6",
+      "name": "Azimuth_Status_Drive_6",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_7",
+      "name": "Azimuth_Status_Drive_7",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_8",
+      "name": "Azimuth_Status_Drive_8",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_9",
+      "name": "Azimuth_Status_Drive_9",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_10",
+      "name": "Azimuth_Status_Drive_10",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_11",
+      "name": "Azimuth_Status_Drive_11",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_12",
+      "name": "Azimuth_Status_Drive_12",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_13",
+      "name": "Azimuth_Status_Drive_13",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_14",
+      "name": "Azimuth_Status_Drive_14",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_15",
+      "name": "Azimuth_Status_Drive_15",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Status_Drive_16",
+      "name": "Azimuth_Status_Drive_16",
+      "sal_size_in_bytes": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_1",
+      "name": "Azimuth_Current_Drive_1",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_2",
+      "name": "Azimuth_Current_Drive_2",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_3",
+      "name": "Azimuth_Current_Drive_3",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_4",
+      "name": "Azimuth_Current_Drive_4",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_5",
+      "name": "Azimuth_Current_Drive_5",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_6",
+      "name": "Azimuth_Current_Drive_6",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_7",
+      "name": "Azimuth_Current_Drive_7",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_8",
+      "name": "Azimuth_Current_Drive_8",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_9",
+      "name": "Azimuth_Current_Drive_9",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_10",
+      "name": "Azimuth_Current_Drive_10",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_11",
+      "name": "Azimuth_Current_Drive_11",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_12",
+      "name": "Azimuth_Current_Drive_12",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_13",
+      "name": "Azimuth_Current_Drive_13",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_14",
+      "name": "Azimuth_Current_Drive_14",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_15",
+      "name": "Azimuth_Current_Drive_15",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth_Current_Drive_16",
+      "name": "Azimuth_Current_Drive_16",
+      "sal_units": "Amp",
+      "type": "double"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Azimuth_Drives",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

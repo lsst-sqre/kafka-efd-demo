@@ -1,0 +1,17 @@
+{
+  "doc": "Configure a script.",
+  "fields": [
+    {
+      "doc": "Configuration as yaml text that is parsed to make a keyword argument dict for the script's configure method.",
+      "name": "config",
+      "type": "string"
+    }
+  ],
+  "name": "Script_command_configure",
+  "namespace": "lsst.sal",
+  "sal_alias": "configure",
+  "sal_subsystem": "Script",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

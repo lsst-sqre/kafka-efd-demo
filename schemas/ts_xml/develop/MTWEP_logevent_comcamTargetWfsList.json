@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "List of target sensor Id list. Put -1 for unused element.",
+      "name": "sensorIdList",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "doc": "The time stamp for when the telemetry was sampled.",
+      "name": "timestamp",
+      "type": "double"
+    }
+  ],
+  "name": "MTWEP_logevent_comcamTargetWfsList",
+  "namespace": "lsst.sal",
+  "sal_alias": "comcamTargetWfsList",
+  "sal_subsystem": "MTWEP",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

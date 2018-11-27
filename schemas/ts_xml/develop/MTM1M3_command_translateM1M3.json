@@ -1,0 +1,36 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "xTranslation",
+      "type": "float"
+    },
+    {
+      "name": "yTranslation",
+      "type": "float"
+    },
+    {
+      "name": "zTranslation",
+      "type": "float"
+    },
+    {
+      "name": "xRotation",
+      "type": "float"
+    },
+    {
+      "name": "yRotation",
+      "type": "float"
+    },
+    {
+      "name": "zRotation",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_command_translateM1M3",
+  "namespace": "lsst.sal",
+  "sal_alias": "translateM1M3",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

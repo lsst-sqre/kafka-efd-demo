@@ -1,0 +1,17 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Aperture percentage.",
+      "name": "dropoutDoorOpening",
+      "type": "float"
+    }
+  ],
+  "name": "ATDome_command_moveShutterDropoutDoor",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveShutterDropoutDoor",
+  "sal_subsystem": "ATDome",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

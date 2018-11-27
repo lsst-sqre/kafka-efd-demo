@@ -1,0 +1,107 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "limitXYMax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "limitZMin",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "limitZMax",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "limitUVMax",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "limitWMin",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "limitWMax",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "velocityXYMax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "velocityRxRyMax",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "velocityZMax",
+      "sal_units": "um/s",
+      "type": "double"
+    },
+    {
+      "name": "velocityRzMax",
+      "sal_units": "deg/s",
+      "type": "double"
+    },
+    {
+      "name": "positionX",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "positionY",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "positionZ",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "positionU",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "positionV",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "positionW",
+      "sal_units": "deg",
+      "type": "double"
+    },
+    {
+      "name": "pivotX",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "pivotY",
+      "sal_units": "um",
+      "type": "double"
+    },
+    {
+      "name": "pivotZ",
+      "sal_units": "um",
+      "type": "double"
+    }
+  ],
+  "name": "ATHexapod_logevent_settingsAppliedPositions",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedPositions",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

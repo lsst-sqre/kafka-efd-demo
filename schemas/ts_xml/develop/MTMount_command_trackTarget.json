@@ -1,0 +1,49 @@
+{
+  "doc": "http://sal.lsst.org/SAL/Commands/MTMount_command_trackTarget.html",
+  "fields": [
+    {
+      "doc": "Azimuth angle",
+      "name": "az_angle",
+      "sal_units": "Degrees",
+      "type": "double"
+    },
+    {
+      "doc": "Azimuth velocity",
+      "name": "az_velocity",
+      "sal_units": "Degrees/second",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation angle",
+      "name": "el_angle",
+      "sal_units": "Degrees",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation velocity",
+      "name": "el_velocity",
+      "sal_units": "Degrees/second",
+      "type": "double"
+    },
+    {
+      "name": "time",
+      "sal_units": "Seconds",
+      "type": "double"
+    },
+    {
+      "doc": "Cable Wrap orientation: Clockwise(CW), Counterclockwise(CCW)",
+      "name": "cablewrap_orientation",
+      "type": "string"
+    }
+  ],
+  "name": "MTMount_command_trackTarget",
+  "namespace": "lsst.sal",
+  "sal_alias": "trackTarget",
+  "sal_author": "Ander Ansuategi",
+  "sal_device": "target",
+  "sal_property": "position",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.0",
+  "type": "record"
+}

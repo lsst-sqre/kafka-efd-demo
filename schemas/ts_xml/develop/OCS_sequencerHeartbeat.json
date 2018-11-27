@@ -1,0 +1,62 @@
+{
+  "fields": [
+    {
+      "doc": "Name for the sequencer instance",
+      "name": "name",
+      "sal_bytes_per_night": 221184,
+      "sal_frequency": 0.02,
+      "sal_instances_per_night": 864,
+      "sal_needed_by_camera": false,
+      "sal_needed_by_dm": true,
+      "sal_needed_by_epo": false,
+      "sal_needed_by_ocs": true,
+      "sal_needed_by_tcs": false,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 256,
+      "sal_units": "None",
+      "sal_values_per_publisher": 1,
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the sequencer heartbeat",
+      "name": "identifier",
+      "sal_bytes_per_night": 3456,
+      "sal_frequency": 0.02,
+      "sal_instances_per_night": 864,
+      "sal_needed_by_camera": false,
+      "sal_needed_by_dm": true,
+      "sal_needed_by_epo": false,
+      "sal_needed_by_ocs": true,
+      "sal_needed_by_tcs": false,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 4,
+      "sal_units": "None",
+      "sal_values_per_publisher": 1,
+      "type": "float"
+    },
+    {
+      "doc": "Timestamp for the sequencer heartbeat",
+      "name": "timestamp",
+      "sal_bytes_per_night": 221184,
+      "sal_frequency": 0.02,
+      "sal_instances_per_night": 864,
+      "sal_needed_by_camera": false,
+      "sal_needed_by_dm": true,
+      "sal_needed_by_epo": false,
+      "sal_needed_by_ocs": true,
+      "sal_needed_by_tcs": false,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 256,
+      "sal_units": "None",
+      "sal_values_per_publisher": 1,
+      "type": "string"
+    }
+  ],
+  "name": "OCS_sequencerHeartbeat",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "OCS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

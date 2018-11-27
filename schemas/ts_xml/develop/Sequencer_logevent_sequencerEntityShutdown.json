@@ -1,0 +1,37 @@
+{
+  "doc": "http://project.lsst.org/ts/Events/Sequencer_logevent_SequencerEntityShutdown.html",
+  "fields": [
+    {
+      "doc": "Name of (commandable) entity",
+      "name": "name",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Identifier for the (commandable) entity",
+      "name": "identifier",
+      "sal_units": "None",
+      "type": "double"
+    },
+    {
+      "doc": "Timestamp of destruction of the (commandable) entity",
+      "name": "timestamp",
+      "sal_units": "None",
+      "type": "string"
+    },
+    {
+      "doc": "Address of (commandable) entity",
+      "name": "address",
+      "sal_units": "None",
+      "type": "long"
+    }
+  ],
+  "name": "Sequencer_logevent_sequencerEntityShutdown",
+  "namespace": "lsst.sal",
+  "sal_alias": "sequencerEntityShutdown",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "Sequencer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

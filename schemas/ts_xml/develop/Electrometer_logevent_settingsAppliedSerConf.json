@@ -1,0 +1,57 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The timestamp for when the event occurred.",
+      "name": "visaResource",
+      "type": "string"
+    },
+    {
+      "doc": "Enum",
+      "name": "baudRate",
+      "type": "long"
+    },
+    {
+      "doc": "Enum",
+      "name": "parity",
+      "type": "long"
+    },
+    {
+      "name": "dataBits",
+      "type": "long"
+    },
+    {
+      "name": "stopBits",
+      "type": "long"
+    },
+    {
+      "doc": "Enum",
+      "name": "timeout",
+      "type": "float"
+    },
+    {
+      "doc": "Enum",
+      "name": "termChar",
+      "type": "long"
+    },
+    {
+      "name": "xonxoff",
+      "type": "boolean"
+    },
+    {
+      "name": "dsrdtr",
+      "type": "boolean"
+    },
+    {
+      "name": "bytesToRead",
+      "type": "long"
+    }
+  ],
+  "name": "Electrometer_logevent_settingsAppliedSerConf",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedSerConf",
+  "sal_subsystem": "Electrometer",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

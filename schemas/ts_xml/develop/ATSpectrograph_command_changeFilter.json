@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "filter",
+      "type": "long"
+    }
+  ],
+  "name": "ATSpectrograph_command_changeFilter",
+  "namespace": "lsst.sal",
+  "sal_alias": "changeFilter",
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

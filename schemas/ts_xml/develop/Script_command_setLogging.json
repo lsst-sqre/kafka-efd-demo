@@ -1,0 +1,17 @@
+{
+  "doc": "Set logging level.",
+  "fields": [
+    {
+      "doc": "Logging level, as a Python logging value.",
+      "name": "level",
+      "type": "int"
+    }
+  ],
+  "name": "Script_command_setLogging",
+  "namespace": "lsst.sal",
+  "sal_alias": "setLogging",
+  "sal_subsystem": "Script",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "1.0.0",
+  "type": "record"
+}

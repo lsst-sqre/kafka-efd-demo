@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "The amount to move the device",
+      "name": "distance",
+      "sal_units": "millimeters",
+      "type": "float"
+    },
+    {
+      "doc": "The timestamp for when the event occurred.",
+      "name": "timestamp",
+      "sal_units": "Seconds",
+      "type": "double"
+    }
+  ],
+  "name": "LinearStage_command_moveAbsolute",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveAbsolute",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "LinearStage",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

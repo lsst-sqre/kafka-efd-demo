@@ -1,0 +1,718 @@
+{
+  "fields": [
+    {
+      "doc": "AZ_LimPos_AND_topple_block_pos_A",
+      "name": "AZ_LimPos_AND_topple_block_pos_A",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_LimNeg_AND_topple_block_pos_B",
+      "name": "AZ_LimNeg_AND_topple_block_pos_B",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_Overspeed",
+      "name": "AZ_Overspeed",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_press_brake",
+      "name": "AZ_press_brake",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_brake_NO_actuated",
+      "name": "AZ_brake_NO_actuated",
+      "type": "boolean"
+    },
+    {
+      "doc": "EL_LimPos",
+      "name": "EL_LimPos",
+      "type": "boolean"
+    },
+    {
+      "doc": "EL_LimNeg",
+      "name": "EL_LimNeg",
+      "type": "boolean"
+    },
+    {
+      "doc": "EL_Overspeed",
+      "name": "EL_Overspeed",
+      "type": "boolean"
+    },
+    {
+      "doc": "EL_press_brake",
+      "name": "EL_press_brake",
+      "type": "boolean"
+    },
+    {
+      "doc": "EL_brake_NO_actuated",
+      "name": "EL_brake_NO_actuated",
+      "type": "boolean"
+    },
+    {
+      "doc": "Mirror_cover_position_NO_Closed",
+      "name": "Mirror_cover_position_NO_Closed",
+      "type": "boolean"
+    },
+    {
+      "doc": "Mirror_cover_locked_switch",
+      "name": "Mirror_cover_locked_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_cable_wrap_LimPos",
+      "name": "AZ_cable_wrap_LimPos",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_cable_wrap_LimNeg",
+      "name": "AZ_cable_wrap_LimNeg",
+      "type": "boolean"
+    },
+    {
+      "doc": "El_locking_pin_inserted",
+      "name": "El_locking_pin_inserted",
+      "type": "boolean"
+    },
+    {
+      "doc": "El_locking_pin_test_position",
+      "name": "El_locking_pin_test_position",
+      "type": "boolean"
+    },
+    {
+      "doc": "El_locking_retracted",
+      "name": "El_locking_retracted",
+      "type": "boolean"
+    },
+    {
+      "doc": "Access_door_NO_closed",
+      "name": "Access_door_NO_closed",
+      "type": "boolean"
+    },
+    {
+      "doc": "Access_door_ladder_NO_parked",
+      "name": "Access_door_ladder_NO_parked",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hatch_NO_Closed",
+      "name": "Hatch_NO_Closed",
+      "type": "boolean"
+    },
+    {
+      "doc": "Platform_NO_parking",
+      "name": "Platform_NO_parking",
+      "type": "boolean"
+    },
+    {
+      "doc": "Platform_NO_total_extended",
+      "name": "Platform_NO_total_extended",
+      "type": "boolean"
+    },
+    {
+      "doc": "Platform_extension_NO_inserted",
+      "name": "Platform_extension_NO_inserted",
+      "type": "boolean"
+    },
+    {
+      "doc": "Pull_CordPos",
+      "name": "Pull_CordPos",
+      "type": "boolean"
+    },
+    {
+      "doc": "Pull_CordNeg",
+      "name": "Pull_CordNeg",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB",
+      "name": "ETPB",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Phase",
+      "name": "ETPB_Phase",
+      "type": "boolean"
+    },
+    {
+      "doc": "Global_IS_Interlock",
+      "name": "Global_IS_Interlock",
+      "type": "boolean"
+    },
+    {
+      "doc": "Earthquake",
+      "name": "Earthquake",
+      "type": "boolean"
+    },
+    {
+      "doc": "SKF_NO_ok",
+      "name": "SKF_NO_ok",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_NO_ok",
+      "name": "Phase_NO_ok",
+      "type": "boolean"
+    },
+    {
+      "doc": "MCS_watchdog",
+      "name": "MCS_watchdog",
+      "type": "boolean"
+    },
+    {
+      "doc": "Loss_communication",
+      "name": "Loss_communication",
+      "type": "boolean"
+    },
+    {
+      "doc": "GISfailure",
+      "name": "GISfailure",
+      "type": "boolean"
+    },
+    {
+      "doc": "PierAccess",
+      "name": "PierAccess",
+      "type": "boolean"
+    },
+    {
+      "doc": "DomeAccess",
+      "name": "DomeAccess",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPBdome",
+      "name": "ETPBdome",
+      "type": "boolean"
+    },
+    {
+      "doc": "DomeParked",
+      "name": "DomeParked",
+      "type": "boolean"
+    },
+    {
+      "doc": "M1M3Interlok",
+      "name": "M1M3Interlok",
+      "type": "boolean"
+    },
+    {
+      "doc": "ManLiftParked",
+      "name": "ManLiftParked",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_and_brake_Azimuth",
+      "name": "STO_and_brake_Azimuth",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_and_brake_Elevation",
+      "name": "STO_and_brake_Elevation",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_AZCW",
+      "name": "STO_AZCW",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_CCW",
+      "name": "STO_CCW",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_Balancing_System",
+      "name": "STO_Balancing_System",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_Mirror_Cover",
+      "name": "STO_Mirror_Cover",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_Locking_pins",
+      "name": "STO_Locking_pins",
+      "type": "boolean"
+    },
+    {
+      "doc": "STO_Deployable_Platforms",
+      "name": "STO_Deployable_Platforms",
+      "type": "boolean"
+    },
+    {
+      "doc": "Platform_extensions",
+      "name": "Platform_extensions",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Cutoff_power",
+      "name": "Phase_Cutoff_power",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Discharge_capacitors",
+      "name": "Phase_Discharge_capacitors",
+      "type": "boolean"
+    },
+    {
+      "doc": "SKF_Pressure_Off",
+      "name": "SKF_Pressure_Off",
+      "type": "boolean"
+    },
+    {
+      "doc": "CCW_Pull_Cord",
+      "name": "CCW_Pull_Cord",
+      "type": "boolean"
+    },
+    {
+      "doc": "Emergency_to_GIS",
+      "name": "Emergency_to_GIS",
+      "type": "boolean"
+    },
+    {
+      "doc": "TMA_Brakes_Failed",
+      "name": "TMA_Brakes_Failed",
+      "type": "boolean"
+    },
+    {
+      "doc": "MCS_Failed",
+      "name": "MCS_Failed",
+      "type": "boolean"
+    },
+    {
+      "doc": "Access_door_1_ladder_parker_position",
+      "name": "Access_door_1_ladder_parker_position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Access_door_2_ladder_parker_position",
+      "name": "Access_door_2_ladder_parker_position",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_platform_access_Door_1_switch",
+      "name": "AZ_platform_access_Door_1_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "AZ_platform_access_Door_2_switch",
+      "name": "AZ_platform_access_Door_2_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hath_switch_1",
+      "name": "Hath_switch_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hath_switch_2",
+      "name": "Hath_switch_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hath_switch_3",
+      "name": "Hath_switch_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hath_switch_4",
+      "name": "Hath_switch_4",
+      "type": "boolean"
+    },
+    {
+      "doc": "Mirror_cover_1_assembly_locked_manual_switch_off",
+      "name": "Mirror_cover_1_assembly_locked_manual_switch_off",
+      "type": "boolean"
+    },
+    {
+      "doc": "Mirror_cover_2_assembly_locked_manual_switch_off",
+      "name": "Mirror_cover_2_assembly_locked_manual_switch_off",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_1_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_1_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_2_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_2_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_3_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_3_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_4_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_4_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_5_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_5_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_6_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_6_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_7_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_7_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "Phase_Capacitor_cabinet_8_Door_Switch_1_9",
+      "name": "Phase_Capacitor_cabinet_8_Door_Switch_1_9",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_AZCW_handrail_middle_floor_1",
+      "name": "ETPB_AZCW_handrail_middle_floor_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_AZCW_handrail_middle_floor_2",
+      "name": "ETPB_AZCW_handrail_middle_floor_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_AZCW_handrail_middle_floor_3",
+      "name": "ETPB_AZCW_handrail_middle_floor_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_AZCW_handrail_top_floor_1",
+      "name": "ETPB_AZCW_handrail_top_floor_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_AZCW_handrail_top_floor_2",
+      "name": "ETPB_AZCW_handrail_top_floor_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_AZCW_handrail_top_floor_3",
+      "name": "ETPB_AZCW_handrail_top_floor_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_area_XPos_beam_1",
+      "name": "ETPB_Azimuth_area_XPos_beam_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_area_XPos_beam_2",
+      "name": "ETPB_Azimuth_area_XPos_beam_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_area_XPos_beam_3",
+      "name": "ETPB_Azimuth_area_XPos_beam_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_area_XNeg_beam_1",
+      "name": "ETPB_Azimuth_area_XNeg_beam_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_area_XNeg_beam_2",
+      "name": "ETPB_Azimuth_area_XNeg_beam_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_area_XNeg_beam_3",
+      "name": "ETPB_Azimuth_area_XNeg_beam_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_stair_XPos_section_1",
+      "name": "ETPB_Azimuth_stair_XPos_section_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_stair_XPos_section_2",
+      "name": "ETPB_Azimuth_stair_XPos_section_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_stair_XPos_section_3",
+      "name": "ETPB_Azimuth_stair_XPos_section_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_stair_XNeg_section_1",
+      "name": "ETPB_Azimuth_stair_XNeg_section_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_stair_XNeg_section_2",
+      "name": "ETPB_Azimuth_stair_XNeg_section_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Azimuth_stair_XNeg_section_3",
+      "name": "ETPB_Azimuth_stair_XNeg_section_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Deployable_platform_XPos",
+      "name": "ETPB_Deployable_platform_XPos",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Deployable_platform_XNeg",
+      "name": "ETPB_Deployable_platform_XNeg",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XPos_pylon_1",
+      "name": "ETPB_Elevation_XPos_pylon_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XPos_pylon_2",
+      "name": "ETPB_Elevation_XPos_pylon_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XPos_TEA_1",
+      "name": "ETPB_Elevation_XPos_TEA_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XPos_TEA_2",
+      "name": "ETPB_Elevation_XPos_TEA_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XNeg_pylon_1",
+      "name": "ETPB_Elevation_XNeg_pylon_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XNeg_pylon_2",
+      "name": "ETPB_Elevation_XNeg_pylon_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XNeg_TEA_3",
+      "name": "ETPB_Elevation_XNeg_TEA_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_XNeg_TEA_4",
+      "name": "ETPB_Elevation_XNeg_TEA_4",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_ring_XPos_section_1",
+      "name": "ETPB_Elevation_ring_XPos_section_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_ring_XPos_section_2",
+      "name": "ETPB_Elevation_ring_XPos_section_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_ring_XPos_section_3",
+      "name": "ETPB_Elevation_ring_XPos_section_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_ring_XNeg_section_1",
+      "name": "ETPB_Elevation_ring_XNeg_section_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_ring_XNeg_section_2",
+      "name": "ETPB_Elevation_ring_XNeg_section_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Elevation_ring_XNeg_section_3",
+      "name": "ETPB_Elevation_ring_XNeg_section_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Handdeld_emergency_3",
+      "name": "ETPB_Handdeld_emergency_3",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Handdeld_emergency_4",
+      "name": "ETPB_Handdeld_emergency_4",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Handheld_emergency_1",
+      "name": "ETPB_Handheld_emergency_1",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Handheld_emergency_2",
+      "name": "ETPB_Handheld_emergency_2",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_MCS_Cabinet",
+      "name": "ETPB_MCS_Cabinet",
+      "type": "boolean"
+    },
+    {
+      "doc": "ETPB_Phase_cabinet",
+      "name": "ETPB_Phase_cabinet",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Cable_Wrap_Negative_limit_switch",
+      "name": "Azimuth_Cable_Wrap_Negative_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Cable_Wrap_Positive_limit_switch",
+      "name": "Azimuth_Cable_Wrap_Positive_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_Negative__power_off_limit_switch",
+      "name": "Azimuth_Negative__power_off_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Azimuth_positive__power_off_limit_switch",
+      "name": "Azimuth_positive__power_off_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "CCW_Movement_Negative_limit__pull_cord_",
+      "name": "CCW_Movement_Negative_limit__pull_cord_",
+      "type": "boolean"
+    },
+    {
+      "doc": "CCW_Movement_Positive_limit__pull_cord_",
+      "name": "CCW_Movement_Positive_limit__pull_cord_",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Negative_power_off_limit_switch",
+      "name": "Elevation_Negative_power_off_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Elevation_Positive_power_off_limit_switch",
+      "name": "Elevation_Positive_power_off_limit_switch",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hard_Stop_1_topple_block_LS1",
+      "name": "Hard_Stop_1_topple_block_LS1",
+      "type": "boolean"
+    },
+    {
+      "doc": "Hard_Stop_2_topple_block_LS1",
+      "name": "Hard_Stop_2_topple_block_LS1",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_1_Bypass_Pushbutton",
+      "name": "Handheld_1_Bypass_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_1_Enable_Pushbutton",
+      "name": "Handheld_1_Enable_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_2_Bypass_Pushbutton",
+      "name": "Handheld_2_Bypass_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_2_Enable_Pushbutton",
+      "name": "Handheld_2_Enable_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_3_Bypass_Pushbutton",
+      "name": "Handheld_3_Bypass_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_3_Enable_Pushbutton",
+      "name": "Handheld_3_Enable_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_4_Bypass_Pushbutton",
+      "name": "Handheld_4_Bypass_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Handheld_4_Enable_Pushbutton",
+      "name": "Handheld_4_Enable_Pushbutton",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_1_Extension_1_Inserted_Position",
+      "name": "Deployable_Platform_1_Extension_1_Inserted_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_1_Extension_2_Inserted_Position",
+      "name": "Deployable_Platform_1_Extension_2_Inserted_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_1_Module_1_Parking_Position",
+      "name": "Deployable_Platform_1_Module_1_Parking_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_1_Module_2_Parking_Position",
+      "name": "Deployable_Platform_1_Module_2_Parking_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_2_Extension_1_Inserted_Position",
+      "name": "Deployable_Platform_2_Extension_1_Inserted_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_2_Extension_2_Inserted_Position",
+      "name": "Deployable_Platform_2_Extension_2_Inserted_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_2_Module_1_Parking_Position",
+      "name": "Deployable_Platform_2_Module_1_Parking_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "Deployable_Platform_2_Module_2_Parking_Position",
+      "name": "Deployable_Platform_2_Module_2_Parking_Position",
+      "type": "boolean"
+    },
+    {
+      "doc": "timestamp",
+      "name": "timestamp",
+      "sal_size_in_bytes": 1,
+      "sal_units": "second",
+      "type": "double"
+    }
+  ],
+  "name": "MTMount_Safety_System",
+  "namespace": "lsst.sal",
+  "sal_author": "Ander Ansuategi",
+  "sal_subsystem": "MTMount",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.2.0",
+  "type": "record"
+}

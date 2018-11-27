@@ -1,0 +1,65 @@
+{
+  "fields": [
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink0DegAbsolutePositionSteps",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink60DegAbsolutePositionSteps",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink120DegAbsolutePositionSteps",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink180DegAbsolutePositionSteps",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink240DegAbsolutePositionSteps",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": "long"
+    },
+    {
+      "doc": "Present position in absolute steps, increasing sign indicates extension towards the mirror",
+      "name": "tangentLink300DegAbsolutePositionSteps",
+      "sal_frequency": 1.0,
+      "sal_publishers": 1,
+      "sal_size_in_bytes": 8,
+      "sal_values_per_publisher": 1,
+      "type": "long"
+    }
+  ],
+  "name": "MTM2_tangentActuatorAbsolutePositionSteps",
+  "namespace": "lsst.sal",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTM2",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

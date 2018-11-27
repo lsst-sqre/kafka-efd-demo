@@ -1,0 +1,16 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "name": "nClears",
+      "type": "long"
+    }
+  ],
+  "name": "MTCamera_command_clear",
+  "namespace": "lsst.sal",
+  "sal_alias": "clear",
+  "sal_subsystem": "MTCamera",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

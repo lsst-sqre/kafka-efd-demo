@@ -1,0 +1,38 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "latitude",
+      "type": "double"
+    },
+    {
+      "name": "longitude",
+      "type": "double"
+    },
+    {
+      "name": "height",
+      "type": "double"
+    },
+    {
+      "name": "pressure",
+      "type": "double"
+    },
+    {
+      "name": "temperature",
+      "type": "double"
+    },
+    {
+      "name": "relativeHumidity",
+      "type": "double"
+    }
+  ],
+  "name": "Scheduler_obsSiteConfig",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

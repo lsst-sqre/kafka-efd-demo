@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "power",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATWhiteLight_command_powerLightOn",
+  "namespace": "lsst.sal",
+  "sal_alias": "powerLightOn",
+  "sal_subsystem": "ATWhiteLight",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

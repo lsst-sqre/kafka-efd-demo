@@ -1,0 +1,172 @@
+{
+  "fields": [
+    {
+      "name": "observationId",
+      "type": "long"
+    },
+    {
+      "name": "observationStartTime",
+      "type": "double"
+    },
+    {
+      "name": "observationStartMjd",
+      "type": "double"
+    },
+    {
+      "name": "observationStartLst",
+      "type": "double"
+    },
+    {
+      "name": "night",
+      "type": "long"
+    },
+    {
+      "name": "targetId",
+      "type": "long"
+    },
+    {
+      "name": "fieldId",
+      "type": "long"
+    },
+    {
+      "name": "groupId",
+      "type": "long"
+    },
+    {
+      "name": "filter",
+      "type": "string"
+    },
+    {
+      "name": "numProposals",
+      "type": "long"
+    },
+    {
+      "name": "proposalIds",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "ra",
+      "type": "double"
+    },
+    {
+      "name": "decl",
+      "type": "double"
+    },
+    {
+      "name": "angle",
+      "type": "double"
+    },
+    {
+      "name": "altitude",
+      "type": "double"
+    },
+    {
+      "name": "azimuth",
+      "type": "double"
+    },
+    {
+      "name": "numExposures",
+      "type": "long"
+    },
+    {
+      "name": "exposureTimes",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "visitTime",
+      "type": "double"
+    },
+    {
+      "name": "skyBrightness",
+      "type": "double"
+    },
+    {
+      "name": "airmass",
+      "type": "double"
+    },
+    {
+      "name": "cloud",
+      "type": "double"
+    },
+    {
+      "name": "seeingFwhm500",
+      "type": "double"
+    },
+    {
+      "name": "seeingFwhmGeom",
+      "type": "double"
+    },
+    {
+      "name": "seeingFwhmEff",
+      "type": "double"
+    },
+    {
+      "name": "fiveSigmaDepth",
+      "type": "double"
+    },
+    {
+      "name": "moonRa",
+      "type": "double"
+    },
+    {
+      "name": "moonDec",
+      "type": "double"
+    },
+    {
+      "name": "moonAlt",
+      "type": "double"
+    },
+    {
+      "name": "moonAz",
+      "type": "double"
+    },
+    {
+      "name": "moonPhase",
+      "type": "double"
+    },
+    {
+      "name": "moonDistance",
+      "type": "double"
+    },
+    {
+      "name": "sunAlt",
+      "type": "double"
+    },
+    {
+      "name": "sunAz",
+      "type": "double"
+    },
+    {
+      "name": "sunRa",
+      "type": "double"
+    },
+    {
+      "name": "sunDec",
+      "type": "double"
+    },
+    {
+      "name": "solarElong",
+      "type": "double"
+    },
+    {
+      "name": "slewTime",
+      "type": "double"
+    },
+    {
+      "name": "note",
+      "type": "string"
+    }
+  ],
+  "name": "Scheduler_observation",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Scheduler",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.13",
+  "type": "record"
+}

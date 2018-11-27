@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "angularVelocityX",
+      "type": "float"
+    },
+    {
+      "name": "angularVelocityY",
+      "type": "float"
+    },
+    {
+      "name": "angularVelocityZ",
+      "type": "float"
+    },
+    {
+      "name": "sequenceNumber",
+      "type": "int"
+    },
+    {
+      "name": "temperature",
+      "type": "int"
+    }
+  ],
+  "name": "MTM1M3_gyroData",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.7.0",
+  "type": "record"
+}

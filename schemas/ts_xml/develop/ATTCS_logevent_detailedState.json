@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "detailedState",
+      "type": "long"
+    }
+  ],
+  "name": "ATTCS_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_subsystem": "ATTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.2",
+  "type": "record"
+}

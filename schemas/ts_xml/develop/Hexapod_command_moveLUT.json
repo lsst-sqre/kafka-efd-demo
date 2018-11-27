@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "az",
+      "type": "double"
+    },
+    {
+      "name": "elev",
+      "type": "double"
+    },
+    {
+      "name": "temp",
+      "type": "double"
+    }
+  ],
+  "name": "Hexapod_command_moveLUT",
+  "namespace": "lsst.sal",
+  "sal_alias": "moveLUT",
+  "sal_subsystem": "Hexapod",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.5.1",
+  "type": "record"
+}

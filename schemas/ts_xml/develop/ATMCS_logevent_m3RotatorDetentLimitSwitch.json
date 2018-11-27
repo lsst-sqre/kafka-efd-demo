@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "nasmyth1DetentActive",
+      "type": "boolean"
+    },
+    {
+      "name": "port3DetentActive",
+      "type": "boolean"
+    },
+    {
+      "name": "nasmyth2DetentActive",
+      "type": "boolean"
+    }
+  ],
+  "name": "ATMCS_logevent_m3RotatorDetentLimitSwitch",
+  "namespace": "lsst.sal",
+  "sal_alias": "m3RotatorDetentLimitSwitch",
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

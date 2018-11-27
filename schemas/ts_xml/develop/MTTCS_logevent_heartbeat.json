@@ -1,0 +1,19 @@
+{
+  "doc": "Heartbeat from the controller.",
+  "fields": [
+    {
+      "doc": "Heartbeat",
+      "name": "heartbeat",
+      "sal_units": "NA",
+      "type": "boolean"
+    }
+  ],
+  "name": "MTTCS_logevent_heartbeat",
+  "namespace": "lsst.sal",
+  "sal_alias": "heartbeat",
+  "sal_author": "salgenerator",
+  "sal_subsystem": "MTTCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

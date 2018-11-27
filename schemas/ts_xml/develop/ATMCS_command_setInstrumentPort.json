@@ -1,0 +1,16 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "name": "port",
+      "type": "long"
+    }
+  ],
+  "name": "ATMCS_command_setInstrumentPort",
+  "namespace": "lsst.sal",
+  "sal_alias": "setInstrumentPort",
+  "sal_subsystem": "ATMCS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.7.1",
+  "type": "record"
+}
