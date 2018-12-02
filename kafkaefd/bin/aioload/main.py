@@ -11,7 +11,6 @@ from io import BytesIO
 import json
 import logging
 from pathlib import Path
-import re
 
 import aiohttp
 import aiokafka
@@ -30,7 +29,8 @@ from ...salschema.convert import validate_schema
 
 CONSUMED = Counter('consumed', 'Topics consumed')
 LATENCY = Histogram('consumer_latency_seconds', 'Consumer latency (seconds)')
-LATENCY_SUMMARY = Summary('consumer_latency_summ_seconds', 'Consumer latency (seconds)')
+LATENCY_SUMMARY = Summary('consumer_latency_summ_seconds',
+                          'Consumer latency (seconds)')
 PRODUCED = Counter('produced', 'Topics produced')
 
 
@@ -94,7 +94,7 @@ def initialize_topics(ctx, root_name, count, log_level):
     """Initialize topics and synchronize Avro schemas to the registry.
     """
     configure_logging(level=log_level)
-    logger = structlog.get_logger(__name__).bind(
+    structlog.get_logger(__name__).bind(
         role='init-topics',
     )
 
@@ -126,9 +126,9 @@ def _create_topics(broker_url, root_name, count):
     for topic, f in fs.items():
         try:
             f.result()  # The result itself is None
-            print("Topic {} created".format(topic))
-        except Exception as e:
-            print("Failed to create topic {}: {}".format(topic, e))
+            logger.info("Topic created", topic=topic)
+        except Exception:
+            logger.exception("Failed to create topic", topic=topic)
 
 
 def _create_schemas(schema_registry_url, root_name, count):
