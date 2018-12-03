@@ -245,6 +245,7 @@ _SAL_TO_AVRO_TYPE['unsigned short'] = 'int'
 _SAL_TO_AVRO_TYPE['unsigned int'] = 'int'
 _SAL_TO_AVRO_TYPE['unsigned long'] = 'long'
 _SAL_TO_AVRO_TYPE['byte'] = 'bytes'
+_SAL_TO_AVRO_TYPE['unsigned long long'] = 'long'
 _SAL_TO_AVRO_TYPE['char'] = 'bytes'
 _SAL_TO_AVRO_TYPE['octet'] = 'bytes'
 
