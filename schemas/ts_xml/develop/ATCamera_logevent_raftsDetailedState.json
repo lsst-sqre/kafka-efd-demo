@@ -2,6 +2,14 @@
   "doc": "http://project.lsst.org/ts/sal_objects/help/ATCamera_logevent_raftsDetailedState.html",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Enumeration of valid substates",
       "name": "substate",
       "type": {

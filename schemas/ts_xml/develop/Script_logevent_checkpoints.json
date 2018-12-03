@@ -1,6 +1,14 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Checkpoint(s) at which to pause, as a regular expression. No checkpoints if blank; all checkpoints if \".*\".",
       "name": "pause",
       "type": "string"

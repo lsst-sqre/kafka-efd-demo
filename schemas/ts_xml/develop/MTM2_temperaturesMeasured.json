@@ -1,6 +1,14 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "As measured temperatures",
       "name": "temps",
       "sal_frequency": 1.0,

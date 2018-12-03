@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org/SAL/Commands/MTM2_command_applyForce.html",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Force in newtons, increasing force corresponds to increasing tension on the load cell",
       "name": "forceSetPoint",
       "sal_units": "Newtons",

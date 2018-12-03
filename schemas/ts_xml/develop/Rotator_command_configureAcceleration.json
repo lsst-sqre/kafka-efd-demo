@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "name": "alimit",
       "sal_units": "deg/s^2",
       "type": "double"

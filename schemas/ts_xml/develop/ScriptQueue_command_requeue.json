@@ -2,6 +2,14 @@
   "doc": "Put a script back on the queue that has already run, is running or is queued.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Index of Script SAL component to requeue.",
       "name": "salIndex",
       "type": "int"

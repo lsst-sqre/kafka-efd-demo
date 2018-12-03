@@ -1,6 +1,14 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "array of steps for each axial actuator in sequence. Increasing steps corresponds to counterclockwise rotation of the motor shaft, looking along the shaft in the direction of the motor",
       "name": "axialAbsolutePositionSteps",
       "sal_frequency": 1.0,

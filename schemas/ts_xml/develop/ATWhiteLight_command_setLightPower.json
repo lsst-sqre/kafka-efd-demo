@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Power intensity, it could a value between 800 to 1200W. Any value under this range will power the light off safely.",
       "name": "power",
       "type": "float"

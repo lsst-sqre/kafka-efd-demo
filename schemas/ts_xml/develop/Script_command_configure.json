@@ -2,6 +2,14 @@
   "doc": "Configure a script.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Configuration as yaml text that is parsed to make a keyword argument dict for the script's configure method.",
       "name": "config",
       "type": "string"

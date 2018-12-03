@@ -2,6 +2,14 @@
   "doc": "Validate Command received from Datalistener",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Command Object",
       "name": "commandObject",
       "sal_units": "NA",

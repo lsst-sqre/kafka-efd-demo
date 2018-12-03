@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Error code directly from the device. For more information check the documentation.",
       "name": "warning",
       "type": "boolean"

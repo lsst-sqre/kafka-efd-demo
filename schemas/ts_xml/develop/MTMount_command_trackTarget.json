@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org/SAL/Commands/MTMount_command_trackTarget.html",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Azimuth angle",
       "name": "az_angle",
       "sal_units": "Degrees",

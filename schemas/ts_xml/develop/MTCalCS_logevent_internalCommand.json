@@ -1,0 +1,28 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "The error code being published.",
+      "name": "commandObject",
+      "type": {
+        "items": "bytes",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTCalCS_logevent_internalCommand",
+  "namespace": "lsst.sal",
+  "sal_alias": "internalCommand",
+  "sal_subsystem": "MTCalCS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.31",
+  "type": "record"
+}

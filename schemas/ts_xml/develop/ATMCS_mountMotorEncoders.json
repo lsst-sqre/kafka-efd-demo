@@ -1,6 +1,14 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "This telemetry item reports the auxiliary telescope 3 mount elevation encoders in degrees + 1 Motor encoder.",
       "name": "elevationEncoder",
       "type": "double"

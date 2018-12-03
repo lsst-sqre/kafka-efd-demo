@@ -1,15 +1,23 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Coordinate system for position. CSys_Observed is refracted apparent topocentric, e.g. similar to CSys_Mount but the telescope model is applied and the azimuth is wrapped. If CSys_None then position should be ignored.",
       "name": "coordinateSystem",
       "type": {
         "name": "coordinateSystem",
         "symbols": [
           "CSys_None",
-          " CSys_ICRS",
-          " CSys_Observed",
-          " CSys_Mount"
+          "CSys_ICRS",
+          "CSys_Observed",
+          "CSys_Mount"
         ],
         "type": "enum"
       }

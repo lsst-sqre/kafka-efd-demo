@@ -2,6 +2,14 @@
   "doc": "Pause the queue. If a script is executing it will continue, but once that script is done no new script will be run.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "name": "ignored",
       "type": "boolean"
     }

@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org/SAL/Events/MTM2_logevent_m2FaultState.html",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "name": "state",
       "type": {
         "name": "state",
@@ -30,7 +38,7 @@
           "FaultStates_DisplacementSensor",
           "FaultStates_ActuatorPlusSoftLimit",
           "FaultStates_ActuatorMinusSoftLimit",
-          "FaultStates_CelTemperatureWarning\n      "
+          "FaultStates_CelTemperatureWarning"
         ],
         "type": "enum"
       }

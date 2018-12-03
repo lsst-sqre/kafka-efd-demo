@@ -1,6 +1,15 @@
 {
   "doc": "http://project.lsst.org/ts/sal_objects/help/MTCamera_logevent_endLoadFilter.html",
-  "fields": [],
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    }
+  ],
   "name": "MTCamera_logevent_endLoadFilter",
   "namespace": "lsst.sal",
   "sal_alias": "endLoadFilter",

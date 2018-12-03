@@ -2,17 +2,24 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
-      "doc": "The timestamp for when the event occurred.",
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Visa resource or port",
       "name": "visaResource",
       "type": "string"
     },
     {
-      "doc": "Enum",
+      "doc": "baud rate as a number",
       "name": "baudRate",
       "type": "long"
     },
     {
-      "doc": "Enum",
       "name": "parity",
       "type": "long"
     },
@@ -25,14 +32,14 @@
       "type": "long"
     },
     {
-      "doc": "Enum",
+      "doc": "time out in seconds",
       "name": "timeout",
       "type": "float"
     },
     {
-      "doc": "Enum",
+      "doc": "termination char, endl for end line",
       "name": "termChar",
-      "type": "long"
+      "type": "string"
     },
     {
       "name": "xonxoff",
@@ -43,6 +50,7 @@
       "type": "boolean"
     },
     {
+      "doc": "The maximum ammount of bytes to read",
       "name": "bytesToRead",
       "type": "long"
     }

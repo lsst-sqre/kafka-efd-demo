@@ -2,6 +2,14 @@
   "doc": "http://project.lsst.org/ts/Events/Sequencer_logevent_SequencerCurrentScript.html",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Script name",
       "name": "sequencerScriptName",
       "sal_units": "None",

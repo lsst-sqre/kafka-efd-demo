@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "detailedState",
+      "type": "long"
+    }
+  ],
+  "name": "IOTA_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_subsystem": "IOTA",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.31",
+  "type": "record"
+}

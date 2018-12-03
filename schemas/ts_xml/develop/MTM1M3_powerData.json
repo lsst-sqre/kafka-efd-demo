@@ -1,0 +1,46 @@
+{
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "powerNetworkACurrent",
+      "type": "float"
+    },
+    {
+      "name": "powerNetworkBCurrent",
+      "type": "float"
+    },
+    {
+      "name": "powerNetworkCCurrent",
+      "type": "float"
+    },
+    {
+      "name": "powerNetworkDCurrent",
+      "type": "float"
+    },
+    {
+      "name": "lightPowerNetworkCurrent",
+      "type": "float"
+    },
+    {
+      "name": "controlsPowerNetworkCurrent",
+      "type": "float"
+    }
+  ],
+  "name": "MTM1M3_powerData",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.35",
+  "type": "record"
+}

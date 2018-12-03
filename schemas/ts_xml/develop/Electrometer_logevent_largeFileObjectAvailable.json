@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "A Uniform Resource Locator which links to a Large File Object\neither for ingest into the EFD Large File Annex, or to announce\nthe successful copy of same to the EFD Large File Annex.\nProtocols are those supported by the cURL library.",
       "name": "url",
       "type": "string"
