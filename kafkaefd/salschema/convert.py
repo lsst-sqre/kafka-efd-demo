@@ -43,6 +43,13 @@ def convert_topic(root, validate=True):
     # (SALCommand, SALEvent, or SALTelemetry)
     avsc['sal_topic_type'] = root.tag
 
+    # Add a timestamp field
+    avsc['fields'].append({
+        "name": "kafka_timestamp",
+        "type": {"type": "long", "logicalType": "timestamp-millis"},
+        "doc": "Timestamp when the Kafka message was created."
+    })
+
     # Convert fields
     for item in root.iterfind('item'):
         field = dict()
