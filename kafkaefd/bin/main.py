@@ -10,6 +10,7 @@ from .registry import registry
 from .salschema import salschema
 from .helloworld import helloworld
 from .helloavro import helloavro
+from .aioload import aioload
 
 # Add -h as a help shortcut option
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -64,3 +65,4 @@ main.add_command(registry)
 main.add_command(salschema)
 main.add_command(helloworld)
 main.add_command(helloavro)
+main.add_command(aioload)

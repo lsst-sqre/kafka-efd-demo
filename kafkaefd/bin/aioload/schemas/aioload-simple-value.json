@@ -1,0 +1,12 @@
+{
+  "name": "value",
+  "namespace": "org.lsst.kafka_efd_demo.aioload.simple",
+  "type": "record",
+  "doc": "Value for a simple topic that just holds a timestamp.",
+  "fields": [
+    {
+      "name": "timestamp",
+      "type": {"type": "long", "logicalType": "timestamp-millis"}
+    }
+  ]
+}

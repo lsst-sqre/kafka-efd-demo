@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: aioload-simple-consumer-0
+spec:
+  template:
+    metadata:
+      labels:
+        role: "consumer"
+        experiment: "aioload-simple"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: consumer
+        image: lsstsqre/kafka-efd-demo:tickets-DM-16500
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "aioload"
+          - "consume"
+          - "--name"
+          - "aioload-simple"
+          - "--count"
+          - "8"
+          - "--consumer-count"
+          - "1"
+          - "--consumer-id"
+          - "0"
+      restartPolicy: Never
+  backoffLimit: 4
