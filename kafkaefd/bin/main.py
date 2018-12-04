@@ -8,6 +8,7 @@ import click
 from .admin import admin
 from .registry import registry
 from .salschema import salschema
+from .salmock import salmock
 from .helloworld import helloworld
 from .helloavro import helloavro
 from .aioload import aioload
@@ -63,6 +64,7 @@ def help(ctx, topic, **kw):
 main.add_command(admin)
 main.add_command(registry)
 main.add_command(salschema)
+main.add_command(salmock)
 main.add_command(helloworld)
 main.add_command(helloavro)
 main.add_command(aioload)
