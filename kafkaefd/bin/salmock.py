@@ -3,12 +3,22 @@
 
 __all__ = ('salmock',)
 
+import asyncio
 import logging
 import random
 import datetime
+import json
+from io import BytesIO
 
+import aiohttp
+import aiokafka
 import click
+import fastavro
 import structlog
+import prometheus_async.aio.web
+from uritemplate import URITemplate
+
+from .utils import get_registry_url, get_broker_url
 
 
 @click.group()
@@ -20,6 +30,7 @@ def salmock(ctx):
 
 
 @salmock.command()
+@click.option('--topic', 'topic_names', multiple=True)
 @click.option(
     '--log-level', 'log_level',
     type=click.Choice(['debug', 'info', 'warning']),
@@ -30,11 +41,116 @@ def salmock(ctx):
     help='Port for the Prometheus metrics scraping endpoint.'
 )
 @click.pass_context
-def produce(ctx, log_level, prometheus_port):
+def produce(ctx, topic_names, log_level, prometheus_port):
     """Produce SAL messages for a specific set of SAL topics, or for all
     SAL topics with registered schemas.
     """
     configure_logging(level=log_level)
+
+    schema_registry_url = get_registry_url(ctx.parent.parent)
+
+    producer_settings = {
+        'bootstrap_servers': get_broker_url(ctx.parent.parent),
+    }
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(
+        producer_main(
+            loop=loop,
+            prometheus_port=prometheus_port,
+            schema_registry_url=schema_registry_url,
+            topic_names=topic_names,
+            root_producer_settings=producer_settings)
+    )
+
+
+async def producer_main(topic_names=None, *, loop, prometheus_port,
+                        schema_registry_url, root_producer_settings):
+    """Main asyncio-based function for the producer."""
+    # Start the Prometheus endpoint
+    asyncio.ensure_future(
+        prometheus_async.aio.web.start_http_server(
+            port=prometheus_port)
+    )
+
+    conn = aiohttp.TCPConnector(limit_per_host=20)
+    async with aiohttp.ClientSession(connector=conn) as httpsession:
+        if topic_names is None:
+            # autodiscover topic names
+            raise NotImplementedError
+
+        # Make topic names compatible with Kafka
+        topic_names = [n.replace('_', '-').lower() for n in topic_names]
+
+        # Get schemas for topics
+        tasks = []
+        for name in topic_names:
+            tasks.append(
+                asyncio.ensure_future(
+                    get_schema(
+                        name + '-value',
+                        httpsession,
+                        schema_registry_url)))
+        results = await asyncio.gather(*tasks)
+        schemas = {name: schema for name, schema in zip(topic_names, results)}
+
+    # Launch producers for each topic
+    tasks = []
+    for topic_name, schema in schemas.items():
+        producer_settings = dict(root_producer_settings)
+        tasks.append(
+            produce_for_topic(
+                loop=loop,
+                producer_settings=producer_settings,
+                topic_name=topic_name,
+                schema=schema,
+                period=1
+            )
+        )
+    await asyncio.gather(*tasks)
+
+
+async def get_schema(subject_name, httpsession, host):
+    headers = {
+        'Accept': 'application/vnd.schemaregistry.v1+json'
+    }
+    uri_temp = URITemplate(host + '/subjects{/subject}/versions{/version}')
+    uri = uri_temp.expand(subject=subject_name, version='latest')
+    r = await httpsession.get(uri, headers=headers)
+    data = await r.json()
+    return json.loads(data['schema'])
+
+
+async def produce_for_topic(*, loop, producer_settings, topic_name, schema,
+                            period):
+    logger = structlog.get_logger().bind(topic=topic_name)
+
+    # Preparse schema
+    schema = fastavro.parse_schema(schema)
+
+    # Start up the producer
+    producer = aiokafka.AIOKafkaProducer(loop=loop, **producer_settings)
+    await producer.start()
+    logger.info('Started producer')
+
+    # Generate and write messages
+    try:
+        for message in generate_message(schema):
+            logger.debug('New message', message=message)
+            message_fh = BytesIO()
+            fastavro.schemaless_writer(
+                message_fh,
+                schema,
+                message
+            )
+            message_fh.seek(0)
+            await producer.send_and_wait(
+                topic_name, value=message_fh.read())
+            logger.debug('Sent message')
+            # naieve message period; need to correct for production time
+            await asyncio.sleep(period)
+    finally:
+        await producer.stop()
 
 
 def generate_message(schema):
