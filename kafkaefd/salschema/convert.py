@@ -80,7 +80,7 @@ def convert_topic(root, validate=True):
             field['type'] = {
                 'type': 'enum',
                 'name': field['name'],
-                'symbols': enumeration.text.split(',')
+                'symbols': [s.strip() for s in enumeration.text.split(',')]
             }
 
         elif count > 1:
