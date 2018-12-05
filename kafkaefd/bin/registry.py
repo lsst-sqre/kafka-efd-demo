@@ -5,6 +5,7 @@ for Avro schemas.
 __all__ = ('registry',)
 
 import json
+import re
 
 import click
 import requests
@@ -35,8 +36,12 @@ def registry(ctx):
     '--compatibility', '-c', 'show_compatibility', is_flag=True,
     help='Show the compatibility configuration for each subject.'
 )
+@click.option(
+    '--filter', '-f', 'filter_regex',
+    help='Regex for selecting subjects.'
+)
 @click.pass_context
-def list_subjects(ctx, show_versions, show_compatibility):
+def list_subjects(ctx, show_versions, show_compatibility, filter_regex):
     """List subjects.
     """
     host = ctx.obj['host']
@@ -47,6 +52,10 @@ def list_subjects(ctx, show_versions, show_compatibility):
     r.raise_for_status()
     subjects = r.json()
     subjects.sort()
+
+    if filter_regex:
+        pattern = re.compile(filter_regex)
+        subjects = [s for s in subjects if pattern.match(s)]
 
     print('Found {0:d} subjects'.format(len(subjects)))
     for subject in subjects:

@@ -93,8 +93,12 @@ def topics(ctx):
     help='Show all topics, including internal Kafka topics, not just user '
          'topics. Internal topics start with an underscore'
 )
+@click.option(
+    '--filter', '-f', 'filter_regex',
+    help='Regex for selecting topics.'
+)
 @click.pass_context
-def list_topics(ctx, list_all):
+def list_topics(ctx, list_all, filter_regex):
     """List topics.
     """
     client = ctx.parent.obj['client']
@@ -106,6 +110,10 @@ def list_topics(ctx, list_all):
     topic_names.sort()
     if not list_all:
         topic_names = [t for t in topic_names if not t.startswith('_')]
+    if filter_regex:
+        pattern = re.compile(filter_regex)
+        topic_names = [t for t in topic_names if pattern.match(t)]
+
     for topic_name in topic_names:
         t = metadata.topics[topic_name]
 
