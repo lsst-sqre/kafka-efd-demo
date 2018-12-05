@@ -127,6 +127,7 @@ async def produce_for_topic(*, loop, producer_settings, topic_name, schema,
 
     # Preparse schema
     schema = fastavro.parse_schema(schema)
+    logger.info('Preparsed schema')
 
     # Start up the producer
     producer = aiokafka.AIOKafkaProducer(loop=loop, **producer_settings)
@@ -174,51 +175,64 @@ def generate_message(schema):
     # type.
     field_generators = {}
     for field in schema['fields']:
-        logger.debug('Making field generator', field=field['name'])
-        name = field['name']
-        if isinstance(field['type'], str):
-            # Basic field types
-            if field['type'] in ('int', 'long'):
-                field_generators[name] = generate_int
-            elif field['type'] == 'float':
-                field_generators[name] = generate_float
-            elif field['type'] == 'bytes':
-                field_generators[name] = generate_bytes
-            elif field['type'] == 'string':
-                field_generators[name] = generate_str
-            elif field['type'] == 'boolean':
-                field_generators[name] = generate_bool
-            else:
-                logger.error('Don\'t have generator for field type',
-                             field=name)
-                raise RuntimeError
-
-        elif isinstance(field['type'], dict):
-            # Complex field types
-            if 'logicalType' in field['type']:
-                if field['type']['logicalType'].startswith('timestamp'):
-                    field_generators[name] = generate_timestamp
-
-            elif 'type' in field['type']:
-                if field['type']['type'] == 'enum':
-                    field_generators[name] = EnumGenerator(
-                        field['type']['symbols'])
-
-            else:
-                logger.error('Don\'t have generator for field type',
-                             field=field)
-                raise RuntimeError
-
-        else:
-            logger.error('Don\'t have generator for field type',
-                         field=field)
-            raise RuntimeError
+        field_generators[field['name']] = get_field_generator(field)
 
     # Generate random messages infinitely
     while True:
         message = {n: gen() for n, gen in field_generators.items()}
         logger.debug(message=message)
         yield message
+
+
+def get_field_generator(field_schema):
+    """Get the field value generator function corresponding to the schema
+    for a single field.
+    """
+    logger = structlog.get_logger(__name__)
+    logger.debug('Making field generator', field=field_schema['name'])
+    if isinstance(field_schema['type'], str):
+        # Basic field types
+        return _get_primative_generator(field_schema['type'])
+
+    elif isinstance(field_schema['type'], dict):
+        # Complex field types
+        if 'logicalType' in field_schema['type']:
+            if field_schema['type']['logicalType'].startswith('timestamp'):
+                return generate_timestamp
+
+        elif 'type' in field_schema['type']:
+            if field_schema['type']['type'] == 'enum':
+                return EnumGenerator(
+                    field_schema['type']['symbols'])
+            elif field_schema['type']['type'] == 'array':
+                item_gen = _get_primative_generator(
+                    field_schema['type']['items'])
+                return ArrayGenerator(item_gen)
+
+    logger.error('Don\'t have generator for field type',
+                 field=field_schema)
+    raise RuntimeError
+
+
+def _get_primative_generator(item_type):
+    """Get the generator function for an int, long, float, bytes, string,
+    or boolean type.
+    """
+    logger = structlog.get_logger(__name__)
+    if item_type in ('int', 'long'):
+        return generate_int
+    elif item_type == 'float':
+        return generate_float
+    elif item_type == 'bytes':
+        return generate_bytes
+    elif item_type == 'string':
+        return generate_str
+    elif item_type == 'boolean':
+        return generate_bool
+    else:
+        logger.error('Don\'t have generator for field/item type',
+                     item_type=item_type)
+        raise RuntimeError
 
 
 def generate_bool():
@@ -263,6 +277,18 @@ class EnumGenerator:
 
     def __call__(self):
         return random.choice(self.symbols)
+
+
+class ArrayGenerator:
+    """Callable that generates array values of a given type.
+    """
+
+    def __init__(self, item_generator, length=2):
+        self.length = length
+        self.item_generator = item_generator
+
+    def __call__(self):
+        return [self.item_generator() for _ in range(self.length)]
 
 
 def configure_logging(level='info'):
