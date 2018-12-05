@@ -19,6 +19,8 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
   - [kafkaefd registry — Avro Schema Registry management](#kafkaefd-registry--avro-schema-registry-management)
   - [kafkaefd helloworld — Hello world demo](#kafkaefd-helloworld--hello-world-demo)
   - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
+  - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-registry--avro-schema-registry-management)
+- [Experiments](#experiments)
 - [InfluxDB installation (optional)](#influxdb-installation-optional)
 - [Lessons learned](#lessons-learned)
 
@@ -349,11 +351,58 @@ export GITHUB_TOKEN="..."  # your personal access token
 To convert the [ts_xml](https://github.com/lsst-ts/ts_xml) files into Avro, and persist those Avro schemas to a local directory `ts_xml_avro`, run:
 
 ```bash
-kafkaefd salschema --write ts_xml_avro
+kafkaefd salschema convert --write ts_xml_avro
 ```
 
 See `kafkaefd salschema -h` for other options.
 The `--xml-repo-ref` option, in particular, allows you to select a specific branch or tag of the [ts_xml](https://github.com/lsst-ts/ts_xml) repository for conversion.
+
+## Experiments
+
+The kafka-efd-demo includes several experimental applications that can be run at scale in Kubernetes.
+This section describes those experiments.
+
+### Mock SAL
+
+This experiment involves creating mock messages of the actual SAL topics, though with random values.
+The code is implemented in `kafkaefd.bin.salmock`.
+
+#### 1. Add SAL schemas to the Registry
+
+First, upload schemas to [ts_xml](https://github.com/lsst-ts/ts_xml) to the Schema Registry:
+
+1. Set up `GITHUB_USER` and `GITHUB_TOKEN` as described in [kafkaefd salschema](#kafkaefd-registry--avro-schema-registry-management).
+2. Run:
+
+   ```bash
+   kafkaefd salschema convert --upload
+   ```
+
+#### 2. Deploy the producer
+
+The producer is a Kubernetes job.
+Deploy it as:
+
+```bash
+kubectl apply -f k8s-apps/salmock-1node-100topic-1hz.yaml
+```
+
+Check the logs for the pod to verify that producers are up.
+
+This producer creates messages for the first 100 SAL topics (ordered alphabetically) at a rate of about 1 Hz.
+
+Each SAL topic is an independent Kafka topic.
+The name of the Kafka topic is a lower case version of the SAL topic with underscores replaced by dashes (`-`).
+
+#### 3. Monitor production
+
+Open http://localhost:9090 to view the Prometheus dashboard (use the `k8s-cluster/port-forward-prometheus.sh` script to set up port forwarding).
+
+You can graph the overall message production rate the mock SAL job using this query:
+
+```
+rate(salmock_produced_total[5m])
+```
 
 ## InfluxDB installation (optional)
 
