@@ -67,6 +67,8 @@ def produce(ctx, topic_names, log_level, prometheus_port):
 async def producer_main(topic_names=None, *, loop, prometheus_port,
                         schema_registry_url, root_producer_settings):
     """Main asyncio-based function for the producer."""
+    logger = structlog.get_logger(__name__)
+
     # Start the Prometheus endpoint
     asyncio.ensure_future(
         prometheus_async.aio.web.start_http_server(
@@ -75,14 +77,23 @@ async def producer_main(topic_names=None, *, loop, prometheus_port,
 
     conn = aiohttp.TCPConnector(limit_per_host=20)
     async with aiohttp.ClientSession(connector=conn) as httpsession:
-        if topic_names is None:
+        if len(topic_names) == 0:
             # autodiscover topic names
-            raise NotImplementedError
+            logger.debug('Autodiscovering topics')
+            topic_names = await autodiscover_topics(httpsession,
+                                                    schema_registry_url)
 
         # Make topic names compatible with Kafka
         topic_names = [n.replace('_', '-').lower() for n in topic_names]
 
+        # Ensure uniqueness
+        topic_names = list(set(topic_names))
+
+        logger.debug('Identified topics', topics=topic_names)
+
         # Get schemas for topics
+        # NOTE: if we auto-discovered topics we downloaded schemas, so there's
+        # room for optimization here.
         tasks = []
         for name in topic_names:
             tasks.append(
@@ -108,6 +119,55 @@ async def producer_main(topic_names=None, *, loop, prometheus_port,
             )
         )
     await asyncio.gather(*tasks)
+
+
+async def autodiscover_topics(httpsession, schema_registry_url):
+    logger = structlog.get_logger(__name__)
+    headers = {
+        'Accept': 'application/vnd.schemaregistry.v1+json'
+    }
+
+    # List all subjects in the registry
+    list_uri = schema_registry_url + '/subjects'
+    r = await httpsession.get(list_uri, headers=headers)
+    subject_names = await r.json()
+    logger.debug(
+        'autodiscover_topics found all subjects',
+        length=len(subject_names))
+
+    # Get all the schemas to find ones that are SAL schemas
+    tasks = []
+    for subject_name in subject_names:
+        tasks.append(
+            asyncio.ensure_future(
+                get_schema(subject_name, httpsession, schema_registry_url)
+            )
+        )
+    results = await asyncio.gather(*tasks)
+
+    # Get topic names corresponding to SAL schemas
+    topic_names = []
+    for subject_name, schema in zip(subject_names, results):
+        # Heuristic for identifying a SAL schema. Actually probably
+        # want to use namespace instead, but lsst.sal isn't formalized yet.
+        if 'sal_topic_type' in schema:
+            nameparts = subject_name.split('-')
+            if nameparts[-1] in ('value', 'key'):
+                topic_names.append('-'.join(nameparts[:-1]))
+                logger.debug(
+                    'autodiscover topic accepted',
+                    subject=subject_name)
+            else:
+                # unlikely code path?
+                topic_names.append(subject_name)
+                logger.debug(
+                    'autodiscover topic accepted',
+                    subject=subject_name)
+        else:
+            logger.debug(
+                'autodiscover topic rejected',
+                subject=subject_name)
+    return topic_names
 
 
 async def get_schema(subject_name, httpsession, host):
