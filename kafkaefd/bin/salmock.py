@@ -23,7 +23,10 @@ from .utils import get_registry_url, get_broker_url
 
 
 # Prometheus metrics
-PRODUCED = Counter('salmock_produced', 'Topics produced by mock SAL')
+PRODUCED = Counter(
+    'salmock_produced',
+    'Topics produced by mock SAL',
+    ['topic'])
 
 
 @click.group()
@@ -232,7 +235,8 @@ async def produce_for_topic(*, loop, producer_settings, topic_name, schema,
             message_fh.seek(0)
             await producer.send_and_wait(
                 topic_name, value=message_fh.read())
-            PRODUCED.inc()  # increment prometheus production counter
+            # increment prometheus production counter
+            PRODUCED.labels(topic=topic_name).inc()
             logger.debug('Sent message')
             # naieve message period; need to correct for production time
             await asyncio.sleep(period)
