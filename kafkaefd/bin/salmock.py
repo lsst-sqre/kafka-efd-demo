@@ -30,7 +30,18 @@ def salmock(ctx):
 
 
 @salmock.command()
-@click.option('--topic', 'topic_names', multiple=True)
+@click.option(
+    '--topic', 'topic_names', multiple=True, show_default=True,
+    help='Name of a SAL topic. Provider serveral --topic options to produce '
+         'for several SAL topics. Leave out the --topic option entirely to '
+         'autodiscover SAL topics based on the Schema Registry and produce '
+         'for all those topics.'
+)
+@click.option(
+    '--max-topics', type=int, default=None, show_default=True,
+    help='Maximum number of topics to produce. This is useful when --topic is '
+         'not set, but you don\'t want to produce for **all** the SAL topics.'
+)
 @click.option(
     '--log-level', 'log_level',
     type=click.Choice(['debug', 'info', 'warning']),
@@ -41,7 +52,7 @@ def salmock(ctx):
     help='Port for the Prometheus metrics scraping endpoint.'
 )
 @click.pass_context
-def produce(ctx, topic_names, log_level, prometheus_port):
+def produce(ctx, topic_names, max_topics, log_level, prometheus_port):
     """Produce SAL messages for a specific set of SAL topics, or for all
     SAL topics with registered schemas.
     """
@@ -60,11 +71,12 @@ def produce(ctx, topic_names, log_level, prometheus_port):
             prometheus_port=prometheus_port,
             schema_registry_url=schema_registry_url,
             topic_names=topic_names,
-            root_producer_settings=producer_settings)
+            root_producer_settings=producer_settings,
+            max_topics=max_topics)
     )
 
 
-async def producer_main(topic_names=None, *, loop, prometheus_port,
+async def producer_main(topic_names=None, *, max_topics, loop, prometheus_port,
                         schema_registry_url, root_producer_settings):
     """Main asyncio-based function for the producer."""
     logger = structlog.get_logger(__name__)
@@ -88,6 +100,14 @@ async def producer_main(topic_names=None, *, loop, prometheus_port,
 
         # Ensure uniqueness
         topic_names = list(set(topic_names))
+
+        # Sort
+        topic_names.sort()
+
+        # Subset topic list
+        if max_topics is not None:
+            if len(topic_names) > max_topics:
+                topic_names = topic_names[:max_topics]
 
         logger.debug('Identified topics', topics=topic_names)
 
