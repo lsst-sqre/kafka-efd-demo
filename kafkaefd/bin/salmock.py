@@ -221,7 +221,7 @@ def _get_primative_generator(item_type):
     logger = structlog.get_logger(__name__)
     if item_type in ('int', 'long'):
         return generate_int
-    elif item_type == 'float':
+    elif item_type in ('float', 'double'):
         return generate_float
     elif item_type == 'bytes':
         return generate_bytes
