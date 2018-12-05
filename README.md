@@ -128,7 +128,7 @@ From the pod's shell,
 1. Create a topic:
 
    ```bash
-   kafka-topics --zookeeper confluent-kafka-cp-zookeeper-headless:2181 --topic confluent-kafka-topic --create --partitions 1 --replication-factor 1 --if-not-exists
+   kafka-topics --zookeeper confluent-cp-zookeeper-headless:2181 --topic confluent-kafka-topic --create --partitions 1 --replication-factor 1 --if-not-exists
    ```
 
 2. Create a message:
@@ -140,13 +140,13 @@ From the pod's shell,
 3. Produce a message to the topic:
 
    ```bash
-   echo "$MESSAGE" | kafka-console-producer --broker-list confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic
+   echo "$MESSAGE" | kafka-console-producer --broker-list confluent-cp-kafka-headless:9092 --topic confluent-kafka-topic
    ```
 
 4. Consume the message:
 
    ```bash
-   kafka-console-consumer --bootstrap-server confluent-kafka-cp-kafka-headless:9092 --topic confluent-kafka-topic --from-beginning --timeout-ms 2000 --max-messages 1 | grep "$MESSAGE"
+   kafka-console-consumer --bootstrap-server confluent-cp-kafka-headless:9092 --topic confluent-kafka-topic --from-beginning --timeout-ms 2000 --max-messages 1 | grep "$MESSAGE"
    ```
 
 ## Connecting to Kafka via Telepresence
@@ -158,7 +158,7 @@ This use useful for development since you can test client code from a local shel
 To expose the Kafka brokers and Schema Registry locally, run this line in a local shell:
 
 ```bash
-telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless --also-proxy confluent-kafka-cp-schema-registry
+telepresence --run-shell --namespace default --also-proxy confluent-cp-kafka-headless --also-proxy confluent-cp-schema-registry
 ```
 
 Now you can run other Kafka clients in other shells.
@@ -182,7 +182,7 @@ Check that the command-line app is install
 kafkaefd help
 ```
 
-**Note:** The `--broker` option defaults to `confluent-kafka-cp-kafka-headless:9092`.
+**Note:** The `--broker` option defaults to `confluent-cp-kafka-headless:9092`.
 This is the headless service for the Kafka brokers given the Kubernetes/Helm installation described above.
 This default should work both inside the cluster and via Telepresence.
 
