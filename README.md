@@ -20,8 +20,9 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
   - [kafkaefd registry — Avro Schema Registry management](#kafkaefd-registry--avro-schema-registry-management)
   - [kafkaefd helloworld — Hello world demo](#kafkaefd-helloworld--hello-world-demo)
   - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
-  - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-registry--avro-schema-registry-management)
+  - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-salschema--ts_sal-schema-conversion)
 - [Experiments](#experiments)
+  - [Mock SAL](#mock-sal)
 - [Lessons learned](#lessons-learned)
 
 ## Kubernetes cluster set up
@@ -401,7 +402,7 @@ The subject names for the schemas match the topic names, with a `-value` suffix.
 
 First, upload schemas from [ts_xml](https://github.com/lsst-ts/ts_xml) to the Schema Registry:
 
-1. Set up `GITHUB_USER` and `GITHUB_TOKEN` as described in [kafkaefd salschema](#kafkaefd-registry--avro-schema-registry-management).
+1. Set up `GITHUB_USER` and `GITHUB_TOKEN` as described in [kafkaefd salschema](#kafkaefd-salschema--ts_sal-schema-conversion).
 
 2. Run:
 
