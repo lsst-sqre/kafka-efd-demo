@@ -12,6 +12,7 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
 - [Kubernetes cluster set up](#kubernetes-cluster-set-up)
 - [Prometheus and Grafana installation](#prometheus-and-grafana-installation)
 - [Kafka cluster installation](#kafka-cluster-installation)
+- [InfluxDB installation (optional)](#influxdb-installation-optional)
 - [Test the Kafka cluster](#test-the-kafka-cluster)
 - [Connecting to Kafka via Telepresence](#connecting-to-kafka-via-telepresence)
 - [The kafkaefd demo application](#the-kafkaefd-demo-application)
@@ -21,7 +22,6 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
   - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
   - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-registry--avro-schema-registry-management)
 - [Experiments](#experiments)
-- [InfluxDB installation (optional)](#influxdb-installation-optional)
 - [Lessons learned](#lessons-learned)
 
 ## Kubernetes cluster set up
@@ -110,6 +110,29 @@ From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts]
 
 - [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html)
 - [Confluent Platform Helm charts repository](https://github.com/confluentinc/cp-helm-charts)
+
+## InfluxDB installation (optional)
+
+Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
+
+### InfluxDB Sink Connector configuration
+
+The [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) consumes Kafka Avro-serialized messages and send them to InfluxDB.
+
+From the `k8s-cluster` directory, connect to the Kafka Connect server:
+
+```bash
+./port-forward-kafka-connect.sh
+```
+
+From the `k8s-cluster/cp-kafka-connect` directory, configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html):
+
+```bash
+./configure-influxdb-connector.sh
+```
+
+With this example configuration the `kafkaefd helloavro` command will send messages to
+InfluxDB.
 
 ## Test the Kafka cluster
 
@@ -406,29 +429,6 @@ You can graph the overall message production rate the mock SAL job using this qu
 ```
 rate(salmock_produced_total[5m])
 ```
-
-## InfluxDB installation (optional)
-
-Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
-
-### InfluxDB Sink Connector configuration
-
-The [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) consumes Kafka Avro-serialized messages and send them to InfluxDB.
-
-From the `k8s-cluster` directory, connect to the Kafka Connect server:
-
-```bash
-./port-forward-kafka-connect.sh
-```
-
-From the `k8s-cluster/cp-kafka-connect` directory, configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html):
-
-```bash
-./configure-influxdb-connector.sh
-```
-
-With this example configuration the `kafkaefd helloavro` command will send messages to
-InfluxDB.
 
 ## Lessons learned
 
