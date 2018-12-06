@@ -364,14 +364,22 @@ This section describes those experiments.
 
 ### Mock SAL
 
-This experiment involves creating mock messages of the actual SAL topics, though with random values.
+This experiment creates mock messages of the actual SAL topics, though with random values.
 The code is implemented in `kafkaefd.bin.salmock`.
+
+This producer, by default, creates messages for the first 100 SAL topics (ordered alphabetically) at a rate of about 1 Hz.
+Each SAL topic is an independent Kafka topic.
+The name of the Kafka topic is a lower case version of the SAL topic with underscores replaced by dashes (`-`).
+
+The schemas for the Kafka topics are in the Schema Registry.
+The subject names for the schemas match the topic names, with a `-value` suffix.
 
 #### 1. Add SAL schemas to the Registry
 
-First, upload schemas to [ts_xml](https://github.com/lsst-ts/ts_xml) to the Schema Registry:
+First, upload schemas from [ts_xml](https://github.com/lsst-ts/ts_xml) to the Schema Registry:
 
 1. Set up `GITHUB_USER` and `GITHUB_TOKEN` as described in [kafkaefd salschema](#kafkaefd-registry--avro-schema-registry-management).
+
 2. Run:
 
    ```bash
@@ -381,18 +389,13 @@ First, upload schemas to [ts_xml](https://github.com/lsst-ts/ts_xml) to the Sche
 #### 2. Deploy the producer
 
 The producer is a Kubernetes job.
-Deploy it as:
+Deploy it:
 
 ```bash
 kubectl apply -f k8s-apps/salmock-1node-100topic-1hz.yaml
 ```
 
 Check the logs for the pod to verify that producers are up.
-
-This producer creates messages for the first 100 SAL topics (ordered alphabetically) at a rate of about 1 Hz.
-
-Each SAL topic is an independent Kafka topic.
-The name of the Kafka topic is a lower case version of the SAL topic with underscores replaced by dashes (`-`).
 
 #### 3. Monitor production
 
