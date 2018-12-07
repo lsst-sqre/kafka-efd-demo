@@ -1,0 +1,42 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "An enumeration indicating the detailed state. See the DetailedStateValue enumeration defined in the Typedefs package.",
+      "name": "detailedState",
+      "type": {
+        "name": "detailedState",
+        "symbols": [
+          "detailedState_DetailedState_DisabledState",
+          "detailedState_DetailedState_EnabledState",
+          "detailedState_DetailedState_FaultState",
+          "detailedState_DetailedState_OfflineState",
+          "detailedState_DetailedState_StandbyState",
+          "detailedState_DetailedState_MonoSettingUpState",
+          "detailedState_DetailedState_StoppedState",
+          "detailedState_DetailedState_StoppedCoolerOffState",
+          "detailedState_DetailedState_StoppedLightOffState",
+          "detailedState_DetailedState_StoppedLightOnState",
+          "detailedState_DetailedState_MonoManualSetup",
+          "detailedState_DetailedState_MonoAutomaticSetup"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "ATMonochromator_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_subsystem": "ATMonochromator",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.5.2",
+  "type": "record"
+}

@@ -1,6 +1,14 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Raw measurements from displacement sensors",
       "name": "rawPosition",
       "sal_frequency": 1.0,

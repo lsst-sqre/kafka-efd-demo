@@ -2,68 +2,20 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
-      "name": "timestamp",
-      "type": "double"
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
     },
     {
       "name": "anyWarning",
       "type": "boolean"
     },
     {
-      "name": "sensorReportsInvalidCommand",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsCommunicationTimeoutError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsDataLengthError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsNumberOfParametersError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsParameterError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsCommunicationError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsIDNumberError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsExpansionLineError",
-      "type": "boolean"
-    },
-    {
-      "name": "sensorReportsWriteControlError",
-      "type": "boolean"
-    },
-    {
-      "name": "responseTimeout",
-      "type": "boolean"
-    },
-    {
-      "name": "invalidLength",
-      "type": "boolean"
-    },
-    {
-      "name": "invalidResponse",
-      "type": "boolean"
-    },
-    {
-      "name": "unknownCommand",
-      "type": "boolean"
-    },
-    {
-      "name": "unknownProblem",
-      "type": "boolean"
+      "name": "displacementSensorFlags",
+      "type": "long"
     }
   ],
   "name": "MTM1M3_logevent_displacementSensorWarning",
@@ -71,6 +23,6 @@
   "sal_alias": "displacementSensorWarning",
   "sal_subsystem": "MTM1M3",
   "sal_topic_type": "SALEvent",
-  "sal_version": "3.7.0",
+  "sal_version": "3.8.35",
   "type": "record"
 }

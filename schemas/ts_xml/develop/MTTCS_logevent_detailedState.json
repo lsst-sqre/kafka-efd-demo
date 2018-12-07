@@ -2,6 +2,14 @@
   "doc": "The current detailed state of the system.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "The current detailed state of the system.",
       "name": "detailedState",
       "sal_units": "NA",

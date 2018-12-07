@@ -2,6 +2,14 @@
   "doc": "Stop one or more queued scripts and/or the current script.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Number of valid entries in salIndices.",
       "name": "length",
       "type": "int"

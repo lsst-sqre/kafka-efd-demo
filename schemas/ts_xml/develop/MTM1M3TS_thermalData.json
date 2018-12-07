@@ -1,0 +1,50 @@
+{
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "double"
+    },
+    {
+      "name": "thermocoupleScanner1",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "thermocoupleScanner2",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "thermocoupleScanner3",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    },
+    {
+      "name": "thermocoupleScanner4",
+      "type": {
+        "items": "float",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3TS_thermalData",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "MTM1M3TS",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8.35",
+  "type": "record"
+}

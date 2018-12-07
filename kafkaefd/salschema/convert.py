@@ -43,6 +43,13 @@ def convert_topic(root, validate=True):
     # (SALCommand, SALEvent, or SALTelemetry)
     avsc['sal_topic_type'] = root.tag
 
+    # Add a timestamp field
+    avsc['fields'].append({
+        "name": "kafka_timestamp",
+        "type": {"type": "long", "logicalType": "timestamp-millis"},
+        "doc": "Timestamp when the Kafka message was created."
+    })
+
     # Convert fields
     for item in root.iterfind('item'):
         field = dict()
@@ -73,7 +80,7 @@ def convert_topic(root, validate=True):
             field['type'] = {
                 'type': 'enum',
                 'name': field['name'],
-                'symbols': enumeration.text.split(',')
+                'symbols': [s.strip() for s in enumeration.text.split(',')]
             }
 
         elif count > 1:
@@ -238,6 +245,7 @@ _SAL_TO_AVRO_TYPE['unsigned short'] = 'int'
 _SAL_TO_AVRO_TYPE['unsigned int'] = 'int'
 _SAL_TO_AVRO_TYPE['unsigned long'] = 'long'
 _SAL_TO_AVRO_TYPE['byte'] = 'bytes'
+_SAL_TO_AVRO_TYPE['unsigned long long'] = 'long'
 _SAL_TO_AVRO_TYPE['char'] = 'bytes'
 _SAL_TO_AVRO_TYPE['octet'] = 'bytes'
 

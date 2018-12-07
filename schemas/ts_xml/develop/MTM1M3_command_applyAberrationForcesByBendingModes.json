@@ -2,6 +2,14 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "name": "coefficients",
       "type": {
         "items": "float",
@@ -14,6 +22,6 @@
   "sal_alias": "applyAberrationForcesByBendingModes",
   "sal_subsystem": "MTM1M3",
   "sal_topic_type": "SALCommand",
-  "sal_version": "3.7.0",
+  "sal_version": "3.8.35",
   "type": "record"
 }

@@ -2,6 +2,14 @@
   "doc": "Move a script elsewhere in the queue. This will fail if the script is already running.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Index of Script SAL component to move.",
       "name": "salIndex",
       "type": "int"

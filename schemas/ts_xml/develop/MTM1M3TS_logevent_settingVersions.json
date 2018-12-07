@@ -1,0 +1,29 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/MTM1M3TS_logevent_settingVersions.html",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "recommendedSettingsVersion",
+      "type": "string"
+    },
+    {
+      "name": "recommendedSettingsLabels",
+      "type": "string"
+    }
+  ],
+  "name": "MTM1M3TS_logevent_settingVersions",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingVersions",
+  "sal_author": "Dave Mills",
+  "sal_subsystem": "MTM1M3TS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "SALVersion",
+  "type": "record"
+}

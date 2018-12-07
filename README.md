@@ -12,6 +12,7 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
 - [Kubernetes cluster set up](#kubernetes-cluster-set-up)
 - [Prometheus and Grafana installation](#prometheus-and-grafana-installation)
 - [Kafka cluster installation](#kafka-cluster-installation)
+- [InfluxDB installation (optional)](#influxdb-installation-optional)
 - [Test the Kafka cluster](#test-the-kafka-cluster)
 - [Connecting to Kafka via Telepresence](#connecting-to-kafka-via-telepresence)
 - [The kafkaefd demo application](#the-kafkaefd-demo-application)
@@ -19,7 +20,9 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
   - [kafkaefd registry — Avro Schema Registry management](#kafkaefd-registry--avro-schema-registry-management)
   - [kafkaefd helloworld — Hello world demo](#kafkaefd-helloworld--hello-world-demo)
   - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
-- [InfluxDB installation (optional)](#influxdb-installation-optional)
+  - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-salschema--ts_sal-schema-conversion)
+- [Experiments](#experiments)
+  - [Mock SAL](#mock-sal)
 - [Lessons learned](#lessons-learned)
 
 ## Kubernetes cluster set up
@@ -108,6 +111,29 @@ From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts]
 
 - [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html)
 - [Confluent Platform Helm charts repository](https://github.com/confluentinc/cp-helm-charts)
+
+## InfluxDB installation (optional)
+
+Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
+
+### InfluxDB Sink Connector configuration
+
+The [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) consumes Kafka Avro-serialized messages and send them to InfluxDB.
+
+From the `k8s-cluster` directory, connect to the Kafka Connect server:
+
+```bash
+./port-forward-kafka-connect.sh
+```
+
+From the `k8s-cluster/cp-kafka-connect` directory, configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html):
+
+```bash
+./configure-influxdb-connector.sh
+```
+
+With this example configuration the `kafkaefd helloavro` command will send messages to
+InfluxDB.
 
 ## Test the Kafka cluster
 
@@ -349,34 +375,61 @@ export GITHUB_TOKEN="..."  # your personal access token
 To convert the [ts_xml](https://github.com/lsst-ts/ts_xml) files into Avro, and persist those Avro schemas to a local directory `ts_xml_avro`, run:
 
 ```bash
-kafkaefd salschema --write ts_xml_avro
+kafkaefd salschema convert --write ts_xml_avro
 ```
 
 See `kafkaefd salschema -h` for other options.
 The `--xml-repo-ref` option, in particular, allows you to select a specific branch or tag of the [ts_xml](https://github.com/lsst-ts/ts_xml) repository for conversion.
 
-## InfluxDB installation (optional)
+## Experiments
 
-Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
+The kafka-efd-demo includes several experimental applications that can be run at scale in Kubernetes.
+This section describes those experiments.
 
-### InfluxDB Sink Connector configuration
+### Mock SAL
 
-The [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) consumes Kafka Avro-serialized messages and send them to InfluxDB.
+This experiment creates mock messages of the actual SAL topics, though with random values.
+The code is implemented in `kafkaefd.bin.salmock`.
 
-From the `k8s-cluster` directory, connect to the Kafka Connect server:
+This producer, by default, creates messages for the first 100 SAL topics (ordered alphabetically) at a rate of about 1 Hz.
+Each SAL topic is an independent Kafka topic.
+The name of the Kafka topic is a lower case version of the SAL topic with underscores replaced by dashes (`-`).
+
+The schemas for the Kafka topics are in the Schema Registry.
+The subject names for the schemas match the topic names, with a `-value` suffix.
+
+#### 1. Add SAL schemas to the Registry
+
+First, upload schemas from [ts_xml](https://github.com/lsst-ts/ts_xml) to the Schema Registry:
+
+1. Set up `GITHUB_USER` and `GITHUB_TOKEN` as described in [kafkaefd salschema](#kafkaefd-salschema--ts_sal-schema-conversion).
+
+2. Run:
+
+   ```bash
+   kafkaefd salschema convert --upload
+   ```
+
+#### 2. Deploy the producer
+
+The producer is a Kubernetes job.
+Deploy it:
 
 ```bash
-./port-forward-kafka-connect.sh
+kubectl apply -f k8s-apps/salmock-1node-100topic-1hz.yaml
 ```
 
-From the `k8s-cluster/cp-kafka-connect` directory, configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html):
+Check the logs for the pod to verify that producers are up.
 
-```bash
-./configure-influxdb-connector.sh
+#### 3. Monitor production
+
+Open http://localhost:9090 to view the Prometheus dashboard (use the `k8s-cluster/port-forward-prometheus.sh` script to set up port forwarding).
+
+You can graph the overall message production rate the mock SAL job using this query:
+
 ```
-
-With this example configuration the `kafkaefd helloavro` command will send messages to
-InfluxDB.
+rate(salmock_produced_total[5m])
+```
 
 ## Lessons learned
 

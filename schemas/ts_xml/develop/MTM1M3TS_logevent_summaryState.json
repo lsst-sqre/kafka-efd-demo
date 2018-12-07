@@ -1,0 +1,25 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help/MTM1M3TS_logevent_summaryState.html",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "summaryState",
+      "type": "long"
+    }
+  ],
+  "name": "MTM1M3TS_logevent_summaryState",
+  "namespace": "lsst.sal",
+  "sal_alias": "summaryState",
+  "sal_author": "Dave Mills",
+  "sal_subsystem": "MTM1M3TS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "SALVersion",
+  "type": "record"
+}

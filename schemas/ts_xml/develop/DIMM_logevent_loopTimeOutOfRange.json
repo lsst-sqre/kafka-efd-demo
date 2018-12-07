@@ -1,0 +1,24 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "loopTimeOutOfRange",
+      "type": "boolean"
+    }
+  ],
+  "name": "DIMM_logevent_loopTimeOutOfRange",
+  "namespace": "lsst.sal",
+  "sal_alias": "loopTimeOutOfRange",
+  "sal_subsystem": "DIMM",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.31",
+  "type": "record"
+}

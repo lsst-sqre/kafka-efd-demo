@@ -2,6 +2,14 @@
   "doc": "SAL indices of scripts on the queue.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Is the ScriptQueue CSC enabled? New scripts will only be started if both `running` and `enable` are True.",
       "name": "enabled",
       "type": "boolean"

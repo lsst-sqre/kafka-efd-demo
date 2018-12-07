@@ -2,6 +2,14 @@
   "doc": "Output script event for a specified script.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "SAL index of Script for which you want information.",
       "name": "salIndex",
       "type": "int"

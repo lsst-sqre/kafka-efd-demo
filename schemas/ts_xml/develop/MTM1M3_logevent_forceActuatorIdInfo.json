@@ -1,0 +1,62 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "xDataReferenceId",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "yDataReferenceId",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "zDataReferenceId",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "sDataReferenceId",
+      "type": {
+        "items": "int",
+        "type": "array"
+      }
+    },
+    {
+      "name": "ilcUniqueId",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    },
+    {
+      "name": "mezzanineUniqueId",
+      "type": {
+        "items": "long",
+        "type": "array"
+      }
+    }
+  ],
+  "name": "MTM1M3_logevent_forceActuatorIdInfo",
+  "namespace": "lsst.sal",
+  "sal_alias": "forceActuatorIdInfo",
+  "sal_subsystem": "MTM1M3",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.35",
+  "type": "record"
+}

@@ -2,6 +2,14 @@
   "doc": "Information about a queued script.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "ID of command which queued this script.",
       "name": "cmdId",
       "type": "int"

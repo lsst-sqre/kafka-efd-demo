@@ -2,8 +2,12 @@
   "doc": "http://sal.lsst.org",
   "fields": [
     {
-      "name": "timestamp",
-      "type": "double"
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
     },
     {
       "name": "zForces",
@@ -23,6 +27,10 @@
     {
       "name": "mY",
       "type": "float"
+    },
+    {
+      "name": "forceMagnitude",
+      "type": "float"
     }
   ],
   "name": "MTM1M3_logevent_rejectedActiveOpticForces",
@@ -30,6 +38,6 @@
   "sal_alias": "rejectedActiveOpticForces",
   "sal_subsystem": "MTM1M3",
   "sal_topic_type": "SALEvent",
-  "sal_version": "3.7.0",
+  "sal_version": "3.8.35",
   "type": "record"
 }

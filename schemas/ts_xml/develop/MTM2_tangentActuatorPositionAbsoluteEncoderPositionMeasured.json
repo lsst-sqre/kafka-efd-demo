@@ -1,6 +1,14 @@
 {
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Present position in microns, the sign of the position is consistent with the optical coordinate system as per LTS-136",
       "name": "tangentLink0DegAbsoluteEncoderPositionMeasured",
       "sal_frequency": 1.0,

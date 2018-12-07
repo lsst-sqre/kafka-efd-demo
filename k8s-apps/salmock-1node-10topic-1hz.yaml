@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: salmock-producer-0
+spec:
+  template:
+    metadata:
+      labels:
+        role: "producer"
+        producerId: "0"
+        experiment: "salmock"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: consumer
+        image: lsstsqre/kafka-efd-demo:tickets-DM-16692
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "salmock"
+          - "produce"
+          - "--max-topics"
+          - "10"
+          - "--log-level"
+          - "info"
+      restartPolicy: Never
+  backoffLimit: 4

@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "An enumeration indicating the FiberSpectrograph detailed state. See the DetailedStateValue enumeration defined in the Typedefs package.",
+      "name": "detailedState",
+      "type": "long"
+    }
+  ],
+  "name": "FiberSpectrograph_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_subsystem": "FiberSpectrograph",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.1",
+  "type": "record"
+}

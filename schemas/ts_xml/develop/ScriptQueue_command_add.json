@@ -2,6 +2,14 @@
   "doc": "Add a script to the queue and configure it.",
   "fields": [
     {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
       "doc": "Is this a standard script (True) or an external script (False)?",
       "name": "isStandard",
       "type": "boolean"

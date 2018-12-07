@@ -12,6 +12,7 @@ from pathlib import Path
 import aiohttp
 import requests
 import click
+from uritemplate import URITemplate
 
 from ..salschema.repo import SalXmlRepo
 from ..salschema.convert import convert_topic
@@ -63,12 +64,17 @@ def salschema(ctx):
     help='Directory to write avro schema files to.'
 )
 @click.option(
+    '--upload', 'upload_to_registry', is_flag=True,
+    default=False,
+    help='Upload schemas to the schema registry'
+)
+@click.option(
     '--print', 'print_schemas', is_flag=True, default=False,
     help='Print schemas to the console'
 )
 @click.pass_context
 def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
-            github_token, write_dir, print_schemas):
+            github_token, write_dir, upload_to_registry, print_schemas):
     """Batch convert SAL XML schemas from the ``ts_sal`` GitHub repository to
     Avro format.
 
@@ -81,6 +87,7 @@ def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
     xml_org, xml_repo_name = xml_repo_slug.split('/')
 
     async def _convert():
+        # limit number of simultaneous connections
         async with aiohttp.ClientSession() as httpsession:
             repo = await SalXmlRepo.from_github(
                 httpsession,
@@ -93,7 +100,6 @@ def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
         schemas = {}
         for topic_name, topic in repo.items():
             avsc = convert_topic(topic)
-            # print(json.dumps(avsc, indent=2, sort_keys=True))
             schemas[topic_name] = avsc
 
         if write_dir is not None:
@@ -104,6 +110,15 @@ def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
                 with open(path, 'w') as f:
                     f.write(json.dumps(schema, indent=2, sort_keys=True))
 
+        if upload_to_registry:
+            host = ctx.obj['host']
+            # Limit number of connectors, otherwise schema registry will
+            # drop connections.
+            conn = aiohttp.TCPConnector(limit_per_host=20)
+            async with aiohttp.ClientSession(connector=conn) as httpsession:
+                await _upload_schemas(
+                    schemas, httpsession, host)
+
         if print_schemas:
             for name, schema in schemas.items():
                 print(json.dumps(schema, indent=2, sort_keys=True))
@@ -112,3 +127,28 @@ def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
 
     loop = asyncio.get_event_loop()
     loop.run_until_complete(_convert())
+
+
+async def _upload_schemas(schemas, httpsession, schema_registry_url):
+    headers = {
+        'Accept': 'application/vnd.schemaregistry.v1+json'
+    }
+    uri_template = URITemplate(
+        schema_registry_url + '/subjects{/subject}/versions')
+
+    tasks = []
+    for name, schema in schemas.items():
+        subject = name.replace('_', '-').lower() + '-value'
+        url = uri_template.expand(subject=subject)
+        data = {'schema': json.dumps(schema)}
+        tasks.append(
+            asyncio.ensure_future(
+                httpsession.post(url, json=data, headers=headers)
+            )
+        )
+    print('Uploading {0:d} schemas'.format(len(tasks)))
+    results = await asyncio.gather(*tasks)
+    for result in results:
+        if result.status >= 300:
+            message = await result.json()
+            print('Error:\n' + message)
