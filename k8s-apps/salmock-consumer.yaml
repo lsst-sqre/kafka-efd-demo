@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: salmock-consumer
+spec:
+  template:
+    metadata:
+      labels:
+        role: "consumer"
+        experiment: "salmock"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: consumer
+        image: lsstsqre/kafka-efd-demo:tickets-DM-16783
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "salmock"
+          - "consume"
+          - "ATArchiver_logevent_archiverEntitySummaryState"
+      restartPolicy: Never
+  backoffLimit: 4

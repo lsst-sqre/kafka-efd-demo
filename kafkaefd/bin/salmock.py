@@ -83,6 +83,36 @@ def produce(ctx, topic_names, max_topics, log_level, prometheus_port):
     )
 
 
+@salmock.command()
+@click.argument('topic_name')
+@click.option(
+    '--log-level', 'log_level',
+    type=click.Choice(['debug', 'info', 'warning']),
+    default='info', help='Logging level'
+)
+@click.pass_context
+def consume(ctx, topic_name, log_level):
+    """Consume a single topic, printing messages to logging.
+    """
+    configure_logging(level=log_level)
+
+    schema_registry_url = get_registry_url(ctx.parent.parent)
+    consumer_settings = {
+        'bootstrap_servers': get_broker_url(ctx.parent.parent),
+        'auto_offset_reset': 'latest'
+    }
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(
+        consumer_main(
+            loop=loop,
+            topic_name=topic_name,
+            consumer_settings=consumer_settings,
+            schema_registry_url=schema_registry_url
+        )
+    )
+
+
 async def producer_main(topic_names=None, *, max_topics, loop, prometheus_port,
                         schema_registry_url, root_producer_settings):
     """Main asyncio-based function for the producer."""
@@ -378,6 +408,43 @@ class ArrayGenerator:
 
     def __call__(self):
         return [self.item_generator() for _ in range(self.length)]
+
+
+async def consumer_main(*, loop, topic_name, consumer_settings,
+                        schema_registry_url):
+    """Main asyncio-based function for the single-topic consumer.
+    """
+    logger = structlog.get_logger(__name__)
+
+    topic_name = topic_name.replace('_', '-').lower()
+
+    async with aiohttp.ClientSession() as httpsession:
+        schema = await get_schema(
+            topic_name + '-value',
+            httpsession,
+            schema_registry_url)
+
+    # Start up the Kafka consumer
+    consumer = aiokafka.AIOKafkaConsumer(loop=loop, **consumer_settings)
+
+    # Main loop for consuming messages
+    try:
+        await consumer.start()
+
+        # Subscribe to all topics in the experiment
+        consumer.subscribe([topic_name])
+        logger.info(f'Started consumer for topic {topic_name}')
+
+        while True:
+            async for message in consumer:
+                value_fh = BytesIO(message.value)
+                value_fh.seek(0)
+                value = fastavro.schemaless_reader(
+                    value_fh,
+                    schema)
+                logger.info("Received message", message=value)
+    finally:
+        consumer.stop()
 
 
 def configure_logging(level='info'):
