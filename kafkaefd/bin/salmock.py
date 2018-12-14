@@ -8,6 +8,7 @@ import logging
 import random
 import datetime
 import json
+import struct
 from io import BytesIO
 
 import aiohttp
@@ -21,6 +22,8 @@ from uritemplate import URITemplate
 
 from .utils import get_registry_url, get_broker_url
 
+# required by confluent wire format
+MAGIC_BYTE = 0
 
 # Prometheus metrics
 PRODUCED = Counter(
@@ -171,7 +174,8 @@ async def producer_main(topic_names=None, *, max_topics, loop, prometheus_port,
                 loop=loop,
                 producer_settings=producer_settings,
                 topic_name=topic_name,
-                schema=schema,
+                schema=schema[0],
+                schema_id=schema[1],
                 period=1
             )
         )
@@ -207,7 +211,7 @@ async def autodiscover_topics(httpsession, schema_registry_url):
     for subject_name, schema in zip(subject_names, results):
         # Heuristic for identifying a SAL schema. Actually probably
         # want to use namespace instead, but lsst.sal isn't formalized yet.
-        if 'sal_topic_type' in schema:
+        if 'sal_topic_type' in schema[0]:
             nameparts = subject_name.split('-')
             if nameparts[-1] in ('value', 'key'):
                 topic_names.append('-'.join(nameparts[:-1]))
@@ -235,11 +239,13 @@ async def get_schema(subject_name, httpsession, host):
     uri = uri_temp.expand(subject=subject_name, version='latest')
     r = await httpsession.get(uri, headers=headers)
     data = await r.json()
-    return json.loads(data['schema'])
+    schema = json.loads(data['schema'])
+    schema_id = data['id']
+    return schema, schema_id
 
 
 async def produce_for_topic(*, loop, producer_settings, topic_name, schema,
-                            period):
+                            schema_id, period):
     logger = structlog.get_logger().bind(topic=topic_name)
 
     # Preparse schema
@@ -256,6 +262,7 @@ async def produce_for_topic(*, loop, producer_settings, topic_name, schema,
         for message in generate_message(schema):
             logger.debug('New message', message=message)
             message_fh = BytesIO()
+            message_fh.write(struct.pack('>bI', MAGIC_BYTE, schema_id))
             fastavro.schemaless_writer(
                 message_fh,
                 schema,
@@ -419,7 +426,7 @@ async def consumer_main(*, loop, topic_name, consumer_settings,
     topic_name = topic_name.replace('_', '-').lower()
 
     async with aiohttp.ClientSession() as httpsession:
-        schema = await get_schema(
+        schema, schema_id = await get_schema(
             topic_name + '-value',
             httpsession,
             schema_registry_url)
