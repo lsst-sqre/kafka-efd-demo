@@ -297,6 +297,52 @@ def configure_topic(ctx, topic, settings, show_details):
         print(json.dumps(config_values, sort_keys=True, indent=2))
 
 
+@admin.group()
+@click.pass_context
+def connector(ctx):
+    """Configure the InfluxDB Sink connector.
+    """
+
+
+@connector.command('config')
+@click.argument('topics', nargs=-1)
+@click.option(
+    '--database', '-d', default="kafkaefd",
+    help='InfluxDB database name.'
+)
+@click.option(
+    '--tasks', '-t', default=1,
+    help='Number of Kafka Connect tasks.'
+)
+@click.pass_context
+def configure_connector(ctx, topics, database, tasks):
+    """Reuturn the InfluxDB Sink Connector configuration
+    """
+    # Make topic names compatible with Kafka
+    topics = [topic.replace('_', '-').lower() for topic in topics]
+
+    # Ensure uniqueness
+    topics = list(set(topics))
+
+    # Sort
+    topics.sort()
+
+    connector = {'name': 'influxdb-sink', 'config': {}}
+    config = connector['config']
+    config['connector.class'] = 'com.datamountaineer.streamreactor.'\
+                                'connect.influx.InfluxSinkConnector'
+    config['task.max'] = tasks
+    config['topics'] = ','.join(topics)
+    config['connect.influx.url'] = 'http://influxdb-influxdb.default:8086'
+    config['connect.influx.db'] = database
+
+    queries = make_connector_queries(topics)
+    config['connect.influx.kcql'] = queries
+    config['connect.influx.username'] = '-'
+
+    print(json.dumps(connector))
+
+
 def convert_configs_to_native_types(configs):
     """Convert a mapping so that values take native types, rather than
     string representations.
@@ -326,3 +372,19 @@ def convert_configs_to_native_types(configs):
             configs[k] = False
         else:
             continue
+
+
+def make_connector_queries(topics):
+    """Make the kafka connector queries. It assumes that the topic structure
+    is flat, thus `SELECT * FROM`, and uses the system time for the InfluxDB
+    time column.
+
+    Parameters
+    ----------
+    topics : `list`
+        List of kafka topics to query.
+    """
+    query_template = "INSERT INTO {} SELECT * FROM {} WITHTIMESTAMP sys_time()"
+    queries = [query_template.format(topic, topic) for topic in topics]
+
+    return ";".join(queries)
