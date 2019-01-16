@@ -51,8 +51,11 @@ def convert_topic(root, validate=True):
     })
 
     # Convert fields
-    for item in root.iterfind('item'):
-        field = dict()
+    for index, item in enumerate(root.iterfind('item')):
+        field = {
+            # This is the index of the field in the XML schema.
+            'sal_index': index
+        }
 
         _copy_xml_tag(field, item.find('EFDB_Name'), key='name')
         _copy_xml_tag(field, item.find('Description'), key='doc')
