@@ -12,6 +12,7 @@
     {
       "doc": "List of target sensor Id list. Put -1 for unused element.",
       "name": "sensorIdList",
+      "sal_index": 0,
       "type": {
         "items": "int",
         "sal_count": 4,
@@ -21,6 +22,7 @@
     {
       "doc": "The time stamp for when the telemetry was sampled.",
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

@@ -12,6 +12,7 @@
     {
       "doc": "full",
       "name": "close",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

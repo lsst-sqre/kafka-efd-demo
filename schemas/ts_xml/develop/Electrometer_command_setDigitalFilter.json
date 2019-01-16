@@ -12,16 +12,19 @@
     {
       "doc": "Median and average filter can operate at the same time",
       "name": "activateAvgFilter",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "doc": "Activate average filter, \n1 - No filter\n2 - Scalar\n3 - Advanced",
       "name": "activateFilter",
+      "sal_index": 1,
       "type": "boolean"
     },
     {
       "doc": "true to activate and false to de-activate this filter.",
       "name": "activateMedFilter",
+      "sal_index": 2,
       "type": "boolean"
     }
   ],

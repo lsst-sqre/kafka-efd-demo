@@ -10,6 +10,7 @@
     },
     {
       "name": "example",
+      "sal_index": 0,
       "type": {
         "items": "boolean",
         "sal_count": 16,

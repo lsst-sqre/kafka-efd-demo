@@ -12,6 +12,7 @@
     {
       "doc": "Command Object",
       "name": "commandObject",
+      "sal_index": 0,
       "sal_units": "NA",
       "type": {
         "items": "bytes",

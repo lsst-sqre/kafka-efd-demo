@@ -11,6 +11,7 @@
     },
     {
       "name": "filter",
+      "sal_index": 0,
       "type": "long"
     }
   ],

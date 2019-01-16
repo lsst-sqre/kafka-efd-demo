@@ -11,10 +11,12 @@
     },
     {
       "name": "ivalue1",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "ivalue2",
+      "sal_index": 1,
       "type": "long"
     }
   ],

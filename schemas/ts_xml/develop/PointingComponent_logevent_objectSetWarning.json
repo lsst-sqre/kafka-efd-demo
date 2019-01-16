@@ -1,0 +1,34 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "level",
+      "sal_index": 0,
+      "type": {
+        "name": "level",
+        "symbols": [
+          "none",
+          "minor",
+          "major"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "PointingComponent_logevent_objectSetWarning",
+  "namespace": "lsst.sal",
+  "sal_alias": "objectSetWarning",
+  "sal_author": "pbt",
+  "sal_subsystem": "PointingComponent",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

@@ -12,11 +12,13 @@
     {
       "doc": "Colon-separated paths to standard scripts, relative to the standard root directory.",
       "name": "standard",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "doc": "Colon-separated paths to external scripts, relative to the external root directory.",
       "name": "external",
+      "sal_index": 1,
       "type": "string"
     }
   ],

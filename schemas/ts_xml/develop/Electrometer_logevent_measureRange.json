@@ -12,6 +12,7 @@
     {
       "doc": "The range for the intensity for measure selected.",
       "name": "rangeValue",
+      "sal_index": 0,
       "type": "double"
     }
   ],

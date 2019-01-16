@@ -12,24 +12,28 @@
     {
       "doc": "Name of (commandable) entity",
       "name": "name",
+      "sal_index": 0,
       "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the (commandable) entity",
       "name": "identifier",
+      "sal_index": 1,
       "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Timestamp of creation of the (commandable) entity",
       "name": "timestamp",
+      "sal_index": 2,
       "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Address of (commandable) entity",
       "name": "address",
+      "sal_index": 3,
       "sal_units": "None",
       "type": "long"
     }

@@ -12,10 +12,12 @@
     {
       "doc": "ID of the louver subsystem (1 to 32)",
       "name": "louverId",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "response",
+      "sal_index": 1,
       "type": "string"
     }
   ],

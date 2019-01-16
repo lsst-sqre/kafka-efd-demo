@@ -11,6 +11,7 @@
     {
       "doc": "The system time (TAI).",
       "name": "timestamp",
+      "sal_index": 0,
       "type": "double"
     }
   ],

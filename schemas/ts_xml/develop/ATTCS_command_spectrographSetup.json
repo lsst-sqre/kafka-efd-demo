@@ -11,14 +11,17 @@
     },
     {
       "name": "grating",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "filter",
+      "sal_index": 1,
       "type": "long"
     },
     {
       "name": "stagePosition",
+      "sal_index": 2,
       "type": "double"
     }
   ],

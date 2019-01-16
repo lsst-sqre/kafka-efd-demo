@@ -11,6 +11,7 @@
     },
     {
       "name": "steps",
+      "sal_index": 0,
       "type": {
         "items": "long",
         "sal_count": 6,

@@ -11,198 +11,231 @@
     {
       "doc": "Azimuth_Status_Drive_1",
       "name": "Azimuth_Status_Drive_1",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_2",
       "name": "Azimuth_Status_Drive_2",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_3",
       "name": "Azimuth_Status_Drive_3",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_4",
       "name": "Azimuth_Status_Drive_4",
+      "sal_index": 3,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_5",
       "name": "Azimuth_Status_Drive_5",
+      "sal_index": 4,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_6",
       "name": "Azimuth_Status_Drive_6",
+      "sal_index": 5,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_7",
       "name": "Azimuth_Status_Drive_7",
+      "sal_index": 6,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_8",
       "name": "Azimuth_Status_Drive_8",
+      "sal_index": 7,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_9",
       "name": "Azimuth_Status_Drive_9",
+      "sal_index": 8,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_10",
       "name": "Azimuth_Status_Drive_10",
+      "sal_index": 9,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_11",
       "name": "Azimuth_Status_Drive_11",
+      "sal_index": 10,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_12",
       "name": "Azimuth_Status_Drive_12",
+      "sal_index": 11,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_13",
       "name": "Azimuth_Status_Drive_13",
+      "sal_index": 12,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_14",
       "name": "Azimuth_Status_Drive_14",
+      "sal_index": 13,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_15",
       "name": "Azimuth_Status_Drive_15",
+      "sal_index": 14,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Status_Drive_16",
       "name": "Azimuth_Status_Drive_16",
+      "sal_index": 15,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Current_Drive_1",
       "name": "Azimuth_Current_Drive_1",
+      "sal_index": 16,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_2",
       "name": "Azimuth_Current_Drive_2",
+      "sal_index": 17,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_3",
       "name": "Azimuth_Current_Drive_3",
+      "sal_index": 18,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_4",
       "name": "Azimuth_Current_Drive_4",
+      "sal_index": 19,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_5",
       "name": "Azimuth_Current_Drive_5",
+      "sal_index": 20,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_6",
       "name": "Azimuth_Current_Drive_6",
+      "sal_index": 21,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_7",
       "name": "Azimuth_Current_Drive_7",
+      "sal_index": 22,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_8",
       "name": "Azimuth_Current_Drive_8",
+      "sal_index": 23,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_9",
       "name": "Azimuth_Current_Drive_9",
+      "sal_index": 24,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_10",
       "name": "Azimuth_Current_Drive_10",
+      "sal_index": 25,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_11",
       "name": "Azimuth_Current_Drive_11",
+      "sal_index": 26,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_12",
       "name": "Azimuth_Current_Drive_12",
+      "sal_index": 27,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_13",
       "name": "Azimuth_Current_Drive_13",
+      "sal_index": 28,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_14",
       "name": "Azimuth_Current_Drive_14",
+      "sal_index": 29,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_15",
       "name": "Azimuth_Current_Drive_15",
+      "sal_index": 30,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Azimuth_Current_Drive_16",
       "name": "Azimuth_Current_Drive_16",
+      "sal_index": 31,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 32,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

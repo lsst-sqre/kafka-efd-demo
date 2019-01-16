@@ -11,6 +11,7 @@
     {
       "doc": "The altitude of the CBP",
       "name": "altitude",
+      "sal_index": 0,
       "sal_units": "Degrees",
       "type": "float"
     }

@@ -11,11 +11,13 @@
     },
     {
       "name": "velocity",
+      "sal_index": 0,
       "sal_units": "deg/s",
       "type": "double"
     },
     {
       "name": "moveDuration",
+      "sal_index": 1,
       "sal_units": "s",
       "type": "double"
     }

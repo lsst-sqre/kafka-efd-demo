@@ -11,6 +11,7 @@
     },
     {
       "name": "wavelength",
+      "sal_index": 0,
       "type": "float"
     }
   ],

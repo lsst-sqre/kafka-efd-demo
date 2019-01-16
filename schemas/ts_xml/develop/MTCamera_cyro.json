@@ -10,6 +10,7 @@
     },
     {
       "name": "coldTemperature",
+      "sal_index": 0,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
@@ -19,11 +20,13 @@
     },
     {
       "name": "compressor",
+      "sal_index": 1,
       "sal_units": "watt",
       "type": "float"
     },
     {
       "name": "compressorSpeed",
+      "sal_index": 2,
       "sal_units": "hertz",
       "type": {
         "items": "float",
@@ -33,6 +36,7 @@
     },
     {
       "name": "cryoTemperature",
+      "sal_index": 3,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
@@ -42,6 +46,7 @@
     },
     {
       "name": "dischargePressure",
+      "sal_index": 4,
       "sal_units": "pascal",
       "type": {
         "items": "float",
@@ -51,6 +56,7 @@
     },
     {
       "name": "dischargeTemp",
+      "sal_index": 5,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
@@ -60,6 +66,7 @@
     },
     {
       "name": "flowInterlock",
+      "sal_index": 6,
       "type": {
         "items": "int",
         "sal_count": 2,
@@ -68,6 +75,7 @@
     },
     {
       "name": "heaterCurrent",
+      "sal_index": 7,
       "sal_units": "ampere",
       "type": {
         "items": "float",
@@ -77,6 +85,7 @@
     },
     {
       "name": "heaterVoltage",
+      "sal_index": 8,
       "sal_units": "volt",
       "type": {
         "items": "float",
@@ -86,6 +95,7 @@
     },
     {
       "name": "intakeFlow",
+      "sal_index": 9,
       "sal_units": "lps",
       "type": {
         "items": "float",
@@ -95,6 +105,7 @@
     },
     {
       "name": "intakePressure",
+      "sal_index": 10,
       "sal_units": "pascal",
       "type": {
         "items": "float",
@@ -104,6 +115,7 @@
     },
     {
       "name": "intakeTemp",
+      "sal_index": 11,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
@@ -113,6 +125,7 @@
     },
     {
       "name": "postExpansionPressure",
+      "sal_index": 12,
       "sal_units": "pascal",
       "type": {
         "items": "float",
@@ -122,6 +135,7 @@
     },
     {
       "name": "postExpansionTemp",
+      "sal_index": 13,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
@@ -131,6 +145,7 @@
     },
     {
       "name": "preExpansionPressure",
+      "sal_index": 14,
       "sal_units": "pascal",
       "type": {
         "items": "float",
@@ -140,6 +155,7 @@
     },
     {
       "name": "preExpansionTemp",
+      "sal_index": 15,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
@@ -149,6 +165,7 @@
     },
     {
       "name": "returnTemp",
+      "sal_index": 16,
       "sal_units": "Celsius",
       "type": {
         "items": "float",

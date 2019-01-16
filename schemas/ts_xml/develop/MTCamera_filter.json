@@ -10,10 +10,12 @@
     },
     {
       "name": "loaderTelemetry",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "rebID",
+      "sal_index": 1,
       "type": "int"
     }
   ],

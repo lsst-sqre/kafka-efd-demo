@@ -12,18 +12,21 @@
     {
       "doc": "Azimuth angle",
       "name": "az_angle",
+      "sal_index": 0,
       "sal_units": "Degrees",
       "type": "double"
     },
     {
       "doc": "Elevation angle",
       "name": "el_angle",
+      "sal_index": 1,
       "sal_units": "Degrees",
       "type": "double"
     },
     {
       "doc": "Cable Wrap orientation: Clockwise(CW), Counterclockwise(CCW)",
       "name": "cablewrap_orientation",
+      "sal_index": 2,
       "type": "string"
     }
   ],

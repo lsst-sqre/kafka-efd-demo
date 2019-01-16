@@ -11,10 +11,12 @@
     },
     {
       "name": "angle",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "demandTime",
+      "sal_index": 1,
       "type": "double"
     }
   ],

@@ -11,6 +11,7 @@
     },
     {
       "name": "power",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

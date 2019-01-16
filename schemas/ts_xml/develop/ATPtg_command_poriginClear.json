@@ -1,0 +1,27 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Which offset to absorb:\n0 = user\n1= handset\n2 = both",
+      "name": "num",
+      "sal_index": 0,
+      "type": "int"
+    }
+  ],
+  "name": "ATPtg_command_poriginClear",
+  "namespace": "lsst.sal",
+  "sal_alias": "poriginClear",
+  "sal_author": "pbt",
+  "sal_subsystem": "ATPtg",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

@@ -11,6 +11,7 @@
     },
     {
       "name": "position",
+      "sal_index": 0,
       "type": {
         "items": "int",
         "sal_count": 34,

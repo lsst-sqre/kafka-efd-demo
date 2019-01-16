@@ -11,10 +11,12 @@
     },
     {
       "name": "recommendedSettingsVersion",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "name": "recommendedSettingsLabels",
+      "sal_index": 1,
       "type": "string"
     }
   ],

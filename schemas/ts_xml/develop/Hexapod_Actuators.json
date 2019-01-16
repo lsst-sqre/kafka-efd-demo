@@ -11,6 +11,7 @@
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/Hexapod_Actuators_Calibrated.html",
       "name": "Calibrated",
+      "sal_index": 0,
       "type": {
         "items": "double",
         "sal_count": 6,
@@ -20,6 +21,7 @@
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/Hexapod_Actuators_Raw.html",
       "name": "Raw",
+      "sal_index": 1,
       "type": {
         "items": "double",
         "sal_count": 6,

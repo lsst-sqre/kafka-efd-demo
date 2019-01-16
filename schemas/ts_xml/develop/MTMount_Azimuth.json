@@ -11,87 +11,103 @@
     {
       "doc": "Azimuth_Status",
       "name": "Azimuth_Status",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Angle_Actual",
       "name": "Azimuth_Angle_Actual",
+      "sal_index": 1,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "Azimuth_Angle_Set",
       "name": "Azimuth_Angle_Set",
+      "sal_index": 2,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "Azimuth_Aceleration_Actual",
       "name": "Azimuth_Aceleration_Actual",
+      "sal_index": 3,
       "sal_units": "deg/second^2",
       "type": "double"
     },
     {
       "doc": "Azimuth_Velocity_Set",
       "name": "Azimuth_Velocity_Set",
+      "sal_index": 4,
       "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Azimuth_Velocity_Actual",
       "name": "Azimuth_Velocity_Actual",
+      "sal_index": 5,
       "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Azimuth_Torque_Actual",
       "name": "Azimuth_Torque_Actual",
+      "sal_index": 6,
       "type": "double"
     },
     {
       "doc": "Azimuth_Positive_Software_limit",
       "name": "Azimuth_Positive_Software_limit",
+      "sal_index": 7,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Negative_Software_limit",
       "name": "Azimuth_Negative_Software_limit",
+      "sal_index": 8,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Positive_Power_Off_switch",
       "name": "Azimuth_Positive_Power_Off_switch",
+      "sal_index": 9,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Negative_Power_Off_switch",
       "name": "Azimuth_Negative_Power_Off_switch",
+      "sal_index": 10,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Positive_Directional_limit_switch",
       "name": "Azimuth_Positive_Directional_limit_switch",
+      "sal_index": 11,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Negative_Directional_limit_switch",
       "name": "Azimuth_Negative_Directional_limit_switch",
+      "sal_index": 12,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Positive_Adjustable_Software_limit",
       "name": "Azimuth_Positive_Adjustable_Software_limit",
+      "sal_index": 13,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Negative_Adjustable_Software_limit",
       "name": "Azimuth_Negative_Adjustable_Software_limit",
+      "sal_index": 14,
       "type": "boolean"
     },
     {
       "doc": "Azimuth_Interlocks",
       "name": "Azimuth_Interlocks",
+      "sal_index": 15,
       "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
@@ -102,6 +118,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 16,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

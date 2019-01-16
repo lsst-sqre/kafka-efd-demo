@@ -12,6 +12,7 @@
     {
       "doc": "Enumeration of valid substates",
       "name": "substate",
+      "sal_index": 0,
       "type": {
         "name": "substate",
         "symbols": [

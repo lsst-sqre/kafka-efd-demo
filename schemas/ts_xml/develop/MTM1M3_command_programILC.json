@@ -11,10 +11,12 @@
     },
     {
       "name": "actuatorId",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "filePath",
+      "sal_index": 1,
       "type": "string"
     }
   ],

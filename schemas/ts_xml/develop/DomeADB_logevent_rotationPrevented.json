@@ -12,6 +12,7 @@
     {
       "doc": "Unique identifier of the cause",
       "name": "causeId",
+      "sal_index": 0,
       "type": "string"
     }
   ],

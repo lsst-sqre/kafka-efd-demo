@@ -10,10 +10,12 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "breakawayLVDT",
+      "sal_index": 1,
       "type": {
         "items": "float",
         "sal_count": 6,
@@ -22,6 +24,7 @@
     },
     {
       "name": "displacementLVDT",
+      "sal_index": 2,
       "type": {
         "items": "float",
         "sal_count": 6,
@@ -30,6 +33,7 @@
     },
     {
       "name": "breakawayPressure",
+      "sal_index": 3,
       "type": {
         "items": "float",
         "sal_count": 6,
@@ -38,6 +42,7 @@
     },
     {
       "name": "pressureSensor1",
+      "sal_index": 4,
       "type": {
         "items": "float",
         "sal_count": 6,
@@ -46,6 +51,7 @@
     },
     {
       "name": "pressureSensor2",
+      "sal_index": 5,
       "type": {
         "items": "float",
         "sal_count": 6,
@@ -54,6 +60,7 @@
     },
     {
       "name": "pressureSensor3",
+      "sal_index": 6,
       "type": {
         "items": "float",
         "sal_count": 6,

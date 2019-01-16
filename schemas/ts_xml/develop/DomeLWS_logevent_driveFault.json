@@ -12,10 +12,12 @@
     {
       "doc": "Unique identifier of the drive (1 to 2)",
       "name": "driveId",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "errorCode",
+      "sal_index": 1,
       "type": "string"
     }
   ],

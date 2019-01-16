@@ -11,10 +11,12 @@
     },
     {
       "name": "cellLightsCommandedOn",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "name": "cellLightsOn",
+      "sal_index": 1,
       "type": "boolean"
     }
   ],

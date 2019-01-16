@@ -12,6 +12,7 @@
       "doc": "array of steps for each axial actuator in sequence. Increasing steps corresponds to counterclockwise rotation of the motor shaft, looking along the shaft in the direction of the motor",
       "name": "axialAbsolutePositionSteps",
       "sal_frequency": 1.0,
+      "sal_index": 0,
       "sal_publishers": 1,
       "sal_size_in_bytes": 8,
       "sal_units": "radians",

@@ -12,6 +12,7 @@
     {
       "doc": "Configuration as yaml text that is parsed to make a keyword argument dict for the script's configure method.",
       "name": "config",
+      "sal_index": 0,
       "type": "string"
     }
   ],

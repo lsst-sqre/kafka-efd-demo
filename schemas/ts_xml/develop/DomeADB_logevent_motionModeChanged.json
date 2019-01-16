@@ -12,6 +12,7 @@
     {
       "doc": "Fired when ADB motion mode changed, (crawl, velocity, etc)",
       "name": "newMode",
+      "sal_index": 0,
       "type": "int"
     }
   ],

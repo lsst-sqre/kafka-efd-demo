@@ -10,25 +10,24 @@
     },
     {
       "name": "ambient_temp",
-      "sal_units": "degreesC",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "humidity",
-      "sal_units": "percent",
+      "sal_index": 1,
       "type": "double"
     },
     {
       "name": "pressure",
-      "sal_units": "Hpa",
+      "sal_index": 2,
       "type": "double"
     }
   ],
   "name": "Environment_weather",
   "namespace": "lsst.sal",
-  "sal_author": "salgenerator",
   "sal_subsystem": "Environment",
   "sal_topic_type": "SALTelemetry",
-  "sal_version": "3.5",
+  "sal_version": "3.8",
   "type": "record"
 }

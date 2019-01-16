@@ -1,0 +1,146 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "numFrames",
+      "sal_index": 0,
+      "type": "long"
+    },
+    {
+      "name": "spot1Flux",
+      "sal_index": 1,
+      "type": "long"
+    },
+    {
+      "name": "splot2Flux",
+      "sal_index": 2,
+      "type": "long"
+    },
+    {
+      "name": "spot1RMSFlux",
+      "sal_index": 3,
+      "type": "long"
+    },
+    {
+      "name": "spot2RMSFlux",
+      "sal_index": 4,
+      "type": "long"
+    },
+    {
+      "name": "spot1MaxInten",
+      "sal_index": 5,
+      "type": "long"
+    },
+    {
+      "name": "spot2MaxInten",
+      "sal_index": 6,
+      "type": "long"
+    },
+    {
+      "name": "seperationX",
+      "sal_index": 7,
+      "sal_units": "long",
+      "type": "long"
+    },
+    {
+      "name": "seperationY",
+      "sal_index": 8,
+      "type": "long"
+    },
+    {
+      "name": "seperationRMSX",
+      "sal_index": 9,
+      "type": "double"
+    },
+    {
+      "name": "seperationRMSY",
+      "sal_index": 10,
+      "type": "double"
+    },
+    {
+      "name": "covarianceX",
+      "sal_index": 11,
+      "type": "double"
+    },
+    {
+      "name": "covarianceY",
+      "sal_index": 12,
+      "type": "double"
+    },
+    {
+      "name": "noiseRMSX",
+      "sal_index": 13,
+      "type": "double"
+    },
+    {
+      "name": "noiseRMSY",
+      "sal_index": 14,
+      "type": "double"
+    },
+    {
+      "name": "averagePositionX",
+      "sal_index": 15,
+      "type": "double"
+    },
+    {
+      "name": "averagePositionY",
+      "sal_index": 16,
+      "type": "double"
+    },
+    {
+      "name": "averagePositionRMSX",
+      "sal_index": 17,
+      "type": "double"
+    },
+    {
+      "name": "averagePositionRMSY",
+      "sal_index": 18,
+      "type": "double"
+    },
+    {
+      "name": "averageFWHMspot1",
+      "sal_index": 19,
+      "type": "double"
+    },
+    {
+      "name": "averageFWHMspot2",
+      "sal_index": 20,
+      "type": "double"
+    },
+    {
+      "name": "averageEllipticityspot1",
+      "sal_index": 21,
+      "type": "double"
+    },
+    {
+      "name": "averageEllipticityspot2",
+      "sal_index": 22,
+      "type": "double"
+    },
+    {
+      "name": "averageBackground",
+      "sal_index": 23,
+      "type": "double"
+    },
+    {
+      "name": "backgroundRMS",
+      "sal_index": 24,
+      "type": "double"
+    }
+  ],
+  "name": "DIMM_logevent_dimmData",
+  "namespace": "lsst.sal",
+  "sal_alias": "dimmData",
+  "sal_subsystem": "DIMM",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.31",
+  "type": "record"
+}

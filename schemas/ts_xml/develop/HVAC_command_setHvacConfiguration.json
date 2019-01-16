@@ -1,0 +1,30 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "maxValveFlow",
+      "sal_index": 0,
+      "type": "double"
+    },
+    {
+      "name": "minValveFlow",
+      "sal_index": 1,
+      "type": "double"
+    }
+  ],
+  "name": "HVAC_command_setHvacConfiguration",
+  "namespace": "lsst.sal",
+  "sal_alias": "setHvacConfiguration",
+  "sal_subsystem": "HVAC",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

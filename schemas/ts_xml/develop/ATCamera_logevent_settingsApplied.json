@@ -11,18 +11,22 @@
     },
     {
       "name": "settings",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "name": "version",
+      "sal_index": 1,
       "type": "long"
     },
     {
       "name": "wrebSettingsVersion",
+      "sal_index": 2,
       "type": "string"
     },
     {
       "name": "bonnShutterSettingsVersion",
+      "sal_index": 3,
       "type": "string"
     }
   ],

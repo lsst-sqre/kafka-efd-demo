@@ -11,6 +11,7 @@
     },
     {
       "name": "detail",
+      "sal_index": 0,
       "type": "string"
     }
   ],

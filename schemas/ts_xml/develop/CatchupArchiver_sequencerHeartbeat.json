@@ -10,14 +10,17 @@
     },
     {
       "name": "name",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "name": "identifier",
+      "sal_index": 1,
       "type": "float"
     },
     {
       "name": "timestamp",
+      "sal_index": 2,
       "type": "string"
     }
   ],

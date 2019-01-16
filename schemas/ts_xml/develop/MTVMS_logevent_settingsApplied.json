@@ -11,10 +11,12 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "settings",
+      "sal_index": 1,
       "type": "string"
     }
   ],

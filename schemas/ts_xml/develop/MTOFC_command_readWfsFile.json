@@ -11,10 +11,12 @@
     },
     {
       "name": "fileName",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "name": "sensorIdList",
+      "sal_index": 1,
       "type": {
         "items": "int",
         "sal_count": 9,

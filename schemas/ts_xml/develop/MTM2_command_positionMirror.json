@@ -12,18 +12,21 @@
     {
       "doc": "Tilt in xy plane",
       "name": "xTilt",
+      "sal_index": 0,
       "sal_units": "radians",
       "type": "double"
     },
     {
       "doc": "Tilt in xy plane",
       "name": "yTilt",
+      "sal_index": 1,
       "sal_units": "radians",
       "type": "double"
     },
     {
       "doc": "Position in Z (along optical axis)",
       "name": "piston",
+      "sal_index": 2,
       "sal_units": "microns",
       "type": "double"
     }

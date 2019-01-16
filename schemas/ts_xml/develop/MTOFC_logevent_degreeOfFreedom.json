@@ -12,6 +12,7 @@
     {
       "doc": "Calculated degree of freedom (DOF) based on the control algorithm.",
       "name": "dof",
+      "sal_index": 0,
       "type": {
         "items": "double",
         "sal_count": 50,
@@ -20,6 +21,7 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

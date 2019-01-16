@@ -11,10 +11,12 @@
     },
     {
       "name": "driveId",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "errorCode",
+      "sal_index": 1,
       "type": "string"
     }
   ],

@@ -12,11 +12,13 @@
     {
       "doc": "Final ack code, typically a SAL__CMD constant.",
       "name": "ack",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "doc": "Desired command duration.",
       "name": "duration",
+      "sal_index": 1,
       "sal_units": "seconds",
       "type": "double"
     }

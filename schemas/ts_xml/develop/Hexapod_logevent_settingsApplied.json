@@ -11,106 +11,127 @@
     },
     {
       "name": "accelerationAccmax",
+      "sal_index": 0,
       "sal_units": "um/s^2",
       "type": "double"
     },
     {
       "name": "limitXYMax",
+      "sal_index": 1,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "limitZMin",
+      "sal_index": 2,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "limitZMax",
+      "sal_index": 3,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "limitUVMax",
+      "sal_index": 4,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "limitWMin",
+      "sal_index": 5,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "limitWMax",
+      "sal_index": 6,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "velocityXYMax",
+      "sal_index": 7,
       "sal_units": "um/s",
       "type": "double"
     },
     {
       "name": "velocityRxRyMax",
+      "sal_index": 8,
       "sal_units": "deg/s",
       "type": "double"
     },
     {
       "name": "velocityZMax",
+      "sal_index": 9,
       "sal_units": "um/s",
       "type": "double"
     },
     {
       "name": "velocityRzMax",
+      "sal_index": 10,
       "sal_units": "deg/s",
       "type": "double"
     },
     {
       "name": "positionX",
+      "sal_index": 11,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "positionY",
+      "sal_index": 12,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "positionZ",
+      "sal_index": 13,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "positionU",
+      "sal_index": 14,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "positionV",
+      "sal_index": 15,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "positionW",
+      "sal_index": 16,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "name": "pivotX",
+      "sal_index": 17,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "pivotY",
+      "sal_index": 18,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "pivotZ",
+      "sal_index": 19,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "elevationRawLUTElevIndex",
+      "sal_index": 20,
       "type": {
         "items": "int",
         "sal_count": 19,
@@ -119,6 +140,7 @@
     },
     {
       "name": "elevationRawLUTX",
+      "sal_index": 21,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -127,6 +149,7 @@
     },
     {
       "name": "elevationRawLUTY",
+      "sal_index": 22,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -135,6 +158,7 @@
     },
     {
       "name": "elevationRawLUTZ",
+      "sal_index": 23,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -143,6 +167,7 @@
     },
     {
       "name": "elevationRawLUTRx",
+      "sal_index": 24,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -151,6 +176,7 @@
     },
     {
       "name": "elevationRawLUTRy",
+      "sal_index": 25,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -159,6 +185,7 @@
     },
     {
       "name": "elevationRawLUTRz",
+      "sal_index": 26,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -167,6 +194,7 @@
     },
     {
       "name": "azimuthRawLUTAzIndex",
+      "sal_index": 27,
       "type": {
         "items": "int",
         "sal_count": 37,
@@ -175,6 +203,7 @@
     },
     {
       "name": "azimuthRawLUTX",
+      "sal_index": 28,
       "type": {
         "items": "double",
         "sal_count": 37,
@@ -183,6 +212,7 @@
     },
     {
       "name": "azimuthRawLUTY",
+      "sal_index": 29,
       "type": {
         "items": "double",
         "sal_count": 37,
@@ -191,6 +221,7 @@
     },
     {
       "name": "azimuthRawLUTZ",
+      "sal_index": 30,
       "type": {
         "items": "double",
         "sal_count": 37,
@@ -199,6 +230,7 @@
     },
     {
       "name": "azimuthRawLUTRx",
+      "sal_index": 31,
       "type": {
         "items": "double",
         "sal_count": 37,
@@ -207,6 +239,7 @@
     },
     {
       "name": "azimuthRawLUTRy",
+      "sal_index": 32,
       "type": {
         "items": "double",
         "sal_count": 37,
@@ -215,6 +248,7 @@
     },
     {
       "name": "azimuthRawLUTRz",
+      "sal_index": 33,
       "type": {
         "items": "double",
         "sal_count": 37,
@@ -223,6 +257,7 @@
     },
     {
       "name": "temperatureRawLUTTempIndex",
+      "sal_index": 34,
       "type": {
         "items": "int",
         "sal_count": 9,
@@ -231,6 +266,7 @@
     },
     {
       "name": "temperatureRawLUTX",
+      "sal_index": 35,
       "type": {
         "items": "double",
         "sal_count": 9,
@@ -239,6 +275,7 @@
     },
     {
       "name": "temperatureRawLUTY",
+      "sal_index": 36,
       "type": {
         "items": "double",
         "sal_count": 9,
@@ -247,6 +284,7 @@
     },
     {
       "name": "temperatureRawLUTZ",
+      "sal_index": 37,
       "type": {
         "items": "double",
         "sal_count": 9,
@@ -255,6 +293,7 @@
     },
     {
       "name": "temperatureRawLUTRx",
+      "sal_index": 38,
       "type": {
         "items": "double",
         "sal_count": 9,
@@ -263,6 +302,7 @@
     },
     {
       "name": "temperatureRawLUTRy",
+      "sal_index": 39,
       "type": {
         "items": "double",
         "sal_count": 9,
@@ -271,6 +311,7 @@
     },
     {
       "name": "temperatureRawLUTRz",
+      "sal_index": 40,
       "type": {
         "items": "double",
         "sal_count": 9,
@@ -279,11 +320,13 @@
     },
     {
       "name": "strutDisplacementMax",
+      "sal_index": 41,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "strutVelocityMax",
+      "sal_index": 42,
       "sal_units": "um/s",
       "type": "double"
     }

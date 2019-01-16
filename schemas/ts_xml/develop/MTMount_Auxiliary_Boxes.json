@@ -11,24 +11,28 @@
     {
       "doc": "Status_TMA_AZ_PD_CBT_0001",
       "name": "Status_TMA_AZ_PD_CBT_0001",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_TMA_EL_PD_CBT_0001",
       "name": "Status_TMA_EL_PD_CBT_0001",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_TMA_EL_PD_CBT_0002",
       "name": "Status_TMA_EL_PD_CBT_0002",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 3,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

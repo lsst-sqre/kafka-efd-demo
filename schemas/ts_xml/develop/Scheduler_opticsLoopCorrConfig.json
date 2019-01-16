@@ -10,10 +10,12 @@
     },
     {
       "name": "telOpticsOlSlope",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "telOpticsClAltLimit",
+      "sal_index": 1,
       "type": {
         "items": "double",
         "sal_count": 3,
@@ -22,6 +24,7 @@
     },
     {
       "name": "telOpticsClDelay",
+      "sal_index": 2,
       "type": {
         "items": "double",
         "sal_count": 2,

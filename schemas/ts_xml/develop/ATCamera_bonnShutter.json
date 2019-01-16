@@ -10,11 +10,13 @@
     },
     {
       "name": "shutter5V",
+      "sal_index": 0,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "shutter36V",
+      "sal_index": 1,
       "sal_units": "volt",
       "type": "float"
     }

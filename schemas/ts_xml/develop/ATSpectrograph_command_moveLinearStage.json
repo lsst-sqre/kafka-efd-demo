@@ -10,8 +10,9 @@
       }
     },
     {
-      "name": "moveLinearStage",
-      "sal_units": "m",
+      "name": "distanceFromHome",
+      "sal_index": 0,
+      "sal_units": "mm",
       "type": "double"
     }
   ],

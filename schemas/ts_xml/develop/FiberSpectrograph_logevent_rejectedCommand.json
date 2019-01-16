@@ -11,14 +11,17 @@
     },
     {
       "name": "commandValue",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "detailedState",
+      "sal_index": 1,
       "type": "int"
     },
     {
       "name": "timestamp",
+      "sal_index": 2,
       "type": "double"
     }
   ],

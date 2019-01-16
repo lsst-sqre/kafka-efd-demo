@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    }
+  ],
+  "name": "PointingComponent_command_guideClear",
+  "namespace": "lsst.sal",
+  "sal_alias": "guideClear",
+  "sal_author": "pbt",
+  "sal_subsystem": "PointingComponent",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

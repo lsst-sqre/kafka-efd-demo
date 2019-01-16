@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "heartbeat",
+      "sal_index": 0,
+      "type": "boolean"
+    }
+  ],
+  "name": "MTEEC_logevent_heartbeat",
+  "namespace": "lsst.sal",
+  "sal_alias": "heartbeat",
+  "sal_subsystem": "MTEEC",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

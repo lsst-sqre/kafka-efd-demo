@@ -11,6 +11,7 @@
     },
     {
       "name": "xForces",
+      "sal_index": 0,
       "type": {
         "items": "float",
         "sal_count": 12,
@@ -19,6 +20,7 @@
     },
     {
       "name": "yForces",
+      "sal_index": 1,
       "type": {
         "items": "float",
         "sal_count": 100,
@@ -27,6 +29,7 @@
     },
     {
       "name": "zForces",
+      "sal_index": 2,
       "type": {
         "items": "float",
         "sal_count": 156,

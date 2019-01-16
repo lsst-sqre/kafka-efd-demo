@@ -11,10 +11,12 @@
     },
     {
       "name": "uid",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "name": "z_arr",
+      "sal_index": 1,
       "type": {
         "items": "double",
         "sal_count": 18,

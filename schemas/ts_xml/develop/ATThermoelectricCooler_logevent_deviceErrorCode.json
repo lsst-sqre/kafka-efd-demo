@@ -12,10 +12,12 @@
     {
       "doc": "Error code directly from the device. For more information check the documentation.",
       "name": "deviceCode",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

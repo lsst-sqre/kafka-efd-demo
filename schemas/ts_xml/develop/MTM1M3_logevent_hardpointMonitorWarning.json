@@ -11,14 +11,17 @@
     },
     {
       "name": "anyWarning",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "name": "anyHardpointMonitorFlags",
+      "sal_index": 1,
       "type": "long"
     },
     {
       "name": "hardpointMonitorFlags",
+      "sal_index": 2,
       "type": {
         "items": "long",
         "sal_count": 6,

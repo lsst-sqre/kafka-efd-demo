@@ -12,6 +12,7 @@
     {
       "doc": "-1 for automatic range.",
       "name": "setRange",
+      "sal_index": 0,
       "type": "float"
     }
   ],

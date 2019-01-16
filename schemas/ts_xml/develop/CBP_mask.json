@@ -11,11 +11,13 @@
     {
       "doc": "The mask of the CBP.",
       "name": "mask",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "doc": "The mask rotation of the CBP.",
       "name": "mask_rotation",
+      "sal_index": 1,
       "type": "float"
     }
   ],

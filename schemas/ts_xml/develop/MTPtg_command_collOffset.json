@@ -1,0 +1,39 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Collimation CA value",
+      "name": "ca",
+      "sal_index": 0,
+      "type": "double"
+    },
+    {
+      "doc": "Collimation CE value",
+      "name": "ce",
+      "sal_index": 1,
+      "type": "double"
+    },
+    {
+      "doc": "Which offset to clear to set:\n0 = user\n1= handset",
+      "name": "num",
+      "sal_index": 2,
+      "type": "int"
+    }
+  ],
+  "name": "MTPtg_command_collOffset",
+  "namespace": "lsst.sal",
+  "sal_alias": "collOffset",
+  "sal_author": "pbt",
+  "sal_subsystem": "MTPtg",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

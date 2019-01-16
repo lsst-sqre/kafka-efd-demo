@@ -12,6 +12,7 @@
     {
       "doc": "Power intensity, it could a value between 800 to 1200W. Any value under this range will power the light off safely.",
       "name": "power",
+      "sal_index": 0,
       "type": "float"
     }
   ],

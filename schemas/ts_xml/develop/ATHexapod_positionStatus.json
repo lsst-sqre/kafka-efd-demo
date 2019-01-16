@@ -11,6 +11,7 @@
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Application_Demand.html",
       "name": "setpointPosition",
+      "sal_index": 0,
       "type": {
         "items": "double",
         "sal_count": 6,
@@ -20,6 +21,7 @@
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Application_Position.html",
       "name": "reportedPosition",
+      "sal_index": 1,
       "type": {
         "items": "double",
         "sal_count": 6,
@@ -29,6 +31,7 @@
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/hexapod_Application_Error.html",
       "name": "positionFollowingError",
+      "sal_index": 2,
       "type": {
         "items": "double",
         "sal_count": 6,

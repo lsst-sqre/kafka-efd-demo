@@ -1,0 +1,30 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "allClear",
+      "sal_index": 0,
+      "type": "boolean"
+    },
+    {
+      "name": "timestamp",
+      "sal_index": 1,
+      "type": "double"
+    }
+  ],
+  "name": "MTDomeTrajectory_logevent_allClear",
+  "namespace": "lsst.sal",
+  "sal_alias": "allClear",
+  "sal_subsystem": "MTDomeTrajectory",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.31",
+  "type": "record"
+}

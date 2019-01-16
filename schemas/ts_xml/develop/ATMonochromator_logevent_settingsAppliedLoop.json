@@ -11,10 +11,12 @@
     },
     {
       "name": "period",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "periodAllowedJitter",
+      "sal_index": 1,
       "type": "double"
     }
   ],

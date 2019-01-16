@@ -12,11 +12,13 @@
     {
       "doc": "Checkpoint(s) at which to pause, as a regular expression. No checkpoints if blank; all checkpoints if \".*\".",
       "name": "pause",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "doc": "Checkpoint(s) at which to stop, as a regular expression. No checkpoints if blank; all checkpoints if \".*\".",
       "name": "stop",
+      "sal_index": 1,
       "type": "string"
     }
   ],

@@ -1,0 +1,27 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Integer state of the ATAOS activity. This is not an enumeration but a bitwise state.",
+      "name": "substate",
+      "sal_index": 0,
+      "type": "bytes"
+    }
+  ],
+  "name": "ATAOS_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_author": "Tiago Ribeiro",
+  "sal_subsystem": "ATAOS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

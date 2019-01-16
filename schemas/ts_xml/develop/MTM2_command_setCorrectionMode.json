@@ -12,6 +12,7 @@
     {
       "doc": "An enumeration: 1 = BendingMode, 2 = Force",
       "name": "mode",
+      "sal_index": 0,
       "type": "int"
     }
   ],

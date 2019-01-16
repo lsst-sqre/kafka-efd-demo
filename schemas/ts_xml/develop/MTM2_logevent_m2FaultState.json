@@ -11,6 +11,7 @@
     },
     {
       "name": "state",
+      "sal_index": 0,
       "type": {
         "name": "state",
         "symbols": [

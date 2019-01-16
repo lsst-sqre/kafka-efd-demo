@@ -1,4 +1,5 @@
 {
+  "doc": "Script metadata that may depend on configuration.",
   "fields": [
     {
       "doc": "Timestamp when the Kafka message was created.",
@@ -11,6 +12,7 @@
     {
       "doc": "Coordinate system for position. CSys_Observed is refracted apparent topocentric, e.g. similar to CSys_Mount but the telescope model is applied and the azimuth is wrapped. If CSys_None then position should be ignored.",
       "name": "coordinateSystem",
+      "sal_index": 0,
       "type": {
         "name": "coordinateSystem",
         "symbols": [
@@ -25,6 +27,7 @@
     {
       "doc": "Longitude, latitude axes of position in coordinateSystem",
       "name": "position",
+      "sal_index": 1,
       "sal_units": "degrees",
       "type": {
         "items": "double",
@@ -35,6 +38,7 @@
     {
       "doc": "Rotation system for cameraAngle:\n        * Rot_NONE: The camera rotator is not used; ignore cameraAngle.\n        * Rot_SKY: Position angle of focal plane +Y, measured from N through E.\n          At 0 degrees, +Y is along N and +X is along E/W depending on handedness.\n          At 90 degrees, +Y is along E and +X is along S/N depending on handedness.\n        * Rot_HORIZON: Position angle of focal plane +Y, measured from +Alt through +Az.\n          At 0 degrees, +Y is along +Alt and +X is along +/-Az, depending on handedness.\n          At 90 degrees, +Y is along +Az and +X is along -/+Alt, depending on handedness.\n        * Rot_MOUNT: The position sent to the instrument rotator; the details depend on the rotator.",
       "name": "rotationSystem",
+      "sal_index": 2,
       "type": {
         "name": "rotationSystem",
         "symbols": [
@@ -49,18 +53,21 @@
     {
       "doc": "Camera angle in rotationSystem",
       "name": "cameraAngle",
+      "sal_index": 3,
       "sal_units": "degrees",
       "type": "double"
     },
     {
       "doc": "Comma-separated names of acceptable filters, or blank for any filter.",
       "name": "filters",
+      "sal_index": 4,
       "sal_units": "seconds",
       "type": "string"
     },
     {
       "doc": "Desired dome state.",
       "name": "dome",
+      "sal_index": 5,
       "sal_units": "seconds",
       "type": {
         "name": "dome",
@@ -75,6 +82,7 @@
     {
       "doc": "Estimated duration of the script, excluding slewing to the initial position required by the script.",
       "name": "duration",
+      "sal_index": 6,
       "sal_units": "seconds",
       "type": "double"
     }

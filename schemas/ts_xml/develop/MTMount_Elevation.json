@@ -11,97 +11,115 @@
     {
       "doc": "Elevation_Status",
       "name": "Elevation_Status",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Elevation_Angle_Actual",
       "name": "Elevation_Angle_Actual",
+      "sal_index": 1,
       "type": "double"
     },
     {
       "doc": "Elevation_Angle_Set",
       "name": "Elevation_Angle_Set",
+      "sal_index": 2,
       "sal_units": "deg",
       "type": "double"
     },
     {
       "doc": "Elevation_Aceleration_Actual",
       "name": "Elevation_Aceleration_Actual",
+      "sal_index": 3,
       "sal_units": "deg/second^2",
       "type": "double"
     },
     {
       "doc": "Elevation_Velocity_Set",
       "name": "Elevation_Velocity_Set",
+      "sal_index": 4,
       "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Elevation_Velocity_Actual",
       "name": "Elevation_Velocity_Actual",
+      "sal_index": 5,
       "sal_units": "deg/second",
       "type": "double"
     },
     {
       "doc": "Elevation_Torque_Actual",
       "name": "Elevation_Torque_Actual",
+      "sal_index": 6,
       "sal_units": "Nmeter",
       "type": "double"
     },
     {
       "doc": "Elevation_Positive_Software_limit",
       "name": "Elevation_Positive_Software_limit",
+      "sal_index": 7,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Negative_Software_limit",
       "name": "Elevation_Negative_Software_limit",
+      "sal_index": 8,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Positive_Power_Off_switch",
       "name": "Elevation_Positive_Power_Off_switch",
+      "sal_index": 9,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Negative_Power_Off_switch",
       "name": "Elevation_Negative_Power_Off_switch",
+      "sal_index": 10,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Positive_Directional_limit_switch",
       "name": "Elevation_Positive_Directional_limit_switch",
+      "sal_index": 11,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Negative_Directional_limit_switch",
       "name": "Elevation_Negative_Directional_limit_switch",
+      "sal_index": 12,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Positive_Adjustable_Software_limit",
       "name": "Elevation_Positive_Adjustable_Software_limit",
+      "sal_index": 13,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Negative_Adjustable_Software_limit",
       "name": "Elevation_Negative_Adjustable_Software_limit",
+      "sal_index": 14,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Positive_Operational_Directional_limit_switch",
       "name": "Elevation_Positive_Operational_Directional_limit_switch",
+      "sal_index": 15,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Negative_Operational_Directional_limit_switch",
       "name": "Elevation_Negative_Operational_Directional_limit_switch",
+      "sal_index": 16,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Interlocks",
       "name": "Elevation_Interlocks",
+      "sal_index": 17,
       "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
@@ -112,6 +130,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 18,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

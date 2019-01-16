@@ -11,6 +11,7 @@
     },
     {
       "name": "targetEncoderValues",
+      "sal_index": 0,
       "type": {
         "items": "long",
         "sal_count": 6,
@@ -19,6 +20,7 @@
     },
     {
       "name": "queuedSteps",
+      "sal_index": 1,
       "type": {
         "items": "long",
         "sal_count": 6,
@@ -27,6 +29,7 @@
     },
     {
       "name": "commandedSteps",
+      "sal_index": 2,
       "type": {
         "items": "int",
         "sal_count": 6,

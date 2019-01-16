@@ -10,6 +10,7 @@
     },
     {
       "name": "pressure",
+      "sal_index": 0,
       "type": "double"
     }
   ],

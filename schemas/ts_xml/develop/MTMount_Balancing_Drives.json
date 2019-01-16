@@ -11,74 +11,87 @@
     {
       "doc": "Balancing_Status_Drive_1",
       "name": "Balancing_Status_Drive_1",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Status_Drive_2",
       "name": "Balancing_Status_Drive_2",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Status_Drive_3",
       "name": "Balancing_Status_Drive_3",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Status_Drive_4",
       "name": "Balancing_Status_Drive_4",
+      "sal_index": 3,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Balancing_Current_Drive_1",
       "name": "Balancing_Current_Drive_1",
+      "sal_index": 4,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Balancing_Current_Drive_2",
       "name": "Balancing_Current_Drive_2",
+      "sal_index": 5,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Balancing_Current_Drive_3",
       "name": "Balancing_Current_Drive_3",
+      "sal_index": 6,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Balancing_Current_Drive_4",
       "name": "Balancing_Current_Drive_4",
+      "sal_index": 7,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "Balancing_Position_Set_Drive_1",
       "name": "Balancing_Position_Set_Drive_1",
+      "sal_index": 8,
       "type": "double"
     },
     {
       "doc": "Balancing_Position_Set_Drive_2",
       "name": "Balancing_Position_Set_Drive_2",
+      "sal_index": 9,
       "type": "double"
     },
     {
       "doc": "Balancing_Position_Set_Drive_3",
       "name": "Balancing_Position_Set_Drive_3",
+      "sal_index": 10,
       "type": "double"
     },
     {
       "doc": "Balancing_Position_Set_Drive_4",
       "name": "Balancing_Position_Set_Drive_4",
+      "sal_index": 11,
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 12,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

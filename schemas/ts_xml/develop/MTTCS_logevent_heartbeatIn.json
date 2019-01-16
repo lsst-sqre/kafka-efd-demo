@@ -12,6 +12,7 @@
     {
       "doc": "Heartbeat to the controller.",
       "name": "heartbeatIn",
+      "sal_index": 0,
       "sal_units": "NA",
       "type": "boolean"
     }

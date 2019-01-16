@@ -12,11 +12,13 @@
     {
       "doc": "ID number of an actuator",
       "name": "axialActuatorID",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "doc": "Increasing steps correspond to counterclockwise rotation of th motor shaft, looking along the motor shaft in the direction of the motor",
       "name": "relativeStepsToMove",
+      "sal_index": 1,
       "type": "long"
     }
   ],

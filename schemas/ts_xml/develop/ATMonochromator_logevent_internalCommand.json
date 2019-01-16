@@ -12,6 +12,7 @@
     {
       "doc": "The error code being published.",
       "name": "commandObject",
+      "sal_index": 0,
       "type": {
         "items": "bytes",
         "sal_count": 900,

@@ -1,0 +1,27 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Name of existing pointing model data file",
+      "name": "pointingFile",
+      "sal_index": 0,
+      "type": "string"
+    }
+  ],
+  "name": "ATPtg_command_pointLoadModel",
+  "namespace": "lsst.sal",
+  "sal_alias": "pointLoadModel",
+  "sal_author": "pbt",
+  "sal_subsystem": "ATPtg",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

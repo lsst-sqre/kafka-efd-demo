@@ -12,6 +12,7 @@
     {
       "doc": "set voltage, will have to be within limits",
       "name": "intTime",
+      "sal_index": 0,
       "type": "float"
     }
   ],

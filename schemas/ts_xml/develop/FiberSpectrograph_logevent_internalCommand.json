@@ -11,6 +11,7 @@
     },
     {
       "name": "commandObject",
+      "sal_index": 0,
       "type": {
         "items": "bytes",
         "sal_count": 800,

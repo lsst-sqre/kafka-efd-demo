@@ -11,11 +11,13 @@
     },
     {
       "name": "period",
+      "sal_index": 0,
       "type": "float"
     },
     {
       "doc": "Time out for the heartbeat to test communication between linux and windows controller",
       "name": "timeout",
+      "sal_index": 1,
       "type": "float"
     }
   ],

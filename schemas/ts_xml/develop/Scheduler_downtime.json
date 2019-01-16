@@ -10,6 +10,7 @@
     },
     {
       "name": "scheduledDowntime",
+      "sal_index": 0,
       "type": {
         "items": "long",
         "sal_count": 200,
@@ -18,6 +19,7 @@
     },
     {
       "name": "unscheduledDowntimes",
+      "sal_index": 1,
       "type": {
         "items": "long",
         "sal_count": 200,
@@ -26,6 +28,7 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 2,
       "type": "double"
     }
   ],

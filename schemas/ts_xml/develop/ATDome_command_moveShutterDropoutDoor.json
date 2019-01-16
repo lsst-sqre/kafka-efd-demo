@@ -12,6 +12,7 @@
     {
       "doc": "Aperture percentage.",
       "name": "dropoutDoorOpening",
+      "sal_index": 0,
       "type": "float"
     }
   ],

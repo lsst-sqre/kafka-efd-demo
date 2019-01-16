@@ -1,0 +1,25 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "reportedLinearStagePosition",
+      "sal_index": 0,
+      "type": "float"
+    }
+  ],
+  "name": "ATSpectrograph_logevent_reportedLinearStagePosition",
+  "namespace": "lsst.sal",
+  "sal_alias": "reportedLinearStagePosition",
+  "sal_subsystem": "ATSpectrograph",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.7.2",
+  "type": "record"
+}

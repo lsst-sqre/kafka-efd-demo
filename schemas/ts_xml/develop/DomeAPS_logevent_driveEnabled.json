@@ -12,6 +12,7 @@
     {
       "doc": "Unique identifier of the drive (1 to 4)",
       "name": "driveId",
+      "sal_index": 0,
       "type": "int"
     }
   ],

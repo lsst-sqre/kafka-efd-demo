@@ -11,10 +11,12 @@
     },
     {
       "name": "imagesLocationUri",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "name": "imagesMatchUri",
+      "sal_index": 1,
       "type": "string"
     }
   ],

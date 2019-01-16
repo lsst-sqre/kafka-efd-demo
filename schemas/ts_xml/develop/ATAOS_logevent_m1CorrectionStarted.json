@@ -1,0 +1,42 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Azimuth position for the correction.",
+      "name": "azimuth",
+      "sal_index": 0,
+      "sal_units": "degrees",
+      "type": "double"
+    },
+    {
+      "doc": "Elevation position for the correction.",
+      "name": "elevation",
+      "sal_index": 1,
+      "sal_units": "degrees",
+      "type": "double"
+    },
+    {
+      "doc": "Pressure correction applied to M1.",
+      "name": "pressure",
+      "sal_index": 2,
+      "sal_units": "Pa",
+      "type": "float"
+    }
+  ],
+  "name": "ATAOS_logevent_m1CorrectionStarted",
+  "namespace": "lsst.sal",
+  "sal_alias": "m1CorrectionStarted",
+  "sal_author": "Tiago Ribeiro",
+  "sal_subsystem": "ATAOS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

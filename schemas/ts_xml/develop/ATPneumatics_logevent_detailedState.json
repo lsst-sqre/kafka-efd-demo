@@ -12,6 +12,7 @@
     {
       "doc": "An enumeration indicating the subsystem summary state. See the SummaryStateValue enumeration defined in the Typedefs package.",
       "name": "detailedState",
+      "sal_index": 0,
       "type": "long"
     }
   ],

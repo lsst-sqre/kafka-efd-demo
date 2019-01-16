@@ -11,16 +11,19 @@
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/Rotator_Application_Demand.html",
       "name": "Demand",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/Rotator_Application_Position.html",
       "name": "Position",
+      "sal_index": 1,
       "type": "double"
     },
     {
       "doc": "http://sal.lsst.org/SAL/Telemetry/Rotator_Application_Error.html",
       "name": "Error",
+      "sal_index": 2,
       "type": "double"
     }
   ],

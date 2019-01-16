@@ -11,11 +11,13 @@
     {
       "doc": "Whether the CBP has been autoparked or not.",
       "name": "autoparked",
+      "sal_index": 0,
       "type": "float"
     },
     {
       "doc": "Whether the CBP is parked or not.",
       "name": "parked",
+      "sal_index": 1,
       "type": "float"
     }
   ],

@@ -12,11 +12,13 @@
     {
       "doc": "Wavefront sensor ID.",
       "name": "sensorId",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "doc": "z4-z22 terms of annular Zernike polynomials.The unit should be decided in a latter time.",
       "name": "annularZernikePoly",
+      "sal_index": 1,
       "type": {
         "items": "double",
         "sal_count": 19,
@@ -26,6 +28,7 @@
     {
       "doc": "The time stamp for when the telemetry was sampled.",
       "name": "timestamp",
+      "sal_index": 2,
       "type": "double"
     }
   ],

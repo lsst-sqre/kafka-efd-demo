@@ -10,10 +10,12 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "inclinometerAngle",
+      "sal_index": 1,
       "type": "float"
     }
   ],

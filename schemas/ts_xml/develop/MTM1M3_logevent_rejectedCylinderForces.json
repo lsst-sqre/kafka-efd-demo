@@ -11,6 +11,7 @@
     },
     {
       "name": "secondaryCylinderForces",
+      "sal_index": 0,
       "type": {
         "items": "long",
         "sal_count": 112,
@@ -19,6 +20,7 @@
     },
     {
       "name": "primaryCylinderForces",
+      "sal_index": 1,
       "type": {
         "items": "long",
         "sal_count": 156,

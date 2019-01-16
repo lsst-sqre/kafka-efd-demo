@@ -12,6 +12,7 @@
     {
       "doc": "An enumeration indicating the FiberSpectrograph detailed state. See the DetailedStateValue enumeration defined in the Typedefs package.",
       "name": "detailedState",
+      "sal_index": 0,
       "type": "long"
     }
   ],

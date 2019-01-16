@@ -12,6 +12,7 @@
     {
       "doc": "Time in seconds.",
       "name": "scanDuration",
+      "sal_index": 0,
       "type": "float"
     }
   ],

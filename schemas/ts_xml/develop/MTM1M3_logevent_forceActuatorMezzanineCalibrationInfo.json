@@ -11,6 +11,7 @@
     },
     {
       "name": "primaryCylinderGain",
+      "sal_index": 0,
       "type": {
         "items": "float",
         "sal_count": 156,
@@ -19,6 +20,7 @@
     },
     {
       "name": "secondaryCylinderGain",
+      "sal_index": 1,
       "type": {
         "items": "float",
         "sal_count": 112,

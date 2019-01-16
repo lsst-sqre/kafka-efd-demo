@@ -12,6 +12,7 @@
     {
       "doc": "This telemetry item reports the auxiliary telescope elevation motor current.",
       "name": "engage",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

@@ -10,11 +10,13 @@
     },
     {
       "name": "upTime",
+      "sal_index": 0,
       "sal_units": "Minutes",
       "type": "long"
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

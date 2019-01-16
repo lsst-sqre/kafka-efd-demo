@@ -11,6 +11,7 @@
     },
     {
       "name": "stopAllAxes",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

@@ -11,11 +11,13 @@
     {
       "doc": "The system time (TAI).",
       "name": "flow",
+      "sal_index": 0,
       "sal_units": "lpm",
       "type": "float"
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

@@ -11,246 +11,287 @@
     {
       "doc": "Azimuth_Thermal_Status_Group_1",
       "name": "Azimuth_Thermal_Status_Group_1",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Thermal_Status_Group_2",
       "name": "Azimuth_Thermal_Status_Group_2",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Thermal_Status_Group_3",
       "name": "Azimuth_Thermal_Status_Group_3",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Thermal_Status_Group_4",
       "name": "Azimuth_Thermal_Status_Group_4",
+      "sal_index": 3,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_1",
       "name": "Azimuth_Surface_Temperature_Motor_1",
+      "sal_index": 4,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_2",
       "name": "Azimuth_Surface_Temperature_Motor_2",
+      "sal_index": 5,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_3",
       "name": "Azimuth_Surface_Temperature_Motor_3",
+      "sal_index": 6,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_4",
       "name": "Azimuth_Surface_Temperature_Motor_4",
+      "sal_index": 7,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_5",
       "name": "Azimuth_Surface_Temperature_Motor_5",
+      "sal_index": 8,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_6",
       "name": "Azimuth_Surface_Temperature_Motor_6",
+      "sal_index": 9,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_7",
       "name": "Azimuth_Surface_Temperature_Motor_7",
+      "sal_index": 10,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_8",
       "name": "Azimuth_Surface_Temperature_Motor_8",
+      "sal_index": 11,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_9",
       "name": "Azimuth_Surface_Temperature_Motor_9",
+      "sal_index": 12,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_10",
       "name": "Azimuth_Surface_Temperature_Motor_10",
+      "sal_index": 13,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_11",
       "name": "Azimuth_Surface_Temperature_Motor_11",
+      "sal_index": 14,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_12",
       "name": "Azimuth_Surface_Temperature_Motor_12",
+      "sal_index": 15,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_13",
       "name": "Azimuth_Surface_Temperature_Motor_13",
+      "sal_index": 16,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_14",
       "name": "Azimuth_Surface_Temperature_Motor_14",
+      "sal_index": 17,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_15",
       "name": "Azimuth_Surface_Temperature_Motor_15",
+      "sal_index": 18,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Motor_16",
       "name": "Azimuth_Surface_Temperature_Motor_16",
+      "sal_index": 19,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_1",
       "name": "Azimuth_Surface_Temperature_Drive_1",
+      "sal_index": 20,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_2",
       "name": "Azimuth_Surface_Temperature_Drive_2",
+      "sal_index": 21,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_3",
       "name": "Azimuth_Surface_Temperature_Drive_3",
+      "sal_index": 22,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_4",
       "name": "Azimuth_Surface_Temperature_Drive_4",
+      "sal_index": 23,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_5",
       "name": "Azimuth_Surface_Temperature_Drive_5",
+      "sal_index": 24,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_6",
       "name": "Azimuth_Surface_Temperature_Drive_6",
+      "sal_index": 25,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_7",
       "name": "Azimuth_Surface_Temperature_Drive_7",
+      "sal_index": 26,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_8",
       "name": "Azimuth_Surface_Temperature_Drive_8",
+      "sal_index": 27,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_9",
       "name": "Azimuth_Surface_Temperature_Drive_9",
+      "sal_index": 28,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_10",
       "name": "Azimuth_Surface_Temperature_Drive_10",
+      "sal_index": 29,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_11",
       "name": "Azimuth_Surface_Temperature_Drive_11",
+      "sal_index": 30,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_12",
       "name": "Azimuth_Surface_Temperature_Drive_12",
+      "sal_index": 31,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_13",
       "name": "Azimuth_Surface_Temperature_Drive_13",
+      "sal_index": 32,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_14",
       "name": "Azimuth_Surface_Temperature_Drive_14",
+      "sal_index": 33,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_15",
       "name": "Azimuth_Surface_Temperature_Drive_15",
+      "sal_index": 34,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Drive_16",
       "name": "Azimuth_Surface_Temperature_Drive_16",
+      "sal_index": 35,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Setpoint_Group_1",
       "name": "Azimuth_Surface_Temperature_Setpoint_Group_1",
+      "sal_index": 36,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Setpoint_Group_2",
       "name": "Azimuth_Surface_Temperature_Setpoint_Group_2",
+      "sal_index": 37,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Setpoint_Group_3",
       "name": "Azimuth_Surface_Temperature_Setpoint_Group_3",
+      "sal_index": 38,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "Azimuth_Surface_Temperature_Setpoint_Group_4",
       "name": "Azimuth_Surface_Temperature_Setpoint_Group_4",
+      "sal_index": 39,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 40,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

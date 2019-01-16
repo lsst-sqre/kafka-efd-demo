@@ -11,114 +11,135 @@
     {
       "doc": "LP_Status_Drive_1",
       "name": "LP_Status_Drive_1",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "LP_Status_Drive_2",
       "name": "LP_Status_Drive_2",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "LP_Position_Drive_1",
       "name": "LP_Position_Drive_1",
+      "sal_index": 2,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "LP_Position_Drive_2",
       "name": "LP_Position_Drive_2",
+      "sal_index": 3,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "LP_Current_Drive_1",
       "name": "LP_Current_Drive_1",
+      "sal_index": 4,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "LP_Current_Drive_2",
       "name": "LP_Current_Drive_2",
+      "sal_index": 5,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "LP_Position_Setpoint_1",
       "name": "LP_Position_Setpoint_1",
+      "sal_index": 6,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "LP_Position_Setpoint_2",
       "name": "LP_Position_Setpoint_2",
+      "sal_index": 7,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "LP_Free_Limit_1",
       "name": "LP_Free_Limit_1",
+      "sal_index": 8,
       "type": "boolean"
     },
     {
       "doc": "LP_Free_Limit_2",
       "name": "LP_Free_Limit_2",
+      "sal_index": 9,
       "type": "boolean"
     },
     {
       "doc": "LP_Lock_Limit_1",
       "name": "LP_Lock_Limit_1",
+      "sal_index": 10,
       "type": "boolean"
     },
     {
       "doc": "LP_Lock_Limit_2",
       "name": "LP_Lock_Limit_2",
+      "sal_index": 11,
       "type": "boolean"
     },
     {
       "doc": "LP_Test_Limit_1",
       "name": "LP_Test_Limit_1",
+      "sal_index": 12,
       "type": "boolean"
     },
     {
       "doc": "LP_Test_Limit_2",
       "name": "LP_Test_Limit_2",
+      "sal_index": 13,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Locking_Pin_1_Retracted",
       "name": "Elevation_Locking_Pin_1_Retracted",
+      "sal_index": 14,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Locking_Pin_2_Retracted",
       "name": "Elevation_Locking_Pin_2_Retracted",
+      "sal_index": 15,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Locking_Pin_1_Inserted",
       "name": "Elevation_Locking_Pin_1_Inserted",
+      "sal_index": 16,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Locking_Pin_2_Inserted",
       "name": "Elevation_Locking_Pin_2_Inserted",
+      "sal_index": 17,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Locking_Pin_1_Test",
       "name": "Elevation_Locking_Pin_1_Test",
+      "sal_index": 18,
       "type": "boolean"
     },
     {
       "doc": "Elevation_Locking_Pin_2_Test",
       "name": "Elevation_Locking_Pin_2_Test",
+      "sal_index": 19,
       "type": "boolean"
     },
     {
       "doc": "LP_Interlocks",
       "name": "LP_Interlocks",
+      "sal_index": 20,
       "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
@@ -129,6 +150,7 @@
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 21,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

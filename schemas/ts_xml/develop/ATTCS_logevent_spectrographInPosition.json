@@ -11,6 +11,7 @@
     },
     {
       "name": "inPosition",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

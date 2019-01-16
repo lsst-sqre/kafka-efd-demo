@@ -12,11 +12,13 @@
     {
       "doc": "Identifier of the error",
       "name": "id",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "doc": "The error info",
       "name": "text",
+      "sal_index": 1,
       "type": "string"
     }
   ],

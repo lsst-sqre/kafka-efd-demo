@@ -11,14 +11,17 @@
     },
     {
       "name": "targetId",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "invalid",
+      "sal_index": 1,
       "type": "boolean"
     },
     {
       "name": "timestamp",
+      "sal_index": 2,
       "type": "double"
     }
   ],

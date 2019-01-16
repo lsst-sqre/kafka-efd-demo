@@ -10,76 +10,92 @@
     },
     {
       "name": "biasStatus",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "biasCurrent",
+      "sal_index": 1,
       "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "biasVoltage",
+      "sal_index": 2,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "clockStatus",
+      "sal_index": 3,
       "type": "int"
     },
     {
       "name": "clockCurrent",
+      "sal_index": 4,
       "sal_units": "ampere",
       "type": "int"
     },
     {
       "name": "clockVoltage",
+      "sal_index": 5,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "fpgaStatus",
+      "sal_index": 6,
       "type": "int"
     },
     {
       "name": "fpgaCurrent",
+      "sal_index": 7,
       "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "fpgaVoltage",
+      "sal_index": 8,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "lowStatus",
+      "sal_index": 9,
       "type": "int"
     },
     {
       "name": "lowCurrent",
+      "sal_index": 10,
       "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "lowVoltage",
+      "sal_index": 11,
       "sal_units": "volt",
       "type": "int"
     },
     {
       "name": "odStatus",
+      "sal_index": 12,
       "type": "int"
     },
     {
       "name": "odCurrent",
+      "sal_index": 13,
       "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "odVoltage",
+      "sal_index": 14,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "rebID",
+      "sal_index": 15,
       "type": "float"
     }
   ],

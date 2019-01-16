@@ -10,10 +10,12 @@
     },
     {
       "name": "rebID",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "timingParameters",
+      "sal_index": 1,
       "type": {
         "items": "long",
         "sal_count": 10,
@@ -22,6 +24,7 @@
     },
     {
       "name": "flag",
+      "sal_index": 2,
       "type": {
         "items": "long",
         "sal_count": 20,

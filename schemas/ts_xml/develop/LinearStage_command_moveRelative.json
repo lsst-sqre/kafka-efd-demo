@@ -11,12 +11,14 @@
     },
     {
       "name": "distance",
+      "sal_index": 0,
       "sal_units": "millimeters",
       "type": "float"
     },
     {
       "doc": "The timestamp for when the event occurred.",
       "name": "timestamp",
+      "sal_index": 1,
       "sal_units": "Seconds",
       "type": "double"
     }

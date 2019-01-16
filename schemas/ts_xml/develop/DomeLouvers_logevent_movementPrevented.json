@@ -12,11 +12,13 @@
     {
       "doc": "ID of the louver subsystem (1 to 32)",
       "name": "louverId",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "doc": "Unique identifier of the cause",
       "name": "causeId",
+      "sal_index": 1,
       "type": "string"
     }
   ],

@@ -11,10 +11,12 @@
     },
     {
       "name": "louverId",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "name": "position",
+      "sal_index": 1,
       "type": "int"
     }
   ],

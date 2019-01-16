@@ -10,6 +10,7 @@
     },
     {
       "name": "ccsStatus",
+      "sal_index": 0,
       "type": {
         "items": "long",
         "sal_count": 20,
@@ -18,6 +19,7 @@
     },
     {
       "name": "imageStatus",
+      "sal_index": 1,
       "type": {
         "items": "long",
         "sal_count": 20,

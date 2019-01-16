@@ -10,6 +10,7 @@
     },
     {
       "name": "status",
+      "sal_index": 0,
       "type": {
         "items": "long",
         "sal_count": 2,

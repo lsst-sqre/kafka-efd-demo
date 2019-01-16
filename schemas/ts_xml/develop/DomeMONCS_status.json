@@ -10,6 +10,7 @@
     },
     {
       "name": "data",
+      "sal_index": 0,
       "type": {
         "items": "float",
         "sal_count": 16,

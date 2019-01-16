@@ -1,0 +1,27 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Which offset to absorb:\n0 = user\n1= handset\n2 = both",
+      "name": "num",
+      "sal_index": 0,
+      "type": "int"
+    }
+  ],
+  "name": "MTPtg_command_offsetAbsorb",
+  "namespace": "lsst.sal",
+  "sal_alias": "offsetAbsorb",
+  "sal_author": "pbt",
+  "sal_subsystem": "MTPtg",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

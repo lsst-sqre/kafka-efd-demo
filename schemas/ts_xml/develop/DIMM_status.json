@@ -1,0 +1,59 @@
+{
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "The status of the DIMM.",
+      "name": "status",
+      "sal_index": 0,
+      "type": "long"
+    },
+    {
+      "doc": "HR star number",
+      "name": "hrNum",
+      "sal_index": 1,
+      "type": "long"
+    },
+    {
+      "doc": "The altitude position of the DIMM",
+      "name": "altitude",
+      "sal_index": 2,
+      "sal_units": "degrees",
+      "type": "float"
+    },
+    {
+      "doc": "The azimuth position of the DIMM",
+      "name": "azimuth",
+      "sal_index": 3,
+      "sal_units": "degrees",
+      "type": "float"
+    },
+    {
+      "doc": "The right-ascension position of the DIMM",
+      "name": "ra",
+      "sal_index": 4,
+      "sal_units": "degrees",
+      "type": "float"
+    },
+    {
+      "doc": "The declination position of the DIMM",
+      "name": "decl",
+      "sal_index": 5,
+      "sal_units": "degrees",
+      "type": "float"
+    }
+  ],
+  "name": "DIMM_status",
+  "namespace": "lsst.sal",
+  "sal_author": "tribeiro",
+  "sal_subsystem": "DIMM",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

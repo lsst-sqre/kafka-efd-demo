@@ -12,30 +12,35 @@
     {
       "doc": "Script name",
       "name": "oCSScriptName",
+      "sal_index": 0,
       "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Identifier for the script",
       "name": "oCSScriptIdentifier",
+      "sal_index": 1,
       "sal_units": "None",
       "type": "double"
     },
     {
       "doc": "Script timestamp",
       "name": "oCSScriptTimestamp",
+      "sal_index": 2,
       "sal_units": "None",
       "type": "string"
     },
     {
       "doc": "Script status code",
       "name": "oCSScriptStatusCode",
+      "sal_index": 3,
       "sal_units": "None",
       "type": "long"
     },
     {
       "doc": "Script status text",
       "name": "oCSScriptStatusText",
+      "sal_index": 4,
       "sal_units": "None",
       "type": "string"
     }

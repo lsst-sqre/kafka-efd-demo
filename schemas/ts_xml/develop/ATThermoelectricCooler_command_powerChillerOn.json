@@ -11,6 +11,7 @@
     },
     {
       "name": "powerOn",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

@@ -1,0 +1,28 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Focus correction.",
+      "name": "focus",
+      "sal_index": 0,
+      "sal_units": "mm",
+      "type": "float"
+    }
+  ],
+  "name": "ATAOS_logevent_focusCorrectionCompleted",
+  "namespace": "lsst.sal",
+  "sal_alias": "focusCorrectionCompleted",
+  "sal_author": "Tiago Ribeiro",
+  "sal_subsystem": "ATAOS",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

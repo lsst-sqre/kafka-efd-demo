@@ -11,11 +11,13 @@
     },
     {
       "name": "homed",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "doc": "The timestamp for when the event occurred.",
       "name": "timestamp",
+      "sal_index": 1,
       "sal_units": "Seconds",
       "type": "double"
     }

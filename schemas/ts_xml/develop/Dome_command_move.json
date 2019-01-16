@@ -11,10 +11,12 @@
     },
     {
       "name": "azimuth",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "elevation",
+      "sal_index": 1,
       "type": "double"
     }
   ],

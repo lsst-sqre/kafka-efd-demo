@@ -12,11 +12,13 @@
     {
       "doc": "Index of Script SAL component to requeue.",
       "name": "salIndex",
+      "sal_index": 0,
       "type": "int"
     },
     {
       "doc": "Queue location.",
       "name": "location",
+      "sal_index": 1,
       "type": {
         "name": "location",
         "symbols": [
@@ -31,6 +33,7 @@
     {
       "doc": "Index of Script SAL component referred to by `location`; ignored unless `location` is `Before` or `After`.",
       "name": "locationSalIndex",
+      "sal_index": 2,
       "type": "int"
     }
   ],

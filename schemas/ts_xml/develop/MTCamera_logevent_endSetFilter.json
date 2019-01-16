@@ -12,6 +12,7 @@
     {
       "doc": "The name of the filter being installed (e.g. U-001)",
       "name": "filterName",
+      "sal_index": 0,
       "type": "string"
     }
   ],

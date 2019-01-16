@@ -12,6 +12,7 @@
       "doc": "Force measurement for each actuator in sequence, increasing force corresponds to increasing tension in the load cell",
       "name": "axialForceMeasured",
       "sal_frequency": 1.0,
+      "sal_index": 0,
       "sal_publishers": 1,
       "sal_size_in_bytes": 8,
       "sal_units": "radians",

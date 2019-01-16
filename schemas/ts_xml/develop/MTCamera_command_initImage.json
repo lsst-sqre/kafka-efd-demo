@@ -11,6 +11,7 @@
     },
     {
       "name": "deltaT",
+      "sal_index": 0,
       "type": "double"
     }
   ],

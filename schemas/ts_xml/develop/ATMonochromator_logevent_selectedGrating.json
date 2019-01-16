@@ -11,6 +11,7 @@
     },
     {
       "name": "gratingType",
+      "sal_index": 0,
       "type": {
         "name": "gratingType",
         "symbols": [
@@ -23,6 +24,7 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

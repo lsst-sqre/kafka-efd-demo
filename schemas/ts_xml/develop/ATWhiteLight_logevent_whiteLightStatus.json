@@ -12,16 +12,19 @@
     {
       "doc": "Blue LED status from the digital output",
       "name": "coolingDown",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "doc": "Red LED status from the digital output. The kiloarc has some safe switches.\n\nThe lamp system immediately extinguishes the bulb, the status indicator turns red, and the error indicator flashes the error code cycle (see above) continuously.",
       "name": "error",
+      "sal_index": 1,
       "type": "boolean"
     },
     {
       "doc": "Greed LED status from the digital output. It could be in Standby or operation.",
       "name": "acceptingCommands",
+      "sal_index": 2,
       "type": "boolean"
     }
   ],

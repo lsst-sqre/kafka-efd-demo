@@ -11,6 +11,7 @@
     {
       "doc": "The focus of the CBP.",
       "name": "focus",
+      "sal_index": 0,
       "type": "float"
     }
   ],

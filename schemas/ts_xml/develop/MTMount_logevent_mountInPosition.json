@@ -12,6 +12,7 @@
     {
       "doc": "Whether the mount is in position or not",
       "name": "inposition",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

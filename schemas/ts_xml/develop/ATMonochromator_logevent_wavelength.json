@@ -11,10 +11,12 @@
     },
     {
       "name": "wavelength",
+      "sal_index": 0,
       "type": "float"
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

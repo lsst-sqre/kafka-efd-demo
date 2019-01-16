@@ -11,6 +11,7 @@
     },
     {
       "name": "ilcState",
+      "sal_index": 0,
       "type": {
         "items": "int",
         "sal_count": 6,

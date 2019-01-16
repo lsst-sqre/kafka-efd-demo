@@ -11,16 +11,19 @@
     },
     {
       "name": "x",
+      "sal_index": 0,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "y",
+      "sal_index": 1,
       "sal_units": "um",
       "type": "double"
     },
     {
       "name": "z",
+      "sal_index": 2,
       "sal_units": "um",
       "type": "double"
     }

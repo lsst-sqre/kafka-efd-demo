@@ -1,0 +1,27 @@
+{
+  "doc": "http://project.lsst.org/ts/sal_objects/help",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "offset",
+      "sal_index": 0,
+      "sal_units": "mm",
+      "type": "float"
+    }
+  ],
+  "name": "ATAOS_command_applyFocusOffset",
+  "namespace": "lsst.sal",
+  "sal_alias": "applyFocusOffset",
+  "sal_author": "Tiago Ribeiro",
+  "sal_subsystem": "ATAOS",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8",
+  "type": "record"
+}

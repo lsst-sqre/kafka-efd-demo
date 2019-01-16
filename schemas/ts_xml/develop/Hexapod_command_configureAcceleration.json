@@ -11,6 +11,7 @@
     },
     {
       "name": "accmax",
+      "sal_index": 0,
       "sal_units": "um/s^2",
       "type": "double"
     }

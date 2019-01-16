@@ -1,0 +1,24 @@
+{
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "workStatus",
+      "sal_index": 0,
+      "type": "long"
+    }
+  ],
+  "name": "HVAC_whiteRoomAHU",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "HVAC",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

@@ -12,11 +12,13 @@
     {
       "doc": "The error code being published.",
       "name": "errorCode",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "doc": "handle a few sentences of higher-level information describing the error.",
       "name": "errorReport",
+      "sal_index": 1,
       "type": "string"
     }
   ],

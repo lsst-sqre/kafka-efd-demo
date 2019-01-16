@@ -12,6 +12,7 @@
     {
       "doc": "Dummy value that is ignored.",
       "name": "ignored",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

@@ -12,6 +12,7 @@
     {
       "doc": "Reached state",
       "name": "newState",
+      "sal_index": 0,
       "type": "int"
     }
   ],

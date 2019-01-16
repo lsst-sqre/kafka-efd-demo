@@ -10,6 +10,7 @@
     },
     {
       "name": "loopTime",
+      "sal_index": 0,
       "sal_units": "ms",
       "type": "double"
     }

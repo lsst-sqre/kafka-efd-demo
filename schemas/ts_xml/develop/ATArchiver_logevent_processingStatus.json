@@ -11,10 +11,12 @@
     },
     {
       "name": "statusCode",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "description",
+      "sal_index": 1,
       "type": "string"
     }
   ],

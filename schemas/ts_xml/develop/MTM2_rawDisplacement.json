@@ -12,6 +12,7 @@
       "doc": "Raw measurements from displacement sensors",
       "name": "rawPosition",
       "sal_frequency": 1.0,
+      "sal_index": 0,
       "sal_publishers": 1,
       "sal_size_in_bytes": 8,
       "sal_units": "microns",

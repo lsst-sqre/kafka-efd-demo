@@ -1,4 +1,5 @@
 {
+  "doc": "Script, class name, description and a list of the remotes it uses -- basically metadata that does not depend on configuration.",
   "fields": [
     {
       "doc": "Timestamp when the Kafka message was created.",
@@ -11,16 +12,19 @@
     {
       "doc": "Name of script class.",
       "name": "classname",
+      "sal_index": 0,
       "type": "string"
     },
     {
       "doc": "Brief description of the script.",
       "name": "description",
+      "sal_index": 1,
       "type": "string"
     },
     {
       "doc": "Remote SAL components used by the script as a comma-separated list. Each name is appended with :<index> if the component is indexed (and possibly with :0 if not indexed).",
       "name": "remotes",
+      "sal_index": 2,
       "type": "string"
     }
   ],

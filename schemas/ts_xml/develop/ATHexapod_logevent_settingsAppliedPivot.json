@@ -1,0 +1,38 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "pivotX",
+      "sal_index": 0,
+      "sal_units": "mm",
+      "type": "double"
+    },
+    {
+      "name": "pivotY",
+      "sal_index": 1,
+      "sal_units": "mm",
+      "type": "double"
+    },
+    {
+      "name": "pivotZ",
+      "sal_index": 2,
+      "sal_units": "mm",
+      "type": "double"
+    }
+  ],
+  "name": "ATHexapod_logevent_settingsAppliedPivot",
+  "namespace": "lsst.sal",
+  "sal_alias": "settingsAppliedPivot",
+  "sal_subsystem": "ATHexapod",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

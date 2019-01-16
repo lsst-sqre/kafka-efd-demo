@@ -12,6 +12,7 @@
     {
       "doc": "The measured average exposure time",
       "name": "measuredExposureTime",
+      "sal_index": 0,
       "sal_units": "seconds",
       "type": "double"
     }

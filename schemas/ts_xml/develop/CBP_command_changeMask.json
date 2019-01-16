@@ -12,6 +12,7 @@
     {
       "doc": "The name of the mask to change to.",
       "name": "mask",
+      "sal_index": 0,
       "type": "string"
     }
   ],

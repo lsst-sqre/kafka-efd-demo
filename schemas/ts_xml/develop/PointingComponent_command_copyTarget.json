@@ -1,0 +1,41 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Target definition will be copied from this target. The 'to' and 'from' targets must be different.",
+      "name": "copyFrom",
+      "sal_index": 0,
+      "type": {
+        "name": "copyFrom",
+        "symbols": [
+          "current",
+          "next",
+          "prospective"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "doc": "Target definition will be copied to this target. The 'to' and 'from' targets must be different. Use the same enumeration constants as copyFrom.",
+      "name": "copyTo",
+      "sal_index": 1,
+      "type": "long"
+    }
+  ],
+  "name": "PointingComponent_command_copyTarget",
+  "namespace": "lsst.sal",
+  "sal_alias": "copyTarget",
+  "sal_author": "pbt",
+  "sal_subsystem": "PointingComponent",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

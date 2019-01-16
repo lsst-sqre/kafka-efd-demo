@@ -12,6 +12,7 @@
     {
       "doc": "Unique identifier of the brake (1 to 4)",
       "name": "errorCode",
+      "sal_index": 0,
       "type": "string"
     }
   ],

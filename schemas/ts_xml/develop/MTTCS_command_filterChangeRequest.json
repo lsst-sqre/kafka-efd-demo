@@ -11,6 +11,7 @@
     },
     {
       "name": "filterChangeRequest",
+      "sal_index": 0,
       "type": "string"
     }
   ],

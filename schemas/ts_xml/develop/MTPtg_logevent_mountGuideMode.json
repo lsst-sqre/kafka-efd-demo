@@ -1,0 +1,21 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    }
+  ],
+  "name": "MTPtg_logevent_mountGuideMode",
+  "namespace": "lsst.sal",
+  "sal_alias": "mountGuideMode",
+  "sal_author": "pbt",
+  "sal_subsystem": "MTPtg",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

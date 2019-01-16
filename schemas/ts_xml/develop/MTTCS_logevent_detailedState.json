@@ -12,6 +12,7 @@
     {
       "doc": "The current detailed state of the system.",
       "name": "detailedState",
+      "sal_index": 0,
       "sal_units": "NA",
       "type": "int"
     }

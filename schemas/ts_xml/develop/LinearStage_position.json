@@ -11,6 +11,7 @@
     {
       "doc": "The position of the linear stage along the track",
       "name": "position",
+      "sal_index": 0,
       "sal_units": "millimeters",
       "type": "float"
     }

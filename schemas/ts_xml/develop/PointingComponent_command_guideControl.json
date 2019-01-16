@@ -1,0 +1,33 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "name": "state",
+      "sal_index": 0,
+      "type": {
+        "name": "state",
+        "symbols": [
+          "on",
+          "off"
+        ],
+        "type": "enum"
+      }
+    }
+  ],
+  "name": "PointingComponent_command_guideControl",
+  "namespace": "lsst.sal",
+  "sal_alias": "guideControl",
+  "sal_author": "pbt",
+  "sal_subsystem": "PointingComponent",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.0",
+  "type": "record"
+}

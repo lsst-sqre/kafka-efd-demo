@@ -11,6 +11,7 @@
     },
     {
       "name": "status",
+      "sal_index": 0,
       "type": "int"
     }
   ],

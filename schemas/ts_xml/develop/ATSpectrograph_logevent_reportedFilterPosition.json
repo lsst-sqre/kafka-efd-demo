@@ -11,6 +11,7 @@
     },
     {
       "name": "reportedFilterPosition",
+      "sal_index": 0,
       "type": "long"
     }
   ],

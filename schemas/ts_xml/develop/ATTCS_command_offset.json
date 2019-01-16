@@ -11,11 +11,13 @@
     },
     {
       "name": "offsetX",
+      "sal_index": 0,
       "sal_units": "arcseconds",
       "type": "double"
     },
     {
       "name": "offsetY",
+      "sal_index": 1,
       "sal_units": "arcseconds",
       "type": "double"
     }

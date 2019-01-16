@@ -11,6 +11,7 @@
     },
     {
       "name": "alimit",
+      "sal_index": 0,
       "sal_units": "deg/s^2",
       "type": "double"
     }

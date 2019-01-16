@@ -11,14 +11,17 @@
     },
     {
       "name": "errorCode",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "errorReport",
+      "sal_index": 1,
       "type": "string"
     },
     {
       "name": "traceback",
+      "sal_index": 2,
       "type": "string"
     }
   ],

@@ -11,14 +11,17 @@
     },
     {
       "name": "integrationTime",
+      "sal_index": 0,
       "type": "float"
     },
     {
       "name": "imageType",
+      "sal_index": 1,
       "type": "string"
     },
     {
       "name": "lamp",
+      "sal_index": 2,
       "type": "string"
     }
   ],

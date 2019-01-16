@@ -12,6 +12,7 @@
     {
       "doc": "Unique identifier of the locking pin(1 to 4)",
       "name": "status",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

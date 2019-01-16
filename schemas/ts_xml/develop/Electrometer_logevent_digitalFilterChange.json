@@ -12,16 +12,19 @@
     {
       "doc": "Average filter, true for set",
       "name": "activateMedianFilter",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "doc": "Filter status, if active will execute Average or Median filter when set, true for active.",
       "name": "activateAverageFilter",
+      "sal_index": 1,
       "type": "boolean"
     },
     {
       "doc": "Median filter, true for set",
       "name": "activateFilter",
+      "sal_index": 2,
       "type": "boolean"
     }
   ],

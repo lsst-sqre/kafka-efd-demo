@@ -11,6 +11,7 @@
     },
     {
       "name": "pssnList",
+      "sal_index": 0,
       "type": {
         "items": "double",
         "sal_count": 31,
@@ -19,6 +20,7 @@
     },
     {
       "name": "sensorIdList",
+      "sal_index": 1,
       "type": {
         "items": "int",
         "sal_count": 31,
@@ -27,6 +29,7 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 2,
       "type": "double"
     }
   ],

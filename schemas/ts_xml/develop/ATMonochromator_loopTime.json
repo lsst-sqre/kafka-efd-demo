@@ -11,6 +11,7 @@
     {
       "doc": "The actual loop time is ms.",
       "name": "loopTime",
+      "sal_index": 0,
       "type": "double"
     }
   ],

@@ -12,18 +12,21 @@
     {
       "doc": "Command Value",
       "name": "commandValue",
+      "sal_index": 0,
       "sal_units": "NA",
       "type": "int"
     },
     {
       "doc": "Detailed State",
       "name": "detailedState",
+      "sal_index": 1,
       "sal_units": "NA",
       "type": "int"
     },
     {
       "doc": "The system time.",
       "name": "timestamp",
+      "sal_index": 2,
       "sal_units": "NA",
       "type": "double"
     }

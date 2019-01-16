@@ -12,6 +12,7 @@
     {
       "doc": "blabla",
       "name": "driveId",
+      "sal_index": 0,
       "type": "int"
     }
   ],

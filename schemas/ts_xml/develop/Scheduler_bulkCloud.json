@@ -10,10 +10,12 @@
     },
     {
       "name": "bulkCloud",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "timestamp",
+      "sal_index": 1,
       "type": "double"
     }
   ],

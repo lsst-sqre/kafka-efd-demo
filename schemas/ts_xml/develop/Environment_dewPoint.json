@@ -1,0 +1,30 @@
+{
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "1 minute average value",
+      "name": "avg1M",
+      "sal_index": 0,
+      "type": "double"
+    },
+    {
+      "doc": "Sensor model used to measure this parameters",
+      "name": "sensorName",
+      "sal_index": 1,
+      "type": "string"
+    }
+  ],
+  "name": "Environment_dewPoint",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "Environment",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

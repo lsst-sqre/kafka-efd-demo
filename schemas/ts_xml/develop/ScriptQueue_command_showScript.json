@@ -12,6 +12,7 @@
     {
       "doc": "SAL index of Script for which you want information.",
       "name": "salIndex",
+      "sal_index": 0,
       "type": "int"
     }
   ],

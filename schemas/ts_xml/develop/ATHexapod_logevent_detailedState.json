@@ -11,6 +11,7 @@
     },
     {
       "name": "detailedState",
+      "sal_index": 0,
       "type": "long"
     }
   ],

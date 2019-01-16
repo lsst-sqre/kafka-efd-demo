@@ -11,6 +11,7 @@
     },
     {
       "name": "modbusSubnet",
+      "sal_index": 0,
       "type": {
         "items": "int",
         "sal_count": 156,
@@ -19,6 +20,7 @@
     },
     {
       "name": "modbusAddress",
+      "sal_index": 1,
       "type": {
         "items": "int",
         "sal_count": 156,
@@ -27,6 +29,7 @@
     },
     {
       "name": "ilcStatus",
+      "sal_index": 2,
       "type": {
         "items": "long",
         "sal_count": 156,
@@ -35,6 +38,7 @@
     },
     {
       "name": "mezzanineStatus",
+      "sal_index": 3,
       "type": {
         "items": "long",
         "sal_count": 156,

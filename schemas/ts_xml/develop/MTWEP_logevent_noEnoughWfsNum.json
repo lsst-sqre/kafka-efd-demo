@@ -12,6 +12,7 @@
     {
       "doc": "The time stamp for when the event occurred.",
       "name": "timestamp",
+      "sal_index": 0,
       "type": "double"
     }
   ],

@@ -1,0 +1,33 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Offset position angle in degrees, clockwise from North",
+      "name": "angle",
+      "sal_index": 0,
+      "type": "double"
+    },
+    {
+      "doc": "Radial offset relative to target position",
+      "name": "radius",
+      "sal_index": 1,
+      "type": "double"
+    }
+  ],
+  "name": "MTPtg_command_offsetPA",
+  "namespace": "lsst.sal",
+  "sal_alias": "offsetPA",
+  "sal_author": "pbt",
+  "sal_subsystem": "MTPtg",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

@@ -11,14 +11,17 @@
     },
     {
       "name": "azPosition",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "elPosition",
+      "sal_index": 1,
       "type": "double"
     },
     {
       "name": "demandTime",
+      "sal_index": 2,
       "type": "double"
     }
   ],

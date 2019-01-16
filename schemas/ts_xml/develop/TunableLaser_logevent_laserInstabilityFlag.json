@@ -11,6 +11,7 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 0,
       "sal_units": "Seconds",
       "type": "double"
     }

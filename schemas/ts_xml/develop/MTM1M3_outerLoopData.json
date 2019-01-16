@@ -10,14 +10,17 @@
     },
     {
       "name": "timestamp",
+      "sal_index": 0,
       "type": "double"
     },
     {
       "name": "broadcastCounter",
+      "sal_index": 1,
       "type": "int"
     },
     {
       "name": "executionTime",
+      "sal_index": 2,
       "type": "double"
     }
   ],

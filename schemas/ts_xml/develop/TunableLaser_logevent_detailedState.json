@@ -1,0 +1,27 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "The substate or extra states of the CSC.",
+      "name": "detailedState",
+      "sal_index": 0,
+      "type": "long"
+    }
+  ],
+  "name": "TunableLaser_logevent_detailedState",
+  "namespace": "lsst.sal",
+  "sal_alias": "detailedState",
+  "sal_author": "ecoughlin",
+  "sal_subsystem": "TunableLaser",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8",
+  "type": "record"
+}

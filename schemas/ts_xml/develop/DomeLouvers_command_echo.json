@@ -11,6 +11,7 @@
     },
     {
       "name": "louverId",
+      "sal_index": 0,
       "type": "int"
     }
   ],

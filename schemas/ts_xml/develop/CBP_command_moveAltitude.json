@@ -12,6 +12,7 @@
     {
       "doc": "The amount to move the altitude by.",
       "name": "altitude",
+      "sal_index": 0,
       "sal_units": "degrees",
       "type": "float"
     }

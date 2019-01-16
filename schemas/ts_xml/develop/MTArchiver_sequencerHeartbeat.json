@@ -10,10 +10,12 @@
     },
     {
       "name": "heartbeat",
+      "sal_index": 0,
       "type": "boolean"
     },
     {
       "name": "priority",
+      "sal_index": 1,
       "type": "long"
     }
   ],

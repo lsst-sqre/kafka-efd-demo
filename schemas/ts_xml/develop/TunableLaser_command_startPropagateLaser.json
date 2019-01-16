@@ -11,6 +11,7 @@
     },
     {
       "name": "startPropagateLaser",
+      "sal_index": 0,
       "type": "boolean"
     }
   ],

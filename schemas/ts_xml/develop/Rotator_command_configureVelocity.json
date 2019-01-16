@@ -11,6 +11,7 @@
     },
     {
       "name": "vlimit",
+      "sal_index": 0,
       "sal_units": "deg/s",
       "type": "double"
     }

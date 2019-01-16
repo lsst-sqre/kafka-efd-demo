@@ -11,6 +11,7 @@
     },
     {
       "name": "slit",
+      "sal_index": 0,
       "type": {
         "name": "slit",
         "symbols": [
@@ -22,6 +23,7 @@
     },
     {
       "name": "slitWidth",
+      "sal_index": 1,
       "type": "float"
     }
   ],
