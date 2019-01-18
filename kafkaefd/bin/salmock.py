@@ -53,6 +53,11 @@ def salmock(ctx):
          'not set, but you don\'t want to produce for **all** the SAL topics.'
 )
 @click.option(
+    '--period', type=float, default=1, show_default=True,
+    help='Set the period in seconds in which every topic is produced, e.g. if '
+         '--period is 0.1 topics are produced at 10Hz.'
+)
+@click.option(
     '--log-level', 'log_level',
     type=click.Choice(['debug', 'info', 'warning']),
     default='info', help='Logging level'
@@ -62,7 +67,7 @@ def salmock(ctx):
     help='Port for the Prometheus metrics scraping endpoint.'
 )
 @click.pass_context
-def produce(ctx, topic_names, max_topics, log_level, prometheus_port):
+def produce(ctx, topic_names, max_topics, period, log_level, prometheus_port):
     """Produce SAL messages for a specific set of SAL topics, or for all
     SAL topics with registered schemas.
     """
@@ -82,7 +87,8 @@ def produce(ctx, topic_names, max_topics, log_level, prometheus_port):
             schema_registry_url=schema_registry_url,
             topic_names=topic_names,
             root_producer_settings=producer_settings,
-            max_topics=max_topics)
+            max_topics=max_topics,
+            period=period)
     )
 
 
@@ -116,8 +122,9 @@ def consume(ctx, topic_name, log_level):
     )
 
 
-async def producer_main(topic_names=None, *, max_topics, loop, prometheus_port,
-                        schema_registry_url, root_producer_settings):
+async def producer_main(topic_names=None, *, max_topics, period, loop,
+                        prometheus_port, schema_registry_url,
+                        root_producer_settings):
     """Main asyncio-based function for the producer."""
     logger = structlog.get_logger(__name__)
 
@@ -176,7 +183,7 @@ async def producer_main(topic_names=None, *, max_topics, loop, prometheus_port,
                 topic_name=topic_name,
                 schema=schema[0],
                 schema_id=schema[1],
-                period=1
+                period=period
             )
         )
     await asyncio.gather(*tasks)
