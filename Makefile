@@ -1,4 +1,4 @@
-.PHONY: help installapp pytest image travis-docker-deploy version
+.PHONY: help installapp test image travis-docker-deploy version
 
 VERSION=$(shell kafkaefd --version)
 
@@ -11,10 +11,10 @@ help:
 	@echo "  make version ..... (print the app version)"
 
 installapp:
-	pip install -e .
+	pip install -e ".[dev]"
 
 test:
-	pytest --flake8
+	pytest
 
 image:
 	python setup.py sdist

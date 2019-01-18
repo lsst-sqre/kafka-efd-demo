@@ -38,6 +38,10 @@ tests_require = [
     'pytest-flake8==1.0.2',
 ]
 
+extras_require = {
+    'dev': tests_require
+}
+
 setup_requires = [
     'setuptools_scm',
     'pytest-runner==4.2',
@@ -60,6 +64,7 @@ setup(
     packages=find_packages(exclude=['docs', 'tests*']),
     install_requires=install_requires,
     tests_require=tests_require,
+    extras_require=extras_require,
     use_scm_version=True,
     setup_requires=setup_requires,
     include_package_data=True,
