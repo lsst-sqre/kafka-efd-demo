@@ -483,7 +483,6 @@ async def consume_for_simple_topics(*, loop, httpsession, consumer_settings,
         schema_uri.expand(subject=f'{topic_name}-key'),
         headers=registry_headers)
     data = await r.json()
-    key_schema = fastavro.parse_schema(json.loads(data['schema']))
 
     r = await httpsession.get(
         schema_uri.expand(subject=f'{topic_name}-value'),
