@@ -16,6 +16,7 @@
       "name": "primaryCylinderForces",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "secondaryCylinderForces",
       "type": {
         "items": "float",
+        "sal_count": 112,
         "type": "array"
       }
     },
@@ -30,6 +32,7 @@
       "name": "xForces",
       "type": {
         "items": "float",
+        "sal_count": 12,
         "type": "array"
       }
     },
@@ -37,6 +40,7 @@
       "name": "yForces",
       "type": {
         "items": "float",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -44,6 +48,7 @@
       "name": "zForces",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },

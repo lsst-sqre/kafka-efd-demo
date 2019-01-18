@@ -21,6 +21,7 @@
       "name": "hardpointMonitorFlags",
       "type": {
         "items": "long",
+        "sal_count": 6,
         "type": "array"
       }
     }

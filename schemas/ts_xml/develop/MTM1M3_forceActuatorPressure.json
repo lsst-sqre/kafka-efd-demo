@@ -12,6 +12,7 @@
       "name": "timestamps",
       "type": {
         "items": "double",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -19,6 +20,7 @@
       "name": "primaryCylinderPushPressures",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -26,6 +28,7 @@
       "name": "primaryCylinderPullPressures",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -33,6 +36,7 @@
       "name": "secondaryCylinderPushPressures",
       "type": {
         "items": "float",
+        "sal_count": 112,
         "type": "array"
       }
     },
@@ -40,6 +44,7 @@
       "name": "secondaryCylinderPullPressures",
       "type": {
         "items": "float",
+        "sal_count": 112,
         "type": "array"
       }
     }

@@ -12,6 +12,7 @@
       "name": "positionError",
       "type": {
         "items": "float",
+        "sal_count": 34,
         "type": "array"
       }
     },
@@ -19,6 +20,7 @@
       "name": "positionActual",
       "type": {
         "items": "float",
+        "sal_count": 34,
         "type": "array"
       }
     },
@@ -26,6 +28,7 @@
       "name": "positionCmd",
       "type": {
         "items": "float",
+        "sal_count": 34,
         "type": "array"
       }
     },
@@ -33,6 +36,7 @@
       "name": "driveTorqueActual",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },
@@ -40,6 +44,7 @@
       "name": "driveTorqueError",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },
@@ -47,6 +52,7 @@
       "name": "driveTorqueCmd",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },
@@ -54,6 +60,7 @@
       "name": "driveCurrentActual",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },
@@ -61,6 +68,7 @@
       "name": "driveTempActual",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },
@@ -68,6 +76,7 @@
       "name": "encoderHeadRaw",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },
@@ -75,6 +84,7 @@
       "name": "encoderHeadCalibrated",
       "type": {
         "items": "float",
+        "sal_count": 68,
         "type": "array"
       }
     },

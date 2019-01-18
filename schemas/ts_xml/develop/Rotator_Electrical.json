@@ -12,6 +12,7 @@
       "name": "CopleyStatusWordDrive",
       "type": {
         "items": "int",
+        "sal_count": 2,
         "type": "array"
       }
     },
@@ -19,6 +20,7 @@
       "name": "CopleyLatchingFaultStatus",
       "type": {
         "items": "int",
+        "sal_count": 2,
         "type": "array"
       }
     }

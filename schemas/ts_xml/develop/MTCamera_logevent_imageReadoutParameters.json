@@ -36,6 +36,7 @@
       "name": "overRows",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -44,6 +45,7 @@
       "name": "overCols",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -52,6 +54,7 @@
       "name": "readRows",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -60,6 +63,7 @@
       "name": "readCols",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -68,6 +72,7 @@
       "name": "readCols2",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -76,6 +81,7 @@
       "name": "preCols",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -84,6 +90,7 @@
       "name": "preRows",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     },
@@ -92,6 +99,7 @@
       "name": "postCols",
       "type": {
         "items": "int",
+        "sal_count": 201,
         "type": "array"
       }
     }

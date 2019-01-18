@@ -13,6 +13,7 @@
       "name": "primaryCylinderGain",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "secondaryCylinderGain",
       "type": {
         "items": "float",
+        "sal_count": 112,
         "type": "array"
       }
     }

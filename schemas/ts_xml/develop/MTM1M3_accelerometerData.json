@@ -16,6 +16,7 @@
       "name": "rawAccelerometers",
       "type": {
         "items": "float",
+        "sal_count": 8,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "accelerometers",
       "type": {
         "items": "float",
+        "sal_count": 8,
         "type": "array"
       }
     },

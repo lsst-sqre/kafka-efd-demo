@@ -16,6 +16,7 @@
       "name": "measuredForce",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "encoder",
       "type": {
         "items": "long",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -30,6 +32,7 @@
       "name": "displacement",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },

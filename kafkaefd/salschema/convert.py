@@ -87,7 +87,8 @@ def convert_topic(root, validate=True):
             }
 
         elif count > 1:
-            field['type'] = {'type': 'array', 'items': avro_type}
+            field['type'] = {'type': 'array', 'items': avro_type,
+                             'sal_count': count}
 
         else:
             field['type'] = avro_type

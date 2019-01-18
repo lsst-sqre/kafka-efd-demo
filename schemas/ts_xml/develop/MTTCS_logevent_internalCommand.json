@@ -15,6 +15,7 @@
       "sal_units": "NA",
       "type": {
         "items": "bytes",
+        "sal_count": 800,
         "type": "array"
       }
     }

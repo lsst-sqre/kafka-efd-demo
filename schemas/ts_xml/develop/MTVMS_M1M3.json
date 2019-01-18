@@ -16,6 +16,7 @@
       "name": "sensor1XAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "sensor1YAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -30,6 +32,7 @@
       "name": "sensor1ZAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -37,6 +40,7 @@
       "name": "sensor2XAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -44,6 +48,7 @@
       "name": "sensor2YAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -51,6 +56,7 @@
       "name": "sensor2ZAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -58,6 +64,7 @@
       "name": "sensor3XAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -65,6 +72,7 @@
       "name": "sensor3YAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -72,6 +80,7 @@
       "name": "sensor3ZAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -79,6 +88,7 @@
       "name": "sensor4XAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -86,6 +96,7 @@
       "name": "sensor4YAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -93,6 +104,7 @@
       "name": "sensor4ZAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -100,6 +112,7 @@
       "name": "sensor5XAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -107,6 +120,7 @@
       "name": "sensor5YAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -114,6 +128,7 @@
       "name": "sensor5ZAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -121,6 +136,7 @@
       "name": "sensor6XAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -128,6 +144,7 @@
       "name": "sensor6YAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },
@@ -135,6 +152,7 @@
       "name": "sensor6ZAcceleration",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     }

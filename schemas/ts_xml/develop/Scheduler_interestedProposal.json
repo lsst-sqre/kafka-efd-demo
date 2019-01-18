@@ -20,6 +20,7 @@
       "name": "proposalIds",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -27,6 +28,7 @@
       "name": "proposalValues",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -34,6 +36,7 @@
       "name": "proposalNeeds",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -41,6 +44,7 @@
       "name": "proposalBonuses",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -48,6 +52,7 @@
       "name": "proposalBoosts",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     }

@@ -18,6 +18,7 @@
       "sal_values_per_publisher": 32,
       "type": {
         "items": "string",
+        "sal_count": 32,
         "type": "array"
       }
     },

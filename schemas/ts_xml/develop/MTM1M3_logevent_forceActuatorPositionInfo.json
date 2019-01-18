@@ -13,6 +13,7 @@
       "name": "actuatorType",
       "type": {
         "items": "int",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "actuatorOrientation",
       "type": {
         "items": "int",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "xPosition",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -34,6 +37,7 @@
       "name": "yPosition",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -41,6 +45,7 @@
       "name": "zPosition",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     }

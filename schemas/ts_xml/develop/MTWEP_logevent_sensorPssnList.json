@@ -13,6 +13,7 @@
       "name": "pssnList",
       "type": {
         "items": "double",
+        "sal_count": 31,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "sensorIdList",
       "type": {
         "items": "int",
+        "sal_count": 31,
         "type": "array"
       }
     },

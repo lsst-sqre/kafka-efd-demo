@@ -13,6 +13,7 @@
       "name": "ilcState",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "motionState",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     }

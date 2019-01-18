@@ -12,6 +12,7 @@
       "name": "Calibrated",
       "type": {
         "items": "double",
+        "sal_count": 2,
         "type": "array"
       }
     },
@@ -19,6 +20,7 @@
       "name": "Raw",
       "type": {
         "items": "double",
+        "sal_count": 2,
         "type": "array"
       }
     }

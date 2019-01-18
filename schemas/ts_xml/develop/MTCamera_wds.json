@@ -16,6 +16,7 @@
       "name": "timingParameters",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "flag",
       "type": {
         "items": "long",
+        "sal_count": 20,
         "type": "array"
       }
     }

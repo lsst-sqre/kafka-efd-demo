@@ -17,6 +17,7 @@
       "sal_values_per_publisher": 1,
       "type": {
         "items": "boolean",
+        "sal_count": 72,
         "type": "array"
       }
     },
@@ -29,6 +30,7 @@
       "sal_values_per_publisher": 1,
       "type": {
         "items": "boolean",
+        "sal_count": 72,
         "type": "array"
       }
     }

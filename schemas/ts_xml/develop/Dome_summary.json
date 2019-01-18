@@ -12,6 +12,7 @@
       "name": "example",
       "type": {
         "items": "boolean",
+        "sal_count": 16,
         "type": "array"
       }
     }

@@ -13,6 +13,7 @@
       "name": "imageSD",
       "type": {
         "items": "float",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "imageMean",
       "type": {
         "items": "float",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "overscanSD",
       "type": {
         "items": "float",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -34,6 +37,7 @@
       "name": "overscanMean",
       "type": {
         "items": "float",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -41,6 +45,7 @@
       "name": "psf",
       "type": {
         "items": "float",
+        "sal_count": 200,
         "type": "array"
       }
     }

@@ -13,6 +13,7 @@
       "name": "position",
       "type": {
         "items": "int",
+        "sal_count": 34,
         "type": "array"
       }
     }

@@ -52,6 +52,7 @@
       "name": "userRegionIds",
       "type": {
         "items": "long",
+        "sal_count": 20,
         "type": "array"
       }
     },
@@ -67,6 +68,7 @@
       "name": "numSubSequenceFilters",
       "type": {
         "items": "long",
+        "sal_count": 20,
         "type": "array"
       }
     },
@@ -78,6 +80,7 @@
       "name": "numSubSequenceFilterVisits",
       "type": {
         "items": "long",
+        "sal_count": 60,
         "type": "array"
       }
     },
@@ -85,6 +88,7 @@
       "name": "numSubSequenceEvents",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -92,6 +96,7 @@
       "name": "numSubSequenceMaxMissed",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -99,6 +104,7 @@
       "name": "subSequenceTimeIntervals",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -106,6 +112,7 @@
       "name": "subSequenceTimeWindowStarts",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -113,6 +120,7 @@
       "name": "subSequenceTimeWindowMaximums",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -120,6 +128,7 @@
       "name": "subSequenceTimeWindowEnds",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -127,6 +136,7 @@
       "name": "subSequenceTimeWeights",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -226,6 +236,7 @@
       "name": "brightLimit",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -233,6 +244,7 @@
       "name": "darkLimit",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -240,6 +252,7 @@
       "name": "maxSeeing",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -247,6 +260,7 @@
       "name": "numFilterExposures",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -254,6 +268,7 @@
       "name": "exposures",
       "type": {
         "items": "double",
+        "sal_count": 50,
         "type": "array"
       }
     },

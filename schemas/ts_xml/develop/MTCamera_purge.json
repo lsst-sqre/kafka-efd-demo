@@ -13,6 +13,7 @@
       "sal_units": "meter",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },

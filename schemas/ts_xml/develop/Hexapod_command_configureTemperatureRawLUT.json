@@ -13,6 +13,7 @@
       "name": "tempIndex",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "x",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "y",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -34,6 +37,7 @@
       "name": "z",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -41,6 +45,7 @@
       "name": "rx",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -48,6 +53,7 @@
       "name": "ry",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -55,6 +61,7 @@
       "name": "rz",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     }

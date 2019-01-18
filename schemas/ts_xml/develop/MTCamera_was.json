@@ -17,6 +17,7 @@
       "sal_units": "ampere",
       "type": {
         "items": "float",
+        "sal_count": 4,
         "type": "array"
       }
     },
@@ -25,6 +26,7 @@
       "sal_units": "kelvin",
       "type": {
         "items": "float",
+        "sal_count": 12,
         "type": "array"
       }
     },
@@ -33,6 +35,7 @@
       "sal_units": "volt",
       "type": {
         "items": "float",
+        "sal_count": 4,
         "type": "array"
       }
     },
@@ -40,6 +43,7 @@
       "name": "cabacMUX",
       "type": {
         "items": "long",
+        "sal_count": 4,
         "type": "array"
       }
     },
@@ -56,6 +60,7 @@
       "name": "fpgaCheckSum",
       "type": {
         "items": "long",
+        "sal_count": 2,
         "type": "array"
       }
     },

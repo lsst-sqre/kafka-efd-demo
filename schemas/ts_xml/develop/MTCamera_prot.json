@@ -12,6 +12,7 @@
       "name": "status",
       "type": {
         "items": "long",
+        "sal_count": 2,
         "type": "array"
       }
     }

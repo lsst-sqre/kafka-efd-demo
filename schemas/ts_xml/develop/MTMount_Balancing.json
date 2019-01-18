@@ -80,6 +80,7 @@
       "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
+        "sal_count": 10,
         "type": "array"
       }
     },

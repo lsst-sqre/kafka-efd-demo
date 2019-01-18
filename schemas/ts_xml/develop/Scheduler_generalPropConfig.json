@@ -56,6 +56,7 @@
       "name": "regionMinimums",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -63,6 +64,7 @@
       "name": "regionMaximums",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -70,6 +72,7 @@
       "name": "regionBounds",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -85,6 +88,7 @@
       "name": "timeRangeStarts",
       "type": {
         "items": "long",
+        "sal_count": 20,
         "type": "array"
       }
     },
@@ -92,6 +96,7 @@
       "name": "timeRangeEnds",
       "type": {
         "items": "long",
+        "sal_count": 20,
         "type": "array"
       }
     },
@@ -99,6 +104,7 @@
       "name": "numSelectionMappings",
       "type": {
         "items": "long",
+        "sal_count": 20,
         "type": "array"
       }
     },
@@ -106,6 +112,7 @@
       "name": "selectionMappings",
       "type": {
         "items": "long",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -121,6 +128,7 @@
       "name": "exclusionMinimums",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -128,6 +136,7 @@
       "name": "exclusionMaximums",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -135,6 +144,7 @@
       "name": "exclusionBounds",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -154,6 +164,7 @@
       "name": "numVisits",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -161,6 +172,7 @@
       "name": "numGroupedVisits",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -168,6 +180,7 @@
       "name": "maxGroupedVisits",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -175,6 +188,7 @@
       "name": "brightLimit",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -182,6 +196,7 @@
       "name": "darkLimit",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -189,6 +204,7 @@
       "name": "maxSeeing",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -196,6 +212,7 @@
       "name": "numFilterExposures",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -203,6 +220,7 @@
       "name": "exposures",
       "type": {
         "items": "double",
+        "sal_count": 20,
         "type": "array"
       }
     },

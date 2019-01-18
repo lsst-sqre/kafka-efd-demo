@@ -12,6 +12,7 @@
       "name": "bladeHome",
       "type": {
         "items": "int",
+        "sal_count": 2,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "sal_units": "second",
       "type": {
         "items": "float",
+        "sal_count": 24,
         "type": "array"
       }
     },
@@ -28,6 +30,7 @@
       "sal_units": "ampere",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
@@ -36,6 +39,7 @@
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
@@ -48,6 +52,7 @@
       "sal_units": "second",
       "type": {
         "items": "float",
+        "sal_count": 24,
         "type": "array"
       }
     },

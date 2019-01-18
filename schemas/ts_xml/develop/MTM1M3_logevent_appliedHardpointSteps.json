@@ -13,6 +13,7 @@
       "name": "targetEncoderValues",
       "type": {
         "items": "long",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "queuedSteps",
       "type": {
         "items": "long",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "commandedSteps",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     }

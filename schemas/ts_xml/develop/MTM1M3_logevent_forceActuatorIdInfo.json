@@ -13,6 +13,7 @@
       "name": "xDataReferenceId",
       "type": {
         "items": "int",
+        "sal_count": 12,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "yDataReferenceId",
       "type": {
         "items": "int",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "zDataReferenceId",
       "type": {
         "items": "int",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -34,6 +37,7 @@
       "name": "sDataReferenceId",
       "type": {
         "items": "int",
+        "sal_count": 112,
         "type": "array"
       }
     },
@@ -41,6 +45,7 @@
       "name": "ilcUniqueId",
       "type": {
         "items": "long",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -48,6 +53,7 @@
       "name": "mezzanineUniqueId",
       "type": {
         "items": "long",
+        "sal_count": 156,
         "type": "array"
       }
     }

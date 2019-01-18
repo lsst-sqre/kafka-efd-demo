@@ -13,6 +13,7 @@
       "name": "xForces",
       "type": {
         "items": "float",
+        "sal_count": 12,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "yForces",
       "type": {
         "items": "float",
+        "sal_count": 100,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "zForces",
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     }

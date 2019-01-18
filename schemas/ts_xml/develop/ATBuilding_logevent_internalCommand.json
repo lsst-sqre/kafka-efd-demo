@@ -14,6 +14,7 @@
       "name": "commandObject",
       "type": {
         "items": "bytes",
+        "sal_count": 800,
         "type": "array"
       }
     }

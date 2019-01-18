@@ -19,6 +19,7 @@
       "name": "salIndices",
       "type": {
         "items": "int",
+        "sal_count": 400,
         "type": "array"
       }
     },

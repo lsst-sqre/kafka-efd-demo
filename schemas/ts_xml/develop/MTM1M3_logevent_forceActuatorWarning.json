@@ -25,6 +25,7 @@
       "name": "forceActuatorFlags",
       "type": {
         "items": "long",
+        "sal_count": 156,
         "type": "array"
       }
     }

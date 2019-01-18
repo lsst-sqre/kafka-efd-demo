@@ -24,6 +24,7 @@
       "name": "driveTorqueActual",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -31,6 +32,7 @@
       "name": "driveTorqueError",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -38,6 +40,7 @@
       "name": "driveTorqueCmd",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -45,6 +48,7 @@
       "name": "driveCurrentActual",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -52,6 +56,7 @@
       "name": "driveTempActual",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -59,6 +64,7 @@
       "name": "encoderHeadRaw",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -66,6 +72,7 @@
       "name": "encoderHeadCalibrated",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -73,6 +80,7 @@
       "name": "resolverRaw",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     },
@@ -80,6 +88,7 @@
       "name": "resolverCalibrated",
       "type": {
         "items": "float",
+        "sal_count": 5,
         "type": "array"
       }
     }

@@ -15,6 +15,7 @@
       "sal_units": "Newtons",
       "type": {
         "items": "double",
+        "sal_count": 72,
         "type": "array"
       }
     }

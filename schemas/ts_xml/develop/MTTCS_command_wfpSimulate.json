@@ -17,6 +17,7 @@
       "name": "z_arr",
       "type": {
         "items": "double",
+        "sal_count": 18,
         "type": "array"
       }
     }

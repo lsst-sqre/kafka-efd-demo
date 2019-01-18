@@ -19,6 +19,7 @@
       "name": "annularZernikePoly",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },

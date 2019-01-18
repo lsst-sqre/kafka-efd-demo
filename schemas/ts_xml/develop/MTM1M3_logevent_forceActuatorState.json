@@ -13,6 +13,7 @@
       "name": "ilcState",
       "type": {
         "items": "int",
+        "sal_count": 156,
         "type": "array"
       }
     },

@@ -29,6 +29,7 @@
       "name": "data",
       "type": {
         "items": "int",
+        "sal_count": 252,
         "type": "array"
       }
     },

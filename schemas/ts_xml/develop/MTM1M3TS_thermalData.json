@@ -16,6 +16,7 @@
       "name": "thermocoupleScanner1",
       "type": {
         "items": "float",
+        "sal_count": 95,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "thermocoupleScanner2",
       "type": {
         "items": "float",
+        "sal_count": 95,
         "type": "array"
       }
     },
@@ -30,6 +32,7 @@
       "name": "thermocoupleScanner3",
       "type": {
         "items": "float",
+        "sal_count": 95,
         "type": "array"
       }
     },
@@ -37,6 +40,7 @@
       "name": "thermocoupleScanner4",
       "type": {
         "items": "float",
+        "sal_count": 95,
         "type": "array"
       }
     }

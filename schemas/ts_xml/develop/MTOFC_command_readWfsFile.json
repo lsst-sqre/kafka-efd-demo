@@ -17,6 +17,7 @@
       "name": "sensorIdList",
       "type": {
         "items": "int",
+        "sal_count": 9,
         "type": "array"
       }
     }

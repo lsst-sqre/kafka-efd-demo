@@ -45,6 +45,7 @@
       "name": "exposureTimes",
       "type": {
         "items": "double",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -68,6 +69,7 @@
       "name": "proposalId",
       "type": {
         "items": "long",
+        "sal_count": 5,
         "type": "array"
       }
     },

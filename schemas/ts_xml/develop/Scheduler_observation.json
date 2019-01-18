@@ -52,6 +52,7 @@
       "name": "proposalIds",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },
@@ -83,6 +84,7 @@
       "name": "exposureTimes",
       "type": {
         "items": "long",
+        "sal_count": 10,
         "type": "array"
       }
     },

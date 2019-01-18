@@ -16,6 +16,7 @@
       "name": "telOpticsClAltLimit",
       "type": {
         "items": "double",
+        "sal_count": 3,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "telOpticsClDelay",
       "type": {
         "items": "double",
+        "sal_count": 2,
         "type": "array"
       }
     }

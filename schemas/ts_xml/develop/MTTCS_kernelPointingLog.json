@@ -18,6 +18,7 @@
       "sal_values_per_publisher": 3,
       "type": {
         "items": "float",
+        "sal_count": 3,
         "type": "array"
       }
     },

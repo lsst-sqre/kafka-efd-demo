@@ -16,6 +16,7 @@
       "name": "rawSensorData",
       "type": {
         "items": "float",
+        "sal_count": 8,
         "type": "array"
       }
     },

@@ -13,6 +13,7 @@
       "name": "coefficients",
       "type": {
         "items": "float",
+        "sal_count": 22,
         "type": "array"
       }
     }

@@ -13,6 +13,7 @@
       "name": "modbusSubnet",
       "type": {
         "items": "int",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "modbusAddress",
       "type": {
         "items": "int",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "ilcStatus",
       "type": {
         "items": "long",
+        "sal_count": 156,
         "type": "array"
       }
     },
@@ -34,6 +37,7 @@
       "name": "mezzanineStatus",
       "type": {
         "items": "long",
+        "sal_count": 156,
         "type": "array"
       }
     }

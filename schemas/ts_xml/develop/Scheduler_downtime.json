@@ -12,6 +12,7 @@
       "name": "scheduledDowntime",
       "type": {
         "items": "long",
+        "sal_count": 200,
         "type": "array"
       }
     },
@@ -19,6 +20,7 @@
       "name": "unscheduledDowntimes",
       "type": {
         "items": "long",
+        "sal_count": 200,
         "type": "array"
       }
     },

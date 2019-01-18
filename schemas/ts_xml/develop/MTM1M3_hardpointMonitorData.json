@@ -16,6 +16,7 @@
       "name": "breakawayLVDT",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "name": "displacementLVDT",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -30,6 +32,7 @@
       "name": "breakawayPressure",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -37,6 +40,7 @@
       "name": "pressureSensor1",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -44,6 +48,7 @@
       "name": "pressureSensor2",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -51,6 +56,7 @@
       "name": "pressureSensor3",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     }

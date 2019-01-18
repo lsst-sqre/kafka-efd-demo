@@ -12,6 +12,7 @@
       "name": "data",
       "type": {
         "items": "float",
+        "sal_count": 16,
         "type": "array"
       }
     }

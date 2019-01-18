@@ -13,6 +13,7 @@
       "name": "commandObject",
       "type": {
         "items": "bytes",
+        "sal_count": 950,
         "type": "array"
       }
     }

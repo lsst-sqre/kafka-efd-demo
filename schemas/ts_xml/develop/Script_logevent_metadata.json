@@ -28,6 +28,7 @@
       "sal_units": "degrees",
       "type": {
         "items": "double",
+        "sal_count": 2,
         "type": "array"
       }
     },

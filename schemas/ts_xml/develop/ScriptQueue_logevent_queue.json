@@ -34,6 +34,7 @@
       "name": "salIndices",
       "type": {
         "items": "int",
+        "sal_count": 400,
         "type": "array"
       }
     },
@@ -47,6 +48,7 @@
       "name": "pastSalIndices",
       "type": {
         "items": "int",
+        "sal_count": 400,
         "type": "array"
       }
     }

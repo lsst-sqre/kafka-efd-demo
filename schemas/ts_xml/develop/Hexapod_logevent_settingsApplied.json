@@ -113,6 +113,7 @@
       "name": "elevationRawLUTElevIndex",
       "type": {
         "items": "int",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -120,6 +121,7 @@
       "name": "elevationRawLUTX",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -127,6 +129,7 @@
       "name": "elevationRawLUTY",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -134,6 +137,7 @@
       "name": "elevationRawLUTZ",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -141,6 +145,7 @@
       "name": "elevationRawLUTRx",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -148,6 +153,7 @@
       "name": "elevationRawLUTRy",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -155,6 +161,7 @@
       "name": "elevationRawLUTRz",
       "type": {
         "items": "double",
+        "sal_count": 19,
         "type": "array"
       }
     },
@@ -162,6 +169,7 @@
       "name": "azimuthRawLUTAzIndex",
       "type": {
         "items": "int",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -169,6 +177,7 @@
       "name": "azimuthRawLUTX",
       "type": {
         "items": "double",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -176,6 +185,7 @@
       "name": "azimuthRawLUTY",
       "type": {
         "items": "double",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -183,6 +193,7 @@
       "name": "azimuthRawLUTZ",
       "type": {
         "items": "double",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -190,6 +201,7 @@
       "name": "azimuthRawLUTRx",
       "type": {
         "items": "double",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -197,6 +209,7 @@
       "name": "azimuthRawLUTRy",
       "type": {
         "items": "double",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -204,6 +217,7 @@
       "name": "azimuthRawLUTRz",
       "type": {
         "items": "double",
+        "sal_count": 37,
         "type": "array"
       }
     },
@@ -211,6 +225,7 @@
       "name": "temperatureRawLUTTempIndex",
       "type": {
         "items": "int",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -218,6 +233,7 @@
       "name": "temperatureRawLUTX",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -225,6 +241,7 @@
       "name": "temperatureRawLUTY",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -232,6 +249,7 @@
       "name": "temperatureRawLUTZ",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -239,6 +257,7 @@
       "name": "temperatureRawLUTRx",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -246,6 +265,7 @@
       "name": "temperatureRawLUTRy",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },
@@ -253,6 +273,7 @@
       "name": "temperatureRawLUTRz",
       "type": {
         "items": "double",
+        "sal_count": 9,
         "type": "array"
       }
     },

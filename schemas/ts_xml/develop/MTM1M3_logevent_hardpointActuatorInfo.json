@@ -13,6 +13,7 @@
       "name": "referenceId",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -20,6 +21,7 @@
       "name": "referencePosition",
       "type": {
         "items": "long",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -27,6 +29,7 @@
       "name": "modbusSubnet",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -34,6 +37,7 @@
       "name": "modbusAddress",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -41,6 +45,7 @@
       "name": "xPosition",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -48,6 +53,7 @@
       "name": "yPosition",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -55,6 +61,7 @@
       "name": "zPosition",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -62,6 +69,7 @@
       "name": "ilcUniqueId",
       "type": {
         "items": "long",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -69,6 +77,7 @@
       "name": "ilcApplicationType",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -76,6 +85,7 @@
       "name": "networkNodeType",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -83,6 +93,7 @@
       "name": "ilcSelectedOptions",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -90,6 +101,7 @@
       "name": "networkNodeOptions",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -97,6 +109,7 @@
       "name": "majorRevision",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -104,6 +117,7 @@
       "name": "minorRevision",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -111,6 +125,7 @@
       "name": "adcScanRate",
       "type": {
         "items": "int",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -118,6 +133,7 @@
       "name": "mainLoadCellCoefficient",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -125,6 +141,7 @@
       "name": "mainLoadCellOffset",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -132,6 +149,7 @@
       "name": "mainLoadCellSensitivity",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -139,6 +157,7 @@
       "name": "backupLoadCellCoefficient",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -146,6 +165,7 @@
       "name": "backupLoadCellOffset",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
@@ -153,6 +173,7 @@
       "name": "backupLoadCellSensitivity",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     }

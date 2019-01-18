@@ -14,6 +14,7 @@
       "name": "bendingModeNbr",
       "type": {
         "items": "int",
+        "sal_count": 32,
         "type": "array"
       }
     },
@@ -23,6 +24,7 @@
       "sal_units": "microns",
       "type": {
         "items": "double",
+        "sal_count": 32,
         "type": "array"
       }
     }
