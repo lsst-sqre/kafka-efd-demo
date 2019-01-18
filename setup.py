@@ -31,11 +31,13 @@ install_requires = [
     'structlog==18.2.0',
     'prometheus-async==18.3.0',
     'prometheus-client==0.4.2',
+    'kafkit==0.1.0a2',
 ]
 
 tests_require = [
     'pytest==3.9.3',
     'pytest-flake8==1.0.2',
+    'pytest-asyncio==0.10.0',
 ]
 
 extras_require = {
