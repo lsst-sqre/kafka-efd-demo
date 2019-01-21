@@ -212,3 +212,10 @@ class SalXmlRepo(Mapping):
     def __iter__(self):
         for key in self._topics:
             yield key
+
+    def itersubsystem(self, subsystem):
+        """Iterate over topics for a single SAL subsytem.
+        """
+        for key, topic in self.items():
+            if self[key].find('Subsystem').text == subsystem:
+                yield key, topic
