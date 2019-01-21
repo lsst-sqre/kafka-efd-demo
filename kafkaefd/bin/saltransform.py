@@ -2,10 +2,139 @@
 messages for Kafka connect.
 """
 
+__all__ = ('saltransform',)
+
+import asyncio
 import datetime
 import re
+import logging
+
+import aiohttp
+import aiokafka
+import click
+import structlog
 
 from kafkit.registry.serializer import PolySerializer
+from kafkit.registry.aiohttp import RegistryApi
+
+from .utils import get_registry_url, get_broker_url
+
+
+@click.group('saltransform')
+@click.pass_context
+def saltransform(ctx):
+    """Transform SAL topics with plain-text messages into a new set of topics
+    with Avro-encoded messages.
+    """
+    ctx.obj = {}
+
+
+@saltransform.command('run')
+@click.option(
+    '--subsystem', 'subsystems', multiple=True, required=True,
+    help='A subsystem to monitor. SAL currently emits all messages for '
+         'a subsystem on a single topic named after that subsystem. Provide '
+         'several subsystem options to simultaneously monitor multiple '
+         'subssytems.'
+)
+@click.option(
+    '--log-level', 'log_level',
+    type=click.Choice(['debug', 'info', 'warning']),
+    default='info', help='Logging level'
+)
+@click.pass_context
+def run(ctx, subsystems, log_level):
+    """Run a Kafka producer-consumer that consumes messages plain text
+    messages from the SAL and produces Avro-encoded messages.
+    """
+    configure_logging(level=log_level)
+    structlog.get_logger(__name__).bind(
+        command='run'
+    )
+
+    producer_settings = {
+        'bootstrap_servers': get_broker_url(ctx.parent.parent),
+    }
+    consumer_settings = {
+        'bootstrap_servers': get_broker_url(ctx.parent.parent),
+        'auto_offset_reset': 'latest'
+    }
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(
+        main_runner(
+            loop=loop,
+            subsystems=subsystems,
+            consumer_settings=consumer_settings,
+            producer_settings=producer_settings,
+            registry_url=get_registry_url(ctx.parent.parent)
+        )
+    )
+
+
+async def main_runner(*, loop, subsystems, consumer_settings,
+                      producer_settings, registry_url):
+    tasks = []
+    async with aiohttp.ClientSession() as httpsession:
+        for subsystem in subsystems:
+            for kind in ('command', 'event', 'telemetry'):
+                tasks.append(asyncio.ensure_future(
+                    subsystem_transformer(
+                        loop=loop,
+                        subsystem=subsystem,
+                        kind=kind,
+                        httpsession=httpsession,
+                        registry_url=registry_url,
+                        producer_settings=producer_settings,
+                        consumer_settings=consumer_settings
+                    )
+                ))
+        await asyncio.gather(*tasks)
+
+
+async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
+                                registry_url,
+                                consumer_settings, producer_settings):
+    logger = structlog.get_logger(__name__).bind(
+        subsystem=subsystem,
+        kind=kind
+    )
+
+    logger.info('Setting up transformer')
+
+    registry = RegistryApi(session=httpsession, url=registry_url)
+    transformer = SalTextTransformer(registry)
+
+    logger.info('Built transformer class')
+
+    # Start the consumer and the producer
+    producer = aiokafka.AIOKafkaProducer(loop=loop, **producer_settings)
+    await producer.start()
+    logger.info('Started producer', **producer_settings)
+
+    consumer = aiokafka.AIOKafkaConsumer(loop=loop, **consumer_settings)
+
+    try:
+        await consumer.start()
+        logger.info('Started consumer', **consumer_settings)
+
+        # SAL produces to Kafka topics named after subsystem and kind
+        consumer.subscribe([f'{subsystem}_{kind}'])
+
+        while True:
+            async for inbound_message in consumer:
+                schema_name, outbound_message = await transformer.transform(
+                    inbound_message.key.decode('utf-8'),
+                    inbound_message.value.decode('utf-8'))
+                # Use the fully-qualified schema name as the topic name
+                # for the outbound stream.
+                await producer.send_and_wait(
+                    schema_name, value=outbound_message)
+
+    finally:
+        logger.info('Shutting down')
+        consumer.stop()
+        logger.info('Shutdown complete')
 
 
 class SalTextTransformer:
@@ -105,3 +234,30 @@ def scan_array(schema_field, scan_index, data_items):
             f"Can't scan an array of type {schema_field!r}")
 
     return array, scan_index + count
+
+
+def configure_logging(level='info'):
+    ch = logging.StreamHandler()
+    formatter = logging.Formatter('%(message)s')
+    ch.setFormatter(formatter)
+    logger = logging.getLogger('kafkaefd')
+    logger.addHandler(ch)
+    logger.setLevel(getattr(logging, level.upper()))
+
+    structlog.configure(
+        processors=[
+            structlog.stdlib.filter_by_level,
+            structlog.stdlib.add_logger_name,
+            structlog.stdlib.add_log_level,
+            structlog.stdlib.PositionalArgumentsFormatter(),
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.processors.StackInfoRenderer(),
+            structlog.processors.format_exc_info,
+            structlog.processors.UnicodeDecoder(),
+            structlog.processors.JSONRenderer()
+        ],
+        context_class=dict,
+        logger_factory=structlog.stdlib.LoggerFactory(),
+        wrapper_class=structlog.stdlib.BoundLogger,
+        cache_logger_on_first_use=True,
+    )

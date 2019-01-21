@@ -12,6 +12,7 @@ from .salmock import salmock
 from .helloworld import helloworld
 from .helloavro import helloavro
 from .aioload import aioload
+from .saltransform import saltransform
 
 # Add -h as a help shortcut option
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -68,3 +69,4 @@ main.add_command(salmock)
 main.add_command(helloworld)
 main.add_command(helloavro)
 main.add_command(aioload)
+main.add_command(saltransform)
