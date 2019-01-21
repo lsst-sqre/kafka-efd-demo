@@ -13,10 +13,13 @@ import aiohttp
 import aiokafka
 import click
 import structlog
+from confluent_kafka.admin import AdminClient, NewTopic
 
 from kafkit.registry.serializer import PolySerializer
 from kafkit.registry.aiohttp import RegistryApi
 
+from ..salschema.repo import SalXmlRepo
+from ..salschema.convert import convert_topic
 from .utils import get_registry_url, get_broker_url
 
 
@@ -27,6 +30,70 @@ def saltransform(ctx):
     with Avro-encoded messages.
     """
     ctx.obj = {}
+
+
+@saltransform.command('init')
+@click.option(
+    '--subsystem', 'subsystems', multiple=True, required=True,
+    help='A subsystem to monitor. SAL currently emits all messages for '
+         'a subsystem on a single topic named after that subsystem. Provide '
+         'several subsystem options to simultaneously monitor multiple '
+         'subssytems.'
+)
+@click.option(
+    '--xml-repo', 'xml_repo_slug',
+    default='lsst-ts/ts_xml', show_default=True,
+    help='Slug of the ``ts_xml`` GitHub repository slug containing the SAL'
+         'XML topic schemas.'
+)
+@click.option(
+    '--xml-repo-ref', 'xml_repo_ref',
+    default='develop', show_default=True,
+    help='Tag of branch name of the ``ts_xml`` GitHub repository.'
+)
+@click.option(
+    '--github-user', '-u', 'github_username',
+    envvar='GITHUB_USER',
+    help='GitHub username for authenticating to the GitHub API. '
+         'Alternative set with the $GITHUB_USER environment variable.'
+)
+@click.option(
+    '--github-token', '-t', 'github_token',
+    envvar='GITHUB_TOKEN',
+    help='GitHub personal access token for authenticating to the GitHub API. '
+         'Set this option with the $GITHUB_TOKEN environment variable for '
+         'better security.'
+)
+@click.option(
+    '--replication', 'replication_factor', type=int, default=3,
+    show_default=True,
+    help='Replication factor configulation for topics.'
+)
+@click.option(
+    '--partitions', 'partitions', type=int, default=1, show_default=True,
+    help='Number of partitions per topic. Note: messages are not produced '
+         'with a key, so there is effectively no partitioning.'
+)
+@click.pass_context
+def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
+         github_token, replication_factor, partitions):
+    """Initialize topics and schemas.
+    """
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(
+        main_init(
+            loop=loop,
+            subsystems=subsystems,
+            xml_repo_slug=xml_repo_slug,
+            xml_repo_ref=xml_repo_ref,
+            github_username=github_username,
+            github_token=github_token,
+            registry_url=get_registry_url(ctx.parent.parent),
+            broker_url=get_broker_url(ctx.parent.parent),
+            replication_factor=replication_factor,
+            partitions=partitions
+        )
+    )
 
 
 @saltransform.command('run')
@@ -70,6 +137,58 @@ def run(ctx, subsystems, log_level):
             registry_url=get_registry_url(ctx.parent.parent)
         )
     )
+
+
+async def main_init(*, loop, subsystems, xml_repo_slug,
+                    xml_repo_ref, github_username, github_token,
+                    registry_url, broker_url, replication_factor, partitions):
+    conn = aiohttp.TCPConnector(limit_per_host=20)
+    async with aiohttp.ClientSession(connector=conn) as httpsession:
+        xml_org, xml_repo_name = xml_repo_slug.split('/')
+        xmlRepo = await SalXmlRepo.from_github(
+            httpsession,
+            github_org=xml_org,
+            github_repo=xml_repo_name,
+            git_ref=xml_repo_ref,
+            github_user=github_username,
+            github_token=github_token)
+
+        registry = RegistryApi(session=httpsession, url=registry_url)
+
+        tasks = []
+        topic_names = []
+        for subsystem in subsystems:
+            for _, topic in xmlRepo.itersubsystem(subsystem):
+                schema = convert_topic(topic)
+                if 'namespace' in schema:
+                    name = f'{schema["namespace"]}.{schema["name"]}'
+                else:
+                    name = schema["name"]
+                topic_names.append(name)
+                tasks.append(
+                    asyncio.ensure_future(
+                        registry.register_schema(schema)
+                    )
+                )
+        await asyncio.gather(*tasks)
+
+        # Create corresponding Kafka topics, if necessary
+        broker = AdminClient({'bootstrap.servers': broker_url})
+        existing_topic_names = [
+            t for t in broker.list_topics(timeout=10).topics.keys()]
+        topic_names = [t for t in topic_names
+                       if t not in existing_topic_names]
+        if len(topic_names) > 0:
+            new_topics = [NewTopic(topic, num_partitions=partitions,
+                                   replication_factor=replication_factor)
+                          for topic in topic_names]
+            fs = broker.create_topics(new_topics)
+            for topic, f in fs.items():
+                try:
+                    f.result()  # The result itself is None
+                    print("Topic {} created".format(topic))
+                except Exception as e:
+                    print("Failed to create topic {}: {}".format(topic, e))
 
 
 async def main_runner(*, loop, subsystems, consumer_settings,
