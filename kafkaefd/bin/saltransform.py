@@ -309,21 +309,27 @@ class SalTextTransformer:
 
 
 def scan_field(schema_field, scan_index, data_items):
-    type_ = schema_field['type']
-    if isinstance(type_, dict):
-        if type_['type'] == 'long' and type_['type'] == 'timestamp-millis':
-            return scan_timestamp_millis(schema_field, scan_index, data_items)
-        elif type_['type'] == 'array':
-            return scan_array(schema_field, scan_index, data_items)
-        else:
-            raise NotImplementedError(
-                "Don't know how to scan this array field yet: "
-                f"{schema_field!r}")
-    elif type_ in ('float', 'double'):
-        return scan_float(schema_field, scan_index, data_items)
-    else:
-        raise NotImplementedError(
-            f"Don't know how to scan this field yet: {schema_field!r}")
+    scanner = get_scanner(schema_field)
+    return scanner(schema_field, scan_index, data_items)
+
+
+def scan_string(schema_field, scan_index, data_items):
+    return data_items[scan_index].strip('"\' '), scan_index + 1
+
+
+def scan_bytes(schema_field, scan_index, data_items):
+    # I actually don't know if this is the right approach. data items are
+    # decoded to utf-8, so maybe it makes sense to re-encode to get it back
+    # to bytes?
+    return data_items[scan_index].encode('utf-8'), scan_index + 1
+
+
+def scan_boolean(schema_field, scan_index, data_items):
+    return bool(data_items[scan_index]), scan_index + 1
+
+
+def scan_int(schema_field, scan_index, data_items):
+    return int(data_items[scan_index]), scan_index + 1
 
 
 def scan_float(schema_field, scan_index, data_items):
@@ -339,20 +345,48 @@ def scan_timestamp_millis(schema_field, scan_index, data_items):
 def scan_array(schema_field, scan_index, data_items):
     count = schema_field['type']['sal_count']
     item_type = schema_field['type']['items']
-    if item_type in ('float', 'double'):
-        array = [float(item)
-                 for item in data_items[scan_index:scan_index+count]]
-    elif item_type in ('int',):
-        array = [int(item)
-                 for item in data_items[scan_index:scan_index+count]]
-    elif item_type in ('string',):
-        array = [item
-                 for item in data_items[scan_index:scan_index+count]]
-    else:
-        raise NotImplementedError(
-            f"Can't scan an array of type {schema_field!r}")
+    scanner = get_scanner(type_=item_type)
+    arr = []
+    for _ in range(count):
+        item, scan_index = scanner(schema_field, scan_index, data_items)
+        arr.append(item)
+    return arr, scan_index
 
-    return array, scan_index + count
+
+SCANNERS = {
+    'string': scan_string,
+    'int': scan_int,
+    'long': scan_int,
+    'short': scan_int,
+    'long long': scan_int,
+    'unsigned short': scan_int,
+    'unsigned int': scan_int,
+    'unsigned long': scan_int,
+    'unsigned long long': scan_int,
+    'float': scan_float,
+    'double': scan_float,
+    'boolean': scan_boolean,
+    'bytes': scan_bytes,
+    'char': scan_bytes,
+    'octet': scan_bytes,
+}
+
+
+def get_scanner(schema_field=None, type_=None):
+    if type_ is None:
+        type_ = schema_field['type']
+    try:
+        return SCANNERS[type_]
+    except (KeyError, TypeError):
+        if isinstance(type_, dict):
+            if type_['type'] == 'long' and type_['type'] == 'timestamp-millis':
+                return scan_timestamp_millis
+            elif type_['type'] == 'array':
+                return scan_array
+            else:
+                raise NotImplementedError(
+                    "Don't know how to scan this array field yet: "
+                    f"{schema_field!r}")
 
 
 def configure_logging(level='info'):
