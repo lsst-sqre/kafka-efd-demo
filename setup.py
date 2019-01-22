@@ -31,7 +31,7 @@ install_requires = [
     'structlog==18.2.0',
     'prometheus-async==18.3.0',
     'prometheus-client==0.4.2',
-    'kafkit==0.1.0a2',
+    'kafkit==0.1.0a3',
 ]
 
 tests_require = [
