@@ -255,9 +255,22 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
 
         while True:
             async for inbound_message in consumer:
+                logger.debug(
+                    'got message',
+                    message=inbound_message.value,
+                    key=inbound_message.key)
+                try:
+                    inbound_key = inbound_message.key.decode('utf-8')
+                except AttributeError:
+                    # Key is None and can't be decoded
+                    inbound_key = ""
+                try:
+                    inbound_value = inbound_message.value.decode('utf-8')
+                except AttributeError:
+                    # Value is None and can't be decoded
+                    inbound_value = ""
                 schema_name, outbound_message = await transformer.transform(
-                    inbound_message.key.decode('utf-8'),
-                    inbound_message.value.decode('utf-8'))
+                    inbound_key, inbound_value)
                 # Use the fully-qualified schema name as the topic name
                 # for the outbound stream.
                 await producer.send_and_wait(
