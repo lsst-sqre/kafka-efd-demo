@@ -242,8 +242,10 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
     await producer.start()
     logger.info('Started producer', **producer_settings)
 
+    input_topic_name = f"{subsystem}_{kind}"
+
     consumer_settings = consumer_settings.copy()
-    consumer_settings['group_id'] = subsystem
+    consumer_settings['group_id'] = input_topic_name
     consumer = aiokafka.AIOKafkaConsumer(loop=loop, **consumer_settings)
 
     try:
@@ -251,7 +253,7 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
         logger.info('Started consumer', **consumer_settings)
 
         # SAL produces to Kafka topics named after subsystem and kind
-        consumer.subscribe([f'{subsystem}_{kind}'])
+        consumer.subscribe([input_topic_name])
 
         while True:
             async for inbound_message in consumer:
