@@ -109,8 +109,17 @@ def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
     type=click.Choice(['debug', 'info', 'warning']),
     default='info', help='Logging level'
 )
+@click.option(
+    '--auto-offset-reset', 'auto_offset_reset',
+    type=click.Choice(['latest', 'earliest']), default='latest',
+    help='If the group does not have a committed offset, this option '
+         'defines how the consumer proceeds. "earliest" means that the '
+         'consumer begins from the first offset. "latest" means the consumer '
+         'begins with the next message that is added to the topic after the '
+         'consumer is started.'
+)
 @click.pass_context
-def run(ctx, subsystems, log_level):
+def run(ctx, subsystems, log_level, auto_offset_reset):
     """Run a Kafka producer-consumer that consumes messages plain text
     messages from the SAL and produces Avro-encoded messages.
     """
@@ -124,7 +133,7 @@ def run(ctx, subsystems, log_level):
     }
     consumer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
-        'auto_offset_reset': 'latest'
+        'auto_offset_reset': auto_offset_reset
     }
 
     loop = asyncio.get_event_loop()
@@ -219,6 +228,8 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
         kind=kind
     )
 
+    consumer_settings = consumer_settings.copy()
+
     logger.info('Setting up transformer')
 
     registry = RegistryApi(session=httpsession, url=registry_url)
@@ -231,6 +242,8 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
     await producer.start()
     logger.info('Started producer', **producer_settings)
 
+    consumer_settings = consumer_settings.copy()
+    consumer_settings['group_id'] = subsystem
     consumer = aiokafka.AIOKafkaConsumer(loop=loop, **consumer_settings)
 
     try:
