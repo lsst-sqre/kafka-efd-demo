@@ -287,7 +287,9 @@ class SalTextTransformer:
     """
 
     preamble_pattern = re.compile(
-        r"^(?P<topic_name>\w+):\( (?P<content>[\'\w\d\s,\.-]+)\)"
+        r"^(?P<subsystem>\w+) "
+        r"(?P<topic_name>\w+):\( "
+        r"(?P<content>[\'\w\d\s,\.-]+)\)"
     )
 
     def __init__(self, registry):
@@ -308,7 +310,9 @@ class SalTextTransformer:
         data_items = items[6:]
 
         schema_info = await self._registry.get_schema_by_subject(
-            topic_name, version='latest'
+            # Subjects are fully namespaced as lsst.sal.
+            f"lsst.sal.{topic_name}",
+            version='latest'
         )
 
         avro_data = {}
