@@ -305,9 +305,6 @@ class SalTextTransformer:
             raise RuntimeError('Cannot match topic name')
 
         topic_name = m.group('topic_name')
-        items = [s.strip(" '") for s in m.group('content').split(',')]
-        # The content of the message covered by the schema itself.
-        data_items = items[6:]
 
         schema_info = await self._registry.get_schema_by_subject(
             # Subjects are fully namespaced as lsst.sal.
@@ -315,12 +312,26 @@ class SalTextTransformer:
             version='latest'
         )
 
+        items = [s.strip(" '") for s in m.group('content').split(',')]
+
         avro_data = {}
 
-        sal_timestamp = datetime.datetime.fromtimestamp(
+        # Add data from the SAL preamble
+        avro_data['sal_revcode'] = items[0]
+        avro_data['sal_created'] = datetime.datetime.fromtimestamp(
+            float(items[1]), tz=datetime.timezone.utc)
+        avro_data['sal_ingested'] = datetime.datetime.fromtimestamp(
             float(items[2]), tz=datetime.timezone.utc)
-        avro_data['kafka_timestamp'] = sal_timestamp
+        avro_data['sal_sequence'] = int(items[3])
+        avro_data['sal_host'] = int(items[4])
+        avro_data['sal_origin'] = int(items[5])
 
+        # Timestamp when this Kafka app is processing the message.
+        avro_data['kafka_timestamp'] = datetime.datetime.now(
+            datetime.timezone.utc)
+
+        # Scan the data corresponding to the SAL XML schema.
+        data_items = items[6:]
         scan_index = 0
         for schema_field in schema_info['schema']['fields']:
             if 'sal_index' not in schema_field:
