@@ -323,7 +323,6 @@ class SalTextTransformer:
 
         scan_index = 0
         for schema_field in schema_info['schema']['fields']:
-            print(schema_field)
             if 'sal_index' not in schema_field:
                 continue
             field_data, scan_index = scan_field(
