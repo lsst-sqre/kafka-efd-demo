@@ -14,6 +14,8 @@ import aiokafka
 import click
 import structlog
 from confluent_kafka.admin import AdminClient, NewTopic
+from prometheus_client import Counter, Summary
+import prometheus_async.aio.web
 
 from kafkit.registry.serializer import PolySerializer
 from kafkit.registry.aiohttp import RegistryApi
@@ -21,6 +23,17 @@ from kafkit.registry.aiohttp import RegistryApi
 from ..salschema.repo import SalXmlRepo
 from ..salschema.convert import convert_topic
 from .utils import get_registry_url, get_broker_url
+
+# Prometheus metrics
+PRODUCED = Counter(
+    'saltransform_produced',
+    'Messages produced by kafkaefd saltransform.')
+TOTAL_TIME = Summary(
+    'saltransform_total_seconds',
+    'Total message processing time, in seconds.')
+TRANSFORM_TIME = Summary(
+    'saltransform_transform_seconds',
+    'Time to transform text to Avro, in seconds.')
 
 
 @click.group('saltransform')
@@ -124,8 +137,13 @@ def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
     help='Rewind each consumer to the start of its partition. '
          'This overrides the --auto-offset-reset option.'
 )
+@click.option(
+    '--prometheus-port', 'prometheus_port', type=int, default=9092,
+    help='Port for the Prometheus metrics scraping endpoint.'
+)
 @click.pass_context
-def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start):
+def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
+        prometheus_port):
     """Run a Kafka producer-consumer that consumes messages plain text
     messages from the SAL and produces Avro-encoded messages.
     """
@@ -150,7 +168,8 @@ def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start):
             consumer_settings=consumer_settings,
             producer_settings=producer_settings,
             registry_url=get_registry_url(ctx.parent.parent),
-            rewind_to_start=rewind_to_start
+            rewind_to_start=rewind_to_start,
+            prometheus_port=prometheus_port
         )
     )
 
@@ -208,7 +227,14 @@ async def main_init(*, loop, subsystems, xml_repo_slug,
 
 
 async def main_runner(*, loop, subsystems, consumer_settings,
-                      producer_settings, registry_url, rewind_to_start):
+                      producer_settings, registry_url, rewind_to_start,
+                      prometheus_port):
+    # Start the Prometheus endpoint
+    asyncio.ensure_future(
+        prometheus_async.aio.web.start_http_server(
+            port=prometheus_port)
+    )
+
     tasks = []
     async with aiohttp.ClientSession() as httpsession:
         for subsystem in subsystems:
@@ -286,6 +312,8 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
 
         while True:
             async for inbound_message in consumer:
+                start_time = datetime.datetime.now()
+
                 logger.debug(
                     'got message',
                     message=inbound_message.value,
@@ -300,12 +328,23 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                 except AttributeError:
                     # Value is None and can't be decoded
                     inbound_value = ""
+
+                transform_start_time = datetime.datetime.now()
                 schema_name, outbound_message = await transformer.transform(
                     inbound_key, inbound_value)
+
+                TRANSFORM_TIME.observe(
+                    (datetime.datetime.now() - transform_start_time).seconds())
+
                 # Use the fully-qualified schema name as the topic name
                 # for the outbound stream.
                 await producer.send_and_wait(
                     schema_name, value=outbound_message)
+
+                PRODUCED.inc()
+
+                TOTAL_TIME.observe(
+                    (datetime.datetime.now() - start_time).seconds())
 
     finally:
         logger.info('Shutting down')
@@ -455,8 +494,8 @@ def get_scanner(schema_field=None, type_=None):
             elif type_['type'] == 'array':
                 return scan_array
             elif type_['type'] == 'enum':
-                # TODO we think enums look like strings, but this isn't
-                # actually seen in the wild yet.
+                # TODO we think enums look like strings in the SAL messages,
+                # but this isn't actually seen in the wild yet.
                 return scan_string
             else:
                 raise NotImplementedError(

@@ -490,6 +490,17 @@ For example, if the input topic `MTM1M3TS_telemetry` has three partitions, then 
 
 **Modify this deployment to add additional subsystems.**
 
+#### Monitoring
+
+The deployment generates Prometheus metrics for monitoring:
+
+- `saltransform_produced` (counter) the number of messages processed. Can be used to compute a rate.
+
+- `saltransform_total_seconds` (summary) observes the time, in seconds, to process a message, from consuming the original message to producing the transformed message.
+
+- `saltransform_transform_seconds` (summary) observes the time, in seconds, to transform the message from text to Avro.
+  That is, this metric only measures the processing time of `SalTextTransformer.transform`.
+
 ## Lessons learned
 
 ### Keys and partitioning

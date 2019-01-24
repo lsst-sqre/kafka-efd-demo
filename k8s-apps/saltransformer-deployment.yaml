@@ -14,6 +14,9 @@ spec:
       labels:
         app: "saltransform"
         subsystem: "MTM1M3TS"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
     spec:
       containers:
       - name: mtm1m3ts
