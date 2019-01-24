@@ -118,8 +118,14 @@ def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
          'begins with the next message that is added to the topic after the '
          'consumer is started.'
 )
+@click.option(
+    '--rewind-to-start', 'rewind_to_start', is_flag=True,
+    default=False,
+    help='Rewind each consumer to the start of its partition. '
+         'This overrides the --auto-offset-reset option.'
+)
 @click.pass_context
-def run(ctx, subsystems, log_level, auto_offset_reset):
+def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start):
     """Run a Kafka producer-consumer that consumes messages plain text
     messages from the SAL and produces Avro-encoded messages.
     """
@@ -143,7 +149,8 @@ def run(ctx, subsystems, log_level, auto_offset_reset):
             subsystems=subsystems,
             consumer_settings=consumer_settings,
             producer_settings=producer_settings,
-            registry_url=get_registry_url(ctx.parent.parent)
+            registry_url=get_registry_url(ctx.parent.parent),
+            rewind_to_start=rewind_to_start
         )
     )
 
@@ -201,7 +208,7 @@ async def main_init(*, loop, subsystems, xml_repo_slug,
 
 
 async def main_runner(*, loop, subsystems, consumer_settings,
-                      producer_settings, registry_url):
+                      producer_settings, registry_url, rewind_to_start):
     tasks = []
     async with aiohttp.ClientSession() as httpsession:
         for subsystem in subsystems:
@@ -214,7 +221,8 @@ async def main_runner(*, loop, subsystems, consumer_settings,
                         httpsession=httpsession,
                         registry_url=registry_url,
                         producer_settings=producer_settings,
-                        consumer_settings=consumer_settings
+                        consumer_settings=consumer_settings,
+                        rewind_to_start=rewind_to_start
                     )
                 ))
         await asyncio.gather(*tasks)
@@ -222,7 +230,8 @@ async def main_runner(*, loop, subsystems, consumer_settings,
 
 async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                                 registry_url,
-                                consumer_settings, producer_settings):
+                                consumer_settings, producer_settings,
+                                rewind_to_start):
     logger = structlog.get_logger(__name__).bind(
         subsystem=subsystem,
         kind=kind
@@ -254,6 +263,26 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
 
         # SAL produces to Kafka topics named after subsystem and kind
         consumer.subscribe([input_topic_name])
+
+        partitions = consumer.assignment()
+        while len(partitions) == 0:
+            # Wait for the consumer to get partition assignment
+            await asyncio.sleep(1.)
+            partitions = consumer.assignment()
+
+        logger.info(
+            'Initial partition assignment',
+            topic=input_topic_name,
+            partitions=[str(p) for p in partitions])
+
+        if rewind_to_start:
+            await consumer.seek_to_beginning()
+            logger.info('Rewound to beginning')
+
+        for partition in partitions:
+            offset = await consumer.position(partition)
+            logger.info('Initial offset',
+                        partition=str(partition), offset=offset)
 
         while True:
             async for inbound_message in consumer:
