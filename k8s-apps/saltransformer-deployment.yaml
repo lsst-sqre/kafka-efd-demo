@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "saltransform-mtm1m3ts"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "saltransform"
+      subsystem: "MTM1M3TS"
+  template:
+    metadata:
+      labels:
+        app: "saltransform"
+        subsystem: "MTM1M3TS"
+    spec:
+      containers:
+      - name: mtm1m3ts
+        image: lsstsqre/kafka-efd-demo:tickets-DM-17282
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "saltransform"
+          - "run"
+          - "--auto-offset-reset"
+          - "earliest"
+          - "--subsystem"
+          - "MTM1M3TS"
+          # - "--rewind-to-start"
+        envFrom:
+        - configMapRef:
+            name: saltransform
