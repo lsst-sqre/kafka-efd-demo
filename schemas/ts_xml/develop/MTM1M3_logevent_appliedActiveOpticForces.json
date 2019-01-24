@@ -10,26 +10,68 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "name": "zForces",
+      "sal_index": 0,
       "type": {
         "items": "float",
+        "sal_count": 156,
         "type": "array"
       }
     },
     {
       "name": "fZ",
+      "sal_index": 1,
       "type": "float"
     },
     {
       "name": "mX",
+      "sal_index": 2,
       "type": "float"
     },
     {
       "name": "mY",
+      "sal_index": 3,
       "type": "float"
     },
     {
       "name": "forceMagnitude",
+      "sal_index": 4,
       "type": "float"
     }
   ],

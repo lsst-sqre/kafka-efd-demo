@@ -9,15 +9,53 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "doc": "array of steps for each axial actuator in sequence. Increasing steps corresponds to counterclockwise rotation of the motor shaft, looking along the shaft in the direction of the motor",
       "name": "axialAbsolutePositionSteps",
       "sal_frequency": 1.0,
+      "sal_index": 0,
       "sal_publishers": 1,
       "sal_size_in_bytes": 8,
       "sal_units": "radians",
       "sal_values_per_publisher": 1,
       "type": {
         "items": "long",
+        "sal_count": 72,
         "type": "array"
       }
     }

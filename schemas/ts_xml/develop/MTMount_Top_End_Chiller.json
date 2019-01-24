@@ -9,333 +9,426 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "doc": "TEC_Status_Chiller_1",
       "name": "TEC_Status_Chiller_1",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Chiller_2",
       "name": "TEC_Status_Chiller_2",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Cabinet_1",
       "name": "TEC_Status_Cabinet_1",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Cabinet_2",
       "name": "TEC_Status_Cabinet_2",
+      "sal_index": 3,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Cabinet_3",
       "name": "TEC_Status_Cabinet_3",
+      "sal_index": 4,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Cabinet_4",
       "name": "TEC_Status_Cabinet_4",
+      "sal_index": 5,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Cabinet_5",
       "name": "TEC_Status_Cabinet_5",
+      "sal_index": 6,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Cabinet_6",
       "name": "TEC_Status_Cabinet_6",
+      "sal_index": 7,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Fan_Status_Cabinet_1",
       "name": "TEC_Fan_Status_Cabinet_1",
+      "sal_index": 8,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Fan_Status_Cabinet_2",
       "name": "TEC_Fan_Status_Cabinet_2",
+      "sal_index": 9,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Fan_Status_Cabinet_3",
       "name": "TEC_Fan_Status_Cabinet_3",
+      "sal_index": 10,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Fan_Status_Cabinet_4",
       "name": "TEC_Fan_Status_Cabinet_4",
+      "sal_index": 11,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Fan_Status_Cabinet_5",
       "name": "TEC_Fan_Status_Cabinet_5",
+      "sal_index": 12,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Fan_Status_Cabinet_6",
       "name": "TEC_Fan_Status_Cabinet_6",
+      "sal_index": 13,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Chiller_1_Valve",
       "name": "TEC_Status_Chiller_1_Valve",
+      "sal_index": 14,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Chiller_2_Valve",
       "name": "TEC_Status_Chiller_2_Valve",
+      "sal_index": 15,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_11",
       "name": "TEC_Status_Fan_11",
+      "sal_index": 16,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_12",
       "name": "TEC_Status_Fan_12",
+      "sal_index": 17,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_13",
       "name": "TEC_Status_Fan_13",
+      "sal_index": 18,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_14",
       "name": "TEC_Status_Fan_14",
+      "sal_index": 19,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_31",
       "name": "TEC_Status_Fan_31",
+      "sal_index": 20,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_32",
       "name": "TEC_Status_Fan_32",
+      "sal_index": 21,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_33",
       "name": "TEC_Status_Fan_33",
+      "sal_index": 22,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Status_Fan_34",
       "name": "TEC_Status_Fan_34",
+      "sal_index": 23,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "TEC_Temperature_Area_1",
       "name": "TEC_Temperature_Area_1",
+      "sal_index": 24,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_2",
       "name": "TEC_Temperature_Area_2",
+      "sal_index": 25,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_3",
       "name": "TEC_Temperature_Area_3",
+      "sal_index": 26,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_4",
       "name": "TEC_Temperature_Area_4",
+      "sal_index": 27,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Area_5",
       "name": "TEC_Temperature_Area_5",
+      "sal_index": 28,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Humidity_Cabinet_1",
       "name": "TEC_Internal_Humidity_Cabinet_1",
+      "sal_index": 29,
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Humidity_Cabinet_2",
       "name": "TEC_Internal_Humidity_Cabinet_2",
+      "sal_index": 30,
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Humidity_Cabinet_3",
       "name": "TEC_Internal_Humidity_Cabinet_3",
+      "sal_index": 31,
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Humidity_Cabinet_4",
       "name": "TEC_Internal_Humidity_Cabinet_4",
+      "sal_index": 32,
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Humidity_Cabinet_5",
       "name": "TEC_Internal_Humidity_Cabinet_5",
+      "sal_index": 33,
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Humidity_Cabinet_6",
       "name": "TEC_Internal_Humidity_Cabinet_6",
+      "sal_index": 34,
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_1",
       "name": "TEC_Internal_Temperature_Cabinet_1",
+      "sal_index": 35,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_2",
       "name": "TEC_Internal_Temperature_Cabinet_2",
+      "sal_index": 36,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_3",
       "name": "TEC_Internal_Temperature_Cabinet_3",
+      "sal_index": 37,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_4",
       "name": "TEC_Internal_Temperature_Cabinet_4",
+      "sal_index": 38,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_5",
       "name": "TEC_Internal_Temperature_Cabinet_5",
+      "sal_index": 39,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Internal_Temperature_Cabinet_6",
       "name": "TEC_Internal_Temperature_Cabinet_6",
+      "sal_index": 40,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_1",
       "name": "TEC_Surface_Temperature_Cabinet_1",
+      "sal_index": 41,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_2",
       "name": "TEC_Surface_Temperature_Cabinet_2",
+      "sal_index": 42,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_3",
       "name": "TEC_Surface_Temperature_Cabinet_3",
+      "sal_index": 43,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_4",
       "name": "TEC_Surface_Temperature_Cabinet_4",
+      "sal_index": 44,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_5",
       "name": "TEC_Surface_Temperature_Cabinet_5",
+      "sal_index": 45,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Surface_Temperature_Cabinet_6",
       "name": "TEC_Surface_Temperature_Cabinet_6",
+      "sal_index": 46,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Humidity_Area_1",
       "name": "TEC_Humidity_Area_1",
+      "sal_index": 47,
       "type": "double"
     },
     {
       "doc": "TEC_Humidity_Area_2",
       "name": "TEC_Humidity_Area_2",
+      "sal_index": 48,
       "type": "double"
     },
     {
       "doc": "TEC_Humidity_Area_3",
       "name": "TEC_Humidity_Area_3",
+      "sal_index": 49,
       "type": "double"
     },
     {
       "doc": "TEC_Humidity_Area_4",
       "name": "TEC_Humidity_Area_4",
+      "sal_index": 50,
       "type": "double"
     },
     {
       "doc": "TEC_Humidity_Area_5",
       "name": "TEC_Humidity_Area_5",
+      "sal_index": 51,
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Fan_13_Input",
       "name": "TEC_Temperature_Fan_13_Input",
+      "sal_index": 52,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Temperature_Fan_14_Input",
       "name": "TEC_Temperature_Fan_14_Input",
+      "sal_index": 53,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Regulation_Chiller_1_Valve",
       "name": "TEC_Regulation_Chiller_1_Valve",
+      "sal_index": 54,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "TEC_Regulation_Chiller_2_Valve",
       "name": "TEC_Regulation_Chiller_2_Valve",
+      "sal_index": 55,
       "sal_units": "degC",
       "type": "double"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 56,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

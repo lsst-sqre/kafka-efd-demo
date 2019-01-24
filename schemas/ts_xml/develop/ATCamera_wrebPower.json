@@ -9,82 +9,134 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "name": "digital_V",
+      "sal_index": 0,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "digital_I",
+      "sal_index": 1,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "analog_V",
+      "sal_index": 2,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "analog_I",
+      "sal_index": 3,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "clkHigh_V",
+      "sal_index": 4,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "clkHigh_I",
+      "sal_index": 5,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "clkLow_V",
+      "sal_index": 6,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "clkLow_I",
+      "sal_index": 7,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "od_V",
+      "sal_index": 8,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "od_I",
+      "sal_index": 9,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "dphi_V",
+      "sal_index": 10,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "dphi_I",
+      "sal_index": 11,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "heater_V",
+      "sal_index": 12,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "heater_I",
+      "sal_index": 13,
       "sal_units": "milliampere",
       "type": "float"
     },
     {
       "name": "hvbias_V",
+      "sal_index": 14,
       "sal_units": "volt",
       "type": "float"
     },
     {
       "name": "hvbias_I",
+      "sal_index": 15,
       "sal_units": "milliampere",
       "type": "float"
     }

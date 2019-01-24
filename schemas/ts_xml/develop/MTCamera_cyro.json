@@ -9,134 +9,203 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "name": "coldTemperature",
+      "sal_index": 0,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 3,
         "type": "array"
       }
     },
     {
       "name": "compressor",
+      "sal_index": 1,
       "sal_units": "watt",
       "type": "float"
     },
     {
       "name": "compressorSpeed",
+      "sal_index": 2,
       "sal_units": "hertz",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "cryoTemperature",
+      "sal_index": 3,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 12,
         "type": "array"
       }
     },
     {
       "name": "dischargePressure",
+      "sal_index": 4,
       "sal_units": "pascal",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "dischargeTemp",
+      "sal_index": 5,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "flowInterlock",
+      "sal_index": 6,
       "type": {
         "items": "int",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "heaterCurrent",
+      "sal_index": 7,
       "sal_units": "ampere",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
     {
       "name": "heaterVoltage",
+      "sal_index": 8,
       "sal_units": "volt",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
     {
       "name": "intakeFlow",
+      "sal_index": 9,
       "sal_units": "lps",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "intakePressure",
+      "sal_index": 10,
       "sal_units": "pascal",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "intakeTemp",
+      "sal_index": 11,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "postExpansionPressure",
+      "sal_index": 12,
       "sal_units": "pascal",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "postExpansionTemp",
+      "sal_index": 13,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "preExpansionPressure",
+      "sal_index": 14,
       "sal_units": "pascal",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "preExpansionTemp",
+      "sal_index": 15,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     },
     {
       "name": "returnTemp",
+      "sal_index": 16,
       "sal_units": "Celsius",
       "type": {
         "items": "float",
+        "sal_count": 2,
         "type": "array"
       }
     }

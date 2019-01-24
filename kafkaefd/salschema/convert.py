@@ -43,16 +43,52 @@ def convert_topic(root, validate=True):
     # (SALCommand, SALEvent, or SALTelemetry)
     avsc['sal_topic_type'] = root.tag
 
-    # Add a timestamp field
+    # Add a timestamp field specifically for Kafka
     avsc['fields'].append({
         "name": "kafka_timestamp",
         "type": {"type": "long", "logicalType": "timestamp-millis"},
         "doc": "Timestamp when the Kafka message was created."
     })
 
+    # Add common metadata fields that appear in messages produced by SAL, but
+    # aren't part of schemas.
+    avsc['fields'].append({
+        "name": "sal_revcode",
+        "type": "string",
+        "doc": "SAL revision code."
+    })
+    avsc['fields'].append({
+        "name": "sal_created",
+        "type": {"type": "long", "logicalType": "timestamp-millis"},
+        "doc": "Time when SAL created the message."
+    })
+    avsc['fields'].append({
+        "name": "sal_ingested",
+        "type": {"type": "long", "logicalType": "timestamp-millis"},
+        "doc": "Time when SAL ingested the message."
+    })
+    avsc['fields'].append({
+        "name": "sal_sequence",
+        "type": "long",
+        "doc": "SAL sequence number."
+    })
+    avsc['fields'].append({
+        "name": "sal_origin",
+        "type": "int",
+        "doc": "SAL origin."
+    })
+    avsc['fields'].append({
+        "name": "sal_host",
+        "type": "int",
+        "doc": "SAL host."
+    })
+
     # Convert fields
-    for item in root.iterfind('item'):
-        field = dict()
+    for index, item in enumerate(root.iterfind('item')):
+        field = {
+            # This is the index of the field in the XML schema.
+            'sal_index': index
+        }
 
         _copy_xml_tag(field, item.find('EFDB_Name'), key='name')
         _copy_xml_tag(field, item.find('Description'), key='doc')
@@ -84,7 +120,8 @@ def convert_topic(root, validate=True):
             }
 
         elif count > 1:
-            field['type'] = {'type': 'array', 'items': avro_type}
+            field['type'] = {'type': 'array', 'items': avro_type,
+                             'sal_count': count}
 
         else:
             field['type'] = avro_type

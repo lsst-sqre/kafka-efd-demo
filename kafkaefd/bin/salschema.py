@@ -12,10 +12,11 @@ from pathlib import Path
 import aiohttp
 import requests
 import click
-from uritemplate import URITemplate
+from kafkit.registry.aiohttp import RegistryApi
 
 from ..salschema.repo import SalXmlRepo
 from ..salschema.convert import convert_topic
+from .utils import get_registry_url
 
 
 @click.group()
@@ -87,9 +88,11 @@ def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
     xml_org, xml_repo_name = xml_repo_slug.split('/')
 
     async def _convert():
-        # limit number of simultaneous connections
-        async with aiohttp.ClientSession() as httpsession:
-            repo = await SalXmlRepo.from_github(
+        # Limit number of connectors, otherwise schema registry will
+        # drop connections.
+        conn = aiohttp.TCPConnector(limit_per_host=20)
+        async with aiohttp.ClientSession(connector=conn) as httpsession:
+            xmlRepo = await SalXmlRepo.from_github(
                 httpsession,
                 github_org=xml_org,
                 github_repo=xml_repo_name,
@@ -97,58 +100,38 @@ def convert(ctx, xml_repo_slug, xml_repo_ref, github_username,
                 github_user=github_username,
                 github_token=github_token)
 
-        schemas = {}
-        for topic_name, topic in repo.items():
-            avsc = convert_topic(topic)
-            schemas[topic_name] = avsc
+            schemas = {}
+            for topic_name, topic in xmlRepo.items():
+                avsc = convert_topic(topic)
+                schemas[topic_name] = avsc
 
-        if write_dir is not None:
-            dirname = Path(write_dir)
-            dirname.mkdir(parents=True, exist_ok=True)
-            for name, schema in schemas.items():
-                path = dirname / (name + '.json')
-                with open(path, 'w') as f:
-                    f.write(json.dumps(schema, indent=2, sort_keys=True))
+            if write_dir is not None:
+                dirname = Path(write_dir)
+                dirname.mkdir(parents=True, exist_ok=True)
+                for name, schema in schemas.items():
+                    path = dirname / (name + '.json')
+                    with open(path, 'w') as f:
+                        f.write(json.dumps(schema, indent=2, sort_keys=True))
 
-        if upload_to_registry:
-            host = ctx.obj['host']
-            # Limit number of connectors, otherwise schema registry will
-            # drop connections.
-            conn = aiohttp.TCPConnector(limit_per_host=20)
-            async with aiohttp.ClientSession(connector=conn) as httpsession:
-                await _upload_schemas(
-                    schemas, httpsession, host)
+            if upload_to_registry:
+                registry_url = get_registry_url(ctx.obj['host'])
+                registry = RegistryApi(session=httpsession,
+                                       url=registry_url)
+                tasks = []
+                for name, schema in schemas.items():
+                    tasks.append(
+                        asyncio.ensure_future(
+                            registry.register_schema(schema)
+                        )
+                    )
+                await asyncio.gather(*tasks)
+                print('Finished uploading {0:d} schemas'.format(len(tasks)))
 
-        if print_schemas:
-            for name, schema in schemas.items():
-                print(json.dumps(schema, indent=2, sort_keys=True))
+            if print_schemas:
+                for name, schema in schemas.items():
+                    print(json.dumps(schema, indent=2, sort_keys=True))
 
-        print('Processed {0:d} schemas'.format(len(repo)))
+            print('Processed {0:d} schemas'.format(len(xmlRepo)))
 
     loop = asyncio.get_event_loop()
     loop.run_until_complete(_convert())
-
-
-async def _upload_schemas(schemas, httpsession, schema_registry_url):
-    headers = {
-        'Accept': 'application/vnd.schemaregistry.v1+json'
-    }
-    uri_template = URITemplate(
-        schema_registry_url + '/subjects{/subject}/versions')
-
-    tasks = []
-    for name, schema in schemas.items():
-        subject = name.replace('_', '-').lower() + '-value'
-        url = uri_template.expand(subject=subject)
-        data = {'schema': json.dumps(schema)}
-        tasks.append(
-            asyncio.ensure_future(
-                httpsession.post(url, json=data, headers=headers)
-            )
-        )
-    print('Uploading {0:d} schemas'.format(len(tasks)))
-    results = await asyncio.gather(*tasks)
-    for result in results:
-        if result.status >= 300:
-            message = await result.json()
-            print('Error:\n' + message)

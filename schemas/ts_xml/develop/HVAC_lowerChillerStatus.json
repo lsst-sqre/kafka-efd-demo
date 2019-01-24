@@ -1,0 +1,123 @@
+{
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
+      "doc": "The system time (TAI).",
+      "name": "activeTemperatureSetpoint",
+      "sal_index": 0,
+      "type": "float"
+    },
+    {
+      "name": "outgoingEvaporateWaterTemperature",
+      "sal_index": 1,
+      "type": "float"
+    },
+    {
+      "name": "returnEvaporateWaterTemperature",
+      "sal_index": 2,
+      "type": "float"
+    },
+    {
+      "name": "operationMode",
+      "sal_index": 3,
+      "type": "long"
+    },
+    {
+      "name": "chillerStatus",
+      "sal_index": 4,
+      "type": "long"
+    },
+    {
+      "doc": "pascal",
+      "name": "circuit1LowPressure",
+      "sal_index": 5,
+      "type": "float"
+    },
+    {
+      "doc": "pascal",
+      "name": "circuit2LowPressure",
+      "sal_index": 6,
+      "type": "float"
+    },
+    {
+      "doc": "percentage",
+      "name": "workloadStatus",
+      "sal_index": 7,
+      "type": "float"
+    },
+    {
+      "name": "generalAlarm",
+      "sal_index": 8,
+      "type": "long"
+    },
+    {
+      "name": "workStatus",
+      "sal_index": 9,
+      "type": "long"
+    },
+    {
+      "name": "powerOnCommand",
+      "sal_index": 10,
+      "type": "long"
+    },
+    {
+      "name": "temperatureSetpointCommand",
+      "sal_index": 11,
+      "type": "float"
+    },
+    {
+      "name": "id",
+      "sal_index": 12,
+      "type": "string"
+    }
+  ],
+  "name": "HVAC_lowerChillerStatus",
+  "namespace": "lsst.sal",
+  "sal_subsystem": "HVAC",
+  "sal_topic_type": "SALTelemetry",
+  "sal_version": "3.8",
+  "type": "record"
+}

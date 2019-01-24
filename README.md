@@ -23,6 +23,7 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
   - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-salschema--ts_sal-schema-conversion)
 - [Experiments](#experiments)
   - [Mock SAL](#mock-sal)
+  - [SAL Transformer](#sal-transformer)
 - [Lessons learned](#lessons-learned)
 
 ## Kubernetes cluster set up
@@ -430,6 +431,75 @@ You can graph the overall message production rate the mock SAL job using this qu
 ```
 rate(salmock_produced_total[5m])
 ```
+
+### SAL Transformer
+
+The SAL now writes messages to Kafka.
+Those messages are formatted in plain text, though, based on a format similar to an SQL insert.
+The InfluxDB ingest needs Avro-encoded messages, though.
+To adapt these two systems together, the `kafkaefd saltransform` app is capable of consuming plain text messages from the SAL and converts them to Avro-formatted messages in new topics.
+
+The original topics that SAL produces are named ``{{subsystem}}_{{kind}}`` where `subsystem` is the name of a SAL subsystem, and `kind` is one of `telemetry`, `events`, and `commands`.
+For example: `MTM1M3TS_telemetry`.
+Multiple SAL topics are written to each of these these Kafka topics.
+
+The output topics are named after individual SAL topics, in an `lsst.sal` namespace.
+For example, `lsst.sal.MTM1M3TS_thermalData`.
+These topic names correspond to subject names for these schemas in the Schema Registry.
+
+#### 1. Deploy the configuration
+
+```
+kubectl --namespace default apply -f k8s-apps/saltransformer-config.yaml
+```
+
+This configuration points to the Confluent installation deployed by [lsst-sqre/terraform-efd-kafka](https://github.com/lsst-sqre/terraform-efd-kafka), which is in the `kafka` Kubernetes namespace.
+Change these hostnames as necessary.
+
+#### 2. Deploy the topic and schema initialization
+
+```
+kubectl --namespace default apply -f k8s-apps/saltransformer-init.yaml
+```
+
+This is a Kubernetes Job that runs the `kafkaefd saltransform init` command.
+For the specific subsytems, this command does the follow:
+
+- Creates output topics for each SAL topic in the specified subsystems.
+  These output topics are namespaced with a `lsst.sal` prefix.
+  For example: `lsst.sal.MTM1M3TS_thermalData`.
+  The command can be modified to control partitioning and replication factors.
+  By default only 1 partition is created for a topic, but topics are replicated across all three brokers.
+
+- Registers Avro schemas for each SAL topic in the specified subsystems with the Schema Registry.
+  This does an XML to Avro conversion using the same code as [kafkaefd salschema](#kafkaefd-salschema--ts_sal-schema-conversion).
+
+**Modify this job to add additional subsystems.**
+
+#### 3. Deploy the transformer application
+
+```
+kubectl --namespace default apply -f k8s-apps/saltransformer-deployment.yaml
+```
+
+This deployment stands up the transformer applications themselves, `kafkaefd saltransformer run`.
+With the structure of the `kafkaefd saltransformer run` application, a single container covers an entire subsystem (event, command, and telemetry streams).
+Each subsystem has its own deployment so that containers for each subsystem are distributed across different nodes for performance.
+If the input topics of a subsystem are partitioned, you can scale the number of replicas in that subsystem's transformer deployment.
+For example, if the input topic `MTM1M3TS_telemetry` has three partitions, then the corresponding deployment for `MTM1M3TS` can have three replicas.
+
+**Modify this deployment to add additional subsystems.**
+
+#### Monitoring
+
+The deployment generates Prometheus metrics for monitoring:
+
+- `saltransform_produced` (counter) the number of messages processed. Can be used to compute a rate.
+
+- `saltransform_total_seconds` (summary) observes the time, in seconds, to process a message, from consuming the original message to producing the transformed message.
+
+- `saltransform_transform_seconds` (summary) observes the time, in seconds, to transform the message from text to Avro.
+  That is, this metric only measures the processing time of `SalTextTransformer.transform`.
 
 ## Lessons learned
 

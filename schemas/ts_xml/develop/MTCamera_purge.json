@@ -9,63 +9,112 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "name": "accelerometer",
+      "sal_index": 0,
       "sal_units": "meter",
       "type": {
         "items": "float",
+        "sal_count": 6,
         "type": "array"
       }
     },
     {
       "name": "blowerSetting",
+      "sal_index": 1,
       "sal_units": "hertz",
       "type": "float"
     },
     {
       "name": "blowerSpeed",
+      "sal_index": 2,
       "sal_units": "hertz",
       "type": "float"
     },
     {
       "name": "bodyFlowMeter",
+      "sal_index": 3,
       "sal_units": "lps",
       "type": "float"
     },
     {
       "name": "bodyTemp",
+      "sal_index": 4,
       "sal_units": "Celsius",
       "type": "float"
     },
     {
       "name": "heaterCurrent",
+      "sal_index": 5,
       "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "heaters",
+      "sal_index": 6,
       "sal_units": "ampere",
       "type": "float"
     },
     {
       "name": "microphone",
+      "sal_index": 7,
       "type": "long"
     },
     {
       "name": "trunkFlowMeter",
+      "sal_index": 8,
       "sal_units": "lps",
       "type": "float"
     },
     {
       "name": "trunkTemp",
+      "sal_index": 9,
       "sal_units": "Celsius",
       "type": "float"
     },
     {
       "name": "valveSetting",
+      "sal_index": 10,
       "type": "long"
     },
     {
       "name": "valves",
+      "sal_index": 11,
       "type": "long"
     }
   ],

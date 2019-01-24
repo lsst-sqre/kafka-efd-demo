@@ -1,0 +1,158 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
+      "doc": "HR star number",
+      "name": "hrNum",
+      "sal_index": 0,
+      "type": "long"
+    },
+    {
+      "name": "timestamp",
+      "sal_index": 1,
+      "sal_units": "seconds",
+      "type": "double"
+    },
+    {
+      "doc": "UT date on PC",
+      "name": "utDate",
+      "sal_index": 2,
+      "type": "string"
+    },
+    {
+      "doc": "UT time on PC",
+      "name": "utTime",
+      "sal_index": 3,
+      "type": "string"
+    },
+    {
+      "doc": "Exposure time in msec",
+      "name": "exposureTime",
+      "sal_index": 4,
+      "sal_units": "seconds",
+      "type": "double"
+    },
+    {
+      "doc": "Airmass of the observation",
+      "name": "airmass",
+      "sal_index": 5,
+      "type": "double"
+    },
+    {
+      "doc": "Total number of scanned lines",
+      "name": "scanLines",
+      "sal_index": 6,
+      "type": "long"
+    },
+    {
+      "doc": "Seeing (arcsec), corrected for zenith distance and exposure",
+      "name": "seeingCorr",
+      "sal_index": 7,
+      "sal_units": "arcsec",
+      "type": "float"
+    },
+    {
+      "doc": "Seeing (arcsec), corrected for zenith, uses 2-point exponential fit",
+      "name": "seeingCorr2",
+      "sal_index": 8,
+      "sal_units": "arcsec",
+      "type": "float"
+    },
+    {
+      "doc": "Seeing (arcsec), corrected for zenith, uses 6-point exponential fit",
+      "name": "seeingCorr6",
+      "sal_index": 9,
+      "sal_units": "arcsec",
+      "type": "float"
+    },
+    {
+      "doc": "Total average flux this time bin",
+      "name": "flux",
+      "sal_index": 10,
+      "sal_units": "arcsec",
+      "type": "long"
+    },
+    {
+      "doc": "Scintillation-ratio (left star)",
+      "name": "scintLeft",
+      "sal_index": 11,
+      "type": "float"
+    },
+    {
+      "doc": "Scintillation-ratio (right star)",
+      "name": "scintRight",
+      "sal_index": 12,
+      "type": "float"
+    },
+    {
+      "doc": "Strehl-ratio (left star)",
+      "name": "strehlLeft",
+      "sal_index": 13,
+      "type": "float"
+    },
+    {
+      "doc": "Strehl-ratio (right star)",
+      "name": "strehlRight",
+      "sal_index": 14,
+      "type": "float"
+    },
+    {
+      "doc": "Star separation in pixels",
+      "name": "delta",
+      "sal_index": 15,
+      "sal_units": "pixels",
+      "type": "float"
+    }
+  ],
+  "name": "DIMM_logevent_dimmMeasurement",
+  "namespace": "lsst.sal",
+  "sal_alias": "dimmMeasurement",
+  "sal_subsystem": "DIMM",
+  "sal_topic_type": "SALEvent",
+  "sal_version": "3.8.31",
+  "type": "record"
+}

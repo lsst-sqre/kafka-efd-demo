@@ -1,0 +1,69 @@
+{
+  "doc": "http://sal.lsst.org",
+  "fields": [
+    {
+      "doc": "Timestamp when the Kafka message was created.",
+      "name": "kafka_timestamp",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
+      "doc": "Target definition will be copied from this target. The 'to' and 'from' targets must be different.",
+      "name": "copyFrom",
+      "sal_index": 0,
+      "type": "long"
+    },
+    {
+      "doc": "Target definition will be copied to this target. The 'to' and 'from' targets must be different.",
+      "name": "copyTo",
+      "sal_index": 1,
+      "type": "long"
+    }
+  ],
+  "name": "ATPtg_command_copyTarget",
+  "namespace": "lsst.sal",
+  "sal_alias": "copyTarget",
+  "sal_author": "pbt",
+  "sal_subsystem": "ATPtg",
+  "sal_topic_type": "SALCommand",
+  "sal_version": "3.8.41",
+  "type": "record"
+}

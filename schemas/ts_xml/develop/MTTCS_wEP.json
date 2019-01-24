@@ -9,15 +9,53 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "name": "basisSetName",
       "sal_bytes_per_night": 597196,
       "sal_frequency": 0.054,
+      "sal_index": 0,
       "sal_instances_per_night": 2332,
       "sal_publishers": 1,
       "sal_size_in_bytes": 256,
       "sal_values_per_publisher": 256,
       "type": {
         "items": "bytes",
+        "sal_count": 256,
         "type": "array"
       }
     },
@@ -25,6 +63,7 @@
       "name": "numberOfTerms",
       "sal_bytes_per_night": 9331,
       "sal_frequency": 0.054,
+      "sal_index": 1,
       "sal_instances_per_night": 2332,
       "sal_publishers": 1,
       "sal_size_in_bytes": 4,
@@ -35,12 +74,14 @@
       "name": "zArr1",
       "sal_bytes_per_night": 1194393,
       "sal_frequency": 0.054,
+      "sal_index": 2,
       "sal_instances_per_night": 2332,
       "sal_publishers": 1,
       "sal_size_in_bytes": 512,
       "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
+        "sal_count": 64,
         "type": "array"
       }
     },
@@ -48,12 +89,14 @@
       "name": "zArr2",
       "sal_bytes_per_night": 1194393,
       "sal_frequency": 0.054,
+      "sal_index": 3,
       "sal_instances_per_night": 2332,
       "sal_publishers": 1,
       "sal_size_in_bytes": 512,
       "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
+        "sal_count": 64,
         "type": "array"
       }
     },
@@ -61,12 +104,14 @@
       "name": "zArr3",
       "sal_bytes_per_night": 1194393,
       "sal_frequency": 0.054,
+      "sal_index": 4,
       "sal_instances_per_night": 2332,
       "sal_publishers": 1,
       "sal_size_in_bytes": 512,
       "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
+        "sal_count": 64,
         "type": "array"
       }
     },
@@ -74,12 +119,14 @@
       "name": "zArr4",
       "sal_bytes_per_night": 1194393,
       "sal_frequency": 0.054,
+      "sal_index": 5,
       "sal_instances_per_night": 2332,
       "sal_publishers": 1,
       "sal_size_in_bytes": 512,
       "sal_values_per_publisher": 64,
       "type": {
         "items": "double",
+        "sal_count": 64,
         "type": "array"
       }
     }

@@ -9,26 +9,66 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "doc": "Status_TMA_AZ_PD_CBT_0001",
       "name": "Status_TMA_AZ_PD_CBT_0001",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_TMA_EL_PD_CBT_0001",
       "name": "Status_TMA_EL_PD_CBT_0001",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "Status_TMA_EL_PD_CBT_0002",
       "name": "Status_TMA_EL_PD_CBT_0002",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 3,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"

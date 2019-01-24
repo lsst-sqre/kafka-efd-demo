@@ -4,12 +4,12 @@ services:
 language: python
 matrix:
   include:
-    - python: '3.6'
+    - python: '3.7-dev'
       env: DEPLOY_DOCKER_IMAGE=true
       install:
         - make installapp
       script:
-        - make pytest
+        - make test
         - make image
       after_success:
         - make travis-docker-deploy

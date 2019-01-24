@@ -10,50 +10,96 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "name": "version",
+      "sal_index": 0,
       "type": "long"
     },
     {
       "name": "startA",
+      "sal_index": 1,
       "sal_units": "ms",
       "type": "float"
     },
     {
       "name": "startB",
+      "sal_index": 2,
       "sal_units": "ms",
       "type": "float"
     },
     {
       "name": "travelDistance",
+      "sal_index": 3,
       "sal_units": "mm",
       "type": "float"
     },
     {
       "name": "startVelocity",
+      "sal_index": 4,
       "sal_units": "Steps/s",
       "type": "float"
     },
     {
       "name": "acceleration",
+      "sal_index": 5,
       "sal_units": "m/s^2",
       "type": "float"
     },
     {
       "name": "maxVelocity",
+      "sal_index": 6,
       "sal_units": "Steps/s",
       "type": "float"
     },
     {
       "name": "threshold",
+      "sal_index": 7,
       "sal_units": "Steps",
       "type": "float"
     },
     {
       "name": "shutterVersion",
+      "sal_index": 8,
       "type": "string"
     },
     {
       "name": "firmwareVersion",
+      "sal_index": 9,
       "type": "string"
     }
   ],

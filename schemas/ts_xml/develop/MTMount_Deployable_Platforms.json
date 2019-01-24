@@ -9,131 +9,191 @@
       }
     },
     {
+      "doc": "SAL revision code.",
+      "name": "sal_revcode",
+      "type": "string"
+    },
+    {
+      "doc": "Time when SAL created the message.",
+      "name": "sal_created",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "Time when SAL ingested the message.",
+      "name": "sal_ingested",
+      "type": {
+        "logicalType": "timestamp-millis",
+        "type": "long"
+      }
+    },
+    {
+      "doc": "SAL sequence number.",
+      "name": "sal_sequence",
+      "type": "long"
+    },
+    {
+      "doc": "SAL origin.",
+      "name": "sal_origin",
+      "type": "int"
+    },
+    {
+      "doc": "SAL host.",
+      "name": "sal_host",
+      "type": "int"
+    },
+    {
       "doc": "DP_Status",
       "name": "DP_Status",
+      "sal_index": 0,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "DP_Status_Drive_1",
       "name": "DP_Status_Drive_1",
+      "sal_index": 1,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "DP_Status_Drive_2",
       "name": "DP_Status_Drive_2",
+      "sal_index": 2,
       "sal_size_in_bytes": 1,
       "type": "string"
     },
     {
       "doc": "DP_Current_Drive_2",
       "name": "DP_Current_Drive_2",
+      "sal_index": 3,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "DP_Current_Drive_1",
       "name": "DP_Current_Drive_1",
+      "sal_index": 4,
       "sal_units": "Amp",
       "type": "double"
     },
     {
       "doc": "DP_Position_Set_Section_1",
       "name": "DP_Position_Set_Section_1",
+      "sal_index": 5,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Position_Set_Section_2",
       "name": "DP_Position_Set_Section_2",
+      "sal_index": 6,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Position_Actual_Section_1",
       "name": "DP_Position_Actual_Section_1",
+      "sal_index": 7,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Position_Actual_Section_2",
       "name": "DP_Position_Actual_Section_2",
+      "sal_index": 8,
       "sal_units": "meterm",
       "type": "double"
     },
     {
       "doc": "DP_Extended_Directional_Limit_Switch_Section_1",
       "name": "DP_Extended_Directional_Limit_Switch_Section_1",
+      "sal_index": 9,
       "type": "boolean"
     },
     {
       "doc": "DP_Extended_Directional_Limit_Switch_Section_2",
       "name": "DP_Extended_Directional_Limit_Switch_Section_2",
+      "sal_index": 10,
       "type": "boolean"
     },
     {
       "doc": "DP_Retracted_Directional_Limit_Switch_Section_1",
       "name": "DP_Retracted_Directional_Limit_Switch_Section_1",
+      "sal_index": 11,
       "type": "boolean"
     },
     {
       "doc": "DP_Retracted_Directional_Limit_Switch_Section_2",
       "name": "DP_Retracted_Directional_Limit_Switch_Section_2",
+      "sal_index": 12,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_1_Extension_1_Locked_Limit_Switch",
       "name": "DP_Platform_1_Extension_1_Locked_Limit_Switch",
+      "sal_index": 13,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_1_Extension_1_Retracted_Limit_Switch",
       "name": "DP_Platform_1_Extension_1_Retracted_Limit_Switch",
+      "sal_index": 14,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_1_Extension_2_Locked_Limit_Switch",
       "name": "DP_Platform_1_Extension_2_Locked_Limit_Switch",
+      "sal_index": 15,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_1_Extension_2_Retracted_Limit_Switch",
       "name": "DP_Platform_1_Extension_2_Retracted_Limit_Switch",
+      "sal_index": 16,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_2_Extension_1_Locked_Limit_Switch",
       "name": "DP_Platform_2_Extension_1_Locked_Limit_Switch",
+      "sal_index": 17,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_2_Extension_1_Retracted_Limit_Switch",
       "name": "DP_Platform_2_Extension_1_Retracted_Limit_Switch",
+      "sal_index": 18,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_2_Extension_2_Locked_Limit_Switch",
       "name": "DP_Platform_2_Extension_2_Locked_Limit_Switch",
+      "sal_index": 19,
       "type": "boolean"
     },
     {
       "doc": "DP_Platform_2_Extension_2_Retracted_Limit_Switch",
       "name": "DP_Platform_2_Extension_2_Retracted_Limit_Switch",
+      "sal_index": 20,
       "type": "boolean"
     },
     {
       "doc": "DP_Interlocks",
       "name": "DP_Interlocks",
+      "sal_index": 21,
       "sal_size_in_bytes": 1,
       "type": {
         "items": "string",
+        "sal_count": 10,
         "type": "array"
       }
     },
     {
       "doc": "timestamp",
       "name": "timestamp",
+      "sal_index": 22,
       "sal_size_in_bytes": 1,
       "sal_units": "second",
       "type": "double"
