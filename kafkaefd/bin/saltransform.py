@@ -454,6 +454,10 @@ def get_scanner(schema_field=None, type_=None):
                 return scan_timestamp_millis
             elif type_['type'] == 'array':
                 return scan_array
+            elif type_['type'] == 'enum':
+                # TODO we think enums look like strings, but this isn't
+                # actually seen in the wild yet.
+                return scan_string
             else:
                 raise NotImplementedError(
                     "Don't know how to scan this array field yet: "
