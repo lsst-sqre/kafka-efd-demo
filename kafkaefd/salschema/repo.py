@@ -63,6 +63,9 @@ class SalXmlRepo(Mapping):
         # Cache for files downloaded from GitHub
         cache_root = Path(cache_dir).expanduser()
 
+        if github_user is None:
+            github_user = 'kafkaefd'
+
         ghclient = gh_aiohttp.GitHubAPI(
             httpsession,
             github_user,
