@@ -1,29 +1,20 @@
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: saltransform
-data:
-  BROKER: "confluent-cp-kafka-headless.kafka:9092"
-  SCHEMAREGISTRY: "http://confluent-cp-schema-registry.kafka:8081"
----
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: "saltransform-mtm1m3ts"
+  name: "saltransform-init"
 spec:
   template:
     metadata:
       labels:
-        role: "saltransformer"
-        subsystem: "MTM1M3TS"
+        role: "saltransform-init"
       # annotations:
       #   prometheus.io/scrape: "true"
       #   prometheus.io/port: "9092"
     spec:
       containers:
       - name: saltransformer
-        image: lsstsqre/kafka-efd-demo:tickets-DM-17282
+        image: lsstsqre/kafka-efd-demo:tickets-DM-17500
         imagePullPolicy: Always
         command:
           - "kafkaefd"
@@ -31,6 +22,19 @@ spec:
           - "init"
           - "--subsystem"
           - "MTM1M3TS"
+          - "--subsystem"
+          - "MTM1M3"
+        env:
+          - name: GITHUB_USER
+            valueFrom:
+              secretKeyRef:
+                name: saltransformer-secrets
+                key: GITHUB_USER
+          - name: GITHUB_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: saltransformer-secrets
+                key: GITHUB_TOKEN
         envFrom:
         - configMapRef:
             name: saltransform

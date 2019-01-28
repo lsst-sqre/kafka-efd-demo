@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: mtm1m3ts
-        image: lsstsqre/kafka-efd-demo:tickets-DM-17282
+        image: lsstsqre/kafka-efd-demo:tickets-DM-17500
         imagePullPolicy: Always
         command:
           - "kafkaefd"
@@ -31,6 +31,41 @@ spec:
           - "--subsystem"
           - "MTM1M3TS"
           # - "--rewind-to-start"
+        envFrom:
+        - configMapRef:
+            name: saltransform
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "saltransform-mtm1m3"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "saltransform"
+      subsystem: "MTM1M3"
+  template:
+    metadata:
+      labels:
+        app: "saltransform"
+        subsystem: "MTM1M3"
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9092"
+    spec:
+      containers:
+      - name: mtm1m3ts
+        image: lsstsqre/kafka-efd-demo:tickets-DM-17500
+        imagePullPolicy: Always
+        command:
+          - "kafkaefd"
+          - "saltransform"
+          - "run"
+          - "--auto-offset-reset"
+          - "earliest"
+          - "--subsystem"
+          - "MTM1M3"
         envFrom:
         - configMapRef:
             name: saltransform
