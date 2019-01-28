@@ -24,6 +24,17 @@ spec:
           - "MTM1M3TS"
           - "--subsystem"
           - "MTM1M3"
+        env:
+          - name: GITHUB_USER
+            valueFrom:
+              secretKeyRef:
+                name: saltransformer-secrets
+                key: GITHUB_USER
+          - name: GITHUB_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: saltransformer-secrets
+                key: GITHUB_TOKEN
         envFrom:
         - configMapRef:
             name: saltransform
