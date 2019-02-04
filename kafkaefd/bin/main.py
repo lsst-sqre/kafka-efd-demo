@@ -32,9 +32,16 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
     show_default=True,
     help='Schema Registry URL. Alternatively set via $SCHEMAREGISTRY env var.'
 )
+@click.option(
+    '--kafka-connect', 'kafka_connect_url', envvar='KAFKA_CONNECT',
+    required=False, nargs=1,
+    default='http://confluent-kafka-cp-kafka-connect:8083',
+    show_default=True,
+    help='Kafka Connect URL. Alternatively set via $KAFKA_CONNECT env var.'
+)
 @click.version_option(message='%(version)s')
 @click.pass_context
-def main(ctx, broker_url, schema_registry_url):
+def main(ctx, broker_url, schema_registry_url, kafka_connect_url):
     """kafkaefd is a collection of subcommands that implement experimental
     Kafka producers and consumers. kafkaefd is a test bed for the Kafka
     technology that will underly the DM Engineering Facility Database (EFD).
@@ -44,6 +51,7 @@ def main(ctx, broker_url, schema_registry_url):
     ctx.obj = {
         'broker_url': broker_url,
         'schema_registry_url': schema_registry_url,
+        'kafka_connect_url': kafka_connect_url,
     }
 
 
