@@ -35,6 +35,9 @@ install_requires = [
 ]
 
 tests_require = [
+    # flake8 is pinned because of
+    # https://github.com/tholo/pytest-flake8/issues/56
+    'flake8==3.6.0',
     'pytest==3.9.3',
     'pytest-flake8==1.0.2',
     'pytest-asyncio==0.10.0',

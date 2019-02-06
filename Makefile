@@ -5,7 +5,7 @@ VERSION=$(shell kafkaefd --version)
 help:
 	@echo "Make command reference"
 	@echo "  make installapp .. (install app for development)"
-	@echo "  make pytest ...... (run unit tests pytest)"
+	@echo "  make test ........ (run unit tests pytest)"
 	@echo "  make image ....... (make tagged Docker image)"
 	@echo "  make travis-docker-deploy (push image to Docker Hub from Travis CI)"
 	@echo "  make version ..... (print the app version)"

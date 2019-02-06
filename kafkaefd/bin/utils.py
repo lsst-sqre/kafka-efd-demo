@@ -36,3 +36,19 @@ def get_registry_url(ctx):
         )
         raise ClickException(message)
     return registry_url
+
+
+def get_connector_url(ctx):
+    """Get the Confluent Kafka Connect connection string from the context, or
+    print an error message otherwise.
+    """
+    try:
+        kafka_connect_url = ctx.obj['kafka_connect_url']
+    except KeyError:
+        message = (
+            'kafka Connect is not configured. Pass a --kafka-connect option to'
+            ' kafkaefd or set the $KAFKA_CONNECT environment variable. An '
+            'example connection string is "https://localhost:8083".'
+        )
+        raise ClickException(message)
+    return kafka_connect_url

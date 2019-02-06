@@ -119,22 +119,56 @@ Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.c
 
 ### InfluxDB Sink Connector configuration
 
-The [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) consumes Kafka Avro-serialized messages and send them to InfluxDB.
+Configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) to consume  Kafka Avro-serialized messages and write them to InfluxDB.
 
-From the `k8s-cluster` directory, connect to the Kafka Connect server:
+Create a database at InfluxDB:
 
-```bash
-./port-forward-kafka-connect.sh
+```
+curl -i -XPOST http://influxdb-influxdb:8086/query --data-urlencode "q=CREATE DATABASE kafkaefd"
 ```
 
-From the `k8s-cluster/cp-kafka-connect` directory, configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html):
+Create and upload the connector configuration:
 
-```bash
-./configure-influxdb-connector.sh
+```
+kafkaefd admin connectors create influxdb-sink --influxdb http://influxdb-influxdb:8086 --database kafkaefd --upload helloavro
 ```
 
-With this example configuration the `kafkaefd helloavro` command will send messages to
-InfluxDB.
+Get the status of the new connector with:
+
+```
+kafkaefd admin connectors status influxdb-sink
+{
+    "connector": {
+        "state": "RUNNING",
+        "worker_id": "10.72.2.8:8083"
+    },
+    "name": "influxdb-sink",
+    "tasks": [
+        {
+            "id": 0,
+            "state": "RUNNING",
+            "worker_id": "10.72.2.8:8083"
+        }
+    ],
+    "type": "sink"
+}
+```
+
+Finally produce a message for the `helloavro` topic:
+
+```
+kafkaefd helloavro produce "Hello Influx"
+```
+
+and verify that it was written to the InfluxDB database:
+
+```
+curl -XPOST http://influxdb-inlfuxdb:8086/query --data-urlencode "q=SELECT * from kafkaefd.autogen.helloavro"
+
+{"results":[{"statement_id":0,"series":[{"name":"helloavro","columns":["time","content"],"values":[["2019-02-05T21:18:31.016246443Z","Hello Influx"]]}]}]}
+```
+
+
 
 ## Test the Kafka cluster
 

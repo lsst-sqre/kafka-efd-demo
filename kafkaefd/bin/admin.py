@@ -28,12 +28,13 @@ __all__ = ('admin',)
 import json
 import re
 
+import requests
 import click
 from confluent_kafka.admin import (
     AdminClient, NewTopic, NewPartitions, ConfigResource, RESOURCE_TOPIC,
     ConfigSource)
 
-from .utils import get_broker_url
+from .utils import get_broker_url, get_connector_url
 
 """Map of ConfigSource ints to label strings.
 
@@ -299,28 +300,55 @@ def configure_topic(ctx, topic, settings, show_details):
 
 @admin.group()
 @click.pass_context
-def connector(ctx):
-    """Configure the InfluxDB Sink connector.
+def connectors(ctx):
+    """List and administer connectors.
     """
 
 
-@connector.command('config')
-@click.argument('topics', nargs=-1)
+@connectors.group()
+@click.pass_context
+def create(ctx):
+    """Create a new connector.
+    """
+
+
+@create.command('influxdb-sink')
+@click.argument('topics', nargs=-1, required=True)
 @click.option(
-    '--database', '-d', default="kafkaefd",
-    help='InfluxDB database name.'
+    '--influxdb', 'influxdb', envvar='INFLUXDB', required=False,
+    nargs=1, default='https://influxdb-efd-kafka.lsst.codes',
+    show_default=True,
+    help='InfluxDB URL. Alternatively set via $INFLUXDB env var.'
+)
+@click.option(
+    '--database', '-d', default="efd", show_default=True,
+    help='InfluxDB database name. It must exist at InfluxDB.'
 )
 @click.option(
     '--tasks', '-t', default=1,
-    help='Number of Kafka Connect tasks.'
+    help='Number of Kafka Connect tasks.', show_default=True,
+)
+@click.option(
+    '--username', '-u', envvar='INFLUXDB_USER', default='-',
+    help='InfluxDB username. Alternatively set via $INFLUXDB_USER env var.'
+)
+@click.option(
+    '--password', '-p', envvar='INFLUXDB_PASSWORD', default=None,
+    help='InfluxDB password. Alternatively set via $INFLUXDB_PASSWORD env var.'
+)
+@click.option(
+    '--upload', is_flag=True,
+    help='Upload InfluxDB Sink Connector configuration.'
 )
 @click.pass_context
-def configure_connector(ctx, topics, database, tasks):
-    """Reuturn the InfluxDB Sink Connector configuration
-    """
-    # Make topic names compatible with Kafka
-    topics = [topic.replace('_', '-').lower() for topic in topics]
+def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
+                         username, password, upload):
+    """Create configuration for the Landoop InfluxDB Sink connector.
 
+    Pass the topic's name as the positional argument. Create connector
+    configuration for multiple topics at once by passing multiple names.
+    Return 409 (Conflict) if rebalance is in process.
+    """
     # Ensure uniqueness
     topics = list(set(topics))
 
@@ -333,14 +361,176 @@ def configure_connector(ctx, topics, database, tasks):
                                 'connect.influx.InfluxSinkConnector'
     config['task.max'] = tasks
     config['topics'] = ','.join(topics)
-    config['connect.influx.url'] = 'http://influxdb-influxdb.default:8086'
+    config['connect.influx.url'] = influxdb
     config['connect.influx.db'] = database
 
     queries = make_connector_queries(topics)
     config['connect.influx.kcql'] = queries
-    config['connect.influx.username'] = '-'
+    config['connect.influx.username'] = username
 
-    print(json.dumps(connector))
+    if password:
+        config['connect.influx.password'] = password
+
+    click.echo(json.dumps(connector, indent=4, sort_keys=True))
+
+    if upload:
+        host = get_connector_url(ctx.parent.parent.parent.parent)
+        uri = host + '/connectors'
+        headers = {'Content-Type': 'application/json'}
+        r = requests.post(uri, data=json.dumps(connector), headers=headers)
+
+        try:
+            r.raise_for_status()
+        except requests.HTTPError as e:
+            if e.response.status_code == 409:
+                click.echo('Error: Connector {} already exists.'.format(
+                    connector['name'])
+                )
+            else:
+                raise
+
+
+@connectors.command('delete')
+@click.argument('connector')
+@click.pass_context
+def delete_connector(ctx, connector):
+    """Delete a connector.
+
+    Halt all tasks and delete the connector configuration.
+    Return 409 (Conflict) if rebalance is in process.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors/{}'.format(connector)
+    r = requests.delete(uri)
+
+    try:
+        r.raise_for_status()
+    except requests.HTTPError as e:
+        if e.response.status_code == 404:
+            click.echo("Error: Connector {} not found.".format(connector))
+        elif e.response.status_code == 409:
+            click.echo("Error: Could not delete {}.".format(connector))
+        else:
+            raise
+
+
+@connectors.command('restart')
+@click.argument('connector')
+@click.pass_context
+def restart_connector(ctx, connector):
+    """Restart a connector and its tasks.
+
+    Return 409 (Conflict) if rebalance is in process.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors/{}/restart'.format(connector)
+    r = requests.post(uri)
+
+    try:
+        r.raise_for_status()
+    except requests.HTTPError as e:
+        if e.response.status_code == 404:
+            click.echo("Error: Connector {} not found.".format(connector))
+        elif e.response.status_code == 409:
+            click.echo("Error: Could not restart {}.".format(connector))
+        else:
+            raise
+
+
+@connectors.command('pause')
+@click.argument('connector')
+@click.pass_context
+def pause_connector(ctx, connector):
+    """Pause the connector and its tasks.
+
+    Stops message processing until the connector is resumed.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors/{}/pause'.format(connector)
+    r = requests.put(uri)
+
+    try:
+        r.raise_for_status()
+    except requests.HTTPError as e:
+        if e.response.status_code == 404:
+            click.echo("Error: Connector {} not found.".format(connector))
+        else:
+            raise
+
+
+@connectors.command('resume')
+@click.argument('connector')
+@click.pass_context
+def resume_connector(ctx, connector):
+    """Resume a paused connector.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors/{}/resume'.format(connector)
+    r = requests.put(uri)
+
+    try:
+        r.raise_for_status()
+    except requests.HTTPError as e:
+        if e.response.status_code == 404:
+            click.echo("Error: Connector {} not found.".format(connector))
+        else:
+            raise
+
+
+@connectors.command('list')
+@click.pass_context
+def list_connectors(ctx):
+    """Get a list of active connectors.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors'
+    r = requests.get(uri)
+    r.raise_for_status()
+    for connector in r.json():
+        click.echo(connector)
+
+
+@connectors.command('status')
+@click.argument('connector')
+@click.pass_context
+def get_connector_status(ctx, connector):
+    """Get current status of the connector.
+
+    Whether it is running, failed or paused, which worker it is assigned to,
+    error information if it has failed, and the state of all its tasks.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors/{}/status'.format(connector)
+    r = requests.get(uri)
+
+    try:
+        r.raise_for_status()
+        click.echo(json.dumps(r.json(), indent=4, sort_keys=True))
+    except requests.HTTPError as e:
+        if e.response.status_code == 404:
+            click.echo("Error: Connector {} not found.".format(connector))
+        else:
+            raise
+
+
+@connectors.command('info')
+@click.argument('connector')
+@click.pass_context
+def get_connector_info(ctx, connector):
+    """Get information about the connector.
+    """
+    host = get_connector_url(ctx.parent.parent.parent)
+    uri = host + '/connectors/{}'.format(connector)
+    r = requests.get(uri)
+
+    try:
+        r.raise_for_status()
+        click.echo(json.dumps(r.json(), indent=4, sort_keys=True))
+    except requests.HTTPError as e:
+        if e.response.status_code == 404:
+            click.echo("Error: Connector {} not found.".format(connector))
+        else:
+            raise
 
 
 def convert_configs_to_native_types(configs):
