@@ -337,13 +337,14 @@ def create(ctx):
     help='InfluxDB password. Alternatively set via $INFLUXDB_PASSWORD env var.'
 )
 @click.option(
-    '--upload', is_flag=True,
-    help='Upload InfluxDB Sink Connector configuration.'
+    '--dry-run', is_flag=True,
+    help='Show the InfluxDB Sink Connector configuration but does not create '
+         'the connector.'
 )
 @click.pass_context
 def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
-                         username, password, upload):
-    """Create configuration for the Landoop InfluxDB Sink connector.
+                         username, password, dry_run):
+    """Create the Landoop InfluxDB Sink connector.
 
     Pass the topic's name as the positional argument. Create connector
     configuration for multiple topics at once by passing multiple names.
@@ -371,23 +372,11 @@ def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
     if password:
         config['connect.influx.password'] = password
 
-    click.echo(json.dumps(connector, indent=4, sort_keys=True))
-
-    if upload:
+    if dry_run:
+        click.echo(json.dumps(connector, indent=4, sort_keys=True))
+    else:
         host = get_connector_url(ctx.parent.parent.parent.parent)
-        uri = host + '/connectors'
-        headers = {'Content-Type': 'application/json'}
-        r = requests.post(uri, data=json.dumps(connector), headers=headers)
-
-        try:
-            r.raise_for_status()
-        except requests.HTTPError as e:
-            if e.response.status_code == 409:
-                click.echo('Error: Connector {} already exists.'.format(
-                    connector['name'])
-                )
-            else:
-                raise
+        upload_connector(host, connector)
 
 
 @connectors.command('delete')
@@ -578,3 +567,22 @@ def make_connector_queries(topics):
     queries = [query_template.format(topic, topic) for topic in topics]
 
     return ";".join(queries)
+
+
+def upload_connector(host, connector):
+    """Upload the connector configuration.
+    """
+    uri = host + '/connectors'
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(uri, data=json.dumps(connector), headers=headers)
+
+    try:
+        r.raise_for_status()
+        click.echo(json.dumps(r.json(), indent=4, sort_keys=True))
+    except requests.HTTPError as e:
+        if e.response.status_code == 409:
+            click.echo('Error: Connector {} already exists.'.format(
+                connector['name'])
+            )
+        else:
+            raise
