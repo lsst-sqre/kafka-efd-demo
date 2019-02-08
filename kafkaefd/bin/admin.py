@@ -28,6 +28,7 @@ __all__ = ('admin',)
 import json
 import re
 
+import time
 import requests
 import click
 from confluent_kafka.admin import (
@@ -341,9 +342,14 @@ def create(ctx):
     help='Show the InfluxDB Sink Connector configuration but does not create '
          'the connector.'
 )
+@click.option(
+    '--daemon', is_flag=True,
+    help='Run in daemon mode, i.e., create the connector and keep monitoring '
+         'its status.'
+)
 @click.pass_context
 def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
-                         username, password, dry_run):
+                         username, password, dry_run, daemon):
     """Create the Landoop InfluxDB Sink connector.
 
     Pass the topic's name as the positional argument. Create connector
@@ -356,27 +362,15 @@ def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
     # Sort
     topics.sort()
 
-    connector = {'name': 'influxdb-sink', 'config': {}}
-    config = connector['config']
-    config['connector.class'] = 'com.datamountaineer.streamreactor.'\
-                                'connect.influx.InfluxSinkConnector'
-    config['task.max'] = tasks
-    config['topics'] = ','.join(topics)
-    config['connect.influx.url'] = influxdb
-    config['connect.influx.db'] = database
+    connector = make_influxdb_sink_connector(topics, influxdb, database, tasks,
+                                             username, password)
 
-    queries = make_connector_queries(topics)
-    config['connect.influx.kcql'] = queries
-    config['connect.influx.username'] = username
-
-    if password:
-        config['connect.influx.password'] = password
+    host = get_connector_url(ctx.parent.parent.parent.parent)
 
     if dry_run:
         click.echo(json.dumps(connector, indent=4, sort_keys=True))
     else:
-        host = get_connector_url(ctx.parent.parent.parent.parent)
-        upload_connector(host, connector)
+        upload_connector(host, connector, daemon)
 
 
 @connectors.command('delete')
@@ -569,7 +563,31 @@ def make_connector_queries(topics):
     return ";".join(queries)
 
 
-def upload_connector(host, connector):
+def make_influxdb_sink_connector(topics, influxdb, database, tasks, username,
+                                 password):
+    """Make InfluxDB Sink connector configuration.
+    """
+    config = {}
+    config['connector.class'] = 'com.datamountaineer.streamreactor.'\
+                                'connect.influx.InfluxSinkConnector'
+    config['task.max'] = tasks
+    config['topics'] = ','.join(topics)
+    config['connect.influx.url'] = influxdb
+    config['connect.influx.db'] = database
+
+    queries = make_connector_queries(topics)
+    config['connect.influx.kcql'] = queries
+    config['connect.influx.username'] = username
+
+    if password:
+        config['connect.influx.password'] = password
+
+    connector = {'name': 'influxdb-sink', 'config': config}
+
+    return connector
+
+
+def upload_connector(host, connector, daemon):
     """Upload the connector configuration.
     """
     uri = host + '/connectors'
@@ -581,8 +599,19 @@ def upload_connector(host, connector):
         click.echo(json.dumps(r.json(), indent=4, sort_keys=True))
     except requests.HTTPError as e:
         if e.response.status_code == 409:
-            click.echo('Error: Connector {} already exists.'.format(
+            click.echo('Info: Connector {} already exists.'.format(
                 connector['name'])
             )
         else:
             raise
+
+    if daemon:
+        uri = host + '/connectors/{}/status'.format(connector['name'])
+        while True:
+            time.sleep(5)
+            r = requests.get(uri)
+            try:
+                r.raise_for_status()
+                click.echo(json.dumps(r.json()))
+            except KeyboardInterrupt:
+                raise
