@@ -1,17 +1,20 @@
----
-apiVersion: batch/v1
-kind: Job
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: "create-influxdb-sink"
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "create-influxdb-sink"
   template:
     metadata:
       labels:
-        role: "create-influxdb-sink"
+        app: "create-influxdb-sink"
     spec:
       containers:
       - name: create-influxdb-sink
-        image: lsstsqre/kafka-efd-demo:tickets-DM-17461
+        image: lsstsqre/kafka-efd-demo:tickets-DM-17754
         imagePullPolicy: Always
         command:
           - "kafkaefd"
@@ -19,9 +22,11 @@ spec:
           - "connectors"
           - "create"
           - "influxdb-sink"
+          - "--influxdb"
+          - "https://influxdb-efd-kafka.lsst.codes"
           - "--database"
           - "kafkaefd"
-          - "--upload"
+          - "--daemon"
           - "helloavro"
         env:
           - name: BROKER
@@ -30,5 +35,3 @@ spec:
             value: "http://confluent-cp-schema-registry.kafka:8081"
           - name: KAFKA_CONNECT
             value: "http://confluent-cp-kafka-connect:8083"
-      restartPolicy: Never
-  backoffLimit: 4
