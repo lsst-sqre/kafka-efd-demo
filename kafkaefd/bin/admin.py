@@ -99,15 +99,18 @@ def topics(ctx):
     '--filter', '-f', 'filter_regex',
     help='Regex for selecting topics.'
 )
+@click.option(
+    '--inline', is_flag=True,
+    help='Show topic names in a single line.'
+)
 @click.pass_context
-def list_topics(ctx, list_all, filter_regex):
+def list_topics(ctx, list_all, filter_regex, inline):
     """List topics.
     """
     client = ctx.parent.obj['client']
 
     metadata = client.list_topics(timeout=10)
 
-    print("Listing {} topics:\n".format(len(metadata.topics)))
     topic_names = [t for t in metadata.topics.keys()]
     topic_names.sort()
     if not list_all:
@@ -116,28 +119,33 @@ def list_topics(ctx, list_all, filter_regex):
         pattern = re.compile(filter_regex)
         topic_names = [t for t in topic_names if pattern.match(t)]
 
-    for topic_name in topic_names:
-        t = metadata.topics[topic_name]
+    if inline:
+        print(" ".join(topic_names))
+    else:
+        print("Listing {} topic(s):\n".format(len(topic_names)))
 
-        if t.error is not None:
-            errstr = ": {}".format(t.error)
-        else:
-            errstr = ""
+        for topic_name in topic_names:
+            t = metadata.topics[topic_name]
 
-        if t.partitions != 1:
-            fmt = '{} ({} partitions){}'
-        else:
-            fmt = '{} ({} partition){}'
-        print(fmt.format(t, len(t.partitions), errstr))
-
-        for p in iter(t.partitions.values()):
-            if p.error is not None:
-                errstr = ": {}".format(p.error)
+            if t.error is not None:
+                errstr = ": {}".format(t.error)
             else:
                 errstr = ""
 
-            print("  {}\tleader: {}, replicas: {}, isrs: {}".format(
-                p.id, p.leader, p.replicas, p.isrs, errstr))
+            if t.partitions != 1:
+                fmt = '{} ({} partitions){}'
+            else:
+                fmt = '{} ({} partition){}'
+            print(fmt.format(t, len(t.partitions), errstr))
+
+            for p in iter(t.partitions.values()):
+                if p.error is not None:
+                    errstr = ": {}".format(p.error)
+                else:
+                    errstr = ""
+
+                print("  {}\tleader: {}, replicas: {}, isrs: {}".format(
+                    p.id, p.leader, p.replicas, p.isrs, errstr))
 
 
 @topics.command('delete')
