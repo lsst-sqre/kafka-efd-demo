@@ -12,7 +12,7 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
 - [Kubernetes cluster set up](#kubernetes-cluster-set-up)
 - [Prometheus and Grafana installation](#prometheus-and-grafana-installation)
 - [Kafka cluster installation](#kafka-cluster-installation)
-- [InfluxDB installation (optional)](#influxdb-installation-optional)
+- [InfluxDB installation](#influxdb-installation)
 - [Test the Kafka cluster](#test-the-kafka-cluster)
 - [Connecting to Kafka via Telepresence](#connecting-to-kafka-via-telepresence)
 - [The kafkaefd demo application](#the-kafkaefd-demo-application)
@@ -20,6 +20,7 @@ This repository contains early explorations of deploying Kafka on Kubernetes and
   - [kafkaefd registry — Avro Schema Registry management](#kafkaefd-registry--avro-schema-registry-management)
   - [kafkaefd helloworld — Hello world demo](#kafkaefd-helloworld--hello-world-demo)
   - [kafkaefd helloavro — Hello world for Avro](#kafkaefd-helloavro--hello-world-for-avro)
+  - [InfluxDB Sink Connector configuration](#influxdb-sink-connector-configuration)
   - [kafkaefd salschema — ts\_sal schema conversion](#kafkaefd-salschema--ts_sal-schema-conversion)
 - [Experiments](#experiments)
   - [Mock SAL](#mock-sal)
@@ -113,60 +114,9 @@ From the `k8s-cluster/` directory, install the [Confluent Platform Kafka charts]
 - [Confluent Platform Helm charts documentation](https://docs.confluent.io/current/installation/installing_cp/cp-helm-charts/docs/index.html)
 - [Confluent Platform Helm charts repository](https://github.com/confluentinc/cp-helm-charts)
 
-## InfluxDB installation (optional)
+## InfluxDB installation
 
 Follow the [InfluxDB + Chronograf + Kapacitor (ICK) deployment](https://github.com/lsst-sqre/ick-deployment) instructions to install those components in the cluster.
-
-### InfluxDB Sink Connector configuration
-
-Configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) to consume  Kafka Avro-serialized messages and write them to InfluxDB.
-
-Create a database at InfluxDB:
-
-```
-curl -i -XPOST http://influxdb-influxdb:8086/query --data-urlencode "q=CREATE DATABASE kafkaefd"
-```
-
-Create and upload the connector configuration:
-
-```
-kafkaefd admin connectors create influxdb-sink --influxdb http://influxdb-influxdb:8086 --database kafkaefd --upload helloavro
-```
-
-Get the status of the new connector with:
-
-```
-kafkaefd admin connectors status influxdb-sink
-{
-    "connector": {
-        "state": "RUNNING",
-        "worker_id": "10.72.2.8:8083"
-    },
-    "name": "influxdb-sink",
-    "tasks": [
-        {
-            "id": 0,
-            "state": "RUNNING",
-            "worker_id": "10.72.2.8:8083"
-        }
-    ],
-    "type": "sink"
-}
-```
-
-Finally produce a message for the `helloavro` topic:
-
-```
-kafkaefd helloavro produce "Hello Influx"
-```
-
-and verify that it was written to the InfluxDB database:
-
-```
-curl -XPOST http://influxdb-inlfuxdb:8086/query --data-urlencode "q=SELECT * from kafkaefd.autogen.helloavro"
-
-{"results":[{"statement_id":0,"series":[{"name":"helloavro","columns":["time","content"],"values":[["2019-02-05T21:18:31.016246443Z","Hello Influx"]]}]}]}
-```
 
 
 
@@ -219,7 +169,7 @@ This use useful for development since you can test client code from a local shel
 To expose the Kafka brokers and Schema Registry locally, run this line in a local shell:
 
 ```bash
-telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless --also-proxy confluent-kafka-cp-schema-registry
+telepresence --run-shell --namespace default --also-proxy confluent-kafka-cp-kafka-headless --also-proxy confluent-kafka-cp-schema-registry --also-proxy confluent-kafka-cp-kafka-connect
 ```
 
 Now you can run other Kafka clients in other shells.
@@ -393,6 +343,60 @@ In this demo, the default topic is called `helloavro`.
 
    ```bash
    kafkaefd helloavro produce "Hello world"
+   ```
+
+### InfluxDB Sink Connector configuration
+
+   Configure the [Landoop InfluxDB Sink Connector](https://docs.lenses.io/connectors/sink/influx.html) to consume  Kafka Avro-serialized messages and write them to InfluxDB.
+
+
+   Create a database. Use the `port-forward-influxdb.sh` script to access the InlfuxDB HTTP API at `http://localhost:8086`.
+
+   ```
+   curl -i -XPOST http://localhost:8086/query --data-urlencode "q=CREATE DATABASE kafkaefd"
+   ```
+
+   Create and upload the connector configuration:
+
+   ```
+   kafkaefd admin connectors create influxdb-sink --influxdb http://influxdb-influxdb:8086 --database kafkaefd helloavro
+   ```
+
+   Note that the InfluxDB URL in this command must be reachable inside the cluster.
+
+   Get the status of the new connector with:
+
+   ```
+   kafkaefd admin connectors status influxdb-sink
+   {
+       "connector": {
+           "state": "RUNNING",
+           "worker_id": "10.72.2.8:8083"
+       },
+       "name": "influxdb-sink",
+       "tasks": [
+           {
+               "id": 0,
+               "state": "RUNNING",
+               "worker_id": "10.72.2.8:8083"
+           }
+       ],
+       "type": "sink"
+   }
+   ```
+
+   Finally produce a message for the `helloavro` topic:
+
+   ```
+   kafkaefd helloavro produce "Hello Influx"
+   ```
+
+   and verify that it was written to the InfluxDB database:
+
+   ```
+   curl -XPOST http://influxdb-inlfuxdb:8086/query --data-urlencode "q=SELECT * from kafkaefd.autogen.helloavro"
+
+   {"results":[{"statement_id":0,"series":[{"name":"helloavro","columns":["time","content"],"values":[["2019-02-05T21:18:31.016246443Z","Hello Influx"]]}]}]}
    ```
 
 ### kafkaefd salschema — ts\_sal schema conversion

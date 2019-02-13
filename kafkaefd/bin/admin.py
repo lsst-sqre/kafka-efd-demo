@@ -28,6 +28,7 @@ __all__ = ('admin',)
 import json
 import re
 
+import time
 import requests
 import click
 from confluent_kafka.admin import (
@@ -98,15 +99,18 @@ def topics(ctx):
     '--filter', '-f', 'filter_regex',
     help='Regex for selecting topics.'
 )
+@click.option(
+    '--inline', is_flag=True,
+    help='Show topic names in a single line.'
+)
 @click.pass_context
-def list_topics(ctx, list_all, filter_regex):
+def list_topics(ctx, list_all, filter_regex, inline):
     """List topics.
     """
     client = ctx.parent.obj['client']
 
     metadata = client.list_topics(timeout=10)
 
-    print("Listing {} topics:\n".format(len(metadata.topics)))
     topic_names = [t for t in metadata.topics.keys()]
     topic_names.sort()
     if not list_all:
@@ -115,28 +119,33 @@ def list_topics(ctx, list_all, filter_regex):
         pattern = re.compile(filter_regex)
         topic_names = [t for t in topic_names if pattern.match(t)]
 
-    for topic_name in topic_names:
-        t = metadata.topics[topic_name]
+    if inline:
+        print(" ".join(topic_names))
+    else:
+        print("Listing {} topic(s):\n".format(len(topic_names)))
 
-        if t.error is not None:
-            errstr = ": {}".format(t.error)
-        else:
-            errstr = ""
+        for topic_name in topic_names:
+            t = metadata.topics[topic_name]
 
-        if t.partitions != 1:
-            fmt = '{} ({} partitions){}'
-        else:
-            fmt = '{} ({} partition){}'
-        print(fmt.format(t, len(t.partitions), errstr))
-
-        for p in iter(t.partitions.values()):
-            if p.error is not None:
-                errstr = ": {}".format(p.error)
+            if t.error is not None:
+                errstr = ": {}".format(t.error)
             else:
                 errstr = ""
 
-            print("  {}\tleader: {}, replicas: {}, isrs: {}".format(
-                p.id, p.leader, p.replicas, p.isrs, errstr))
+            if t.partitions != 1:
+                fmt = '{} ({} partitions){}'
+            else:
+                fmt = '{} ({} partition){}'
+            print(fmt.format(t, len(t.partitions), errstr))
+
+            for p in iter(t.partitions.values()):
+                if p.error is not None:
+                    errstr = ": {}".format(p.error)
+                else:
+                    errstr = ""
+
+                print("  {}\tleader: {}, replicas: {}, isrs: {}".format(
+                    p.id, p.leader, p.replicas, p.isrs, errstr))
 
 
 @topics.command('delete')
@@ -337,13 +346,19 @@ def create(ctx):
     help='InfluxDB password. Alternatively set via $INFLUXDB_PASSWORD env var.'
 )
 @click.option(
-    '--upload', is_flag=True,
-    help='Upload InfluxDB Sink Connector configuration.'
+    '--dry-run', is_flag=True,
+    help='Show the InfluxDB Sink Connector configuration but does not create '
+         'the connector.'
+)
+@click.option(
+    '--daemon', is_flag=True,
+    help='Run in daemon mode, i.e., create the connector and keep monitoring '
+         'its status.'
 )
 @click.pass_context
 def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
-                         username, password, upload):
-    """Create configuration for the Landoop InfluxDB Sink connector.
+                         username, password, dry_run, daemon):
+    """Create the Landoop InfluxDB Sink connector.
 
     Pass the topic's name as the positional argument. Create connector
     configuration for multiple topics at once by passing multiple names.
@@ -355,39 +370,15 @@ def create_influxdb_sink(ctx, topics, influxdb, database, tasks,
     # Sort
     topics.sort()
 
-    connector = {'name': 'influxdb-sink', 'config': {}}
-    config = connector['config']
-    config['connector.class'] = 'com.datamountaineer.streamreactor.'\
-                                'connect.influx.InfluxSinkConnector'
-    config['task.max'] = tasks
-    config['topics'] = ','.join(topics)
-    config['connect.influx.url'] = influxdb
-    config['connect.influx.db'] = database
+    connector = make_influxdb_sink_connector(topics, influxdb, database, tasks,
+                                             username, password)
 
-    queries = make_connector_queries(topics)
-    config['connect.influx.kcql'] = queries
-    config['connect.influx.username'] = username
+    host = get_connector_url(ctx.parent.parent.parent.parent)
 
-    if password:
-        config['connect.influx.password'] = password
-
-    click.echo(json.dumps(connector, indent=4, sort_keys=True))
-
-    if upload:
-        host = get_connector_url(ctx.parent.parent.parent.parent)
-        uri = host + '/connectors'
-        headers = {'Content-Type': 'application/json'}
-        r = requests.post(uri, data=json.dumps(connector), headers=headers)
-
-        try:
-            r.raise_for_status()
-        except requests.HTTPError as e:
-            if e.response.status_code == 409:
-                click.echo('Error: Connector {} already exists.'.format(
-                    connector['name'])
-                )
-            else:
-                raise
+    if dry_run:
+        click.echo(json.dumps(connector, indent=4, sort_keys=True))
+    else:
+        upload_connector(host, connector, daemon)
 
 
 @connectors.command('delete')
@@ -578,3 +569,57 @@ def make_connector_queries(topics):
     queries = [query_template.format(topic, topic) for topic in topics]
 
     return ";".join(queries)
+
+
+def make_influxdb_sink_connector(topics, influxdb, database, tasks, username,
+                                 password):
+    """Make InfluxDB Sink connector configuration.
+    """
+    config = {}
+    config['connector.class'] = 'com.datamountaineer.streamreactor.'\
+                                'connect.influx.InfluxSinkConnector'
+    config['task.max'] = tasks
+    config['topics'] = ','.join(topics)
+    config['connect.influx.url'] = influxdb
+    config['connect.influx.db'] = database
+
+    queries = make_connector_queries(topics)
+    config['connect.influx.kcql'] = queries
+    config['connect.influx.username'] = username
+
+    if password:
+        config['connect.influx.password'] = password
+
+    connector = {'name': 'influxdb-sink', 'config': config}
+
+    return connector
+
+
+def upload_connector(host, connector, daemon):
+    """Upload the connector configuration.
+    """
+    uri = host + '/connectors'
+    headers = {'Content-Type': 'application/json'}
+    r = requests.post(uri, data=json.dumps(connector), headers=headers)
+
+    try:
+        r.raise_for_status()
+        click.echo(json.dumps(r.json(), indent=4, sort_keys=True))
+    except requests.HTTPError as e:
+        if e.response.status_code == 409:
+            click.echo('Info: Connector {} already exists.'.format(
+                connector['name'])
+            )
+        else:
+            raise
+
+    if daemon:
+        uri = host + '/connectors/{}/status'.format(connector['name'])
+        while True:
+            time.sleep(5)
+            r = requests.get(uri)
+            try:
+                r.raise_for_status()
+                click.echo(json.dumps(r.json()))
+            except KeyboardInterrupt:
+                raise
