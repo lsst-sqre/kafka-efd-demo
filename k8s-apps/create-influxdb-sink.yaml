@@ -16,18 +16,8 @@ spec:
       - name: create-influxdb-sink
         image: lsstsqre/kafka-efd-demo:tickets-DM-17754
         imagePullPolicy: Always
-        command:
-          - "kafkaefd"
-          - "admin"
-          - "connectors"
-          - "create"
-          - "influxdb-sink"
-          - "--influxdb"
-          - "https://influxdb-efd-kafka.lsst.codes"
-          - "--database"
-          - "kafkaefd"
-          - "--daemon"
-          - "helloavro"
+        command: ["/bin/sh"]
+        args: ["-c", "kafkaefd admin connectors create influxdb-sink --influxdb https://influxdb-efd-kafka.lsst.codes --database efd --daemon $(kafkaefd admin topics list --inline --filter lsst.sal.*)"]
         env:
           - name: BROKER
             value: "confluent-cp-kafka-headless.kafka:9092"
