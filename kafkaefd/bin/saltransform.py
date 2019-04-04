@@ -334,7 +334,7 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                     inbound_key, inbound_value)
 
                 TRANSFORM_TIME.observe(
-                    (datetime.datetime.now() - transform_start_time).seconds())
+                    (datetime.datetime.now() - transform_start_time).seconds)
 
                 # Use the fully-qualified schema name as the topic name
                 # for the outbound stream.
@@ -344,7 +344,7 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                 PRODUCED.inc()
 
                 TOTAL_TIME.observe(
-                    (datetime.datetime.now() - start_time).seconds())
+                    (datetime.datetime.now() - start_time).seconds)
 
     finally:
         logger.info('Shutting down')
