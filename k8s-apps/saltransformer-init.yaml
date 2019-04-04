@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: saltransformer
-        image: lsstsqre/kafka-efd-demo:tickets-DM-17500
+        image: lsstsqre/kafka-efd-demo:latest
         imagePullPolicy: Always
         command:
           - "kafkaefd"
