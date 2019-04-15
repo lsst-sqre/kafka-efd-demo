@@ -155,10 +155,12 @@ def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
 
     producer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
+        'acks': 0,
     }
     consumer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
-        'auto_offset_reset': auto_offset_reset
+        'auto_offset_reset': auto_offset_reset,
+        'check_crcs': False,
     }
 
     loop = asyncio.get_event_loop()
