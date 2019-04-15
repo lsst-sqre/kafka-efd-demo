@@ -24,6 +24,7 @@ from kafkit.registry.aiohttp import RegistryApi
 from ..salschema.repo import SalXmlRepo
 from ..salschema.convert import convert_topic
 from .utils import get_registry_url, get_broker_url
+from .decorators import time_this
 
 # Prometheus metrics
 PRODUCED = Counter(
@@ -381,6 +382,7 @@ class SalTextTransformer:
         super().__init__()
         self._registry = registry
         self._serializer = PolySerializer(registry=self._registry)
+        self.logger = logging.getLogger('kafkaefd')
 
     async def transform(self, key_text, message_text):
         """Transform the message to Confluent Wire Format Avro.
@@ -391,11 +393,14 @@ class SalTextTransformer:
 
         topic_name = m.group('topic_name')
 
+        start_get_schema = time.perf_counter()
         schema_info = await self._registry.get_schema_by_subject(
             # Subjects are fully namespaced as lsst.sal.
             f"lsst.sal.{topic_name}",
             version='latest'
         )
+        get_schema_time = time.perf_counter() - start_get_schema
+        self.logger.debug(f'Get schema time: {get_schema_time:0.6f}s')
 
         items = [s.strip(" '") for s in m.group('content').split(',')]
 
@@ -418,65 +423,94 @@ class SalTextTransformer:
         # Scan the data corresponding to the SAL XML schema.
         data_items = items[6:]
         scan_index = 0
+        tasks = []
+        start_message_proc = time.perf_counter()
         for schema_field in schema_info['schema']['fields']:
             if 'sal_index' not in schema_field:
                 continue
-            field_data, scan_index = scan_field(
-                schema_field, scan_index, data_items)
-            avro_data[schema_field['name']] = field_data
+            tasks.append(asyncio.ensure_future(
+                process_field(schema_field=schema_field,
+                              scan_index=scan_index,
+                              data_items=data_items,
+                              avro_data=avro_data)))
+            if isinstance(schema_field['type'], dict):
+                if schema_field['type']['type'] == 'array':
+                    scan_index = scan_index + schema_field['type']['sal_count']
+            else:
+                scan_index = scan_index + 1
+        await asyncio.gather(*tasks)
+        message_proc_time = time.perf_counter() - start_message_proc
+        self.logger.debug(f'Message process time: {message_proc_time:0.6f}s')
 
+        start_serialization = time.perf_counter()
         message = await self._serializer.serialize(
             avro_data,
             schema=schema_info['schema'],
             schema_id=schema_info['id'],
             subject=schema_info['subject'])
+        serialization_time = time.perf_counter() - start_serialization
+        self.logger.debug(f'Serialization time: {serialization_time:0.6f}s')
 
         return schema_info['schema']['name'], message
 
 
-def scan_field(schema_field, scan_index, data_items):
+async def process_field(schema_field, scan_index, data_items, avro_data):
+    field_data = await scan_field(
+        schema_field, scan_index, data_items)
+    avro_data[schema_field['name']] = field_data
+
+
+@time_this
+async def scan_field(schema_field, scan_index, data_items):
     scanner = get_scanner(schema_field)
     return scanner(schema_field, scan_index, data_items)
 
 
+@time_this
 def scan_string(schema_field, scan_index, data_items):
-    return data_items[scan_index].strip('"\' '), scan_index + 1
+    return data_items[scan_index].strip('"\' ')
 
 
+@time_this
 def scan_bytes(schema_field, scan_index, data_items):
     # I actually don't know if this is the right approach. data items are
     # decoded to utf-8, so maybe it makes sense to re-encode to get it back
     # to bytes?
-    return data_items[scan_index].encode('utf-8'), scan_index + 1
+    return data_items[scan_index].encode('utf-8')
 
 
+@time_this
 def scan_boolean(schema_field, scan_index, data_items):
-    return bool(data_items[scan_index]), scan_index + 1
+    return bool(data_items[scan_index])
 
 
+@time_this
 def scan_int(schema_field, scan_index, data_items):
-    return int(data_items[scan_index]), scan_index + 1
+    return int(data_items[scan_index])
 
 
+@time_this
 def scan_float(schema_field, scan_index, data_items):
-    return float(data_items[scan_index]), scan_index + 1
+    return float(data_items[scan_index])
 
 
+@time_this
 def scan_timestamp_millis(schema_field, scan_index, data_items):
     timestamp = float(data_items[scan_index]) / 1000.
     dt = datetime.datetime.fromtimestamp(timestamp, tz=datetime.timezone.utc)
-    return dt, scan_index + 1
+    return dt
 
 
+@time_this
 def scan_array(schema_field, scan_index, data_items):
     count = schema_field['type']['sal_count']
     item_type = schema_field['type']['items']
-    scanner = get_scanner(type_=item_type)
+    scanner = get_scanner(schema_field, item_type)
     arr = []
-    for _ in range(count):
-        item, scan_index = scanner(schema_field, scan_index, data_items)
+    for i in range(count):
+        item = scanner(schema_field, scan_index + i, data_items)
         arr.append(item)
-    return arr, scan_index
+    return arr
 
 
 SCANNERS = {
@@ -498,6 +532,7 @@ SCANNERS = {
 }
 
 
+@time_this
 def get_scanner(schema_field=None, type_=None):
     if type_ is None:
         type_ = schema_field['type']
@@ -505,7 +540,8 @@ def get_scanner(schema_field=None, type_=None):
         return SCANNERS[type_]
     except (KeyError, TypeError):
         if isinstance(type_, dict):
-            if type_['type'] == 'long' and type_['type'] == 'timestamp-millis':
+            if (type_['type'] == 'long' and
+                    type_['logicalType'] == 'timestamp-millis'):
                 return scan_timestamp_millis
             elif type_['type'] == 'array':
                 return scan_array
