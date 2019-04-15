@@ -6,6 +6,7 @@ __all__ = ('saltransform',)
 
 import asyncio
 import datetime
+import time
 import re
 import logging
 
@@ -312,7 +313,7 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
 
         while True:
             async for inbound_message in consumer:
-                start_time = datetime.datetime.now()
+                start_time = time.perf_counter()
 
                 logger.debug(
                     'got message',
@@ -329,22 +330,27 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                     # Value is None and can't be decoded
                     inbound_value = ""
 
-                transform_start_time = datetime.datetime.now()
+                transform_start_time = time.perf_counter()
                 schema_name, outbound_message = await transformer.transform(
                     inbound_key, inbound_value)
 
-                TRANSFORM_TIME.observe(
-                    (datetime.datetime.now() - transform_start_time).seconds)
+                transform_time = time.perf_counter() - transform_start_time
+
+                TRANSFORM_TIME.observe(transform_time)
 
                 # Use the fully-qualified schema name as the topic name
                 # for the outbound stream.
                 await producer.send_and_wait(
                     schema_name, value=outbound_message)
 
+                total_time = time.perf_counter() - start_time
+
+                logger.debug(f'Transform time: {transform_time:0.6f}s')
+                logger.debug(f'Total time: {total_time:0.6f}s')
+
                 PRODUCED.inc()
 
-                TOTAL_TIME.observe(
-                    (datetime.datetime.now() - start_time).seconds)
+                TOTAL_TIME.observe(total_time)
 
     finally:
         logger.info('Shutting down')
@@ -415,6 +421,7 @@ class SalTextTransformer:
             schema=schema_info['schema'],
             schema_id=schema_info['id'],
             subject=schema_info['subject'])
+
         return schema_info['schema']['name'], message
 
 
