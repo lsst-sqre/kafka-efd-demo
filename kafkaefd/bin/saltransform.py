@@ -9,6 +9,9 @@ import datetime
 import time
 import re
 import logging
+import concurrent.futures
+import functools
+
 
 import aiohttp
 import aiokafka
@@ -422,23 +425,17 @@ class SalTextTransformer:
 
         # Scan the data corresponding to the SAL XML schema.
         data_items = items[6:]
-        scan_index = 0
-        tasks = []
         start_message_proc = time.perf_counter()
-        for schema_field in schema_info['schema']['fields']:
-            if 'sal_index' not in schema_field:
-                continue
-            tasks.append(asyncio.ensure_future(
-                process_field(schema_field=schema_field,
-                              scan_index=scan_index,
-                              data_items=data_items,
-                              avro_data=avro_data)))
-            if isinstance(schema_field['type'], dict):
-                if schema_field['type']['type'] == 'array':
-                    scan_index = scan_index + schema_field['type']['sal_count']
-            else:
-                scan_index = scan_index + 1
-        await asyncio.gather(*tasks)
+        loop = asyncio.get_running_loop()
+        with concurrent.futures.ProcessPoolExecutor() as pool:
+
+            func = functools.partial(process_fields,
+                                     schema_info=schema_info,
+                                     data_items=data_items,
+                                     avro_data=avro_data)
+
+            avro_data = await loop.run_in_executor(pool, func)
+
         message_proc_time = time.perf_counter() - start_message_proc
         self.logger.debug(f'Message process time: {message_proc_time:0.6f}s')
 
@@ -454,14 +451,29 @@ class SalTextTransformer:
         return schema_info['schema']['name'], message
 
 
-async def process_field(schema_field, scan_index, data_items, avro_data):
-    field_data = await scan_field(
-        schema_field, scan_index, data_items)
-    avro_data[schema_field['name']] = field_data
+def process_fields(schema_info, data_items, avro_data):
+
+    scan_index = 0
+    for schema_field in schema_info['schema']['fields']:
+        if 'sal_index' not in schema_field:
+            continue
+
+        field_data = scan_field(
+            schema_field, scan_index, data_items)
+
+        avro_data[schema_field['name']] = field_data
+
+        if isinstance(schema_field['type'], dict):
+            if schema_field['type']['type'] == 'array':
+                scan_index = scan_index + schema_field['type']['sal_count']
+        else:
+            scan_index = scan_index + 1
+
+    return avro_data
 
 
 @time_this
-async def scan_field(schema_field, scan_index, data_items):
+def scan_field(schema_field, scan_index, data_items):
     scanner = get_scanner(schema_field)
     return scanner(schema_field, scan_index, data_items)
 
