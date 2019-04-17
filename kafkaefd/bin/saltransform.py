@@ -142,9 +142,14 @@ def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
     '--prometheus-port', 'prometheus_port', type=int, default=9092,
     help='Port for the Prometheus metrics scraping endpoint.'
 )
+@click.option(
+    '--tasks', 'concurrent_messages', type=int, default=1,
+    help='Number of transform tasks to run concurrently. Too many '
+         'concurrent tasks may cause connection timeouts.'
+)
 @click.pass_context
 def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
-        prometheus_port):
+        prometheus_port, concurrent_messages):
     """Run a Kafka producer-consumer that consumes messages plain text
     messages from the SAL and produces Avro-encoded messages.
     """
@@ -172,7 +177,8 @@ def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
             producer_settings=producer_settings,
             registry_url=get_registry_url(ctx.parent.parent),
             rewind_to_start=rewind_to_start,
-            prometheus_port=prometheus_port
+            prometheus_port=prometheus_port,
+            concurrent_messages=concurrent_messages
         )
     )
 
@@ -231,7 +237,7 @@ async def main_init(*, loop, subsystems, xml_repo_slug,
 
 async def main_runner(*, loop, subsystems, consumer_settings,
                       producer_settings, registry_url, rewind_to_start,
-                      prometheus_port):
+                      prometheus_port, concurrent_messages):
     # Start the Prometheus endpoint
     asyncio.ensure_future(
         prometheus_async.aio.web.start_http_server(
@@ -251,7 +257,8 @@ async def main_runner(*, loop, subsystems, consumer_settings,
                         registry_url=registry_url,
                         producer_settings=producer_settings,
                         consumer_settings=consumer_settings,
-                        rewind_to_start=rewind_to_start
+                        rewind_to_start=rewind_to_start,
+                        concurrent_messages=concurrent_messages
                     )
                 ))
         await asyncio.gather(*tasks)
@@ -260,7 +267,7 @@ async def main_runner(*, loop, subsystems, consumer_settings,
 async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                                 registry_url,
                                 consumer_settings, producer_settings,
-                                rewind_to_start):
+                                rewind_to_start, concurrent_messages):
     logger = structlog.get_logger(__name__).bind(
         subsystem=subsystem,
         kind=kind
@@ -312,15 +319,17 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
             offset = await consumer.position(partition)
             logger.info('Initial offset',
                         partition=str(partition), offset=offset)
-
+        tasks = []
         while True:
             async for inbound_message in consumer:
-                task = asyncio.ensure_future(process_message(
+                tasks.append(asyncio.ensure_future(process_message(
                                              inbound_message=inbound_message,
                                              transformer=transformer,
                                              producer=producer,
-                                             logger=logger))
-                await task
+                                             logger=logger)))
+                if len(tasks) >= concurrent_messages:
+                    await asyncio.gather(*tasks)
+                    tasks = []
     finally:
         logger.info('Shutting down')
         consumer.stop()
@@ -505,7 +514,8 @@ def get_scanner(schema_field=None, type_=None):
         return SCANNERS[type_]
     except (KeyError, TypeError):
         if isinstance(type_, dict):
-            if type_['type'] == 'long' and type_['logicalType'] == 'timestamp-millis':
+            if (type_['type'] == 'long' and
+                    type_['logicalType'] == 'timestamp-millis'):
                 return scan_timestamp_millis
             elif type_['type'] == 'array':
                 return scan_array
