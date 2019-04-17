@@ -505,7 +505,7 @@ def get_scanner(schema_field=None, type_=None):
         return SCANNERS[type_]
     except (KeyError, TypeError):
         if isinstance(type_, dict):
-            if type_['type'] == 'long' and type_['type'] == 'timestamp-millis':
+            if type_['type'] == 'long' and type_['logicalType'] == 'timestamp-millis':
                 return scan_timestamp_millis
             elif type_['type'] == 'array':
                 return scan_array
