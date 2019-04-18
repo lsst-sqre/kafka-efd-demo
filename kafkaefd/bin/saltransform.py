@@ -147,9 +147,23 @@ def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
     help='Number of transform tasks to run concurrently. Too many '
          'concurrent tasks may cause connection timeouts.'
 )
+@click.option(
+    '--disable-producer-acks', 'disable_producer_acks', is_flag=True,
+    default=False,
+    help='Producer will not wait for any acknowledgment from the server. '
+         'The message will immediately be added to the socket buffer and '
+         'considered sent.'
+)
+@click.option(
+    '--disable-consumer-check-crcs', 'disable_consumer_check_crcs',
+    is_flag=True, default=False,
+    help='Disable CRC32 checks of the records consumed in '
+         'cases of extreme performance.'
+)
 @click.pass_context
 def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
-        prometheus_port, concurrent_messages):
+        prometheus_port, concurrent_messages, disable_producer_acks,
+        disable_consumer_check_crcs):
     """Run a Kafka producer-consumer that consumes messages plain text
     messages from the SAL and produces Avro-encoded messages.
     """
@@ -160,12 +174,12 @@ def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
 
     producer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
-        'acks': 0,
+        'acks': 0 if disable_producer_acks else 1,
     }
     consumer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
         'auto_offset_reset': auto_offset_reset,
-        'check_crcs': False,
+        'check_crcs': not disable_consumer_check_crcs,
     }
 
     loop = asyncio.get_event_loop()
