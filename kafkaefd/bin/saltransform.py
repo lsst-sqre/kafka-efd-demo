@@ -6,6 +6,7 @@ __all__ = ('saltransform',)
 
 import asyncio
 import datetime
+import time
 import re
 import logging
 
@@ -141,9 +142,28 @@ def init(ctx, subsystems, xml_repo_slug, xml_repo_ref, github_username,
     '--prometheus-port', 'prometheus_port', type=int, default=9092,
     help='Port for the Prometheus metrics scraping endpoint.'
 )
+@click.option(
+    '--tasks', 'concurrent_messages', type=int, default=1,
+    help='Number of transform tasks to run concurrently. Too many '
+         'concurrent tasks may cause connection timeouts.'
+)
+@click.option(
+    '--disable-producer-acks', 'disable_producer_acks', is_flag=True,
+    default=False,
+    help='Producer will not wait for any acknowledgment from the server. '
+         'The message will immediately be added to the socket buffer and '
+         'considered sent.'
+)
+@click.option(
+    '--disable-consumer-check-crcs', 'disable_consumer_check_crcs',
+    is_flag=True, default=False,
+    help='Disable CRC32 checks of the records consumed in '
+         'cases of extreme performance.'
+)
 @click.pass_context
 def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
-        prometheus_port):
+        prometheus_port, concurrent_messages, disable_producer_acks,
+        disable_consumer_check_crcs):
     """Run a Kafka producer-consumer that consumes messages plain text
     messages from the SAL and produces Avro-encoded messages.
     """
@@ -154,10 +174,12 @@ def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
 
     producer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
+        'acks': 0 if disable_producer_acks else 1,
     }
     consumer_settings = {
         'bootstrap_servers': get_broker_url(ctx.parent.parent),
-        'auto_offset_reset': auto_offset_reset
+        'auto_offset_reset': auto_offset_reset,
+        'check_crcs': not disable_consumer_check_crcs,
     }
 
     loop = asyncio.get_event_loop()
@@ -169,7 +191,8 @@ def run(ctx, subsystems, log_level, auto_offset_reset, rewind_to_start,
             producer_settings=producer_settings,
             registry_url=get_registry_url(ctx.parent.parent),
             rewind_to_start=rewind_to_start,
-            prometheus_port=prometheus_port
+            prometheus_port=prometheus_port,
+            concurrent_messages=concurrent_messages
         )
     )
 
@@ -228,7 +251,7 @@ async def main_init(*, loop, subsystems, xml_repo_slug,
 
 async def main_runner(*, loop, subsystems, consumer_settings,
                       producer_settings, registry_url, rewind_to_start,
-                      prometheus_port):
+                      prometheus_port, concurrent_messages):
     # Start the Prometheus endpoint
     asyncio.ensure_future(
         prometheus_async.aio.web.start_http_server(
@@ -248,7 +271,8 @@ async def main_runner(*, loop, subsystems, consumer_settings,
                         registry_url=registry_url,
                         producer_settings=producer_settings,
                         consumer_settings=consumer_settings,
-                        rewind_to_start=rewind_to_start
+                        rewind_to_start=rewind_to_start,
+                        concurrent_messages=concurrent_messages
                     )
                 ))
         await asyncio.gather(*tasks)
@@ -257,7 +281,7 @@ async def main_runner(*, loop, subsystems, consumer_settings,
 async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
                                 registry_url,
                                 consumer_settings, producer_settings,
-                                rewind_to_start):
+                                rewind_to_start, concurrent_messages):
     logger = structlog.get_logger(__name__).bind(
         subsystem=subsystem,
         kind=kind
@@ -309,47 +333,61 @@ async def subsystem_transformer(*, loop, subsystem, kind, httpsession,
             offset = await consumer.position(partition)
             logger.info('Initial offset',
                         partition=str(partition), offset=offset)
-
+        tasks = []
         while True:
             async for inbound_message in consumer:
-                start_time = datetime.datetime.now()
-
-                logger.debug(
-                    'got message',
-                    message=inbound_message.value,
-                    key=inbound_message.key)
-                try:
-                    inbound_key = inbound_message.key.decode('utf-8')
-                except AttributeError:
-                    # Key is None and can't be decoded
-                    inbound_key = ""
-                try:
-                    inbound_value = inbound_message.value.decode('utf-8')
-                except AttributeError:
-                    # Value is None and can't be decoded
-                    inbound_value = ""
-
-                transform_start_time = datetime.datetime.now()
-                schema_name, outbound_message = await transformer.transform(
-                    inbound_key, inbound_value)
-
-                TRANSFORM_TIME.observe(
-                    (datetime.datetime.now() - transform_start_time).seconds)
-
-                # Use the fully-qualified schema name as the topic name
-                # for the outbound stream.
-                await producer.send_and_wait(
-                    schema_name, value=outbound_message)
-
-                PRODUCED.inc()
-
-                TOTAL_TIME.observe(
-                    (datetime.datetime.now() - start_time).seconds)
-
+                tasks.append(asyncio.ensure_future(process_message(
+                                             inbound_message=inbound_message,
+                                             transformer=transformer,
+                                             producer=producer,
+                                             logger=logger)))
+                if len(tasks) >= concurrent_messages:
+                    await asyncio.gather(*tasks)
+                    tasks = []
     finally:
         logger.info('Shutting down')
         consumer.stop()
         logger.info('Shutdown complete')
+
+
+async def process_message(inbound_message, transformer, producer, logger):
+    start_time = time.perf_counter()
+    logger.debug(
+        'got message',
+        message=inbound_message.value,
+        key=inbound_message.key)
+    try:
+        inbound_key = inbound_message.key.decode('utf-8')
+    except AttributeError:
+        # Key is None and can't be decoded
+        inbound_key = ""
+    try:
+        inbound_value = inbound_message.value.decode('utf-8')
+    except AttributeError:
+        # Value is None and can't be decoded
+        inbound_value = ""
+
+    transform_start_time = time.perf_counter()
+    schema_name, outbound_message = await transformer.transform(
+        inbound_key, inbound_value)
+
+    transform_time = time.perf_counter() - transform_start_time
+
+    TRANSFORM_TIME.observe(transform_time)
+
+    # Use the fully-qualified schema name as the topic name
+    # for the outbound stream.
+    await producer.send_and_wait(
+        schema_name, value=outbound_message)
+
+    total_time = time.perf_counter() - start_time
+
+    logger.debug(f'Transform time: {transform_time:0.6f}s')
+    logger.debug(f'Total time: {total_time:0.6f}s')
+
+    PRODUCED.inc()
+
+    TOTAL_TIME.observe(total_time)
 
 
 class SalTextTransformer:
@@ -415,6 +453,7 @@ class SalTextTransformer:
             schema=schema_info['schema'],
             schema_id=schema_info['id'],
             subject=schema_info['subject'])
+
         return schema_info['schema']['name'], message
 
 
@@ -489,7 +528,8 @@ def get_scanner(schema_field=None, type_=None):
         return SCANNERS[type_]
     except (KeyError, TypeError):
         if isinstance(type_, dict):
-            if type_['type'] == 'long' and type_['type'] == 'timestamp-millis':
+            if (type_['type'] == 'long' and
+                    type_['logicalType'] == 'timestamp-millis'):
                 return scan_timestamp_millis
             elif type_['type'] == 'array':
                 return scan_array

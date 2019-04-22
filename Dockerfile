@@ -1,4 +1,4 @@
-FROM python:3.6.6
+FROM python:3.7.3
 MAINTAINER sqre-admin
 LABEL description="Publication service for LSST notebook-based reports" \
       name="lsstsqre/kafka-efd-demo"
