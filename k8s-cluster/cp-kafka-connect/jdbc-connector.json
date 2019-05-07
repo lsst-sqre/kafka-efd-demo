@@ -1,0 +1,18 @@
+{
+  "name" : "oracle-sink",
+  "config" : {
+  "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+  "topics": "lsst.sal.MTM1M3_gyroData",
+  "tasks.max": 1,
+  "connection.url": "jdbc:oracle:thin:@lsst-oradb-test.ncsa.illinois.edu:1521:kafka_efd",
+  "connection.user": "kafka_efd",
+  "connection.password": "---",
+  "insert.mode": "insert",
+  "batch.size": 3000,
+  "table.name.format": "${topic}",
+  "auto.create": true,
+  "auto.evolve": false,
+  "max.retries": 10,
+  "retry.backoff.ms": 3000
+  }
+}
