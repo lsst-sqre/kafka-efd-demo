@@ -9,7 +9,7 @@ MAINTAINER afausti@lsst.org
 # Add InfluxDB Sink Connector from Landoop
 
 ARG CONNECTOR="influxdb"
-ARG CONNECTOR_VERSION="1.2.1"
+ARG CONNECTOR_VERSION="1.2.3"
 ARG VERSION="2.1.0"
 
 RUN wget https://github.com/landoop/stream-reactor/releases/download/${CONNECTOR_VERSION}/kafka-connect-${CONNECTOR}-${CONNECTOR_VERSION}-${VERSION}-all.tar.gz && \
