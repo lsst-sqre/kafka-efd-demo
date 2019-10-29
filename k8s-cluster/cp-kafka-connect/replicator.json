@@ -1,0 +1,14 @@
+{
+  "name": "efd-replicator",
+  "config": {
+    "connector.class": "io.confluent.connect.replicator.ReplicatorSourceConnector",
+    "tasks.max": "4",
+    "key.converter": "io.confluent.connect.replicator.util.ByteArrayConverter",
+    "value.converter": "io.confluent.connect.replicator.util.ByteArrayConverter",
+    "src.kafka.bootstrap.servers": "summit-efd0.lsst.codes:31090",
+    "dest.kafka.bootstrap.servers": "test-efd0.lsst.codes:31090",
+    "topic.whitelist": "testtopic",
+    "topic.rename.format": "${topic}",
+  }
+}
+
