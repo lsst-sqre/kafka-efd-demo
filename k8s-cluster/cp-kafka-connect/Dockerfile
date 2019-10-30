@@ -25,6 +25,6 @@ chmod -R ag+w /etc/landoop/jars/lib
 
 COPY ./ojdbc8.jar /usr/share/java/kafka-connect-jdbc/
 
-# Add the Replicator connector 
+# Download the corresponding version of the Replicator connector from https://www.confluent.io/hub/confluentinc/kafka-connect-replicator 
 RUN mkdir -p /usr/share/java/kafka-connect-replicator
 COPY confluentinc-kafka-connect-replicator-${CONFLUENT_VERSION}/lib/* /usr/share/java/kafka-connect-replicator/ 
