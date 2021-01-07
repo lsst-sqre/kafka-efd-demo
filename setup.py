@@ -22,7 +22,7 @@ install_requires = [
     'click>=7.0,<8.0',
     'confluent-kafka[avro]==0.11.6',
     'uritemplate==3.0.0',
-    'lxml==4.2.5',
+    'lxml==4.6.2',
     'cachetools==3.0.0',
     'aiohttp==3.4.4',
     'aiofile==1.4.3',
