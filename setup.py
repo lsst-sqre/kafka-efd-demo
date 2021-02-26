@@ -24,7 +24,7 @@ install_requires = [
     'uritemplate==3.0.0',
     'lxml==4.2.5',
     'cachetools==3.0.0',
-    'aiohttp==3.4.4',
+    'aiohttp==3.7.4',
     'aiofile==1.4.3',
     'aiokafka==0.4.3',
     'gidgethub==3.0.0',
